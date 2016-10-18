@@ -1,0 +1,50 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.50cm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[plainfootsepline, headsepline]{scrpage2}
+\usepackage[autostyle=true,german=quotes]{csquotes}
+
+\usepackage[bookmarks]{hyperref}
+%hidelinks
+%colorlinks
+\usepackage[xindy, acronym, nonumberlist]{glossaries}
+\GlsSetXdyCodePage{duden-utf8}
+
+\usepackage[square, numbers]{natbib}
+\usepackage{pdfpages}
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{wrapfig,lipsum}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{listings}
+
+\usepackage{eurosym}
+
+\bibliographystyle{plainnat}
+
+\author{Simon Lang}
+\title{Studienarbeit}
+
+\setheadsepline{1pt}[\color{orange}]
+\setlength{\headsep}{20 mm}
+
+\begin{document}
+	
+	\include{documents/titel}
+	\include{documents/erklaerung}
+	\include{documents/inhaltsverzeichnis}
+	\include{documents/aufgabenstellung}
+	\include{documents/terminplanung}
+	\include{documents/qualitaetssicherung}
+	\include{documents/arbeitsmittel}
+	\include{documents/abschluss}
+	\include{documents/anhang}
+	
+\end{document}
