@@ -7,7 +7,10 @@ The system build of three different applications, which you can find in our repo
 * FleeAndCatch-Robot [Robot](https://github.com/FleeAndCatch-Dev/FleeAndCatch-Robot)
 
 ## FleeAndCatch-App
+![Xamarin](https://www.xamarin.com/content/images/pages/branding/assets/xamarin-logo.png)
 
 ## FleeAndCatch-Backend
+![Java](https://upload.wikimedia.org/wikipedia/de/e/e1/Java-Logo.svg)
 
 ## FleeAndCatch-Robot
+![LEGO Mindstorm EV3](http://www.followingthenerd.com/site/wp-content/uploads/MINDSTORMS_Black_Short_RGB.png)
