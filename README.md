@@ -26,5 +26,5 @@ The robot is based on the LeJos system, which is implementing with java 7 and a 
 * Setup the server application - Link is coming
 * Install an instance of the mobile application on your device - Link is coming
 
-For more detail, you can have a look in our wiki our the documentation of our project.
+For more detail, you can have a look in our [Wiki](https://github.com/FleeAndCatch-Dev/FleeAndCatch-Docs/wiki) our the documentation of our project.
 Have fun with our application, we are open to any suggestions ;)
