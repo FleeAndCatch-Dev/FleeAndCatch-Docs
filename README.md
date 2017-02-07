@@ -22,9 +22,9 @@ The robot is based on the LeJos system, which is implementing with java 7 and a 
 <img src="http://www.pgs-holzwickede.de/wordpress/wp-content/uploads/2015/09/mindstorms-schriftzug.png" width="250">
 
 ## Start guide
-* Setup your LEGO robot - Link is coming
-* Setup the server application - Link is coming
-* Install an instance of the mobile application on your device - Link is coming
+* [Setup the LEGO Mindstorm EV3](https://github.com/FleeAndCatch-Dev/FleeAndCatch-Docs/wiki/Start-guide#setup-the-lego-mindstrom-ev3)
+* [Setup the server application](https://github.com/FleeAndCatch-Dev/FleeAndCatch-Docs/wiki/Start-guide#setup-the-server-application)
+* [Setup the mobile application](https://github.com/FleeAndCatch-Dev/FleeAndCatch-Docs/wiki/Start-guide#setup-the-mobile-application)
 
 For more detail, you can have a look in our [Wiki](https://github.com/FleeAndCatch-Dev/FleeAndCatch-Docs/wiki) our the documentation of our project.
 Have fun with our application, we are open to any suggestions ;)
