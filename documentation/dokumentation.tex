@@ -9,11 +9,10 @@
 \usepackage[plainfootsepline, headsepline]{scrpage2}
 \usepackage[autostyle=true,german=quotes]{csquotes}
 
-\usepackage[bookmarks]{hyperref}
+\usepackage[bookmarks, colorlinks]{hyperref}
 %hidelinks
 %colorlinks
-\usepackage[xindy, acronym, nonumberlist]{glossaries}
-%\GlsSetXdyCodePage{duden-utf8}
+\usepackage[xindy, acronyms, nonumberlist]{glossaries}
 
 \usepackage[square, numbers]{natbib}
 \usepackage{pdfpages}
@@ -37,6 +36,7 @@
 
 \makeglossaries
 \input{dokumente/glossarycontent}
+\glsaddall
 
 \begin{document}
 	

@@ -1,16 +1,17 @@
-%dual entry
-%\newglossaryentry{gls-api}
-%{
-%	name=Application Programming Interface,
-%	description={Eine API ist ein Teil einer Software, die die Anbindung an ein anderes System %ermöglicht}
-%}
-
 %abbreviations
 %\newacronym{fre}{FRE}{Field Robot Event}
-%\newacronym[longplural={Applications}]{app}{App}{Application}
 
 %glossaries
+%\newglossaryentry{fieldrobot}
 %{
 %	name=Fieldrobot,
 %	description={Ein Fieldrobot ist ein autonomer Roboter, der in der Agrarwirtschaft zum Einsatz kommt}
 %}
+
+%dual entry
+\newglossaryentry{gls-app}
+{
+	name=Application,
+	description={Eine Application ist ein ausführbares Programm für mobile Geräte, wie Smartphones oder Tablets}
+}
+\newacronym[see={[Glossary:]{gls-app}}]{app}{App}{Application\glsadd{app}}

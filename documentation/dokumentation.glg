@@ -1,4 +1,13 @@
-Warning: File 'dokumentation.glo' is empty.
-Have you used any entries defined in glossary 'main'?
-Remember to use package option 'nomain' if you
-don't want to use the main glossary.
+;; This logfile was generated automatically by `xindy'
+;; at 18.03.2017  15:28:34
+;; Indexstyle: "C:\\Users\\SL-Th\\OneDrive\\Dokumente\\DHBW\\Studienarbeit\\FleeAndCatch-Docs\\documentation\\qyqVbkuD2_", Rawindex: "C:\\Users\\SL-Th\\OneDrive\\Dokumente\\DHBW\\Studienarbeit\\FleeAndCatch-Docs\\documentation\\FKVUiAlC7M", Output: "dokumentation.gls"
+
+
+Building indexentry-tree:
+Hierdepth of index is :TREE
+
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+
+Forming letter-groups:
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "€ÈÈ´¨†€Ú¨Ã¼" -> "A"
