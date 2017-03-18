@@ -24,6 +24,9 @@
 \providecommand*\glsXpageXglsignore[2]{\setentrycounter[#1]{page}\glsignore{#2}}
 \begin{theglossary}\glossaryheader
 \glsgroupheading{A}\relax\glsresetentrylist
+\glossentry{api}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{1}\delimN 
+\glsXpageXglsnumberformat{}{13}, \glsseeformat[Glossary:]{gls-api}{}}}\relax\glsresetentrylist
 \glossentry{app}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{1}\delimN 
 \glsXpageXglsnumberformat{}{7}\delimN 

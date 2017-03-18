@@ -14,6 +14,7 @@ A level-1 auxiliary file: dokumente/evaluation.aux
 A level-1 auxiliary file: dokumente/zusammenfassungausblick.aux
 A level-1 auxiliary file: dokumente/literatur.aux
 A level-1 auxiliary file: dokumente/anhang.aux
-I found no \citation commands---while reading file dokumentation.aux
 Database file #1: literatur.bib
-(There was 1 error message)
+Warning--empty year in DanielWurstl.Unterschiedeund
+Warning--empty year in PetraRiepe.NativeApp
+(There were 2 warnings)

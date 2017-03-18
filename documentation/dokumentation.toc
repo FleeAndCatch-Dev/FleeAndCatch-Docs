@@ -10,37 +10,39 @@
 \contentsline {subsubsection}{\numberline {2.1.3}Antriebsarten}{12}{subsubsection.2.1.3}
 \contentsline {subsubsection}{\numberline {2.1.4}Sensorik}{12}{subsubsection.2.1.4}
 \contentsline {subsubsection}{\numberline {2.1.5}LEGO Mindstorm}{12}{subsubsection.2.1.5}
-\contentsline {subsection}{\numberline {2.2}App Entwicklung}{13}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Arten}{14}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Plattform\IeC {\"u}bergreifende Programmierung}{14}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Mono}{14}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}.Net Framework}{14}{subsubsection.2.2.4}
-\contentsline {subsection}{\numberline {2.3}Java}{14}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Grundlagen}{14}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Java Runtime Environment}{14}{subsubsection.2.3.2}
-\contentsline {subsection}{\numberline {2.4}Kommunikation}{14}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Grundlagen}{14}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}TCP/IP}{14}{subsubsection.2.4.2}
-\contentsline {subsubsection}{\numberline {2.4.3}Wifi}{14}{subsubsection.2.4.3}
-\contentsline {subsubsection}{\numberline {2.4.4}Datenaustausch}{14}{subsubsection.2.4.4}
-\contentsline {section}{\numberline {3}Theoretische Grundlagen}{14}{section.3}
-\contentsline {subsection}{\numberline {3.1}Schwarmverhalten}{14}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}Allgemein}{14}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}Vorbilder aus dem Tierreich}{14}{subsubsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.3}Szenarien}{14}{subsubsection.3.1.3}
-\contentsline {subsubsection}{\numberline {3.1.4}Algorithmen}{14}{subsubsection.3.1.4}
-\contentsline {section}{\numberline {4}Projektorganisation}{15}{section.4}
-\contentsline {subsection}{\numberline {4.1}Projektablaufplan}{15}{subsection.4.1}
-\contentsline {section}{\numberline {5}Konzeption}{16}{section.5}
-\contentsline {subsection}{\numberline {5.1}Anforderunsdefinitionen}{16}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Softwarearchitektur}{16}{subsubsection.5.1.1}
-\contentsline {subsection}{\numberline {5.2}Use Cases}{16}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {5.2.1}Connect}{16}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2}Synchronization}{17}{subsubsection.5.2.2}
-\contentsline {subsubsection}{\numberline {5.2.3}Szenario}{20}{subsubsection.5.2.3}
-\contentsline {subsubsection}{\numberline {5.2.4}Exception}{20}{subsubsection.5.2.4}
-\contentsline {subsection}{\numberline {5.3}Kommunikation}{20}{subsection.5.3}
-\contentsline {section}{\numberline {6}L\IeC {\"o}sungsansatz}{26}{section.6}
-\contentsline {section}{\numberline {7}Umsetzung}{27}{section.7}
-\contentsline {section}{\numberline {8}Evaluation}{28}{section.8}
-\contentsline {section}{\numberline {9}Zusammenfassung und Ausblick}{29}{section.9}
+\contentsline {subsection}{\numberline {2.2}\gls {app} Entwicklung}{13}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Native \glspl {app}}{13}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Web \glspl {app}}{13}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Hybride \glspl {app}}{14}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Plattform\IeC {\"u}bergreifende Programmierung}{15}{subsubsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.5}Mono}{15}{subsubsection.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.6}.Net Framework}{15}{subsubsection.2.2.6}
+\contentsline {subsection}{\numberline {2.3}Java}{15}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Grundlagen}{15}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Java Runtime Environment}{15}{subsubsection.2.3.2}
+\contentsline {subsection}{\numberline {2.4}Kommunikation}{15}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Grundlagen}{15}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}TCP/IP}{15}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Wifi}{15}{subsubsection.2.4.3}
+\contentsline {subsubsection}{\numberline {2.4.4}Datenaustausch}{15}{subsubsection.2.4.4}
+\contentsline {section}{\numberline {3}Theoretische Grundlagen}{15}{section.3}
+\contentsline {subsection}{\numberline {3.1}Schwarmverhalten}{15}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Allgemein}{15}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Vorbilder aus dem Tierreich}{15}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Szenarien}{15}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}Algorithmen}{15}{subsubsection.3.1.4}
+\contentsline {section}{\numberline {4}Projektorganisation}{16}{section.4}
+\contentsline {subsection}{\numberline {4.1}Projektablaufplan}{16}{subsection.4.1}
+\contentsline {section}{\numberline {5}Konzeption}{17}{section.5}
+\contentsline {subsection}{\numberline {5.1}Anforderunsdefinitionen}{17}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Softwarearchitektur}{17}{subsubsection.5.1.1}
+\contentsline {subsection}{\numberline {5.2}Use Cases}{17}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Connect}{17}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Synchronization}{18}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.3}Szenario}{21}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.4}Exception}{21}{subsubsection.5.2.4}
+\contentsline {subsection}{\numberline {5.3}Kommunikation}{21}{subsection.5.3}
+\contentsline {section}{\numberline {6}L\IeC {\"o}sungsansatz}{27}{section.6}
+\contentsline {section}{\numberline {7}Umsetzung}{28}{section.7}
+\contentsline {section}{\numberline {8}Evaluation}{29}{section.8}
+\contentsline {section}{\numberline {9}Zusammenfassung und Ausblick}{30}{section.9}

@@ -25,5 +25,7 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{A}\relax\glsresetentrylist
 \glossentry{gls-app}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{1}}}\relax\glsresetentrylist
+\glossentry{gls-api}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{1}}}%
 \end{theglossary}\glossarypostamble
