@@ -86,7 +86,13 @@ genutzt werden \cite[vgl.][Seite 21]{Scholz.DasEV3}.  \\
 Für den Anschluss von Motoren und Sensoren verfügt der EV3-Stein über 8 Ports, an welche die anderen System-Komponenten müber Kabel mit RJ12-Steckern angeschlossen werden. 4 der Ports dienen für den Anschluss von
 Motoren, die restlichen 4 Ports für die Abfrage von Sensorwerte \cite[vgl.][21]{Scholz.DasEV3}.  \\
 Der EV3-Stein besitzt an der Vorderseite ein LCD-Display zur Anzeige von Texten und Grafiken sowie  
-6 Knöpfe für die Bedienung durch den Benutzer. Display und Knöpfe dienen zur Bedienung der Firmware sowie zur Tätigung von Einstellungen, können aber ebenso durch Programmen angesprochen und ausgewertet werden \cite[vgl.][21]{Scholz.DasEV3}. 
+6 Knöpfe für die Bedienung durch den Benutzer. Display und Knöpfe dienen zur Bedienung der Firmware sowie zur Tätigung von Einstellungen, können aber ebenso durch Programmen angesprochen und ausgewertet werden
+Start
+Mein Kanal
+Trends
+Abos
+BIBLIOTHEK
+\cite[vgl.][21]{Scholz.DasEV3}. 
 \smallskip
 \newline
 Die folgende Auflistung zeigt einige Leistungsmerkmale des EV3-Steins \citep[vgl.][Seite 23 f., Seite 32]{Scholz.DasEV3, Schobel.RobertaEV3Programmieren}.
@@ -263,12 +269,12 @@ Eine \gls{app} ist ein ausführbares Programm für mobile Geräte, wie Smartphon
 In der Entwicklung von nativen \glspl{app} werden die direkten Ressourcen des Gerätes verwendet. Dazu gehört die Laufzeitumgebung des Betriebssystemes, Bibliotheken und Hardwareschnittstellen. Der Vorteil von einer nativen Entwicklung liegt hauptsächlich darin, dass diese für das Betriebssystem optimiert ist und die vorhandenen Schnittstellen genutzt werden können, um komplexe und rechenintensive Anwendungen zu ermöglichen.\footnote{\citep[vgl.][Unterschiede und Vergleich native Apps vs. Web Apps]{DanielWurstl.Unterschiedeund}\label{note1}}\\
 Vertreter diese Entwicklung finden sich für verschiedene Betriebssysteme. Der populärste unter ihnen ist bei weitem Android mit einer nativen Java Entwicklung über Android Studio von Google. Sie besitzt aktuellen den höchsten Marktanteil und eine entsprechende Popularität unter Entwickler und Nutzer.
 
-\subsubsection{Web \glspl{app}\label{web}
+\subsubsection{Web \glspl{app}}\label{web}
 
 Die Entwicklung von web \glspl{app} arbeitet mit systemübergreifenden Ressourcen und greift auf gängige Webtechnologien, wie \gls{html}, \gls{css} und \gls{javascript} zurück. Die \gls{app} wird hierbei nicht wie normale Anwendungen direkt auf dem System des Gerätes ausgeführt, sondern kommt in dessen Browser zur Ausführung. Der Vorteil hierbei ist vor allem, dass diese Art von \gls{app} auf allen Betriebssystemen lauffähig ist und direkt über das Internet veröffentlicht und aktualisiert werden kann, jedoch wird eine stabile Internetverbindung vorausgesetzt.\footref{note1}\\
 Von dieser Entwicklung finden sich viele Vertreter mit der Unterstützung diverser \glspl{framework}. Das populärste unter ihnen ist aktuell AngularJS von Google, was auf \gls{javascript} basiert. In Kombination mit anderen Webtechnologien, wie \gls{html} und \gls{css} lassen sich perfomante web \glspl{app} entwickeln.
 
-\subsubsection{Hybride \glspl{app}\label{hybride}
+\subsubsection{Hybride \glspl{app}}\label{hybride}
 
 Die Entwicklung von hybride \glspl{app} vereinigt die beiden Entwicklungen von native und web. Sie besteht dabei aus einem nativen Rahmen, in der eine web \gls{app} zur Ausführung kommt, diese besitzt entsprechende Zugriffsrechte auf Hardwareschnittstellen, um diese mit \glspl{api} anzusprechen.\footnote{\citep[vgl.][Native App, Web App und Hybrid App im Überblick]{PetraRiepe.NativeApp}\label{note2}}\\
 Diese Entwicklung ist aktuell noch sehr jung, jedoch stechen hier bereits verschiedene Vertreter hervor. Der populärste unter ihnen ist Ionic von Drifty, welches auf Apache Cordova als Basis zurückgreift. In Kombination mit AngularJS, \gls{typescript} und anderen Webtechnologien lässt sich die web \gls{app} entwickeln und auf einem beliebigen Gerät unter einem nativen Browser ausführen. Es unterstützt dabei verschiedenste Betriebssystem, wie Android, iOS und Windows. Diese Entwicklungen können dabei meist nicht nur mobil, sondern unter anderem auf weiteren Systemen, wie stationäre bereitgestellt werden.
@@ -289,16 +295,36 @@ Um die Entwicklung von \glspl{app} einfach zu halten, verwenden immer mehr Entwi
 	\label{fig:xamarin}
 \end{wrapfigure}
 
-Xamarin ist ein \gls{framework} zur Entwicklung von nativen plattformübergreifenden Apps. Dabei baut Xamarin auf Mono, einer opensource Version des .NET Framework, welches auf den .NET ECMA Standards basiert.\footnote{\citep[vgl.][Introduction to Mobile Development - Xamarin]{Xamarin.Introductionto}\label{note3}} Um nativen Quellcode auf den verschiedenen Systemen auszuführen, setzt Xamarin auf verschiedene Softwarekomponenten, um aus einem mit .NET entwickelten Projekt nativen Quellcode zu erzeugen.\\
-Für iOS Systeme verwendet Xamarin den AOT (Ahead-of-Time) Compiler, um aus einem Xamarin.iOS Projekt ARM Maschinencode zur erzeugen, der so entsprechend schnell ausgeführt werden kann.
- 
- Bei Android nutzt Xamarin die IL, um JIT nativen Quellcode für die entsprechende Hardware zu compilieren und die \gls{app} auszuführen.
+Xamarin ist ein \gls{framework} zur Entwicklung von nativen plattformübergreifenden Apps, welches auf Mono basiert, siehe \eqref{mono}. Um nativen Quellcode auf den verschiedenen Systemen auszuführen, setzt Xamarin auf verschiedene Softwarekomponenten, um aus einem mit .NET entwickelten Projekt nativen Quellcode zu erzeugen.\\
+Für iOS Systeme verwendet Xamarin den \gls{aot} Compiler, um aus einem Xamarin.iOS Projekt \gls{arm} Maschinencode zur erzeugen, der entsprechend schnell auf dem System ausgeführt werden kann.\footnote{\citep[vgl.][Introduction to Mobile Development - Xamarin]{Xamarin.Introductionto}\label{note3}} Bei Android hingegen wird der Quellcode in \gls{il} übersetzt, welches \gls{jit} nutzt um zur Laufzeit Maschinencode für das entsprechende Gerät zu erzeugen.\footref{note3} Dazu nutzt Xamarin Softwarekomponenten, während der Laufzeit, um bestimmte Prozesse, wie Speicherverwaltung und Plattformoperationen. Zur Entwicklung bringt Xamarin eine große Bandbreite von Funktionalitäten für den Entwickler, wie Bibliotheken, eine Test Cloud, sowie Unterstützung von nativen Bibliotheken, wie für \gls{java} oder \gls{objectivc}. Xamarin bietet Unterstützung für diverse Betriebssysteme, wie zum Beispiel Android, iOS, Windows und Windows Phone. Um mit Xamarin zu entwickeln, gibt es aktuell verschiedene Möglichkeiten mit Unterstützung auf unterschiedlichen Betriebssystemen. Einerseits kann mit Xamarin Studio auf einem OSX System, oder mit Visual Studio auf Windows und Linux entwickelt werden.\\
+Wie viele andere \glspl{framework}, bietet auch Xamarin verschiedene nützliche \glspl{template}, die jeweils andere Nutzen besitzen. Diese bauen dabei auf zwei Hauptkomponenten von Bibliotheken, einerseits Shared Projects und Protable Class Libraries.
 
-\begin{comment}
-	Zur Ausführung kommt es in einem eigenen Laufzeitsystem durch das .NET Framework, wobei unter Linux Betriebssystemen Mono genutzt wird. Zur Entwicklung bringt Xamarin eine große Bandbreite von Funktionalitäten für den Entwickler, wie Bibliotheken, einer Test Cloud und Unterstützung von nativen Bibliotheken, wie von Java und Objective-C. Xamarin bietet Unterstützung für diverse Betriebssysteme, wie zum Beispiel Android, iOS, Windows und Windows Phone. Um mit Xamarin zu entwickeln, gibt es aktuell verschiedene Möglichkeiten. Einerseitz kann mit Xamarin Studio auf einem OSX System, oder mit Visual Studio auf Windows und Linux entwickelt werden.\\
-\end{comment}
+\begin{wrapfigure}{r}{0.65\textwidth}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{images/technische_grundlagen/SharedAssetProject.png}
+	\end{center}
+	\caption{Shared Project}
+	\label{fig:xamarin}
+\end{wrapfigure}
 
-\subsubsection{Mono}
+\paragraph{Shared Projects}
+
+
+, welches die Möglichkeit bietet den erstellten Quellcode für verschiedene Systeme bereitzustellen und in andere Projekte, wie Xamarin native Projekte bereitzustellen.
+
+\begin{wrapfigure}{r}{0.65\textwidth}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{images/technische_grundlagen/PortableClassLibrary.png}
+	\end{center}
+	\caption{Portable Class Library}
+	\label{fig:xamarin}
+\end{wrapfigure}
+
+\paragraph{Protable Class Libraries}
+
+
+
+\subsubsection{Mono}\label{mono}
 
 \begin{wrapfigure}{r}{0.3\textwidth}
 	\begin{center}
