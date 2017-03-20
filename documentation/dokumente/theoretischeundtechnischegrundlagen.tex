@@ -41,7 +41,7 @@ Sensoren lassen sich hinsichtliche ihrer Arbeitsweise und ... wie folgt klassifi
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-\LM{} ist eine seit 1988 existierende Produktserie des Spielwarenherstellers \LE{} \cite[vgl.][21]{EV3RU}. 
+\LM{} ist eine seit 1988 existierende Produktserie des Spielwarenherstellers \LE{} \cite[vgl.][21]{Scholz.DasEV3}. 
 \LM{} ermöglicht das Bauen, Programmieren und Steuern verschiedener \LE{} Roboter. Dies Roboter bestehen dabei aus
 gängigen \LE{} Teilen die auch in anderen \LE{}-Produkten Verwendung finden, sowie speziellen \LE{}-Komponenten 
 wie einer zentralen Steuereinheit, Motoren und Sensoren.
@@ -53,15 +53,15 @@ wie einer zentralen Steuereinheit, Motoren und Sensoren.
 \color{finishing}
 % Eigentlicher Text:
 Der 2013 erschienene EV3 ist das dritte System der \LM{} Reihe. Die Bezeichnung setzt sich aus EV für Evolution 
-und 3 für die 3 Stufe der \LM{}-Serie zusammen \cite[vgl.][21]{EV3RU}. \\
+und 3 für die 3 Stufe der \LM{}-Serie zusammen \cite[vgl.][Seite 21]{Scholz.DasEV3}. \\
 Im Vergleich zu den Vorgängersystemen verfügt das EV3-System über eine modernere und leistungsfähigere Steuereinheit und auch die anderen elektronischen Komponenten des System wurden an den heutigen Stand der Technik 
-angepasst \cite[vgl.][22]{EV3RU}.
+angepasst \cite[vgl.][Seite 22]{Scholz.DasEV3}.
 \medskip
 \newline
 Die folgende Abbildung X.X zeigt einige der zentralen Komponeten des EV3-Systems, wie die Steuereinheit (EV3-Stein), Motoren und vier Sensoren.
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.90\textwidth]{images/EV3-Overview.png}
+	\includegraphics[width=0.90\textwidth]{images/technische_grundlagen/EV3-Overview.png}
 	\caption[Zentrale Komponenten des EV3-Systems]{Zentrale Komponenten des EV3-Systems}
 	\label{fig:<Sprungmakre>}
 \end{figure}
@@ -79,17 +79,17 @@ dieses Projekt eine deutlich größere Relevanzu aufweisen.
 % Eigentlicher Text:
 Die zentrale Komponenten und das Gehirn des LEGO MINDSTORMS EV3-Systems ist die zentrale Steuereinheit kurz (EV3-)Stein oder auch Brick genannt. Bei ihm handelt
 es sich um eine Computer welcher selbständig Programme ausführen kann. Dazu verfügt der EV3-Stein über 
-ein Linux Betriebssystem und eine spezielle Firmware, die wie die auszuführenden Programme auf einem Flash-Speicher liegen \cite[vgl.][21]{EV3RU}. \\
+ein Linux Betriebssystem und eine spezielle Firmware, die wie die auszuführenden Programme auf einem Flash-Speicher liegen \cite[vgl.][21]{Scholz.DasEV3}. \\
 Zur Kommunikation mit dem PC verfügt der EV3-Stein über eine USB- sowie Bluetooth-Schnittstelle. Neben der 
 Kommunikation zu einem Computer kann die USB-Schnittstelle auch für den Zusammenschluss mit einem weiteren EV3-Stein (genannt Daisy Chain) 
-genutzt werden \cite[vgl.][21]{EV3RU}.  \\
+genutzt werden \cite[vgl.][Seite 21]{Scholz.DasEV3}.  \\
 Für den Anschluss von Motoren und Sensoren verfügt der EV3-Stein über 8 Ports, an welche die anderen System-Komponenten müber Kabel mit RJ12-Steckern angeschlossen werden. 4 der Ports dienen für den Anschluss von
-Motoren, die restlichen 4 Ports für die Abfrage von Sensorwerte \cite[vgl.][21]{EV3RU}.  \\
+Motoren, die restlichen 4 Ports für die Abfrage von Sensorwerte \cite[vgl.][21]{Scholz.DasEV3}.  \\
 Der EV3-Stein besitzt an der Vorderseite ein LCD-Display zur Anzeige von Texten und Grafiken sowie  
-6 Knöpfe für die Bedienung durch den Benutzer. Display und Knöpfe dienen zur Bedienung der Firmware sowie zur Tätigung von Einstellungen, können aber ebenso durch Programmen angesprochen und ausgewertet werden \cite[vgl.][21]{EV3RU}. 
+6 Knöpfe für die Bedienung durch den Benutzer. Display und Knöpfe dienen zur Bedienung der Firmware sowie zur Tätigung von Einstellungen, können aber ebenso durch Programmen angesprochen und ausgewertet werden \cite[vgl.][21]{Scholz.DasEV3}. 
 \smallskip
 \newline
-Die folgende Auflistung zeigt einige Leistungsmerkmale des EV3-Steins \cites[vgl.][23\psq]{EV3RU}[32]{Roberta}.
+Die folgende Auflistung zeigt einige Leistungsmerkmale des EV3-Steins \citep[vgl.][Seite 23 f., Seite 32]{Scholz.DasEV3, Schobel.RobertaEV3Programmieren}.
 \begin{itemize}
 	\item{Prozessor:} ARM9 32Bit, 300 MHz, 16 MB Flash 64MB RAM
 	\item{Betriebssystem:} Linux
@@ -105,7 +105,7 @@ Die folgende Auflistung zeigt einige Leistungsmerkmale des EV3-Steins \cites[vgl
 \color{finishing}
 % Eigentlicher Text:
 Das EV3-System verfügt über zwei unterschiedliche Motoren, einen großen Motor und einen mittleren Motor. 
-Bei beiden handelt es sich um Servormotoren mit integriertem Rotationssensor, welche von außen angesteuert und abgefragt werden können \cite[vgl.][92]{Roberta}. Die Motoren lassen sich sehr exakt steuern und ermöglichen so einen synchronen Betrieb mehrerer Motoren \cite[vgl.][29\psq]{EV3RU}.
+Bei beiden handelt es sich um Servormotoren mit integriertem Rotationssensor, welche von außen angesteuert und abgefragt werden können \cite[vgl.][92]{Schobel.RobertaEV3Programmieren}. Die Motoren lassen sich sehr exakt steuern und ermöglichen so einen synchronen Betrieb mehrerer Motoren \cite[vgl.][Seite 29 f.]{Scholz.DasEV3}.
 \smallskip
 \newline
 Die folgende Tabelle zeigt die wichtigsten Eigenschaften der beiden Motoren.
@@ -131,7 +131,7 @@ Zum EV3-System gehören eine Reihe von verschiedenen Sensoren die es den Roboter
 \color{finishing}
 % Eigentlicher Text:
 Der Frabsensor ist ein digitaler Sensor der dazu dient die Lichtintensität sowie verschiedener Farben zu erkennen. Der Sensor kann sowohl
-aktiv als auch passiv betrieben werden und verfügt dafür über vier unterschiedliche Betriebsmodi  \cite[vgl.][101]{Roberta}:
+aktiv als auch passiv betrieben werden und verfügt dafür über vier unterschiedliche Betriebsmodi  \cite[vgl.][101]{Schobel.RobertaEV3Programmieren}:
 \begin{itemize}
 	\item{Farbmodus (passiv)} - In diesem Modus erkennt der Sensor 7 verschiedenen Farben.
 	\item{RGB-Modus (aktiv)} - In diesem Modus sendet der Sensor nacheinander rotes, grünes und balues Licht aus, je nachdem zu welchem Anteil ein Gegenstand die einzelnen Farben reflektiert wird die Frabe des Gegenstands ermittelt.
@@ -153,7 +153,7 @@ Durch diesen Sensor wird es beispielsweise möglich den Roboter einer frabigen L
 Diese aktive Sensor verwendet für den Menschen unhörbaren Ultraschall um die Entfernung von Objekten zu ermitteln.
 Der Sensor emmitiert dazu Untraschall und misst die Laufzeit der Schallwellen, wenn diese von einem Objekt reflektiert
 werden, aus der Laufzeit kann dann die Entfernung ermittelt werden.
-Der Senors verfügt über zwei unterschiedliche Betriebsmodi \cite[vgl.][32\psq]{EV3RU}:
+Der Senors verfügt über zwei unterschiedliche Betriebsmodi \cite[vgl.][32 f.]{Scholz.DasEV3}:
 \begin{itemize}
 	\item{Messen} - In diesem Modus sendet der Sensor Ultraschall aus um die Entfernung von Objekten zu ermitteln.
 	\item{Scannen} - In diesem passiven Modus emittiert der Sensor selbst keinen Untraschall, sondern er reagiert auf >>fremden<< Ultraschall und kann so einen anderen aktiven Ultraschallsensor erkennen.
@@ -170,14 +170,14 @@ Eigenschaften:
 % Eigentlicher Text:
 Der Berührungssensor ist ein einfacher mechanischer Sensor. Wird der Knopf am Ende des Senors gedrückt wird dies
 registriert. Trotz der Einfachheit dieses Sensors ist dieser dennoch sehr nützlich, da er beispielsweise die
-Kollision des Roboters mit einem Hindernis erkennen kann \cite[vgl.][33]{EV3RU}.
+Kollision des Roboters mit einem Hindernis erkennen kann \cite[vgl.][33]{Scholz.DasEV3}.
 \paragraph{Kreiselsensor (Gyroskop)}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
 Der Kreiselsensor ermöglicht es Drehbewegungen um eine Achse über Rotationsgeschwindigkeit und Drehwinkel zu 
 messen. Dadurch wird es möglich die Eigenbewegung des Roboters oder einer Roboterkomponente zu registrieren 
-\cite[vgl.][33]{EV3RU}.
+\cite[vgl.][33]{Scholz.DasEV3}.
 \medskip
 \newline
 Eigenschaften:
@@ -207,11 +207,12 @@ Neben den hier vorgestellten Sensoren existiert noch ein Infrarotsensor, welcher
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{process}
 % Eigentlicher Text:
-Für die Programmierung der \LM{} Produkte gibt es eine Reihe unterschiedlicher Programmiersprachen und -umgebungen. Die hauseigene \LE{}-Software zur Programmierung des EV3 richtet sich an Einsteiger. Sie ermöglicht es über eine grafische Oberfläche via vorgefertigter Programmabläufe welche durch grafische Blöcke repräsentiert werden den EV3 zu programmieren \cite[vgl.][25\psq]{Roberta}. \\
+Für die Programmierung der \LM{} Produkte gibt es eine Reihe unterschiedlicher Programmiersprachen und -umgebungen. Die hauseigene \LE{}-Software zur Programmierung des EV3 richtet sich an Einsteiger. Sie ermöglicht es über eine grafische Oberfläche via vorgefertigter Programmabläufe welche durch grafische Blöcke repräsentiert werden den EV3 zu programmieren.\footnote{\citep[vgl.][25 f.]{Schobel.RobertaEV3Programmieren}\label{Roberta25psq}} \\
+%cite[vgl.][25\psq]{Roberta}.
 Die Abbildung X.X gibt einen Überblick über verschiedene für den EV3 verfügbare Programmiersprechen sowie ihre Vor- und Nachteile.
 \paragraph{leJOS}
-Das LEGO Java Operating System abgekürzt leJOS ist ein Framework, das es ermöglicht den EV3 mit der Programmiersprache Java zu programmieren. Das leJOS-Projekt wurde 1999 gegründet und sämtliche Komponenten (wie auch Java) sind kostenlos verfügbar \cite[vgl.][21\psq]{Roberta}. \\
-leJOS bietet eine schlanke Java Virtual Machine (JVM) für den EV3-Stein sowie eine Klassenbibliothek mit welcher die Komponenten des EV3 (Motoren, Sensoren etc.) angesprochen werden können. Installiert wird leJOS auf einer bootbaren microSD-Karte und kann anschließend davon gestartet werden, ohne die auf dem EV3 vorhandene LEGO-Software zu löschen oder zu verändern \cite[vgl.][23\psq]{Roberta}. \\
+Das LEGO Java Operating System abgekürzt leJOS ist ein Framework, das es ermöglicht den EV3 mit der Programmiersprache Java zu programmieren. Das leJOS-Projekt wurde 1999 gegründet und sämtliche Komponenten (wie auch Java) sind kostenlos verfügbar \cite[vgl.][21 f.]{Schobel.RobertaEV3Programmieren}. \\
+leJOS bietet eine schlanke Java Virtual Machine (JVM) für den EV3-Stein sowie eine Klassenbibliothek mit welcher die Komponenten des EV3 (Motoren, Sensoren etc.) angesprochen werden können. Installiert wird leJOS auf einer bootbaren microSD-Karte und kann anschließend davon gestartet werden, ohne die auf dem EV3 vorhandene LEGO-Software zu löschen oder zu verändern \cite[vgl.][23 f.]{Schobel.RobertaEV3Programmieren}. \\
 Durch leJOS ist es möglich den EV3 mit Hilfe der Hochsprache Java zu programmieren womit eine mächtige
 Programmiersprache zur Verfügung steht und die Vorteile der Objektorientierung für den EV3 genutzt werden können.
 \begin{table}[ht]
@@ -229,7 +230,7 @@ Programmiersprache zur Verfügung steht und die Vorteile der Objektorientierung 
 	\caption[Eigenschaften der EV3-Motortypen]{Eigenschaften der EV3-Motoren}
 \end{table}
 leJOS bietet eine umfangreiche Klassenbibliothek sowie gut dokumentierte API was unter anderem die
-Integration von weiteren Sensoren etc. erleichter \cite[vgl.][23\psq]{Roberta}.
+Integration von weiteren Sensoren etc. erleichter \cite[vgl.][23 f.]{Schobel.RobertaEV3Programmieren}.
 Im folgenden sind einige Features die leJOS bietet aufgelistet:
 \begin{itemize}
 	\item{Objektorientierte Programmierung mit Java}
