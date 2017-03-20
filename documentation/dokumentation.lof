@@ -1,18 +1,19 @@
 \select@language {ngerman}
-\contentsline {figure}{\numberline {1}{\ignorespaces App Entwicklung\relax }}{13}{figure.caption.11}
-\contentsline {figure}{\numberline {2}{\ignorespaces Xamarin\relax }}{15}{figure.caption.12}
-\contentsline {figure}{\numberline {3}{\ignorespaces Mono\relax }}{15}{figure.caption.13}
-\contentsline {figure}{\numberline {4}{\ignorespaces Connect\relax }}{18}{figure.caption.14}
-\contentsline {figure}{\numberline {5}{\ignorespaces Connection\relax }}{19}{figure.caption.15}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Connect}}}{19}{subfigure.5.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Home}}}{19}{subfigure.5.2}
-\contentsline {figure}{\numberline {6}{\ignorespaces Synchronization\relax }}{20}{figure.caption.16}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Update all}}}{20}{subfigure.6.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Update}}}{20}{subfigure.6.2}
-\contentsline {figure}{\numberline {7}{\ignorespaces Robot list\relax }}{21}{figure.caption.17}
-\contentsline {figure}{\numberline {8}{\ignorespaces Spectator\relax }}{22}{figure.caption.18}
-\contentsline {figure}{\numberline {9}{\ignorespaces Spectator\relax }}{23}{figure.caption.19}
-\contentsline {figure}{\numberline {10}{\ignorespaces Control\relax }}{24}{figure.caption.20}
-\contentsline {figure}{\numberline {11}{\ignorespaces Control\relax }}{25}{figure.caption.21}
-\contentsline {figure}{\numberline {12}{\ignorespaces Synchron\relax }}{26}{figure.caption.22}
-\contentsline {figure}{\numberline {13}{\ignorespaces Follow\relax }}{27}{figure.caption.23}
+\contentsline {figure}{\numberline {1}{\ignorespaces Zentrale Komponenten des EV3-Systems}}{13}{figure.caption.11}
+\contentsline {figure}{\numberline {2}{\ignorespaces App Entwicklung\relax }}{18}{figure.caption.20}
+\contentsline {figure}{\numberline {3}{\ignorespaces Xamarin\relax }}{20}{figure.caption.21}
+\contentsline {figure}{\numberline {4}{\ignorespaces Mono\relax }}{20}{figure.caption.22}
+\contentsline {figure}{\numberline {5}{\ignorespaces Connect\relax }}{23}{figure.caption.23}
+\contentsline {figure}{\numberline {6}{\ignorespaces Connection\relax }}{24}{figure.caption.24}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Connect}}}{24}{subfigure.6.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Home}}}{24}{subfigure.6.2}
+\contentsline {figure}{\numberline {7}{\ignorespaces Synchronization\relax }}{25}{figure.caption.25}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Update all}}}{25}{subfigure.7.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Update}}}{25}{subfigure.7.2}
+\contentsline {figure}{\numberline {8}{\ignorespaces Robot list\relax }}{26}{figure.caption.26}
+\contentsline {figure}{\numberline {9}{\ignorespaces Spectator\relax }}{27}{figure.caption.27}
+\contentsline {figure}{\numberline {10}{\ignorespaces Spectator\relax }}{28}{figure.caption.28}
+\contentsline {figure}{\numberline {11}{\ignorespaces Control\relax }}{29}{figure.caption.29}
+\contentsline {figure}{\numberline {12}{\ignorespaces Control\relax }}{30}{figure.caption.30}
+\contentsline {figure}{\numberline {13}{\ignorespaces Synchron\relax }}{31}{figure.caption.31}
+\contentsline {figure}{\numberline {14}{\ignorespaces Follow\relax }}{32}{figure.caption.32}

@@ -9,41 +9,52 @@
 \contentsline {subsubsection}{\numberline {2.1.2}Mobile Roboter}{12}{subsubsection.2.1.2}
 \contentsline {subsubsection}{\numberline {2.1.3}Antriebsarten}{12}{subsubsection.2.1.3}
 \contentsline {subsubsection}{\numberline {2.1.4}Sensorik}{12}{subsubsection.2.1.4}
-\contentsline {subsubsection}{\numberline {2.1.5}LEGO Mindstorm}{12}{subsubsection.2.1.5}
-\contentsline {subsection}{\numberline {2.2}\gls {app} Entwicklung}{13}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Native \glspl {app}}{13}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Web \glspl {app}}{13}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Hybride \glspl {app}}{14}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}Plattform\IeC {\"u}bergreifende Entwicklung}{14}{subsubsection.2.2.4}
-\contentsline {subsubsection}{\numberline {2.2.5}Xamarin}{15}{subsubsection.2.2.5}
-\contentsline {subsubsection}{\numberline {2.2.6}Mono}{15}{subsubsection.2.2.6}
-\contentsline {subsubsection}{\numberline {2.2.7}.NET Framework}{15}{subsubsection.2.2.7}
-\contentsline {subsection}{\numberline {2.3}Java}{16}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Grundlagen}{16}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Java Runtime Environment}{16}{subsubsection.2.3.2}
-\contentsline {section}{\numberline {3}Theoretische Grundlagen}{16}{section.3}
-\contentsline {subsection}{\numberline {3.1}Schwarmverhalten}{16}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}Allgemein}{16}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}Vorbilder aus dem Tierreich}{16}{subsubsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.3}Szenarien}{16}{subsubsection.3.1.3}
-\contentsline {subsubsection}{\numberline {3.1.4}Algorithmen}{16}{subsubsection.3.1.4}
-\contentsline {subsection}{\numberline {3.2}Kommunikation}{16}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Grundlagen}{16}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}TCP/IP}{16}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Wifi}{16}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Datenaustausch}{16}{subsubsection.3.2.4}
-\contentsline {section}{\numberline {4}Projektorganisation}{17}{section.4}
-\contentsline {subsection}{\numberline {4.1}Projektablaufplan}{17}{subsection.4.1}
-\contentsline {section}{\numberline {5}Konzeption}{18}{section.5}
-\contentsline {subsection}{\numberline {5.1}Anforderunsdefinitionen}{18}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Softwarearchitektur}{18}{subsubsection.5.1.1}
-\contentsline {subsection}{\numberline {5.2}Use Cases}{18}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {5.2.1}Connect}{18}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2}Synchronization}{19}{subsubsection.5.2.2}
-\contentsline {subsubsection}{\numberline {5.2.3}Szenario}{22}{subsubsection.5.2.3}
-\contentsline {subsubsection}{\numberline {5.2.4}Exception}{22}{subsubsection.5.2.4}
-\contentsline {subsection}{\numberline {5.3}Kommunikation}{22}{subsection.5.3}
-\contentsline {section}{\numberline {6}L\IeC {\"o}sungsansatz}{28}{section.6}
-\contentsline {section}{\numberline {7}Umsetzung}{29}{section.7}
-\contentsline {section}{\numberline {8}Evaluation}{30}{section.8}
-\contentsline {section}{\numberline {9}Zusammenfassung und Ausblick}{31}{section.9}
+\contentsline {subsection}{\numberline {2.2}}{12}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Das EV3-System}{12}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Der EV3-Stein (Steuereinheit)}{12}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Motoren}{14}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Sensoren}{14}{subsubsection.2.2.4}
+\contentsline {paragraph}{Farbsensor}{14}{section*.13}
+\contentsline {paragraph}{Ultraschallsensor}{15}{section*.14}
+\contentsline {paragraph}{Ber\IeC {\"u}hrungssensor}{15}{section*.15}
+\contentsline {paragraph}{Kreiselsensor (Gyroskop)}{16}{section*.16}
+\contentsline {paragraph}{Rotationssensor (Integiert)}{16}{section*.17}
+\contentsline {subsubsection}{\numberline {2.2.5}Programmierung}{16}{subsubsection.2.2.5}
+\contentsline {paragraph}{leJOS}{16}{section*.18}
+\contentsline {subsection}{\numberline {2.3}\gls {app} Entwicklung}{18}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Native \glspl {app}}{18}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Web \glspl {app}}{18}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Hybride \glspl {app}}{19}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}Plattform\IeC {\"u}bergreifende Entwicklung}{19}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.5}Xamarin}{20}{subsubsection.2.3.5}
+\contentsline {subsubsection}{\numberline {2.3.6}Mono}{20}{subsubsection.2.3.6}
+\contentsline {subsubsection}{\numberline {2.3.7}.NET Framework}{20}{subsubsection.2.3.7}
+\contentsline {subsection}{\numberline {2.4}Java}{21}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Grundlagen}{21}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Java Runtime Environment}{21}{subsubsection.2.4.2}
+\contentsline {section}{\numberline {3}Theoretische Grundlagen}{21}{section.3}
+\contentsline {subsection}{\numberline {3.1}Schwarmverhalten}{21}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Allgemein}{21}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Vorbilder aus dem Tierreich}{21}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Szenarien}{21}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}Algorithmen}{21}{subsubsection.3.1.4}
+\contentsline {subsection}{\numberline {3.2}Kommunikation}{21}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Grundlagen}{21}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}TCP/IP}{21}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Wifi}{21}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Datenaustausch}{21}{subsubsection.3.2.4}
+\contentsline {section}{\numberline {4}Projektorganisation}{22}{section.4}
+\contentsline {subsection}{\numberline {4.1}Projektablaufplan}{22}{subsection.4.1}
+\contentsline {section}{\numberline {5}Konzeption}{23}{section.5}
+\contentsline {subsection}{\numberline {5.1}Anforderunsdefinitionen}{23}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Softwarearchitektur}{23}{subsubsection.5.1.1}
+\contentsline {subsection}{\numberline {5.2}Use Cases}{23}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Connect}{23}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Synchronization}{24}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.3}Szenario}{27}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.4}Exception}{27}{subsubsection.5.2.4}
+\contentsline {subsection}{\numberline {5.3}Kommunikation}{27}{subsection.5.3}
+\contentsline {section}{\numberline {6}L\IeC {\"o}sungsansatz}{33}{section.6}
+\contentsline {section}{\numberline {7}Umsetzung}{34}{section.7}
+\contentsline {section}{\numberline {8}Evaluation}{35}{section.8}
+\contentsline {section}{\numberline {9}Zusammenfassung und Ausblick}{36}{section.9}

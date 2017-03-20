@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: dokumentation.aux
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: dokumentation.aux
 The style file: plainnat.bst
 A level-1 auxiliary file: dokumente/titel.aux
 A level-1 auxiliary file: dokumente/erklaerung.aux
@@ -14,7 +16,51 @@ A level-1 auxiliary file: dokumente/evaluation.aux
 A level-1 auxiliary file: dokumente/zusammenfassungausblick.aux
 A level-1 auxiliary file: dokumente/literatur.aux
 A level-1 auxiliary file: dokumente/anhang.aux
+A level-1 auxiliary file: dokumente/terminology.aux
 Database file #1: literatur.bib
+Warning--to sort, need author or key in Xamarin.Introductionto
+Warning--empty year in Xamarin.Introductionto
 Warning--empty year in DanielWurstl.Unterschiedeund
 Warning--empty year in PetraRiepe.NativeApp
-(There were 2 warnings)
+You've used 3 entries,
+            2773 wiz_defined-function locations,
+            624 strings with 5954 characters,
+and the built_in function-call counts, 865 in all, are:
+= -- 73
+> -- 20
+< -- 2
++ -- 9
+- -- 6
+* -- 48
+:= -- 117
+add.period$ -- 8
+call.type$ -- 3
+change.case$ -- 11
+chr.to.int$ -- 3
+cite$ -- 11
+duplicate$ -- 45
+empty$ -- 100
+format.name$ -- 8
+if$ -- 186
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 22
+num.names$ -- 8
+pop$ -- 40
+preamble$ -- 1
+purify$ -- 8
+quote$ -- 0
+skip$ -- 43
+stack$ -- 0
+substring$ -- 7
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 33
+warning$ -- 4
+while$ -- 6
+width$ -- 0
+write$ -- 38
+(There were 4 warnings)
