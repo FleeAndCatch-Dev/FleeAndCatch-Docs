@@ -8,38 +8,78 @@
 \subsubsection{LEGO Mindstorm}
 
 \newpage
-\subsection{App Entwicklung} %Simon ca. 8
+\subsection{\gls{app} Entwicklung} %Simon ca. 8
 
-Eine App, kurz für Application ist ein ausführbares Programm für mobile Geräte, wie Smartphones oder Tablets. Um eine App für ein Endgerät zu entwickeln, müssen im Voraus Zielpunkte abgeklärt werden, da je nach Art der Entwicklung andere Voraussetzungen und Möglichkeiten bestehen. Allgemein kennt die App Entwicklung drei verschiedene Arten, die native, web und hybride Entwicklung.\\
-In der nativen Entwicklung werden die direkten Ressourcen des Gerätes verwendet. Dazu gehört die Laufzeitumgebung, Bibliotheken, Geräteschnittstellen und andere APIs. Der Vorteil hierbei ist, dass diese Entwicklungen für Betriebssystem optimiert sind, da sie auf die vorhandenen Schnittstellen aufbauen können und daher komplexere und rechenintensivere Anwendungen ermöglichen.(Zitat ) die 
+\begin{wrapfigure}{r}{0.45\textwidth}
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/App-Development.jpg}
+	\end{center}
+	\caption{App Entwicklung}
+	\label{fig:appentwicklung}
+\end{wrapfigure}
 
+Eine \gls{app} ist ein ausführbares Programm für mobile Geräte, wie Smartphones oder Tablets. Um eine \gls{app} für ein mobiles Gerät zu entwickeln, müssen wie für andere Anwendungen im Voraus Anforderungen definiert werden, die diese erfüllen soll. Je nach festgelegten Anforderungen, die an das System gestellt werden, besteht eine bestimmte Anzahl von Möglichkeiten der Entwicklung. Allgemein kennt die \gls{app} Entwicklung drei verschiedene Arten, die native, web und hybride Entwicklung, siehe \eqref{native}, \eqref{web} und \eqref{hybride}. Dabei werden verschiedene \glspl{framework} verwendet, um mit unterschiedlichsten Programmiersprachen den Aufbau der Logik zu beschreiben. Eine \gls{app} besteht immer aus zwei Teile, dem \gls{ui}, das meist mit einer \gls{xml} ähnlichen Sprache beschrieben wird und dem Programmcode, der sich auf viele Klassen verteilt und die Funktionalitäten der \gls{app} beschreiben.
 
-Ein Beispiel ist hierfür eine native Android Entwicklung durch Java und Googles Android Studio, wobei die direkten Ressourcen von Android genutzt und somit auch die vorhandenen UI Elemente und Schnittstellen zur Verwendung kommen, die Android Nutzer gewohnt sind.\\
-Die web Entwicklung arbeitet hingegen zur nativen Entwicklung mit systemübergreifenden Ressourcen und greift dabei auf gängige Webtechnologien, wie HTML, CSS und Javascript zurück. Die App wird hierbei nicht wie normale Anwendungen direkt auf dem System des Gerätes ausgeführt, sondern kommt in dessen Browser zur Ausführung.
+\subsubsection{Native \glspl{app}}\label{native}
 
-\subsubsection{Arten}
+In der Entwicklung von nativen \glspl{app} werden die direkten Ressourcen des Gerätes verwendet. Dazu gehört die Laufzeitumgebung des Betriebssystemes, Bibliotheken und Hardwareschnittstellen. Der Vorteil von einer nativen Entwicklung liegt hauptsächlich darin, dass diese für das Betriebssystem optimiert ist und die vorhandenen Schnittstellen genutzt werden können, um komplexe und rechenintensive Anwendungen zu ermöglichen.\footnote{\citep[vgl.][Unterschiede und Vergleich native Apps vs. Web Apps]{DanielWurstl.Unterschiedeund}\label{note1}}\\
+Vertreter diese Entwicklung finden sich für verschiedene Betriebssysteme. Der populärste unter ihnen ist bei weitem Android mit einer nativen Java Entwicklung über Android Studio von Google. Sie besitzt aktuellen den höchsten Marktanteil und eine entsprechende Popularität unter Entwickler und Nutzer.
 
-\subsubsection*{Web Apps}
-\subsubsection*{Native Apps}
-\subsubsection*{Hybride Apps}
+\subsubsection{Web \glspl{app}}\label{web}
 
-\subsubsection{Plattformübergreifende Programmierung}
+Die Entwicklung von web \glspl{app} arbeitet mit systemübergreifenden Ressourcen und greift dabei auf gängige Webtechnologien, wie \gls{html}, \gls{css} und \gls{javascript} zurück. Die \gls{app} wird hierbei nicht wie normale Anwendungen direkt auf dem System des Gerätes ausgeführt, sondern kommt in dessen Browser zur Ausführung. Der Vorteil hierbei ist vor allem, dass diese Art von \gls{app} auf allen Betriebssystemen lauffähig ist und direkt über das Internet veröffentlicht und aktualisiert werden kann, jedoch wird eine stabile Internetverbindung vorausgesetzt.\footref{note1}\\
+Von dieser Entwicklung finden sich viele Vertreter mit der Unterstützung diverser Frameworks. Das populärste unter ihnen ist aktuell AngularJS von Google, was auf JavaScript basiert. In Kombination mit anderen Webtechnologien, wie gls{html} und \gls{css} lassen sich perfomante web \glspl{app} entwickeln.
 
-\subsubsection*{Xamarin}
+\subsubsection{Hybride \glspl{app}}\label{hybride}
+
+Die Entwicklung von hybride \glspl{app} vereinigt die beiden Entwicklungen von native und web. Sie besteht dabei aus einem nativen Rahmen, in der eine web \gls{app} zur Ausführung kommt, diese besitzt entsprechende Zugriffsrechte auf Hardwareschnittstellen, um diese mit \glspl{api} anzusprechen.\footnote{\citep[vgl.][Native App, Web App und Hybrid App im Überblick]{PetraRiepe.NativeApp}\label{note2}}\\
+Diese Entwicklung ist aktuell noch sehr jung, jedoch stechen hier bereits verschiedene Vertreter hervor. Der populärste unter ihnen ist Ionic von Drifty, welches auf Apache Cordova als Basis zurückgreift. In Kombination mit AngularJS, TypeScript und anderen Webtechnologien lässt sich die web \gls{app} entwickeln und auf einem beliebigen Gerät unter einem nativen Browser ausführen. Es unterstützt dabei verschiedenste Betriebssystem, wie Android, iOS und Windows. Diese Entwicklungen können dabei meist nicht nur mobil, sondern unter anderem auf weiteren Systemen, wie stationäre bereitgestellt werden.
+
+\subsubsection{Plattformübergreifende Entwicklung}
+
+Um die Entwicklung von \glspl{app} einfach zu halten, verwenden immer mehr Entwickler die Form der plattformübergreifenden Entwicklung. Dadurch lässt sich die \gls{app} unabhängig des Betriebssystems entwickeln und kann somit eine größere Menge von Nutzern erreichen. Diese Entwicklung greift dabei meist auf plattformübergreifende Konzepte, wie eine native Laufzeitumgebung, oder Browser zurück, um darin die \gls{app} auszuführen. Der große Vorteil in dieser Entwicklung, liegt in der Wiederverwendbarkeit des Quellcodes und der verbesserten Wartbarkeit, da hier lediglich ein Projekt gewartet werden muss und der Quellcode für viele Betriebssysteme übernommen werden kann. Zur plattformübergreifenden Entwicklung wurden die letzten Jahre viele Ansätze mit verschiedenen \glspl{framework} entwickelt. Beispiele hierfür sind Ionic, Unity, Qt oder Xamarin.\\
+\newpage
+\subsubsection{Xamarin}
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+	\begin{center}
+		\includegraphics[width=0.25\textwidth]{images/technische_grundlagen/xamarin.png}
+	\end{center}
+	\caption{Xamarin}
+	\label{fig:xamarin}
+\end{wrapfigure}
+
+Xamarin ist ein \gls{framework} zur Entwicklung von nativen plattformübergreifenden \glspl{app}. Dabei baut Xamarin auf Mono, einer opensource Version des .NET Framework, welches auf den .NET ECMA Standards basiert.\footnote{\citep[vgl.][Introduction to Mobile Development - Xamarin]{Xamarin.Introductionto}\label{note3}} Um nativen Quellcode auf den verschiedenen Systemen auszuführen, setzt Xamarin auf verschiedene Softwarekomponenten, um aus einem mit .NET entwickelten Projekt nativen Quellcode zu erzeugen.\\
+Für iOS Systeme verwendet Xamarin den AOT (Ahead-of-Time) Compiler, um aus einem Xamarin.iOS Projekt ARM Maschinencode zur erzeugen, der so entsprechend schnell ausgeführt werden kann.
+ 
+ Bei Android nutzt Xamarin die IL, um JIT nativen Quellcode für die entsprechende Hardware zu compilieren und die \gls{app} auszuführen.
+
+\begin{comment}
+	Zur Ausführung kommt es in einem eigenen Laufzeitsystem durch das .NET Framework, wobei unter Linux Betriebssystemen Mono genutzt wird. Zur Entwicklung bringt Xamarin eine große Bandbreite von Funktionalitäten für den Entwickler, wie Bibliotheken, einer Test Cloud und Unterstützung von nativen Bibliotheken, wie von Java und Objective-C. Xamarin bietet Unterstützung für diverse Betriebssysteme, wie zum Beispiel Android, iOS, Windows und Windows Phone. Um mit Xamarin zu entwickeln, gibt es aktuell verschiedene Möglichkeiten. Einerseitz kann mit Xamarin Studio auf einem OSX System, oder mit Visual Studio auf Windows und Linux entwickelt werden.\\
+\end{comment}
+
 \subsubsection{Mono}
-\subsubsection{.Net Framework}
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+	\begin{center}
+		\includegraphics[width=0.25\textwidth]{images/technische_grundlagen/mono.png}
+	\end{center}
+	\caption{Mono}
+	\label{fig:mono}
+\end{wrapfigure}
+
+Mono ist eine opensource Laufzeitumgebung für Linux Betriebssysteme, um Anwendungen auszuführen, die auf dem .NET Framework basieren. Dabei greift Mono auf Standards des CLI und ECMA von C\# zurück. Gestartet wurde das Projekt durch die Firma Novell und aktuell weiterentwickelt von Microsoft und wird dadurch auf gleichem Stand wie .NET gehalten.
+
+\subsubsection{.NET Framework}
+
+Das .NET Framework ist eine Laufzeitumgebung für .NET Anwendungen, die verschiedene Dienste bereitstellt. Es besteht aus zwei Hauptkomponenten, der CLR, die eine Speicherverwaltung und verschiedene Systemdienste bereitstellt, sowie der .NET Bibliothek. Um Anwendungen für .NET zu entwickeln, wird die entsprechende Version von .NET \gls{framework} auf dem System benötigt. Als Programmiersprache ist der Entwickler weitgehend unabhängig, der Quellcode muss jedoch die CLI-Spezifikationen erfüllen. Dafür eignen sich unter anderem die Programmiersprachen von Microsoft, wie VisualBasic, C\#, VisulF\# und C++.
 
 \subsection{Java} %Gemeinsam ca. 2
 
 \subsubsection{Grundlagen}
 \subsubsection{Java Runtime Environment}
 
-\subsection{Kommunikation} %Manuel ca. 5
-
-\subsubsection{Grundlagen}
-\subsubsection{TCP/IP}
-\subsubsection{Wifi}
-\subsubsection{Datenaustausch} %(JSON und Serialisierung)
+\section{Theoretische Grundlagen}
 
 \subsection{Schwarmverhalten}
 \subsubsection{Allgemein}
@@ -47,3 +87,10 @@ Die web Entwicklung arbeitet hingegen zur nativen Entwicklung mit systemübergre
 % Fische, Bienen, Ameisen
 \subsubsection{Szenarien}
 \subsubsection{Algorithmen}
+
+\subsection{Kommunikation} %Manuel ca. 5
+
+\subsubsection{Grundlagen}
+\subsubsection{TCP/IP}
+\subsubsection{Wifi}
+\subsubsection{Datenaustausch} %(JSON und Serialisierung)

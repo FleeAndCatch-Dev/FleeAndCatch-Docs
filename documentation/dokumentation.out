@@ -9,36 +9,40 @@
 \BOOKMARK [3][-]{subsubsection.2.1.3}{Antriebsarten}{subsection.2.1}% 9
 \BOOKMARK [3][-]{subsubsection.2.1.4}{Sensorik}{subsection.2.1}% 10
 \BOOKMARK [3][-]{subsubsection.2.1.5}{LEGO Mindstorm}{subsection.2.1}% 11
-\BOOKMARK [2][-]{subsection.2.2}{App Entwicklung}{section.2}% 12
-\BOOKMARK [3][-]{subsubsection.2.2.1}{Arten}{subsection.2.2}% 13
-\BOOKMARK [3][-]{subsubsection.2.2.2}{Plattform\374bergreifende Programmierung}{subsection.2.2}% 14
-\BOOKMARK [3][-]{subsubsection.2.2.3}{Mono}{subsection.2.2}% 15
-\BOOKMARK [3][-]{subsubsection.2.2.4}{.Net Framework}{subsection.2.2}% 16
-\BOOKMARK [2][-]{subsection.2.3}{Java}{section.2}% 17
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Grundlagen}{subsection.2.3}% 18
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Java Runtime Environment}{subsection.2.3}% 19
-\BOOKMARK [2][-]{subsection.2.4}{Kommunikation}{section.2}% 20
-\BOOKMARK [3][-]{subsubsection.2.4.1}{Grundlagen}{subsection.2.4}% 21
-\BOOKMARK [3][-]{subsubsection.2.4.2}{TCP/IP}{subsection.2.4}% 22
-\BOOKMARK [3][-]{subsubsection.2.4.3}{Wifi}{subsection.2.4}% 23
-\BOOKMARK [3][-]{subsubsection.2.4.4}{Datenaustausch}{subsection.2.4}% 24
-\BOOKMARK [2][-]{subsection.2.5}{Schwarmverhalten}{section.2}% 25
-\BOOKMARK [3][-]{subsubsection.2.5.1}{Allgemein}{subsection.2.5}% 26
-\BOOKMARK [3][-]{subsubsection.2.5.2}{Vorbilder aus dem Tierreich}{subsection.2.5}% 27
-\BOOKMARK [3][-]{subsubsection.2.5.3}{Szenarien}{subsection.2.5}% 28
-\BOOKMARK [3][-]{subsubsection.2.5.4}{Algorithmen}{subsection.2.5}% 29
-\BOOKMARK [1][-]{section.3}{Projektorganisation}{}% 30
-\BOOKMARK [2][-]{subsection.3.1}{Projektablaufplan}{section.3}% 31
-\BOOKMARK [1][-]{section.4}{Konzeption}{}% 32
-\BOOKMARK [2][-]{subsection.4.1}{Anforderunsdefinitionen}{section.4}% 33
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Softwarearchitektur}{subsection.4.1}% 34
-\BOOKMARK [2][-]{subsection.4.2}{Use Cases}{section.4}% 35
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Connect}{subsection.4.2}% 36
-\BOOKMARK [3][-]{subsubsection.4.2.2}{Synchronization}{subsection.4.2}% 37
-\BOOKMARK [3][-]{subsubsection.4.2.3}{Szenario}{subsection.4.2}% 38
-\BOOKMARK [3][-]{subsubsection.4.2.4}{Exception}{subsection.4.2}% 39
-\BOOKMARK [2][-]{subsection.4.3}{Kommunikation}{section.4}% 40
-\BOOKMARK [1][-]{section.5}{L\366sungsansatz}{}% 41
-\BOOKMARK [1][-]{section.6}{Umsetzung}{}% 42
-\BOOKMARK [1][-]{section.7}{Evaluation}{}% 43
-\BOOKMARK [1][-]{section.8}{Zusammenfassung und Ausblick}{}% 44
+\BOOKMARK [2][-]{subsection.2.2}{app Entwicklung}{section.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Native app}{subsection.2.2}% 13
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Web app}{subsection.2.2}% 14
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Hybride app}{subsection.2.2}% 15
+\BOOKMARK [3][-]{subsubsection.2.2.4}{Plattform\374bergreifende Entwicklung}{subsection.2.2}% 16
+\BOOKMARK [3][-]{subsubsection.2.2.5}{Xamarin}{subsection.2.2}% 17
+\BOOKMARK [3][-]{subsubsection.2.2.6}{Mono}{subsection.2.2}% 18
+\BOOKMARK [3][-]{subsubsection.2.2.7}{.NET Framework}{subsection.2.2}% 19
+\BOOKMARK [2][-]{subsection.2.3}{Java}{section.2}% 20
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Grundlagen}{subsection.2.3}% 21
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Java Runtime Environment}{subsection.2.3}% 22
+\BOOKMARK [1][-]{section.3}{Theoretische Grundlagen}{}% 23
+\BOOKMARK [2][-]{subsection.3.1}{Schwarmverhalten}{section.3}% 24
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Allgemein}{subsection.3.1}% 25
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Vorbilder aus dem Tierreich}{subsection.3.1}% 26
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Szenarien}{subsection.3.1}% 27
+\BOOKMARK [3][-]{subsubsection.3.1.4}{Algorithmen}{subsection.3.1}% 28
+\BOOKMARK [2][-]{subsection.3.2}{Kommunikation}{section.3}% 29
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Grundlagen}{subsection.3.2}% 30
+\BOOKMARK [3][-]{subsubsection.3.2.2}{TCP/IP}{subsection.3.2}% 31
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Wifi}{subsection.3.2}% 32
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Datenaustausch}{subsection.3.2}% 33
+\BOOKMARK [1][-]{section.4}{Projektorganisation}{}% 34
+\BOOKMARK [2][-]{subsection.4.1}{Projektablaufplan}{section.4}% 35
+\BOOKMARK [1][-]{section.5}{Konzeption}{}% 36
+\BOOKMARK [2][-]{subsection.5.1}{Anforderunsdefinitionen}{section.5}% 37
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Softwarearchitektur}{subsection.5.1}% 38
+\BOOKMARK [2][-]{subsection.5.2}{Use Cases}{section.5}% 39
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Connect}{subsection.5.2}% 40
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Synchronization}{subsection.5.2}% 41
+\BOOKMARK [3][-]{subsubsection.5.2.3}{Szenario}{subsection.5.2}% 42
+\BOOKMARK [3][-]{subsubsection.5.2.4}{Exception}{subsection.5.2}% 43
+\BOOKMARK [2][-]{subsection.5.3}{Kommunikation}{section.5}% 44
+\BOOKMARK [1][-]{section.6}{L\366sungsansatz}{}% 45
+\BOOKMARK [1][-]{section.7}{Umsetzung}{}% 46
+\BOOKMARK [1][-]{section.8}{Evaluation}{}% 47
+\BOOKMARK [1][-]{section.9}{Zusammenfassung und Ausblick}{}% 48
