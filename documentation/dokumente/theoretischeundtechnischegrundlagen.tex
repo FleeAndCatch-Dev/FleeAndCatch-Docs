@@ -284,7 +284,6 @@ Diese Entwicklung ist aktuell noch sehr jung, jedoch stechen hier bereits versch
 Um die Entwicklung von \glspl{app} einfach zu halten, verwenden immer mehr Entwickler die Form der plattformübergreifenden Entwicklung. Dadurch lässt sich die \gls{app} unabhängig des Betriebssystems entwickeln und kann somit eine größere Menge von Nutzern erreichen. Diese Entwicklung greift dabei meist auf plattformübergreifende Konzepte, wie eine native Laufzeitumgebung, oder Browser zurück, um darin die \gls{app} auszuführen. Der große Vorteil in dieser Entwicklung, liegt in der Wiederverwendbarkeit des Quellcodes und der verbesserten Wartbarkeit, da hier lediglich ein Projekt gewartet werden muss und der Quellcode für viele Betriebssysteme übernommen werden kann. Zur plattformübergreifenden Entwicklung wurden die letzten Jahre viele Ansätze mit verschiedenen \glspl{framework} entwickelt. Beispiele hierfür sind Ionic, Unity, Qt oder Xamarin.\\
 \newpage
 
-\color{process}
 \subsubsection{Xamarin}
 
 \begin{wrapfigure}{r}{0.3\textwidth}
@@ -299,31 +298,53 @@ Xamarin ist ein \gls{framework} zur Entwicklung von nativen plattformübergreife
 Für iOS Systeme verwendet Xamarin den \gls{aot} Compiler, um aus einem Xamarin.iOS Projekt \gls{arm} Maschinencode zur erzeugen, der entsprechend schnell auf dem System ausgeführt werden kann.\footnote{\citep[vgl.][Introduction to Mobile Development - Xamarin]{Xamarin.Introductionto}\label{note3}} Bei Android hingegen wird der Quellcode in \gls{il} übersetzt, welches \gls{jit} nutzt um zur Laufzeit Maschinencode für das entsprechende Gerät zu erzeugen.\footref{note3} Dazu nutzt Xamarin Softwarekomponenten, während der Laufzeit, um bestimmte Prozesse, wie Speicherverwaltung und Plattformoperationen. Zur Entwicklung bringt Xamarin eine große Bandbreite von Funktionalitäten für den Entwickler, wie Bibliotheken, eine Test Cloud, sowie Unterstützung von nativen Bibliotheken, wie für \gls{java} oder \gls{objectivc}. Xamarin bietet Unterstützung für diverse Betriebssysteme, wie zum Beispiel Android, iOS, Windows und Windows Phone. Um mit Xamarin zu entwickeln, gibt es aktuell verschiedene Möglichkeiten mit Unterstützung auf unterschiedlichen Betriebssystemen. Einerseits kann mit Xamarin Studio auf einem OSX System, oder mit Visual Studio auf Windows und Linux entwickelt werden.\\
 Wie viele andere \glspl{framework}, bietet auch Xamarin verschiedene nützliche \glspl{template}, die jeweils andere Nutzen besitzen. Diese bauen dabei auf zwei Hauptkomponenten von Bibliotheken, einerseits Shared Projects und Protable Class Libraries.
 
-\begin{wrapfigure}{r}{0.65\textwidth}
+\begin{wrapfigure}{r}{0.55\textwidth}
 	\begin{center}
-		\includegraphics[width=0.6\textwidth]{images/technische_grundlagen/SharedAssetProject.png}
+		\includegraphics[width=0.5\textwidth]{images/technische_grundlagen/SharedAssetProject.png}
 	\end{center}
 	\caption{Shared Project}
-	\label{fig:xamarin}
+	\label{fig:shared}
 \end{wrapfigure}
 
 \paragraph{Shared Projects}
 
+ermöglichen dem Entwickler Quellcode für verschiedene Plattformen zu entwickeln, wobei die plattformspezifischen Projekte das entsprechende shared Project referenzieren. Somit besitzt diese Projektart keinen direkten Output, sondern kopiert den Quellcode in das zu entsprechend bauende Projekt, siehe Abbildung \eqref{fig:shared}.\footnote{\citep[vgl.][Shared Projects - Xamarin]{Xamarin.SharedProjects}\label{note4}} Der Hauptunterschied zu anderen Projekten ist zudem, dass ein shared Project keine anderen Abhängigkeiten haben darf und daher nur als Referenz für andere Projekte dienen.
 
-, welches die Möglichkeit bietet den erstellten Quellcode für verschiedene Systeme bereitzustellen und in andere Projekte, wie Xamarin native Projekte bereitzustellen.
-
-\begin{wrapfigure}{r}{0.65\textwidth}
+\begin{wrapfigure}{r}{0.55\textwidth}
 	\begin{center}
-		\includegraphics[width=0.6\textwidth]{images/technische_grundlagen/PortableClassLibrary.png}
+		\includegraphics[width=0.5\textwidth]{images/technische_grundlagen/PortableClassLibrary.png}
 	\end{center}
 	\caption{Portable Class Library}
-	\label{fig:xamarin}
+	\label{fig:portable}
 \end{wrapfigure}
 
 \paragraph{Protable Class Libraries}
 
+ermöglichen dem Entwickler die Implementierung von plattformübergreifende Bibliotheken, aus denen \glspl{dll} erzeugt werden können. Das Besondere an Portable Class Libraries ist dabei, dass die Plattformen spezifisch ausgewählt werden können, wobei auf die Unterstützung verschiedener Betriebssysteme zu achten ist, siehe Abbildung \eqref{fig:pcl_support}.\footnote{\citep[vgl.][Introduction to Portable Class Libraries - Xamarin]{Xamarin.PortableClass}\label{note5}} Eine Portable Class Library besitzt darüber hinaus verschiedene Vor- bzw. Nachteile, die für oder Gegen ihre Nutzung sprechen.\\
 
+\begin{wrapfigure}{r}{0.55\textwidth}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{images/technische_grundlagen/pclSupport.png}
+	\end{center}
+	\caption{Unterstützung Portable Class Library}
+	\label{fig:pcl_support}
+\end{wrapfigure}
 
+\noindent
+Vorteile:
+\begin{itemize}
+	\item Implementierung von zentralem Quellcode
+	\item Einfaches Refactoring
+	\item Referenzierung von Anwendungen
+\end{itemize}
+\noindent
+Nachteile:
+\begin{itemize}
+	\item Keine Referenzierung von Plattform spezifischem Quellcode
+	\item Keine Standardbibliotheken vorhanden
+\end{itemize}
+\color{process}
+\newpage
 \subsubsection{Mono}\label{mono}
 
 \begin{wrapfigure}{r}{0.3\textwidth}

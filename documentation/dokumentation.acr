@@ -25,42 +25,44 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{A}\relax\glsresetentrylist
 \glossentry{aot}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{1}\delimN 
 \glsXpageXglsnumberformat{}{7}\delimN 
 \glsXpageXglsnumberformat{}{21}, \glsseeformat[Glossary:]{gls-aot}{}}}\relax\glsresetentrylist
 \glossentry{api}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{1}\delimN 
-\glsXpageXglsnumberformat{}{7}\delimN 
 \glsXpageXglsnumberformat{}{20}, \glsseeformat[Glossary:]{gls-api}{}}}\relax\glsresetentrylist
 \glossentry{app}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{1}\delimN 
 \glsXpageXglsnumberformat{}{5}\delimN 
-\glsXpageXglsnumberformat{}{19}\delimR 
-\glsXpageXglsnumberformat{}{21}}}\relax\glsresetentrylist
+\glsXpageXglsnumberformat{}{19}\delimN 
+\glsXpageXglsnumberformat{}{20}}}\relax\glsresetentrylist
 \glossentry{arm}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{1}\delimN 
 \glsXpageXglsnumberformat{}{7}\delimN 
 \glsXpageXglsnumberformat{}{21}, \glsseeformat[Glossary:]{gls-arm}{}}}\glsgroupskip
 \glsgroupheading{C}\relax\glsresetentrylist
 \glossentry{css}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{1}\delimN 
 \glsXpageXglsnumberformat{}{7}\delimN 
 \glsXpageXglsnumberformat{}{19}\delimN 
 \glsXpageXglsnumberformat{}{20}, \glsseeformat[Glossary:]{gls-css}{}}}\glsgroupskip
+\glsgroupheading{D}\relax\glsresetentrylist
+\glossentry{dll}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{22}, \glsseeformat[Glossary:]{gls-dll}{}}}\glsgroupskip
 \glsgroupheading{H}\relax\glsresetentrylist
 \glossentry{html}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{1}\delimN 
 \glsXpageXglsnumberformat{}{7}\delimN 
 \glsXpageXglsnumberformat{}{19}\delimN 
 \glsXpageXglsnumberformat{}{20}, \glsseeformat[Glossary:]{gls-html}{}}}\glsgroupskip
+\glsgroupheading{I}\relax\glsresetentrylist
+\glossentry{il}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{7}\delimN 
+\glsXpageXglsnumberformat{}{21}, \glsseeformat[Glossary:]{gls-il}{}}}\glsgroupskip
+\glsgroupheading{J}\relax\glsresetentrylist
+\glossentry{jit}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{7}\delimN 
+\glsXpageXglsnumberformat{}{21}, \glsseeformat[Glossary:]{gls-jit}{}}}\glsgroupskip
 \glsgroupheading{U}\relax\glsresetentrylist
 \glossentry{ui}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{1}\delimN 
 \glsXpageXglsnumberformat{}{7}\delimN 
 \glsXpageXglsnumberformat{}{19}, \glsseeformat[Glossary:]{gls-ui}{}}}\glsgroupskip
 \glsgroupheading{X}\relax\glsresetentrylist
 \glossentry{xml}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{1}\delimN 
 \glsXpageXglsnumberformat{}{7}\delimN 
 \glsXpageXglsnumberformat{}{19}, \glsseeformat[Glossary:]{gls-xml}{}}}%
 \end{theglossary}\glossarypostamble
