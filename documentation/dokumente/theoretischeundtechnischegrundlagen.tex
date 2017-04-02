@@ -359,11 +359,10 @@ Mono ist ein opensource Framework, das auf dem .NET Framework von Microsoft basi
 Um Anwendungen auf verschieden Systemen auszuführen, nutzt Mono verschiedene Komponenten. Dazu gehört an vorderster Stelle ein Compiler, um den erstellten Quellcode in die jeweilige Maschinensprache zu übersetzen. Die Übersetzung findet dabei in Kooperation der Mono Runtime statt, die die entsprechende Infrastruktur zur Ausführung der Anwendung bereitstellt. Für eine effiziente Entwicklung stellt Mono zwei Bibliotheken zur Verfügung, einerseits die .NET Class Library, die die Grundelemente von .NET enthält, sowie die Mono Class Library mit zusätzlichen Funktionen für plattformübergreifende Anwendungen.\\
 Für die Nutzung von Mono stehen verschiedene Vorteile im Vergleich zu anderen Framework. Der Hauptgrund für die Nutzung liegt vor allem in der Popularität von .NET, da dies auf den meisten Computern zur Verfügung steht, oder installiert werden kann. Ein großer Nutzen stellt die High-Level Programmierung dar, die eine Implementierung mit einer Laufzeitumgebung ermöglicht, die Funktionen wie Speicherverwaltung selbst organisiert. Durch Verwendung der \gls{clr} kann der Entwickler seine übliche Programmiersprache verwenden und ist unhabhängig vom bestehenden System.
 
-\color{process}
-
-\newpage
 \subsubsection{.NET Framework}\label{net}
 %\footnote{\citep[vgl.][Overview of the .NET Framework]{Microsoft.Overviewof}\label{note7}}
+
+Das .NET Framework dient zur Entwicklung, sowie Ausführung von Anwendungen, die mit Programmiersprachen implementiert werden, die auf den Standards von .NET basieren. Es besteht aus verschiedenen Komponenten, wobei der Kern des Frameworks in der \gls{clr} liegt. Diese ist verantwortlich für die Laufzeitumgebung und entsprechend für die Ausführung der Anwendungen, indem es die bereitgestellten Ressourcen des Systems nutzt.\\
 
 \begin{wrapfigure}{r}{0.45\textwidth}
 	\begin{center}
@@ -373,21 +372,18 @@ Für die Nutzung von Mono stehen verschiedene Vorteile im Vergleich zu anderen F
 	\label{fig:net}
 \end{wrapfigure}
 
-Das .NET Framework dient zur Entwicklung, sowie Ausführung von Anwendungen, die mit Programmiersprachen implementiert werden, die auf den Standards von .NET basieren. Es besteht aus verschiedenen Komponenten, wobei der Kern des Frameworks in der \gls{clr} liegt. Diese ist verantwortlich für die Laufzeitumgebung und entsprechend für die Ausführung der Anwendungen, indem es die bereitgestellten Ressourcen nutzt und um diese auszuführen.\\
-Die \gls{clr} kompiliert dabei zur Laufzeit der Anwendung den Quellcode für das entsprechende System, um diesen native als Maschinencode auszuführen. Dabei werden verschiedene Funktionen genutzt, um eine flexible Ausführung zu gewährleisten. Dazu gehört beispielsweise das Memory Management, zur Speicherverwaltung, sowie das Thread Management, um die einzelnen Prozesse zu organisieren.\\
-Um plattformübergreifend zu entwickeln stellt das .NET Framework die .NET Class Library zur Verfügung. Diese enthält wie andere Bibliotheken eine Sammlung bereits implementierten Quellcode, um diesen zu nutzen. Zusätzlich stellt sie Klassen bereit, um auf systemnahe Schnittstellen zuzugreifen.\\
-Mit dem .NET Framework lässt sich eine große Bandbreite von Anwendungen entwickeln, von Konsolenanwendungen, grafischen Oberflächen, bis hin zu Webanwendungen.
+\noindent
+Die \gls{clr} führt zur Laufzeit je nach System verschiedene Aktionen aus, um die entsprechende Anwendung auszuführen. Der allgemeine Ablauf ist dabei folgender. Der Quellcode wird in die \gls{clr} geladen und nach Sicherheitsanforderungen entsprechend des Systems überprüft. Anschließend wird er durch eine \gls{jit} Kompilierung in einen \gls{il} Quellcode konvertiert, um diesen nativ auf dem System ausführen zu können. Der \gls{il} Quellcode setzt dabei auf die gesetzten Standards der \gls{cli} auf, die eine sprach- und plattformunabhängige Entwicklung von Anwendungen ermöglicht.\\
+Das .NET Framework bietet zusätzlich zur unabhängigen Entwicklung verschiedene unterstützende Komponenten. Die wichtigste unter ihnen ist die .NET Class Library. Diese unterstützt den Entwickler mit einer Sammlung bereits implementierten Quellcode, wie Klassen und entsprechenden Zugang zu systemnahen Schnittstellen. Mit dem .NET Framework lässt sich eine große Bandbreite von Anwendungen entwickeln, von Konsolenanwendungen, grafischen Oberflächen, bis hin zu Webanwendungen.\\
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.6\textwidth]{images/technische_grundlagen/clr.png}
+	\includegraphics[width=0.65\textwidth]{images/technische_grundlagen/clr.png}
 	\caption{Common Language Runtime}
 	\label{fig:clr}
 \end{figure}
 
-\begin{comment}
-	Beim Ausführen des C#-Programms wird die Assembly in die CLR geladen, was je nach den im Manifest enthaltenen Informationen die Durchführung verschiedener Aktionen erfordert. Wenn die Sicherheitsanforderungen erfüllt sind, konvertiert die CLR den IL-Code mithilfe der Just-In-Time (JIT)-Kompilierung in systemeigene Maschinenanweisungen. Die CLR stellt darüber hinaus weitere Dienste zur automatischen Garbage Collection, Ausnahmebehandlung und Ressourcenverwaltung bereit. Der über die CLR ausgeführte Code wird manchmal als "verwalteter Code" bezeichnet. Dieser steht im Gegensatz zum "nicht verwalteten Code", der in systemeigene Maschinensprache kompiliert wird, die auf ein bestimmtes System abgestimmt ist. Das folgende Diagramm veranschaulicht die Beziehungen zwischen C#-Quellcodedateien, den .NET Framework-Klassenbibliotheken, Assemblys sowie der CLR zur Kompilierungszeit und zur Laufzeit.
-\end{comment}
+\color{process}
 
 \newpage
 \section{Theoretische Grundlagen}

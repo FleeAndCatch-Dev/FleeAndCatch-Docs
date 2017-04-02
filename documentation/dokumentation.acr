@@ -39,10 +39,12 @@
 \glsgroupheading{C}\relax\glsresetentrylist
 \glossentry{cli}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{7}\delimN 
-\glsXpageXglsnumberformat{}{13}, \glsseeformat[Glossary:]{gls-cli}{}}}\relax\glsresetentrylist
+\glsXpageXglsnumberformat{}{13}\delimN 
+\glsXpageXglsnumberformat{}{14}, \glsseeformat[Glossary:]{gls-cli}{}}}\relax\glsresetentrylist
 \glossentry{clr}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{7}\delimN 
-\glsXpageXglsnumberformat{}{13}, \glsseeformat[Glossary:]{gls-clr}{}}}\relax\glsresetentrylist
+\glsXpageXglsnumberformat{}{13}\delimN 
+\glsXpageXglsnumberformat{}{14}, \glsseeformat[Glossary:]{gls-clr}{}}}\relax\glsresetentrylist
 \glossentry{css}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{7}\delimN 
 \glsXpageXglsnumberformat{}{9}\delimN 
@@ -59,11 +61,13 @@
 \glsgroupheading{I}\relax\glsresetentrylist
 \glossentry{il}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{7}\delimN 
-\glsXpageXglsnumberformat{}{11}, \glsseeformat[Glossary:]{gls-il}{}}}\glsgroupskip
+\glsXpageXglsnumberformat{}{11}\delimN 
+\glsXpageXglsnumberformat{}{14}, \glsseeformat[Glossary:]{gls-il}{}}}\glsgroupskip
 \glsgroupheading{J}\relax\glsresetentrylist
 \glossentry{jit}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{7}\delimN 
-\glsXpageXglsnumberformat{}{11}, \glsseeformat[Glossary:]{gls-jit}{}}}\glsgroupskip
+\glsXpageXglsnumberformat{}{11}\delimN 
+\glsXpageXglsnumberformat{}{14}, \glsseeformat[Glossary:]{gls-jit}{}}}\glsgroupskip
 \glsgroupheading{U}\relax\glsresetentrylist
 \glossentry{ui}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{7}\delimN 

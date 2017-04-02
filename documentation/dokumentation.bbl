@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,12 +10,6 @@
 \newblock Unterschiede und vergleich native apps vs. web apps.
 \newblock URL
   \url{http://www.app-entwickler-verzeichnis.de/faq-app-entwicklung/11-definitionen/107-unterschiede-und-vergleich-native-apps-vs-web-apps}.
-
-\bibitem[Microsoft()]{Microsoft.Overviewof}
-Microsoft.
-\newblock Overview of the .net framework.
-\newblock URL
-  \url{https://msdn.microsoft.com/en-us/library/zw4w595w(v=vs.110).aspx}.
 
 \bibitem[{Mono project}(17.03.2017)]{MonoProject.AboutMono}
 {Mono project}.
