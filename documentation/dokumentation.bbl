@@ -1,0 +1,64 @@
+\begin{thebibliography}{9}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{Daniel W{\"u}rstl}()]{DanielWurstl.Unterschiedeund}
+{Daniel W{\"u}rstl}.
+\newblock Unterschiede und vergleich native apps vs. web apps.
+\newblock URL
+  \url{http://www.app-entwickler-verzeichnis.de/faq-app-entwicklung/11-definitionen/107-unterschiede-und-vergleich-native-apps-vs-web-apps}.
+
+\bibitem[Microsoft()]{Microsoft.Overviewof}
+Microsoft.
+\newblock Overview of the .net framework.
+\newblock URL
+  \url{https://msdn.microsoft.com/en-us/library/zw4w595w(v=vs.110).aspx}.
+
+\bibitem[{Mono project}(17.03.2017)]{MonoProject.AboutMono}
+{Mono project}.
+\newblock About mono | mono, 17.03.2017.
+\newblock URL \url{https://www.mono-project.com/docs/about-mono/}.
+
+\bibitem[{Petra Riepe}()]{PetraRiepe.NativeApp}
+{Petra Riepe}.
+\newblock Native app, web app und hybrid app im {\"u}berblick: Warum native
+  wenn es auch hybrid geht?
+\newblock URL
+  \url{http://www.computerwoche.de/a/warum-native-wenn-es-auch-hybrid-geht,3096411}.
+
+\bibitem[Sch{\"o}bel et~al.(2015)Sch{\"o}bel, Leimbach, and
+  Jost]{Schobel.RobertaEV3Programmieren}
+Maximilian Sch{\"o}bel, Thorsten Leimbach, and Beate Jost.
+\newblock \emph{Roberta - EV3-Programmieren mit Java}.
+\newblock Roberta - Lernen mit Robotern. Fraunhofer-Verl., Stuttgart, 2015.
+\newblock ISBN 9783839608401.
+
+\bibitem[Scholz et~al.(2014)Scholz, Jost, and Leimbach]{Scholz.DasEV3}
+Matthias~Paul Scholz, Beate Jost, and Thorsten Leimbach.
+\newblock \emph{Das EV3 Roboter Universum: Ein umfassender Einstieg in LEGO
+  MINDSTORMS mit 8 spannenden Roboterprojekten}.
+\newblock 1. auflage edition, 2014.
+\newblock ISBN 3-8266-9473-2.
+
+\bibitem[Xamarin({\natexlab{a}})]{Xamarin.Introductionto}
+Xamarin.
+\newblock Introduction to mobile development - xamarin, {\natexlab{a}}.
+\newblock URL
+  \url{https://developer.xamarin.com/guides/cross-platform/getting_started/introduction_to_mobile_development/}.
+
+\bibitem[Xamarin({\natexlab{b}})]{Xamarin.PortableClass}
+Xamarin.
+\newblock Introduction to portable class libraries - xamarin, {\natexlab{b}}.
+\newblock URL
+  \url{https://developer.xamarin.com/guides/cross-platform/application_fundamentals/pcl/introduction_to_portable_class_libraries/}.
+
+\bibitem[Xamarin({\natexlab{c}})]{Xamarin.SharedProjects}
+Xamarin.
+\newblock Shared projects - xamarin, {\natexlab{c}}.
+\newblock URL
+  \url{https://developer.xamarin.com/guides/cross-platform/application_fundamentals/shared_projects/}.
+
+\end{thebibliography}

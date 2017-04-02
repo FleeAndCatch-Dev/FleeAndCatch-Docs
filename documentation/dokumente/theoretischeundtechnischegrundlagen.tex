@@ -343,7 +343,7 @@ Nachteile:
 	\item Keine Referenzierung von Plattform spezifischem Quellcode
 	\item Keine Standardbibliotheken vorhanden
 \end{itemize}
-\color{process}
+
 \newpage
 \subsubsection{Mono}\label{mono}
 
@@ -355,51 +355,41 @@ Nachteile:
 	\label{fig:mono}
 \end{wrapfigure}
 
-Mono ist ein opensource Framework, die auf dem .NET Framework von Microsoft basiert. Die Implementierung von Mono greift dabei auf die \gls{ecma} Standards von .NET für die Programmiersprache \gls{csharp}, sowie die \gls{cli} zurück.\footnote{\citep[vgl.][About Mono]{Mono project.AboutMono}\label{note6}} Dies ermöglicht Entwicklern die Erstellung von plattformübergreifenden Anwendungen, welche mittels einer zur Verfügung gestellten Laufzeitumgebung auf verschiedenen Systemen ausgeführt werden können.\\
+Mono ist ein opensource Framework, das auf dem .NET Framework von Microsoft basiert. Die Implementierung von Mono greift dabei auf die Standards von .NET für die Programmiersprache \gls{csharp}, sowie die \gls{cli} zurück.\footnote{\citep[vgl.][About Mono]{MonoProject.AboutMono}\label{note6}} Dies ermöglicht Entwicklern die Erstellung von plattformübergreifenden Anwendungen, welche mittels einer zur Verfügung gestellten Laufzeitumgebung auf verschiedenen Systemen ausgeführt werden können.\\
 Um Anwendungen auf verschieden Systemen auszuführen, nutzt Mono verschiedene Komponenten. Dazu gehört an vorderster Stelle ein Compiler, um den erstellten Quellcode in die jeweilige Maschinensprache zu übersetzen. Die Übersetzung findet dabei in Kooperation der Mono Runtime statt, die die entsprechende Infrastruktur zur Ausführung der Anwendung bereitstellt. Für eine effiziente Entwicklung stellt Mono zwei Bibliotheken zur Verfügung, einerseits die .NET Class Library, die die Grundelemente von .NET enthält, sowie die Mono Class Library mit zusätzlichen Funktionen für plattformübergreifende Anwendungen.\\
-Für die Nutzung von Mono stehen verschiedene Vorteile im Vergleich zu anderen Framework. Der Hauptgrund für die Nutzung liegt vor allem in der Popularität von .NET, da dies auf den meisten Computern zur Verfügung steht, oder installiert werden kann. Ein großer Nutzen stellt die High-Level Programmierung dar, die eine Implementierung mit einer Laufzeitumgebung ermöglicht, die Funktionen wie Speicherverwaltung selbst organisiert. Durch Verwendung der CLR kann der Entwickler seine übliche Programmiersprache verwenden und ist unhabhängig.
+Für die Nutzung von Mono stehen verschiedene Vorteile im Vergleich zu anderen Framework. Der Hauptgrund für die Nutzung liegt vor allem in der Popularität von .NET, da dies auf den meisten Computern zur Verfügung steht, oder installiert werden kann. Ein großer Nutzen stellt die High-Level Programmierung dar, die eine Implementierung mit einer Laufzeitumgebung ermöglicht, die Funktionen wie Speicherverwaltung selbst organisiert. Durch Verwendung der \gls{clr} kann der Entwickler seine übliche Programmiersprache verwenden und ist unhabhängig vom bestehenden System.
 
+\color{process}
+
+\newpage
 \subsubsection{.NET Framework}\label{net}
+%\footnote{\citep[vgl.][Overview of the .NET Framework]{Microsoft.Overviewof}\label{note7}}
 
-Das .NET Framework besteht aus der CLR, sowie der .NET Class Library und unterstützt Anwendungen, die auf den Standards von .NET basieren. 
+\begin{wrapfigure}{r}{0.45\textwidth}
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/net_aufbau.jpeg}
+	\end{center}
+	\caption{.NET Framework Ausführung}
+	\label{fig:net}
+\end{wrapfigure}
 
-\begin{comment}
-	You can think of the runtime as an agent that manages code at execution time, providing core services such as memory management, thread management, and remoting, while also enforcing strict type safety and other forms of code accuracy that promote security and robustness. In fact, the concept of code management is a fundamental principle of the runtime. Code that targets the runtime is known as managed code, while code that does not target the runtime is known as unmanaged code. The class library is a comprehensive, object-oriented collection of reusable types that you can use to develop applications ranging from traditional command-line or graphical user interface (GUI) applications to applications based on the latest innovations provided by ASP.NET, such as Web Forms and XML Web services.
-	The .NET Framework can be hosted by unmanaged components that load the common language runtime into their processes and initiate the execution of managed code, thereby creating a software environment that can exploit both managed and unmanaged features. The .NET Framework not only provides several runtime hosts, but also supports the development of third-party runtime hosts.
-	For example, ASP.NET hosts the runtime to provide a scalable, server-side environment for managed code. ASP.NET works directly with the runtime to enable ASP.NET applications and XML Web services, both of which are discussed later in this topic.
-	Internet Explorer is an example of an unmanaged application that hosts the runtime (in the form of a MIME type extension). Using Internet Explorer to host the runtime enables you to embed managed components or Windows Forms controls in HTML documents. Hosting the runtime in this way makes managed mobile code possible, but with significant improvements that only managed code can offer, such as semi-trusted execution and isolated file storage.
-	The following illustration shows the relationship of the common language runtime and the class library to your applications and to the overall system. The illustration also shows how managed code operates within a larger architecture.
-\end{comment}
+Das .NET Framework dient zur Entwicklung, sowie Ausführung von Anwendungen, die mit Programmiersprachen implementiert werden, die auf den Standards von .NET basieren. Es besteht aus verschiedenen Komponenten, wobei der Kern des Frameworks in der \gls{clr} liegt. Diese ist verantwortlich für die Laufzeitumgebung und entsprechend für die Ausführung der Anwendungen, indem es die bereitgestellten Ressourcen nutzt und um diese auszuführen.\\
+Die \gls{clr} kompiliert dabei zur Laufzeit der Anwendung den Quellcode für das entsprechende System, um diesen native als Maschinencode auszuführen. Dabei werden verschiedene Funktionen genutzt, um eine flexible Ausführung zu gewährleisten. Dazu gehört beispielsweise das Memory Management, zur Speicherverwaltung, sowie das Thread Management, um die einzelnen Prozesse zu organisieren.\\
+Um plattformübergreifend zu entwickeln stellt das .NET Framework die .NET Class Library zur Verfügung. Diese enthält wie andere Bibliotheken eine Sammlung bereits implementierten Quellcode, um diesen zu nutzen. Zusätzlich stellt sie Klassen bereit, um auf systemnahe Schnittstellen zuzugreifen.\\
+Mit dem .NET Framework lässt sich eine große Bandbreite von Anwendungen entwickeln, von Konsolenanwendungen, grafischen Oberflächen, bis hin zu Webanwendungen.
 
-\paragraph{Common Language Runtime}
-
-\begin{comment}
-	The common language runtime manages memory, thread execution, code execution, code safety verification, compilation, and other system services. These features are intrinsic to the managed code that runs on the common language runtime.
-	With regards to security, managed components are awarded varying degrees of trust, depending on a number of factors that include their origin (such as the Internet, enterprise network, or local computer). This means that a managed component might or might not be able to perform file-access operations, registry-access operations, or other sensitive functions, even if it is being used in the same active application.
-	The runtime enforces code access security. For example, users can trust that an executable embedded in a Web page can play an animation on screen or sing a song, but cannot access their personal data, file system, or network. The security features of the runtime thus enable legitimate Internet-deployed software to be exceptionally feature rich.
-	The runtime also enforces code robustness by implementing a strict type-and-code-verification infrastructure called the common type system (CTS). The CTS ensures that all managed code is self-describing. The various Microsoft and third-party language compilers generate managed code that conforms to the CTS. This means that managed code can consume other managed types and instances, while strictly enforcing type fidelity and type safety.
-	In addition, the managed environment of the runtime eliminates many common software issues. For example, the runtime automatically handles object layout and manages references to objects, releasing them when they are no longer being used. This automatic memory management resolves the two most common application errors, memory leaks and invalid memory references.
-	The runtime also accelerates developer productivity. For example, programmers can write applications in their development language of choice, yet take full advantage of the runtime, the class library, and components written in other languages by other developers. Any compiler vendor who chooses to target the runtime can do so. Language compilers that target the .NET Framework make the features of the .NET Framework available to existing code written in that language, greatly easing the migration process for existing applications.
-	While the runtime is designed for the software of the future, it also supports software of today and yesterday. Interoperability between managed and unmanaged code enables developers to continue to use necessary COM components and DLLs.
-	The runtime is designed to enhance performance. Although the common language runtime provides many standard runtime services, managed code is never interpreted. A feature called just-in-time (JIT) compiling enables all managed code to run in the native machine language of the system on which it is executing. Meanwhile, the memory manager removes the possibilities of fragmented memory and increases memory locality-of-reference to further increase performance.
-	Finally, the runtime can be hosted by high-performance, server-side applications, such as Microsoft SQL Server and Internet Information Services (IIS). This infrastructure enables you to use managed code to write your business logic, while still enjoying the superior performance of the industry's best enterprise servers that support runtime hosting.
-\end{comment}
-
-\paragraph{.NET Class Library}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{images/technische_grundlagen/clr.png}
+	\caption{Common Language Runtime}
+	\label{fig:clr}
+\end{figure}
 
 \begin{comment}
-	The .NET Framework class library is a collection of reusable types that tightly integrate with the common language runtime. The class library is object oriented, providing types from which your own managed code can derive functionality. This not only makes the .NET Framework types easy to use, but also reduces the time associated with learning new features of the .NET Framework. In addition, third-party components can integrate seamlessly with classes in the .NET Framework.
-	For example, the .NET Framework collection classes implement a set of interfaces that you can use to develop your own collection classes. Your collection classes will blend seamlessly with the classes in the .NET Framework.
-	As you would expect from an object-oriented class library, the .NET Framework types enable you to accomplish a range of common programming tasks, including tasks such as string management, data collection, database connectivity, and file access. In addition to these common tasks, the class library includes types that support a variety of specialized development scenarios. For example, you can use the .NET Framework to develop the following types of applications and services:
-	Console applications. See Building Console Applications.
-	Windows GUI applications (Windows Forms). See Windows Forms.
-	Windows Presentation Foundation (WPF) applications. See Windows Presentation Foundation.
-	ASP.NET applications. See Web Applications with ASP.NET.
-	Windows services. See Introduction to Windows Service Applications.
-	Service-oriented applications using Windows Communication Foundation (WCF). See Service-Oriented Applications with WCF.
-	Workflow-enabled applications using Windows Workflow Foundation (WF). See Building Workflows in the .NET Framework.
+	Beim Ausführen des C#-Programms wird die Assembly in die CLR geladen, was je nach den im Manifest enthaltenen Informationen die Durchführung verschiedener Aktionen erfordert. Wenn die Sicherheitsanforderungen erfüllt sind, konvertiert die CLR den IL-Code mithilfe der Just-In-Time (JIT)-Kompilierung in systemeigene Maschinenanweisungen. Die CLR stellt darüber hinaus weitere Dienste zur automatischen Garbage Collection, Ausnahmebehandlung und Ressourcenverwaltung bereit. Der über die CLR ausgeführte Code wird manchmal als "verwalteter Code" bezeichnet. Dieser steht im Gegensatz zum "nicht verwalteten Code", der in systemeigene Maschinensprache kompiliert wird, die auf ein bestimmtes System abgestimmt ist. Das folgende Diagramm veranschaulicht die Beziehungen zwischen C#-Quellcodedateien, den .NET Framework-Klassenbibliotheken, Assemblys sowie der CLR zur Kompilierungszeit und zur Laufzeit.
 \end{comment}
 
+\newpage
 \section{Theoretische Grundlagen}
 
 \subsection{Schwarmverhalten}

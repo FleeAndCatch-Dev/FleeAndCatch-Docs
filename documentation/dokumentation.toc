@@ -1,0 +1,58 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Einleitung}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Ausgangslage}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Zielsetzung}{1}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Erwartetes Ergebnis}{1}{subsection.1.3}
+\contentsline {section}{\numberline {2}Technische Grundlagen}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Robotik}{2}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Mobile Roboter}{2}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Sensorik}{2}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Antriebsarten}{2}{subsubsection.2.1.3}
+\contentsline {subsection}{\numberline {2.2}LEGO MINDSTORMS}{2}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Das EV3-System}{3}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Der EV3-Stein (Steuereinheit)}{3}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Motoren}{4}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Sensoren}{5}{subsubsection.2.2.4}
+\contentsline {paragraph}{Farbsensor}{5}{section*.13}
+\contentsline {paragraph}{Ultraschallsensor}{6}{section*.14}
+\contentsline {paragraph}{Ber\IeC {\"u}hrungssensor}{6}{section*.15}
+\contentsline {paragraph}{Kreiselsensor (Gyroskop)}{6}{section*.16}
+\contentsline {paragraph}{Rotationssensor (Integiert)}{6}{section*.17}
+\contentsline {subsubsection}{\numberline {2.2.5}Programmierung}{7}{subsubsection.2.2.5}
+\contentsline {paragraph}{leJOS}{7}{section*.18}
+\contentsline {subsection}{\numberline {2.3}\gls {app} Entwicklung}{9}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Native \glspl {app}}{9}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Web \glspl {app}}{9}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Hybride \glspl {app}}{10}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}Plattform\IeC {\"u}bergreifende Entwicklung}{10}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.5}Xamarin}{11}{subsubsection.2.3.5}
+\contentsline {paragraph}{Shared Projects}{11}{section*.23}
+\contentsline {paragraph}{Protable Class Libraries}{12}{section*.25}
+\contentsline {subsubsection}{\numberline {2.3.6}Mono}{13}{subsubsection.2.3.6}
+\contentsline {subsubsection}{\numberline {2.3.7}.NET Framework}{14}{subsubsection.2.3.7}
+\contentsline {section}{\numberline {3}Theoretische Grundlagen}{15}{section.3}
+\contentsline {subsection}{\numberline {3.1}Schwarmverhalten}{15}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Allgemein}{15}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Vorbilder aus dem Tierreich}{15}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Szenarien}{15}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}Algorithmen}{15}{subsubsection.3.1.4}
+\contentsline {subsection}{\numberline {3.2}Kommunikation}{15}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Grundlagen}{15}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}TCP/IP}{15}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Wifi}{15}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Serialisierung}{15}{subsubsection.3.2.4}
+\contentsline {section}{\numberline {4}Projektorganisation}{16}{section.4}
+\contentsline {subsection}{\numberline {4.1}Projektablaufplan}{16}{subsection.4.1}
+\contentsline {section}{\numberline {5}Konzeption}{17}{section.5}
+\contentsline {subsection}{\numberline {5.1}Anforderunsdefinitionen}{17}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Softwarearchitektur}{17}{subsubsection.5.1.1}
+\contentsline {subsection}{\numberline {5.2}Szenarios}{17}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Use Cases}{17}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Connect}{17}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.2}Synchronization}{18}{subsubsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.3}Szenario}{21}{subsubsection.5.3.3}
+\contentsline {subsubsection}{\numberline {5.3.4}Exception}{21}{subsubsection.5.3.4}
+\contentsline {subsection}{\numberline {5.4}Kommunikation}{21}{subsection.5.4}
+\contentsline {section}{\numberline {6}Implementierung}{27}{section.6}
+\contentsline {section}{\numberline {7}Evaluation}{28}{section.7}
+\contentsline {section}{\numberline {8}Ausblick}{29}{section.8}
