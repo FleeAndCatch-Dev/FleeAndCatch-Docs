@@ -1,13 +1,67 @@
+\color{process}
+
 \section{Konzeption}
 
 In diesem Kapitel werden die Anforderungsdefinitionen des Projektes, mit Spezialisierung auf die verschiedenen Use Cases beschrieben.
 
 \subsection{Anforderunsdefinitionen}
-%Was wollen wir von der SOftware haben
-In diesem Abschnitt wird auf die Funktionalitäten und Use Cases des Projektes eingegangen.
 
-\subsubsection{Softwarearchitektur}
-\subsection{Szenarios}
+Um ein Schwarmverhalten für Kleinrobotern zu verwirklichen, indem verschiedene Komponenten miteinander interagieren, muss eine Basis geschaffen werden, damit der jeder Teilnehmer mit anderen kommunizieren kann. Die dabei teilnehmenden Komponenten sind in drei verschiedene Softwareanwendungen aufgeteilt.\\ 
+Zum einen der Roboter, der Anfragen entgegennimmt und diese nach festgelegten Kriterien entsprechend verarbeitet. Dabei sendet jeder festgelegte Daten zur Synchronisation an eine höhere Instanz, die diese für eine Steuerung zur Verfügung stellt. Eine mobile App dient dabei zur Auswahl des Kontextes, in dem der Roboterschwarm gesteuert wird. Dazu erhält sie nach Start regelmäßige Daten zur Anzeige eines UI und sendet entsprechende Steuerungskommandos. Ein Desktopprogramm dient dabei als Backend und Kommunikationsschnittstelle, die die entschprechenden Anfragen weiterleitet und Daten zwischenspeichert, um diese anzuzeigen.\\
+Dabei sind verschiedene Anforderungen für die Basissoftware von nöten:
+
+\begin{itemize}
+	\item Netzwerkanbindung
+	\item Übergreifende Kommandostruktur
+	\item Interpreter für Kommunikation
+	\item User Interface
+	\item Roboter Basisfunktionen
+\end{itemize}
+
+Zur Basissoftware werden zusätzliche Funktionen benötigt, die ein Schwarmverhalten zu erstellen. Um die verschiedenen Szenarien zu unterstützen wird einerseits ein Fahren des Roboters, sowie eine Positionsabhängiges Fahren, sowie ein definiertes Wendeprogramm in Abhängigkeit verschiedener Parameter wie Winkel und Zeit. Damit ist eine Zusammenarbeit der Roboter möglich zur Ausführung verschiedener Schwarmszenarien.
+
+\newpage
+\subsection{Softwarearchitektur}
+
+Die Software besteht aus 3 Hauptkomponenten, dem Roboter, der Anfragen al JSON Objekte erhält und diese nach Kriterien entsprechend interpretiert und reagiert. Und nach dem Start eines Szenarios regelmäßige Daten an eine höhere Instanz sendet um die bestehenden Daten, wie Position auf den neuesten Stand zu bringen. 
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.65\textwidth]{images/konzeption/Softwarearchitecture.png}
+	\caption{Softwarearchitektur}
+	\label{fig:softwarearchitecture}
+\end{figure}
+
+\newpage
+\subsection{Steuerung}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.65\textwidth]{images/Controling.png}
+	\caption{Steuerung}
+	\label{fig:steuerung}
+\end{figure}
+
+\subsection{Szenarien}
+
+Zur Steuerung der verschiedenen Roboter wurden Szenarien entwickelt. Diese repräsentieren, in welchem Kontext die teilnehmenden Roboter gesteuert werden. Dabei gibt es verschiedene Unterschiede, von Anzahl der Roboter, Nutzer, sowie des Ziels des jeweiligen Szenario. Die Steuerung der Szenarien läuft dabei jeweils gleich ab, durch die im mobilen Gerät vorhandenen Gleichgewichtssensoren, werden Parameter zur Steuerung berechnet, die für die Ausrichtung und die Geschwindigkeit des entsprechenden Roboters zuständig ist.
+
+
+
+% Verschiedene Modi
+
+% Bild steuerung ??
+
+\paragraph{Control}
+
+
+
+\paragraph{Synchron}
+\paragraph{Follow}
+\paragraph{Flee}
+\paragraph{Catch}
+
 \subsection{Use Cases}
 \subsubsection{Connect}
 
