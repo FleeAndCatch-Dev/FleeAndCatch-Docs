@@ -76,3 +76,5 @@
 (indexentry :tkey (("IL" "\\glossentry{il}") ) :locref "{}{14}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("IL" "\\glossentry{il}") ) :locref "{}{14}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("CLI" "\\glossentry{cli}") ) :locref "{}{14}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("UI" "\\glossentry{ui}") ) :locref "{}{17}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("UI" "\\glossentry{ui}") ) :locref "{}{17}" :attr "pageglsnumberformat" ) 

@@ -1,4 +1,4 @@
-\color{process}
+\color{finishing}
 
 \section{Konzeption}
 
@@ -6,20 +6,19 @@ In diesem Kapitel werden die Anforderungsdefinitionen des Projektes, mit Spezial
 
 \subsection{Anforderunsdefinitionen}
 
-Um ein Schwarmverhalten für Kleinrobotern zu verwirklichen, indem verschiedene Komponenten miteinander interagieren, muss eine Basis geschaffen werden, damit der jeder Teilnehmer mit anderen kommunizieren kann. Die dabei teilnehmenden Komponenten sind in drei verschiedene Softwareanwendungen aufgeteilt.\\ 
-Zum einen der Roboter, der Anfragen entgegennimmt und diese nach festgelegten Kriterien entsprechend verarbeitet. Dabei sendet jeder festgelegte Daten zur Synchronisation an eine höhere Instanz, die diese für eine Steuerung zur Verfügung stellt. Eine mobile App dient dabei zur Auswahl des Kontextes, in dem der Roboterschwarm gesteuert wird. Dazu erhält sie nach Start regelmäßige Daten zur Anzeige eines UI und sendet entsprechende Steuerungskommandos. Ein Desktopprogramm dient dabei als Backend und Kommunikationsschnittstelle, die die entschprechenden Anfragen weiterleitet und Daten zwischenspeichert, um diese anzuzeigen.\\
-Dabei sind verschiedene Anforderungen für die Basissoftware von nöten:
+Ein Schwarmverhalten zur Interaktion von Kleinroboter benötigt verschiedene Anforderungen, um korrekt untereinander agieren zu können. Die Basis hierbei bildet das Kommunikationssystem zwischen den einzelnen Komponenten, um erfasste Daten zuverlässig zu synchronisieren. Um die Daten entsprechend zu interpretieren benötigt jede Komponente den jeweiligen Aufbau der Kommunikation, damit diese verwertet und Aktionen ausgeführt werden können.\\
+Diese Aktionen repräsentieren den Grundbestandteil des Schwarmverhaltens und sind auf die verschiedenen Systeme verteilt. Die Roboter benötigen hierbei implementierte Funktionen, wie das Ansteuern von Motoren, Sensorik, sowie die Aktualisierung, um erfasste Daten an Nutzer weiterzuleiten. Zur Steuerung dient eine App für mobile Smartphones mit einem \gls{ui} um verschiedene Szenarien zu starten, sowie die Roboter kontrollieren zu können. Die Kontrollschnittstelle stellt dabei eine Desktopanwendung dar, über die der Nutzer mit den Robotern kommuniziert und Daten zur Steuerung abgreifen kann, wobei mehrere Nutzer zur selben Zeit mit verschiedenen Szenarien unterstützt werden sollen.\\
 
+\noindent
+Damit bestehen folgende Anforderungsdefinitionen an die zu erstellenden Softwarekomponenten:
 \begin{itemize}
-	\item Netzwerkanbindung
-	\item Übergreifende Kommandostruktur
-	\item Interpreter für Kommunikation
-	\item User Interface
-	\item Roboter Basisfunktionen
+	\item Kommunikationssystem
+	\item Interpretation
+	\item \gls{ui}
+	\item Steuerungsfunktionen
 \end{itemize}
 
-Zur Basissoftware werden zusätzliche Funktionen benötigt, die ein Schwarmverhalten zu erstellen. Um die verschiedenen Szenarien zu unterstützen wird einerseits ein Fahren des Roboters, sowie eine Positionsabhängiges Fahren, sowie ein definiertes Wendeprogramm in Abhängigkeit verschiedener Parameter wie Winkel und Zeit. Damit ist eine Zusammenarbeit der Roboter möglich zur Ausführung verschiedener Schwarmszenarien.
-
+\color{process}
 \newpage
 \subsection{Softwarearchitektur}
 
