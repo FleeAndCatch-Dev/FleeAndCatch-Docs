@@ -18,26 +18,31 @@ Damit bestehen folgende Anforderungsdefinitionen an die zu erstellenden Software
 	\item Steuerungsfunktionen
 \end{itemize}
 
-\color{process}
 \newpage
 \subsection{Softwarearchitektur}
 
-Die Software besteht aus 3 Hauptkomponenten, dem Roboter, der Anfragen al JSON Objekte erhält und diese nach Kriterien entsprechend interpretiert und reagiert. Und nach dem Start eines Szenarios regelmäßige Daten an eine höhere Instanz sendet um die bestehenden Daten, wie Position auf den neuesten Stand zu bringen. 
+Die Architektur des Schwarmverhaltens besteht aus drei Hauptkomponente, den Robotern, einer Desktopanwendung, sowie einer mobilen App, siehe Abbildung \ref{fig:softwarearchitecture}.\\
+Diese Komponenten kommunizieren über ein drahtloses Netzwerk mittels \gls{tcp} untereinander, indem diese Zeichenketten als \gls{json} versenden. Dadurch lassen sich gesammelte Daten als Objekte kapseln und auf den verschiedenen Systemen entsprechend synchronisieren. Dies geschieht über eine Klassenstruktur, die Kommandos abbildet, durch die die kommunizierten Daten serialisiert und als Objekte dargestellt werden können.\\
+Die Roboter basieren auf dem Java System \gls{lejos}, da durch die bereitgestellten Bibliotheken für \gls{ev3} Systeme eine unkomplizierte Implementierung von Logik möglich ist, sowie eine direkte Unterstützung von \gls{eclipse} gegeben ist, um erstellte Software zu debuggen. Die Roboter unterstützen für ein Schwarmverhalten klassische Funktionen, um die Daten der vorhandenen Sensorik auszulesen, sowie Motoren anzusteuern. Diese Funktionen werden einerseits durch Kommandos ausgeführt um den entsprechenden Roboter zu steuern. Anderseits werden regelmäßig Daten durch einen Prozess erfasst, um diese auf dem Backend zu aktualisieren.\\
+Die App beruht auf der plattformübergreifenden Implementierung mittels des Frameworks Xamarin um möglichst viele Systeme zu erreichen. Sie baut dabei auf ein einfaches \gls{ui} mit dem Design Pattern \gls{mvvm} auf, um diese von der eigentlichen Logik zu trennen und einen qualitativ hochwertigen Quellcode zu schaffen, der einfach gewartet werden kann. Die App besitzt Basisfunktionen zur Erstellung von Kommandos, die die Verwaltung von Szenarien veranlassen und steuert somit den Schwarm.\\
+Das Backend dient als Kommunikationsschnittstelle des gesamten Systems und steuert die Kommandos für den Ablauf der Szenarien. Es besitzt ein \gls{ui} mit \gls{javafx} Realisierung zur Anzeige von erfassten Daten der einzelnen Komponenten und stellt diese anhand einer auswählbaren Hierarchie dar.
 
 \newpage
+\begin{verbatim}
+\end{verbatim}
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.65\textwidth]{images/konzeption/Softwarearchitecture.png}
 	\caption{Softwarearchitektur}
 	\label{fig:softwarearchitecture}
 \end{figure}
-
+\color{process}
 \newpage
 \subsection{Steuerung}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.65\textwidth]{images/Controling.png}
+	\includegraphics[width=0.4\textwidth]{images/Controling.png}
 	\caption{Steuerung}
 	\label{fig:steuerung}
 \end{figure}

@@ -78,3 +78,8 @@
 (indexentry :tkey (("CLI" "\\glossentry{cli}") ) :locref "{}{14}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("UI" "\\glossentry{ui}") ) :locref "{}{17}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("UI" "\\glossentry{ui}") ) :locref "{}{17}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("TCP" "\\glossentry{tcp}") ) :locref "{}{18}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("JSON" "\\glossentry{json}") ) :locref "{}{18}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("UI" "\\glossentry{ui}") ) :locref "{}{18}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("MVVM" "\\glossentry{mvvm}") ) :locref "{}{18}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("UI" "\\glossentry{ui}") ) :locref "{}{18}" :attr "pageglsnumberformat" ) 

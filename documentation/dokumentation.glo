@@ -12,3 +12,7 @@
 (indexentry :tkey (("Framework" "\\glossentry{framework}") ) :locref "{}{11}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("Template" "\\glossentry{template}") ) :locref "{}{11}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("C\\#" "\\glossentry{csharp}") ) :locref "{}{13}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("leJos" "\\glossentry{lejos}") ) :locref "{}{18}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("EV3" "\\glossentry{ev3}") ) :locref "{}{18}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("Eclipse" "\\glossentry{eclipse}") ) :locref "{}{18}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("Eclipse" "\\glossentry{javafx}") ) :locref "{}{18}" :attr "pageglsnumberformat" ) 
