@@ -10,17 +10,19 @@
 \contentsline {figure}{\numberline {9}{\ignorespaces Common Language Runtime\relax }}{14}{figure.caption.29}
 \contentsline {figure}{\numberline {10}{\ignorespaces Softwarearchitektur\relax }}{19}{figure.caption.30}
 \contentsline {figure}{\numberline {11}{\ignorespaces Steuerung\relax }}{20}{figure.caption.31}
-\contentsline {figure}{\numberline {12}{\ignorespaces Connect\relax }}{22}{figure.caption.37}
-\contentsline {figure}{\numberline {13}{\ignorespaces Connection\relax }}{23}{figure.caption.38}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Connect}}}{23}{subfigure.13.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Home}}}{23}{subfigure.13.2}
-\contentsline {figure}{\numberline {14}{\ignorespaces Synchronization\relax }}{24}{figure.caption.39}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Update all}}}{24}{subfigure.14.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Update}}}{24}{subfigure.14.2}
-\contentsline {figure}{\numberline {15}{\ignorespaces Robot list\relax }}{25}{figure.caption.40}
-\contentsline {figure}{\numberline {16}{\ignorespaces Spectator\relax }}{26}{figure.caption.41}
-\contentsline {figure}{\numberline {17}{\ignorespaces Spectator\relax }}{27}{figure.caption.42}
-\contentsline {figure}{\numberline {18}{\ignorespaces Control\relax }}{28}{figure.caption.43}
-\contentsline {figure}{\numberline {19}{\ignorespaces Control\relax }}{29}{figure.caption.44}
-\contentsline {figure}{\numberline {20}{\ignorespaces Synchron\relax }}{30}{figure.caption.45}
-\contentsline {figure}{\numberline {21}{\ignorespaces Follow\relax }}{31}{figure.caption.46}
+\contentsline {figure}{\numberline {12}{\ignorespaces Logo\relax }}{21}{figure.caption.37}
+\contentsline {figure}{\numberline {13}{\ignorespaces Mockup Connection\relax }}{22}{figure.caption.38}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Log in}}}{22}{subfigure.13.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Home}}}{22}{subfigure.13.2}
+\contentsline {figure}{\numberline {14}{\ignorespaces Use Case Connect\relax }}{23}{figure.caption.39}
+\contentsline {figure}{\numberline {15}{\ignorespaces Mockup Synchronization\relax }}{24}{figure.caption.40}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Log in}}}{24}{subfigure.15.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Home}}}{24}{subfigure.15.2}
+\contentsline {figure}{\numberline {16}{\ignorespaces Use Case Synchronization\relax }}{25}{figure.caption.41}
+\contentsline {figure}{\numberline {17}{\ignorespaces Use Case Update\relax }}{25}{figure.caption.42}
+\contentsline {figure}{\numberline {18}{\ignorespaces Mockup Szenario\relax }}{26}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Szenario}}}{26}{subfigure.18.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Spectator}}}{26}{subfigure.18.2}
+\contentsline {figure}{\numberline {19}{\ignorespaces Use Case Szenario\relax }}{27}{figure.caption.44}
+\contentsline {figure}{\numberline {20}{\ignorespaces Use Case Spectator\relax }}{27}{figure.caption.45}
+\contentsline {figure}{\numberline {21}{\ignorespaces Use Case Exception\relax }}{28}{figure.caption.46}

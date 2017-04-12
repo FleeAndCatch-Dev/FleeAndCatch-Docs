@@ -73,97 +73,116 @@ stellt ein Verfolgungsszenario dar, indem der Nutzer mit seinem Roboter vor ande
 
 stellt ein Verfolgungsszenario dar, indem der Nutzer die restlichen Roboter fängt. Diese fahren zufällig in verschiedene Richtungen davon. Sollte der Nutzer alle gefangen haben, ertönt ein Signal und beendet damit das Szenario.
 
-\color{process}
-\subsection{Use Cases}
-\subsubsection{Connect}
-
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{images/use_cases/Connect.png}
+		\includegraphics[width=0.4\textwidth]{images/logos/UWP/FleeAndCatch_Logo.png}
 	\end{center}
-	\caption{Connect}
+	\caption{Logo}
+	\label{fig:Logo}
+\end{figure}
+
+\newpage
+\color{process}
+\subsection{Use Cases}
+
+In diesem Abschnitt werden die Use Cases des Schwarmverhaltens beschrieben. Dabei wird insbesondere auf den Ablauf in Form von \gls{uml} Diagrammen eingegangen.
+
+\subsubsection{Connection}
+
+Im Use Case Connection wird durch die Eingabe einer IP-Adresse eine drahtlose Verbindung über das verbundene Netzwerk zur Desktopanwendung aufgebaut. Dabei erhält jede Komponente zur Unterscheidung eine individuelle Identifikation, durch eine fortlaufende Nummer. Um eine entsprechende Reaktionsgeschwindigkeit während eines Szenarios garantieren zu können, wird zum Verbindungsaufbau eine Initialisierung durchgeführt. in deren Ablauf wird in regelmäßigen Zeitabständen Daten zwischen der Desktopanwendung und der Komponente hin- und herversendet, bis diese erreicht ist. Dies macht bei der App keinen Unterschied, bei Roboter jedoch wird erst bei entsprechender Beanspruchung des Threads eine längere CPU-Laufzeit freigegeben und somit eine Reaktionsverzögerung während eines Szenarios vermieden.\\
+Allgemein wird für diesen Use-Case unter zwei Typen unterschieden, dem Connection, Disconnection, wobei entsprechend eine Verbindung auf, oder abgebaut wird. Die eingegbene IP-Adresse kann dabei in einer internen SQLite-DB hinterlegt werden, um diese nicht erneut eingeben zu müssen. Hierbei wird immer die zuletzt gespeicherte automatisch eingetragen.
+
+\begin{figure}[h]
+	\centering
+	\subfloat[Log in]{\includegraphics[width=0.25\textwidth]{images/mockups/Connection.png}\label{fig:Connect}}
+	\qquad
+	\subfloat[Home]{\includegraphics[width=0.25\textwidth]{images/mockups/Home.png}\label{fig:Home}}
+	\caption{Mockup Connection}
+\end{figure}
+\newpage
+\begin{verbatim}
+\end{verbatim}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{images/use_cases/Connect.png}
+	\end{center}
+	\caption{Use Case Connect}
 	\label{fig:UC_Connect}
 \end{figure}
 
-\noindent
-Im Use Case Connect wird eine erste Verbindung durch die Eingabe der IP-Adresse zum Backend aufgebaut. Dabei sendet die Komponente, ob Roboter oder App eine Abbildung seiner selbst als Objekt dem Backend. Daraufhin startet das Backend die Verbindung indem es der Komponente entsprechende Verbindungskommandos zusendet. Sobald eine Reaktion in einer festgelegten Zeit erfolgt, akzeptiert das Backend die Verbindung und sendet die entsprechende Id für die Komponente. Ab diesem Moment ist die Komponente verbunden und ein Robot für Aktionen entsprechend verfügbar. Die Verbindungsinitialisierung dient hierbei der Verkürzung der Reaktionszeit, die bei einem Roboter sonst entsprechend hoch wäre.
-
-\begin{figure}[!tbp]
-	\centering
-	\subfloat[Connect]{\includegraphics[width=0.4\textwidth]{images/mockups/Connection.png}\label{fig:Connect}}
-	\hfill
-	\subfloat[Home]{\includegraphics[width=0.4\textwidth]{images/mockups/Home.png}\label{fig:Home}}
-	\caption{Connection}
-\end{figure}
-
+\newpage
 \subsubsection{Synchronization}
 
-\begin{figure}[!tbp]
+Im Use Case Synchronization werden Daten entsprechend des gesetzten Typen im Kommando versendet. Hierbei werden Roboter von ganzen Szenarien unterschieden, wobei ein Roboter, alle vorhandenen ROboter, oder Szenarien aktualisiert werden können. Die Aktualisierung der ROboter dient dabei zu Anfang zum Auswahl der beteiligten Roboter, sowie dem SZenario. Der einzele ROboter dient dem aktualisieren der hinterlegten Daten der Desktopanwendung, sowie der App, wobei diese direkt in der \gls{ui} angezeigt werden können. Die Übertragung der gesamten Szenarios, dient dem Spectator, um eine aktuell laufendes Szenario einzusehen, wobei anschließen nur das aktuelle Szenario übertragen wird, welches der Nutzer ausgewählt hat.
+
+\begin{figure}[h]
 	\centering
-	\subfloat[Update all]{\includegraphics[width=0.4\textwidth]{images/use_cases/Synchronization.png}\label{fig:UC_Synchronization}}
-	\hfill
-	\subfloat[Update]{\includegraphics[width=0.55\textwidth]{images/use_cases/Update.png}\label{fig:UC_Update}}
-	\caption{Synchronization}
+	\subfloat[Log in]{\includegraphics[width=0.25\textwidth]{images/mockups/RobotList.png}\label{fig:Synchronization_1}}
+	\qquad
+	\subfloat[Home]{\includegraphics[width=0.25\textwidth]{images/mockups/Control.png}\label{fig:Synchronization_2}}
+	\caption{Mockup Synchronization}
 \end{figure}
-
-\noindent
-Im Use Case Synchronization werden Daten entsprechend des gesetzten Typen zwischen den Komponenten übertragen. Dabei können einerseits die Roboter als Objekte, oder ganze Szenarien übertragen werden. Dies dient zur Gegenseitigen Synchronisierung der Daten.
-
-\begin{figure}[!tbp]
+\newpage
+\begin{verbatim}
+\end{verbatim}
+\begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{images/mockups/RobotList.png}
+		\includegraphics[width=0.35\textwidth]{images/use_cases/Synchronization.png}
 	\end{center}
-	\caption{Robot list}
-	\label{fig:RobotList}
+	\caption{Use Case Synchronization}
+	\label{fig:UC_Synchronization}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{images/use_cases/Update.png}
+	\end{center}
+	\caption{Use Case Update}
+	\label{fig:UC_Update}
 \end{figure}
 
+\newpage
 \subsubsection{Szenario}
 
+Im Use Case Szenario wird der Ablauf der definierten Szenarien zur Steuerung der Roboter dargestellt. Dabei wird zunächst vom Nutzer das jeweilige Szenario mit den teilnehmenden Robotern ausgewählt und anschließend durch ein Kommando mit dem Typen Begin getstartet. Hierbei erhält das Backend das erstellte SZenario und behandelt es entsprechend der Definition, wobei es ein STeuerungskommando oder ein Positionskommando an den ROboter weiterleitet.\\
+Der SInn hierbei ist, dass die Intelligenz auf dem Backend ausgelagert wird, um die Resourcen der Roboter zu schonen, wobei diese lediglich Steuerungskommandos erhalten, oder minimierte autonome Positionen anfahren können. Das Szenariokommando wird dabei laufend erneut gesendet, um aktuelle Daten, wie Steuerungsinformation durch die Motion Sensoren weiterzuleiten.
+ 
+\begin{figure}[h]
+	\centering
+	\subfloat[Szenario]{\includegraphics[width=0.25\textwidth]{images/mockups/Control.png}\label{fig:Szenario_1}}
+	\qquad
+	\subfloat[Spectator]{\includegraphics[width=0.25\textwidth]{images/mockups/Spectator.png}\label{fig:Szenario_2}}
+	\caption{Mockup Szenario}
+\end{figure}
+\newpage
+\begin{verbatim}
+\end{verbatim}
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=0.6\textwidth]{images/use_cases/Spectator.png}
+		\includegraphics[width=0.4\textwidth]{images/use_cases/Szenario.png}
 	\end{center}
-	\caption{Spectator}
-	\label{fig:UC_Spectator}
+	\caption{Use Case Szenario}
+	\label{fig:UC_Szenario_1}
 \end{figure}
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=0.6\textwidth]{images/mockups/Spectator.png}
+		\includegraphics[width=0.35\textwidth]{images/use_cases/Spectator.png}
 	\end{center}
-	\caption{Spectator}
-	\label{fig:Spectator}
-\end{figure}
-
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=0.8\textwidth]{images/use_cases/Control.png}
-	\end{center}
-	\caption{Control}
-	\label{fig:UC_Control}
-\end{figure}
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=0.6\textwidth]{images/mockups/Control.png}
-	\end{center}
-	\caption{Control}
-	\label{fig:Control}
+	\caption{Use Case Spectator}
+	\label{fig:UC_Szenario_2}
 \end{figure}
 
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=0.9\textwidth]{images/use_cases/Synchron.png}
-	\end{center}
-	\caption{Synchron}
-	\label{fig:UC_Synchron}
-\end{figure}
-
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=0.9\textwidth]{images/use_cases/Follow.png}
-	\end{center}
-	\caption{Follow}
-	\label{fig:UC_Follow}
-\end{figure}
-
+\newpage
 \subsubsection{Exception}
+
+Im Use Case Exception wird die das Auftreten einer Exception im Kontext eines Verbindungsverlustes behandelt. Dabei wird der beteiligte Komponente, wie die auftretende Nachricht an das Backend weitergeleitet. 
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{images/use_cases/Exception.png}
+	\end{center}
+	\caption{Use Case Exception}
+	\label{fig:Exception}
+\end{figure}
+
+\newpage
 \subsection{Kommunikation}

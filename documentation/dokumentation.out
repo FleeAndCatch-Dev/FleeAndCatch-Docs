@@ -40,15 +40,15 @@
 \BOOKMARK [2][-]{subsection.5.3}{Steuerung}{section.5}% 40
 \BOOKMARK [2][-]{subsection.5.4}{Szenarien}{section.5}% 41
 \BOOKMARK [2][-]{subsection.5.5}{Use Cases}{section.5}% 42
-\BOOKMARK [3][-]{subsubsection.5.5.1}{Connect}{subsection.5.5}% 43
+\BOOKMARK [3][-]{subsubsection.5.5.1}{Connection}{subsection.5.5}% 43
 \BOOKMARK [3][-]{subsubsection.5.5.2}{Synchronization}{subsection.5.5}% 44
 \BOOKMARK [3][-]{subsubsection.5.5.3}{Szenario}{subsection.5.5}% 45
 \BOOKMARK [3][-]{subsubsection.5.5.4}{Exception}{subsection.5.5}% 46
 \BOOKMARK [2][-]{subsection.5.6}{Kommunikation}{section.5}% 47
 \BOOKMARK [1][-]{section.6}{Implementierung}{}% 48
-\BOOKMARK [2][-]{subsubsection.6.0.1}{Kommunikation}{section.6}% 49
-\BOOKMARK [2][-]{subsection.6.1}{App}{section.6}% 50
-\BOOKMARK [2][-]{subsection.6.2}{Backend}{section.6}% 51
-\BOOKMARK [2][-]{subsection.6.3}{Robot}{section.6}% 52
+\BOOKMARK [2][-]{subsection.6.1}{Kommunikation}{section.6}% 49
+\BOOKMARK [2][-]{subsection.6.2}{App}{section.6}% 50
+\BOOKMARK [2][-]{subsection.6.3}{Backend}{section.6}% 51
+\BOOKMARK [2][-]{subsection.6.4}{Robot}{section.6}% 52
 \BOOKMARK [1][-]{section.7}{Evaluation}{}% 53
 \BOOKMARK [1][-]{section.8}{Ausblick}{}% 54
