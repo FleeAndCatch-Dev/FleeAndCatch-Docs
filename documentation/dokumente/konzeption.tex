@@ -172,7 +172,7 @@ Diese Implementierung soll den Vorteil einer Auslagerung der Programmlogik schaf
 \end{figure}
 
 \newpage
-\color{process}
+
 \subsubsection{Exception}
 
 Der Use Case Exception stellt den Ablauf einer auftretenden Exception in einem Roboter zum Kontext eines Verbindungsverlustes dar, siehe Abbildung \ref{fig:Exception}. Dabei soll die auftretenden Nachricht, sowie die beteiligte Komponente der Desktopanwendung zugesendet werden. Dies soll ein kontrolliertes Schließen eines Szenarios ermöglichen, welches von einer solchen Exception betroffen ist. Die dabei teilnehmenden Komponenten, wie Nutzer und andere Roboter sollen entsprechend zurückgesetzt werden, damit diese für ein neues Szenario zur Verfügung stehen.\\
@@ -186,4 +186,110 @@ Der Use Case Exception stellt den Ablauf einer auftretenden Exception in einem R
 \end{figure}
 
 \newpage
+\color{process}
 \subsection{Kommunikation}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Connection} & \\
+		\hline
+		String id & Stellt den Identifikationsstring dar \\
+		String type & Stellte den Typen dar \\
+		String apiid & Stellt die verwendete \gls{api} dar \\
+		ClientIdentification identification & Stellt das Identifikationsobjekt der Komponente dar \\
+		\hline
+	\end{tabular}
+	\caption[\gls{json} Kommando Connection]{\gls{json} Kommando Connection}
+	\label{tab:Connection}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Synchronization} & \\
+		\hline
+		String id & Stellt den Identifikationsstring dar \\
+		String type & Stellte den Typen dar \\
+		String apiid & Stellt die verwendete \gls{api} dar \\
+		ClientIdentification identification & Stellt das Identifikationsobjekt der Komponente dar \\
+		List scenarios & Stellt die aktuellen Szenarien dar, die übertragen werden\\
+		List robots & Stellt die aktuellen Roboter dar, die übertragen werden \\
+		\hline
+	\end{tabular}
+	\caption[\gls{json} Kommando Synchronization]{\gls{json} Kommando Synchronization}
+	\label{tab:Synchronization}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Scenario} & \\
+		\hline
+		String id & Stellt den Identifikationsstring dar \\
+		String type & Stellte den Typen dar \\
+		String apiid & Stellt die verwendete \gls{api} dar \\
+		ClientIdentification identification & Stellt das Identifikationsobjekt der Komponente dar \\
+		Scenario scenarios & Stellt das aktuell ablaufende Szenario dar \\
+		\hline
+	\end{tabular}
+	\caption[\gls{json} Kommando Scenario]{\gls{json} Kommando Scenario}
+	\label{tab:Szenario}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Exception} & \\
+		\hline
+		String id & Stellt den Identifikationsstring dar \\
+		String type & Stellte den Typen dar \\
+		String apiid & Stellt die verwendete \gls{api} dar \\
+		ClientIdentification identification & Stellt das Identifikationsobjekt der Komponente dar \\
+		Exception exception & Stellt die aktuelle Execption dar, die im Roboter auftritt \\
+		\hline
+	\end{tabular}
+	\caption[\gls{json} Kommando Exception]{\gls{json} Kommando Exception}
+	\label{tab:Exception}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Control} & \\
+		\hline
+		String id & Stellt den Identifikationsstring dar \\
+		String type & Stellte den Typen dar \\
+		String apiid & Stellt die verwendete \gls{api} dar \\
+		ClientIdentification identification & Stellt das Identifikationsobjekt der Komponente dar \\
+		Robot robot & Stellt den aktuellen Roboter dar\\
+		Steering steering & Stellt die aktuellen Steuerungsinformationen dar \\
+		\hline
+	\end{tabular}
+	\caption[\gls{json} Kommando Control]{\gls{json} Kommando Control}
+	\label{tab:Control}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Position} & \\
+		\hline
+		String id & Stellt den Identifikationsstring dar \\
+		String type & Stellte den Typen dar \\
+		String apiid & Stellt die verwendete \gls{api} dar \\
+		ClientIdentification identification & Stellt das Identifikationsobjekt der Komponente dar \\
+		Robot robot & Stellt den aktuellen Roboter dar\\
+		Position position &  Stellt die anzufahrende Position dar\\
+		Speed speed & Stellt die einzustellende Geschwindigkeit dar\\
+		\hline
+	\end{tabular}
+	\caption[\gls{json} Kommando Position]{\gls{json} Kommando Position}
+	\label{tab:Position}
+\end{table}
