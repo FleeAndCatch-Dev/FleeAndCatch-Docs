@@ -85,4 +85,6 @@
 (indexentry :tkey (("UI" "\\glossentry{ui}") ) :locref "{}{18}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("UI" "\\glossentry{ui}") ) :locref "{}{20}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("UML" "\\glossentry{uml}") ) :locref "{}{22}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("TCP" "\\glossentry{tcp}") ) :locref "{}{22}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("CPU" "\\glossentry{cpu}") ) :locref "{}{22}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("UI" "\\glossentry{ui}") ) :locref "{}{24}" :attr "pageglsnumberformat" ) 

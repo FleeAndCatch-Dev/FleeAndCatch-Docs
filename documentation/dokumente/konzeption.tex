@@ -82,15 +82,15 @@ stellt ein Verfolgungsszenario dar, indem der Nutzer die restlichen Roboter fän
 \end{figure}
 
 \newpage
-\color{process}
 \subsection{Use Cases}
 
 In diesem Abschnitt werden die Use Cases des Schwarmverhaltens beschrieben. Dabei wird insbesondere auf den Ablauf in Form von \gls{uml} Diagrammen eingegangen.
 
 \subsubsection{Connection}
 
-Im Use Case Connection wird durch die Eingabe einer IP-Adresse eine drahtlose Verbindung über das verbundene Netzwerk zur Desktopanwendung aufgebaut. Dabei erhält jede Komponente zur Unterscheidung eine individuelle Identifikation, durch eine fortlaufende Nummer. Um eine entsprechende Reaktionsgeschwindigkeit während eines Szenarios garantieren zu können, wird zum Verbindungsaufbau eine Initialisierung durchgeführt. in deren Ablauf wird in regelmäßigen Zeitabständen Daten zwischen der Desktopanwendung und der Komponente hin- und herversendet, bis diese erreicht ist. Dies macht bei der App keinen Unterschied, bei Roboter jedoch wird erst bei entsprechender Beanspruchung des Threads eine längere CPU-Laufzeit freigegeben und somit eine Reaktionsverzögerung während eines Szenarios vermieden.\\
-Allgemein wird für diesen Use-Case unter zwei Typen unterschieden, dem Connection, Disconnection, wobei entsprechend eine Verbindung auf, oder abgebaut wird. Die eingegbene IP-Adresse kann dabei in einer internen SQLite-DB hinterlegt werden, um diese nicht erneut eingeben zu müssen. Hierbei wird immer die zuletzt gespeicherte automatisch eingetragen.
+Der Use Case Connection stellt den Ablauf eines Verbindungsaufbaus zwischen den Komponenten und der Desktopanwendung dar. Dies soll über die Nutzung eines drahtlosen Netzwerks mittels \gls{tcp} Schnittstelle des Smartphones realisiert werden. Die IP-Adresse kann dabei durch die Verwendung einer \gls{sqlite} Datenbank lokal gespeichert werden, um diese später bei einem erneuten Aufruf automatisch eintragen zu lassen. Zur Unterscheidung der verschiedenen Komponenten soll eine individuelle Identifikation erstellt werden, wobei der Typ der Komponente, sowie weitere Merkmale ersichtlich werden sollen.\\
+Der Use Case soll dabei in zwei unterschiedliche Typen untergliedert werden, womit ein Verbindungsaufbau von einem Verbindungsabbau unterschieden werden kann. Der Ablauf eines Verbindungsaufbaus soll dabei für jede Komponente identisch 
+abgewickelt werden, siehe Abbildung \ref{fig:UC_Connect}. Um eine entsprechend stabile Reaktionszeit der teilnehmenden Roboter zu garantieren, sollen zum Start des Verbindungsaufbaus wiederholt Kommandos versendet werden. Dies soll eine erhöhte \gls{cpu} Laufzeit erreichen, um eine Zeitverzögerung zur Laufzeit der Szenarios zu verhindern.\\
 
 \begin{figure}[h]
 	\centering
@@ -106,14 +106,14 @@ Allgemein wird für diesen Use-Case unter zwei Typen unterschieden, dem Connecti
 	\begin{center}
 		\includegraphics[width=1\textwidth]{images/use_cases/Connect.png}
 	\end{center}
-	\caption{Use Case Connect}
+	\caption{Use Case Connection}
 	\label{fig:UC_Connect}
 \end{figure}
 
 \newpage
 \subsubsection{Synchronization}
 
-Im Use Case Synchronization werden Daten entsprechend des gesetzten Typen im Kommando versendet. Hierbei werden Roboter von ganzen Szenarien unterschieden, wobei ein Roboter, alle vorhandenen ROboter, oder Szenarien aktualisiert werden können. Die Aktualisierung der ROboter dient dabei zu Anfang zum Auswahl der beteiligten Roboter, sowie dem SZenario. Der einzele ROboter dient dem aktualisieren der hinterlegten Daten der Desktopanwendung, sowie der App, wobei diese direkt in der \gls{ui} angezeigt werden können. Die Übertragung der gesamten Szenarios, dient dem Spectator, um eine aktuell laufendes Szenario einzusehen, wobei anschließen nur das aktuelle Szenario übertragen wird, welches der Nutzer ausgewählt hat.
+Der Use Case Synchronization stellt den Datenaustausch der beteiligten Komponenten dar, siehe Abbildung \ref{fig:UC_Synchronization} und \ref{fig:UC_Update}. Hierbei sollen verschiedene Typen unterschieden werden, wobei der komplette Datensatz in Form von allen Szenarien, Robotern, oder eines einzelnen Szenarios, sowie Roboters übertragen werden soll. Dies wird einerseits der Erstellung eines Szenarios dienen, als auch dessen Beobachtung durch den Spectator Modus. Die Übertragung eines einzelnen Roboter dient der Aktualisierung der jeweiligen Daten der Desktopanwendung, sowie der App, um diese laufend aktuell zu halten. Die synchronisierten Daten sollen des Weiteren auf den Komponenten über eine \gls{ui} dargestellt werden können, um die Veränderung der aktuellen Daten zu verdeutlichen, sowie eine verbesserte Steuerung schaffen.\\
 
 \begin{figure}[h]
 	\centering
@@ -143,8 +143,8 @@ Im Use Case Synchronization werden Daten entsprechend des gesetzten Typen im Kom
 \newpage
 \subsubsection{Szenario}
 
-Im Use Case Szenario wird der Ablauf der definierten Szenarien zur Steuerung der Roboter dargestellt. Dabei wird zunächst vom Nutzer das jeweilige Szenario mit den teilnehmenden Robotern ausgewählt und anschließend durch ein Kommando mit dem Typen Begin getstartet. Hierbei erhält das Backend das erstellte SZenario und behandelt es entsprechend der Definition, wobei es ein STeuerungskommando oder ein Positionskommando an den ROboter weiterleitet.\\
-Der SInn hierbei ist, dass die Intelligenz auf dem Backend ausgelagert wird, um die Resourcen der Roboter zu schonen, wobei diese lediglich Steuerungskommandos erhalten, oder minimierte autonome Positionen anfahren können. Das Szenariokommando wird dabei laufend erneut gesendet, um aktuelle Daten, wie Steuerungsinformation durch die Motion Sensoren weiterzuleiten.
+Der Use Case Szenario stellt den Ablauf der definierten Szenarien, zur Steuerung der Roboter dar, siehe Abbildung \ref{fig:UC_Szenario_1}. Der Nutzer soll dabei zu Beginn das gewünschte Szenario, sowie die teilnehmenden Roboter festlegen. Anschließend wird das Szenario durch das Senden eines Kommandos gestartet, welches von der Desktopanwendung initialisiert wird. Dieses Kommando soll laufend wiederholt werden, um aktuelle Daten, wie Steuerungsinformationen an die Roboter weiterzuleiten. Zur Steuerung sollen hierbei eine direkte von einer positionsorientierten unterschieden werden, wobei die Roboter je nach Kommando die direkten Steuerungsinformationen oder eine anzufahrende Position erhalten.\\
+Diese Implementierung soll den Vorteil einer Auslagerung der Programmlogik schaffen, indem die Ressourcen der Roboter geschont werden und die Logik zentral in der Desktopanwendung ausgeführt werden kann.\\
  
 \begin{figure}[h]
 	\centering
@@ -158,23 +158,24 @@ Der SInn hierbei ist, dass die Intelligenz auf dem Backend ausgelagert wird, um 
 \end{verbatim}
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=0.4\textwidth]{images/use_cases/Szenario.png}
+		\includegraphics[width=0.425\textwidth]{images/use_cases/Szenario.png}
 	\end{center}
 	\caption{Use Case Szenario}
 	\label{fig:UC_Szenario_1}
 \end{figure}
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=0.35\textwidth]{images/use_cases/Spectator.png}
+		\includegraphics[width=0.375\textwidth]{images/use_cases/Spectator.png}
 	\end{center}
 	\caption{Use Case Spectator}
 	\label{fig:UC_Szenario_2}
 \end{figure}
 
 \newpage
+\color{process}
 \subsubsection{Exception}
 
-Im Use Case Exception wird die das Auftreten einer Exception im Kontext eines Verbindungsverlustes behandelt. Dabei wird der beteiligte Komponente, wie die auftretende Nachricht an das Backend weitergeleitet. 
+Der Use Case Exception stellt den Ablauf einer auftretenden Exception in einem Roboter zum Kontext eines Verbindungsverlustes dar, siehe Abbildung \ref{fig:Exception}. Dabei soll die auftretenden Nachricht, sowie die beteiligte Komponente der Desktopanwendung zugesendet werden. Dies soll ein kontrolliertes Schließen eines Szenarios ermöglichen, welches von einer solchen Exception betroffen ist. Die dabei teilnehmenden Komponenten, wie Nutzer und andere Roboter sollen entsprechend zurückgesetzt werden, damit diese für ein neues Szenario zur Verfügung stehen.\\
 
 \begin{figure}[h]
 	\begin{center}

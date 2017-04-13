@@ -16,3 +16,4 @@
 (indexentry :tkey (("EV3" "\\glossentry{ev3}") ) :locref "{}{18}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("Eclipse" "\\glossentry{eclipse}") ) :locref "{}{18}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("Eclipse" "\\glossentry{javafx}") ) :locref "{}{18}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("SQLite" "\\glossentry{sqlite}") ) :locref "{}{22}" :attr "pageglsnumberformat" ) 
