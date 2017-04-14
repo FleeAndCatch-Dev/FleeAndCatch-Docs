@@ -8,17 +8,21 @@
 \contentsline {figure}{\numberline {7}{\ignorespaces Mono\relax }}{13}{figure.caption.27}
 \contentsline {figure}{\numberline {8}{\ignorespaces .NET Framework Ausf\IeC {\"u}hrung\relax }}{14}{figure.caption.28}
 \contentsline {figure}{\numberline {9}{\ignorespaces Common Language Runtime\relax }}{14}{figure.caption.29}
-\contentsline {figure}{\numberline {10}{\ignorespaces Connect\relax }}{17}{figure.caption.30}
-\contentsline {figure}{\numberline {11}{\ignorespaces Connection\relax }}{18}{figure.caption.31}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Connect}}}{18}{subfigure.11.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Home}}}{18}{subfigure.11.2}
-\contentsline {figure}{\numberline {12}{\ignorespaces Synchronization\relax }}{19}{figure.caption.32}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Update all}}}{19}{subfigure.12.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Update}}}{19}{subfigure.12.2}
-\contentsline {figure}{\numberline {13}{\ignorespaces Robot list\relax }}{20}{figure.caption.33}
-\contentsline {figure}{\numberline {14}{\ignorespaces Spectator\relax }}{21}{figure.caption.34}
-\contentsline {figure}{\numberline {15}{\ignorespaces Spectator\relax }}{22}{figure.caption.35}
-\contentsline {figure}{\numberline {16}{\ignorespaces Control\relax }}{23}{figure.caption.36}
-\contentsline {figure}{\numberline {17}{\ignorespaces Control\relax }}{24}{figure.caption.37}
-\contentsline {figure}{\numberline {18}{\ignorespaces Synchron\relax }}{25}{figure.caption.38}
-\contentsline {figure}{\numberline {19}{\ignorespaces Follow\relax }}{26}{figure.caption.39}
+\contentsline {figure}{\numberline {10}{\ignorespaces Softwarearchitektur\relax }}{19}{figure.caption.30}
+\contentsline {figure}{\numberline {11}{\ignorespaces Steuerung\relax }}{20}{figure.caption.31}
+\contentsline {figure}{\numberline {12}{\ignorespaces Logo\relax }}{21}{figure.caption.37}
+\contentsline {figure}{\numberline {13}{\ignorespaces Mockup Connection\relax }}{22}{figure.caption.38}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Log in}}}{22}{subfigure.13.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Home}}}{22}{subfigure.13.2}
+\contentsline {figure}{\numberline {14}{\ignorespaces Use Case Connection\relax }}{23}{figure.caption.39}
+\contentsline {figure}{\numberline {15}{\ignorespaces Mockup Synchronization\relax }}{24}{figure.caption.40}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Log in}}}{24}{subfigure.15.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Home}}}{24}{subfigure.15.2}
+\contentsline {figure}{\numberline {16}{\ignorespaces Use Case Synchronization\relax }}{25}{figure.caption.41}
+\contentsline {figure}{\numberline {17}{\ignorespaces Use Case Update\relax }}{25}{figure.caption.42}
+\contentsline {figure}{\numberline {18}{\ignorespaces Mockup Szenario\relax }}{26}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Szenario}}}{26}{subfigure.18.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Spectator}}}{26}{subfigure.18.2}
+\contentsline {figure}{\numberline {19}{\ignorespaces Use Case Szenario\relax }}{27}{figure.caption.44}
+\contentsline {figure}{\numberline {20}{\ignorespaces Use Case Spectator\relax }}{27}{figure.caption.45}
+\contentsline {figure}{\numberline {21}{\ignorespaces Use Case Exception\relax }}{28}{figure.caption.46}

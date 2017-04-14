@@ -1,11 +1,14 @@
 ;; This logfile was generated automatically by `xindy'
-;; at 02.04.2017  16:47:07
-;; Indexstyle: "C:\\Users\\SL-Th\\OneDrive\\Dokumente\\DHBW\\Studienarbeit\\FleeAndCatch-Docs\\documentation\\6jH6EQ_Plw", Rawindex: "C:\\Users\\SL-Th\\OneDrive\\Dokumente\\DHBW\\Studienarbeit\\FleeAndCatch-Docs\\documentation\\wlGi85PY6H", Output: "dokumentation.acr"
+;; at 10.04.2017  13:44:59
+;; Indexstyle: "C:\\Users\\SL-Th\\OneDrive\\Dokumente\\DHBW\\Studienarbeit\\FleeAndCatch-Docs\\documentation\\oUR9YK1yZD", Rawindex: "C:\\Users\\SL-Th\\OneDrive\\Dokumente\\DHBW\\Studienarbeit\\FleeAndCatch-Docs\\documentation\\9A6VFNGJ1c", Output: "dokumentation.acr"
 
 
 Building indexentry-tree:
 Hierdepth of index is :TREE
 
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
@@ -34,6 +37,9 @@ Letter-group: "´´" -> "D"
 Letter-group: "†´¨" -> "C"
 Letter-group: "†´Ë" -> "C"
 Letter-group: "€ÈÈ" -> "A"
+Letter-group: "Ú†È" -> "T"
+Letter-group: "¬ÐÃ¼" -> "J"
+Letter-group: "»åå»" -> "M"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "€ÃÚ" -> "A"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
@@ -46,6 +52,10 @@ sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "¨´" -> "I"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "¬¨Ú" -> "J"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "»åå»" -> "M"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "Ú†È" -> "T"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "à¨" -> "U"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)

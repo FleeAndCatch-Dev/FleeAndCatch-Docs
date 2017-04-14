@@ -67,11 +67,20 @@
 \glossentry{jit}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{7}\delimN 
 \glsXpageXglsnumberformat{}{11}\delimN 
-\glsXpageXglsnumberformat{}{14}, \glsseeformat[Glossary:]{gls-jit}{}}}\glsgroupskip
+\glsXpageXglsnumberformat{}{14}, \glsseeformat[Glossary:]{gls-jit}{}}}\relax\glsresetentrylist
+\glossentry{json}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{18}}}\glsgroupskip
+\glsgroupheading{M}\relax\glsresetentrylist
+\glossentry{mvvm}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{18}}}\glsgroupskip
+\glsgroupheading{T}\relax\glsresetentrylist
+\glossentry{tcp}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{18}}}\glsgroupskip
 \glsgroupheading{U}\relax\glsresetentrylist
 \glossentry{ui}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{7}\delimN 
-\glsXpageXglsnumberformat{}{9}, \glsseeformat[Glossary:]{gls-ui}{}}}\glsgroupskip
+\glsXpageXglsnumberformat{}{9}\delimN 
+\glsXpageXglsnumberformat{}{17}, \glsseeformat[Glossary:]{gls-ui}{}}}\glsgroupskip
 \glsgroupheading{X}\relax\glsresetentrylist
 \glossentry{xml}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{7}\delimN 

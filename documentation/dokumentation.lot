@@ -1,3 +1,9 @@
 \select@language {ngerman}
 \contentsline {table}{\numberline {1}{\ignorespaces Eigenschaften der EV3-Motortypen}}{5}{table.caption.12}
 \contentsline {table}{\numberline {2}{\ignorespaces Eigenschaften der EV3-Motortypen}}{7}{table.caption.19}
+\contentsline {table}{\numberline {3}{\ignorespaces \gls {json} Kommando Connection}}{29}{table.caption.48}
+\contentsline {table}{\numberline {4}{\ignorespaces \gls {json} Kommando Synchronization}}{29}{table.caption.50}
+\contentsline {table}{\numberline {5}{\ignorespaces \gls {json} Kommando Scenario}}{30}{table.caption.52}
+\contentsline {table}{\numberline {6}{\ignorespaces \gls {json} Kommando Exception}}{30}{table.caption.54}
+\contentsline {table}{\numberline {7}{\ignorespaces \gls {json} Kommando Control}}{31}{table.caption.56}
+\contentsline {table}{\numberline {8}{\ignorespaces \gls {json} Kommando Position}}{31}{table.caption.58}
