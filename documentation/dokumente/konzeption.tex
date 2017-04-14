@@ -22,7 +22,7 @@ Damit bestehen folgende Anforderungsdefinitionen an die zu erstellenden Software
 \subsection{Softwarearchitektur}
 
 Die Architektur des Schwarmverhaltens besteht aus drei Hauptkomponente, den Robotern, einer Desktopanwendung, sowie einer mobilen App, siehe Abbildung \ref{fig:softwarearchitecture}.\\
-Diese Komponenten kommunizieren über ein drahtloses Netzwerk mittels \gls{tcp} untereinander, indem diese Zeichenketten als \gls{json} versenden. Dadurch lassen sich gesammelte Daten als Objekte kapseln und auf den verschiedenen Systemen entsprechend synchronisieren. Dies geschieht über eine Klassenstruktur, die Kommandos abbildet, durch die die kommunizierten Daten serialisiert und als Objekte dargestellt werden können.\\
+Diese Komponenten kommunizieren über ein drahtloses Netzwerk mittels \gls{tcp} untereinander, indem diese Zeichenketten als \gls{json} versenden. Dadurch lassen sich gesammelte Daten als Objekte kapseln und auf den verschiedenen Systemen entsprechend synchronisieren. Dies geschieht über eine Klassenstruktur, die Kommandos abbildet, durch die die kommunizierten Daten serialisiert und als Objekte dargestellt werden können, siehe \ref{kommunikation}.\\
 Die Roboter basieren auf dem Java System \gls{lejos}, da durch die bereitgestellten Bibliotheken für \gls{ev3} Systeme eine unkomplizierte Implementierung von Logik möglich ist, sowie eine direkte Unterstützung von \gls{eclipse} gegeben ist, um erstellte Software zu debuggen. Die Roboter unterstützen für ein Schwarmverhalten klassische Funktionen, um die Daten der vorhandenen Sensorik auszulesen, sowie Motoren anzusteuern. Diese Funktionen werden einerseits durch Kommandos ausgeführt um den entsprechenden Roboter zu steuern. Anderseits werden regelmäßig Daten durch einen Prozess erfasst, um diese auf dem Backend zu aktualisieren.\\
 Die App beruht auf der plattformübergreifenden Implementierung mittels des Frameworks Xamarin um möglichst viele Systeme zu erreichen. Sie baut dabei auf ein einfaches \gls{ui} mit dem Design Pattern \gls{mvvm} auf, um diese von der eigentlichen Logik zu trennen und einen qualitativ hochwertigen Quellcode zu schaffen, der einfach gewartet werden kann. Die App besitzt Basisfunktionen zur Erstellung von Kommandos, die die Verwaltung von Szenarien veranlassen und steuert somit den Schwarm.\\
 Das Backend dient als Kommunikationsschnittstelle des gesamten Systems und steuert die Kommandos für den Ablauf der Szenarien. Es besitzt ein \gls{ui} mit \gls{javafx} Realisierung zur Anzeige von erfassten Daten der einzelnen Komponenten und stellt diese anhand einer auswählbaren Hierarchie dar.
@@ -187,13 +187,17 @@ Der Use Case Exception stellt den Ablauf einer auftretenden Exception in einem R
 
 \newpage
 \color{process}
-\subsection{Kommunikation}
+\subsection{Kommunikation}\label{kommunikation}
+
+Die Kommunikation des Schwarmverhalten basiert auf dem Standard für Netzwerkkommunikation, indem über eine \gls{tcp} Schnittstelle Zeichenketten binär versendet werden. Dabei sollen die zu übertragenen Daten als Zeichenkette serialisiert und binär versendet werden, wobei die Gegenstelle die Daten über eine vorliegende Kommandostruktur deserialisiert. Um auf die Daten entsprechend zu reagieren werden diese nach Abhängigkeiten interpretiert. Dies soll über einen Typen realisiert werden, der der jeweiligen Struktur des Kommandos entspricht. Damit die Kommandostruktur als solche von den Komponenten von anderen unterschieden werden kann, sollen diese eine zusätzliche Grundstruktur zur Identifizierung der Schnittstelle, als auch den Kommandos erhalten. 
+
+\paragraph{Connection} stellt das Kommando zur allgemeinen Verbindung dar, wobei eine Verbindung sowohl aufgebaut, als auch abgebaut werden kann. Dazu werden Parameter zur Identifizierung von Komponenten genutzt, die entsprechend auch in weiteren Kommandos ihre Anwendung finden. Die Tabelle \ref{tab:Connection} stellt den allgemeinen Aufbau eines solchen Kommandos dar.
 
 \begin{table}[h]
 	\centering
-	\begin{tabular}{|p{4cm}|p{10cm}|}
+	\begin{tabular}{|p{4cm}|p{8cm}|}
 		\hline
-		\textbf{Connection} & \\
+		\textbf{Connection} & Definition\\
 		\hline
 		String id & Stellt den Identifikationsstring dar \\
 		String type & Stellte den Typen dar \\
@@ -205,11 +209,13 @@ Der Use Case Exception stellt den Ablauf einer auftretenden Exception in einem R
 	\label{tab:Connection}
 \end{table}
 
+\paragraph{Synchronization} stellt das Kommando zur Synchronization der erfassten Daten zwischen den verschiedenen Komponenten dar. Dabei werden die Daten als Listen mit entsprechenden Szenarien, wie Robotern übertragen. Je nach vorliegendem Typ des Kommandos, können verschiedene Daten übertragen werden, wobei Current einem einzelnen Objekten und die entsprechende Mehrzahl kompletten Datensätzen entspricht.
+
 \begin{table}[h]
 	\centering
 	\begin{tabular}{|p{4cm}|p{10cm}|}
 		\hline
-		\textbf{Synchronization} & \\
+		\textbf{Synchronization} & Definition\\
 		\hline
 		String id & Stellt den Identifikationsstring dar \\
 		String type & Stellte den Typen dar \\
@@ -223,11 +229,13 @@ Der Use Case Exception stellt den Ablauf einer auftretenden Exception in einem R
 	\label{tab:Synchronization}
 \end{table}
 
+\paragraph{Scenario} stellt das aktuell ablaufende Szenario dar, dass als Schwarmverhalten nachgeahmt wird. Darin enthalten sind die teilnehmenden Komponenten, sowie deren aktuell erfassten Daten. Zudem sind Steuerungsinformationen enthalten, die zur Orientierung des Schwarms entsprechend dem Kommando dienen. Diese verändern sich je nach Typen des Szenarios und können in verschiedenen Kontexten kommuniziert werden, um ein unterschiedliches Ergebnis zu erreichen.\\
+
 \begin{table}[h]
 	\centering
-	\begin{tabular}{|p{4cm}|p{10cm}|}
+	\begin{tabular}{|p{4cm}|p{8cm}|}
 		\hline
-		\textbf{Scenario} & \\
+		\textbf{Scenario} & Definition\\
 		\hline
 		String id & Stellt den Identifikationsstring dar \\
 		String type & Stellte den Typen dar \\
@@ -240,11 +248,13 @@ Der Use Case Exception stellt den Ablauf einer auftretenden Exception in einem R
 	\label{tab:Szenario}
 \end{table}
 
+\paragraph{Exception} stellt das Kommando zur Abhandlung eines Fehlverhaltens einer Komponente dar, die anderen Komponenten mitgeteilt werden kann. Sie enthält Informationen zur verursachenden Komponente, sowie des auftretenden Fehlers, der behandelt wird. Verwendung findet die Fehlerweiterleitung im Verbindungsverlust des Roboters, damit andere Teilnehmer über das Abmelden des entsprechenden Roboters in Kenntnis gesetzt werden und das Szenario beenden.
+
 \begin{table}[h]
 	\centering
-	\begin{tabular}{|p{4cm}|p{10cm}|}
+	\begin{tabular}{|p{4cm}|p{8cm}|}
 		\hline
-		\textbf{Exception} & \\
+		\textbf{Exception} & Definition\\
 		\hline
 		String id & Stellt den Identifikationsstring dar \\
 		String type & Stellte den Typen dar \\
@@ -257,11 +267,14 @@ Der Use Case Exception stellt den Ablauf einer auftretenden Exception in einem R
 	\label{tab:Exception}
 \end{table}
 
+\newpage
+\paragraph{Control} stellt das Kommando zur direkten Steuerung eines Roboters dar. Hierbei werden Steuerungsinformationen, wie Geschwindigkeit und Ausrichtung übertragen, um den Roboter entsprechend seiner aktuellen Position relativ zu steuern. Dies findet Anwendung in einer direkten Steuerung, als auch im Schwarmverhalten zur Steuerung des Nutzer abhängigen Roboters.
+
 \begin{table}[h]
 	\centering
-	\begin{tabular}{|p{4cm}|p{10cm}|}
+	\begin{tabular}{|p{4cm}|p{8cm}|}
 		\hline
-		\textbf{Control} & \\
+		\textbf{Control} & Definition\\
 		\hline
 		String id & Stellt den Identifikationsstring dar \\
 		String type & Stellte den Typen dar \\
@@ -275,11 +288,13 @@ Der Use Case Exception stellt den Ablauf einer auftretenden Exception in einem R
 	\label{tab:Control}
 \end{table}
 
+\paragraph{Position} stellt das Kommando zur indirekten Steuerung eines Roboters dar. Hierbei werden Positionsdaten übertragen, die der autonomen Navigation des Roboters dienen. Um eine entsprechende Geschwindigkeit zu erhalten, kann zudem ein Geschwindigkeitswert angefügt werden, der abhängig des Roboters gesetzt wird.
+
 \begin{table}[h]
 	\centering
-	\begin{tabular}{|p{4cm}|p{10cm}|}
+	\begin{tabular}{|p{4cm}|p{8cm}|}
 		\hline
-		\textbf{Position} & \\
+		\textbf{Position} & Definition\\
 		\hline
 		String id & Stellt den Identifikationsstring dar \\
 		String type & Stellte den Typen dar \\
