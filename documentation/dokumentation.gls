@@ -42,6 +42,8 @@
 \glsgroupheading{J}\relax\glsresetentrylist
 \glossentry{java}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{11}}}\relax\glsresetentrylist
+\glossentry{javafx}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{18}}}\relax\glsresetentrylist
 \glossentry{javascript}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{9}\delimN 
 \glsXpageXglsnumberformat{}{10}}}\glsgroupskip
@@ -51,6 +53,9 @@
 \glsgroupheading{O}\relax\glsresetentrylist
 \glossentry{objectivc}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{11}}}\glsgroupskip
+\glsgroupheading{S}\relax\glsresetentrylist
+\glossentry{sqlite}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{22}}}\glsgroupskip
 \glsgroupheading{T}\relax\glsresetentrylist
 \glossentry{template}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{11}}}\relax\glsresetentrylist
