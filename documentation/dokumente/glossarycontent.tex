@@ -1,60 +1,144 @@
 %abbreviations
-%\newacronym{html}{HTML}{}
+\newacronym[longplural={Applications}]{app}{App}{Application}
+\newacronym{tcp}{TCP}{Transmission Control Protocol}
+\newacronym{json}{JSON}{JavaScript Object Notation}
+\newacronym{mvvm}{MVVM}{Model View ViewModel}
+\newacronym{uml}{UML}{UMnified Modeling Language}
+\newacronym{cpu}{CPU}{Central Processing Unit}
 
 %glossaries
 \newglossaryentry{javascript}
 {
 	name=JavaScript,
-	description={}
+	description={JavaScript ist eine Skriptsprache zur Entwicklung dynamischer Internetseiten}
 }
-\newglossaryentry{browser}
+\newglossaryentry{typescript}
 {
-	name=Browser,
-	description={}
+	name=TypeScript,
+	description={TypeScript ist eine objektorientierte Programmiersprache von Microsoft basierend auf den ECMA-Script-6 Standards}
 }
 \newglossaryentry{framework}
 {
 	name=Framework,
-	description={},
+	description={Ein Framework ist ein Rahmen zur Programmierung mit verschiedenen Softwarekomponenten},
 	plural=Frameworks
+}
+\newglossaryentry{java}
+{
+	name=Java,
+	description={}
+}
+\newglossaryentry{objectivc}
+{
+	name=Objective-C,
+	description={}
+}
+\newglossaryentry{template}
+{
+	name=Template,
+	description={}
+}
+\newglossaryentry{csharp}
+{
+	name=C\#,
+	description={}
+}
+\newglossaryentry{lejos}
+{
+	name=leJos,
+	description={}
+}
+\newglossaryentry{ev3}
+{
+	name=EV3,
+	description={}
+}
+\newglossaryentry{eclipse}
+{
+	name=Eclipse,
+	description={}
+}
+\newglossaryentry{javafx}
+{
+	name=Eclipse,
+	description={}
+}
+\newglossaryentry{sqlite}
+{
+	name=SQLite,
+	description={}
 }
 
 %dual entry
-\newglossaryentry{gls-app}
-{
-	name=Application,
-	description={Eine Application ist ein ausführbares Programm für mobile Geräte, wie Smartphones oder Tablets},
-	plural=Apps
-}
-\newacronym[see={[Glossary:]{gls-app}}]{app}{App}{Application\glsadd{app}}
-\newglossaryentry{gls-api}
-{
-	name=Application Programming Interface,
+\newglossaryentry{gls-api} {
+	name={Application Programming Interface},
 	description={Eine API ist eine Programmierschnittstelle, die die Anbindung von Software ermöglicht},
-	plural=APIs
 }
-\newacronym[see={[Glossary:]{gls-api}}]{api}{API}{Application Programming Interface\glsadd{api}}
+\newacronym[see={[Glossary:]{gls-api}}]{api}{API}{Application Programming Interface\glsadd{gls-api}}
 \newglossaryentry{gls-html}
 {
-	name=,
-	description={}
+	name=Hypertext Markup Language,
+	description={HTML basiert auf XML und bestimmt den Aufbau einer Internetseite},
 }
-\newacronym[see={[Glossary:]{gls-html}}]{html}{HTML}{\glsadd{html}}
+\newacronym[see={[Glossary:]{gls-html}}]{html}{HTML}{Hypertext Markup Language\glsadd{html}}
 \newglossaryentry{gls-css}
 {
-	name=,
-	description={}
+	name=Cascading Style Sheets,
+	description={CSS bestimmt das Design einer Internetseite}
 }
-\newacronym[see={[Glossary:]{gls-css}}]{css}{CSS}{\glsadd{css}}
+\newacronym[see={[Glossary:]{gls-css}}]{css}{CSS}{Cascading Style Sheets\glsadd{css}}
 \newglossaryentry{gls-xml}
 {
-	name=,
-	description={}
+	name=Extensible Markup Language,
+	description={XML ist ein auf Text basiertes Format zum Austausch von Informationen und Daten}
 }
-\newacronym[see={[Glossary:]{gls-xml}}]{xml}{XML}{\glsadd{xml}}
+\newacronym[see={[Glossary:]{gls-xml}}]{xml}{XML}{Extensible Markup Language\glsadd{xml}}
 \newglossaryentry{gls-ui}
 {
-	name=,
+	name=User Interface,
+	description={Die UI ist eine Nutzerschnittstelle, für Interaktionen mit der Anwendung}
+}
+\newacronym[see={[Glossary:]{gls-ui}}]{ui}{UI}{User Interface\glsadd{ui}}
+\newglossaryentry{gls-aot}
+{
+	name=Ahead of Time,
+	description={Übersetzt Programmcode vor der Ausführung in Maschinencode}
+}
+\newacronym[see={[Glossary:]{gls-aot}}]{aot}{AOT}{Ahead of Time\glsadd{aot}}
+\newglossaryentry{gls-arm}
+{
+	name=Acorn RISC Machines,
+	description={Mikroprozessordesign der Firma Acorn}
+}
+\newacronym[see={[Glossary:]{gls-arm}}]{arm}{ARM}{Acorn RISC Machines\glsadd{arm}}
+\newglossaryentry{gls-il}
+{
+	name=Intermediate Language,
+	description={Intermediate Language ist eine objektorientierte Assemblersprache}
+}
+\newacronym[see={[Glossary:]{gls-il}}]{il}{IL}{Intermediate Language\glsadd{il}}
+\newglossaryentry{gls-jit}
+{
+	name=Just-in-Time,
+	description={Just-in-Time bedeutet, das der entsprechende Quellcode zur Laufzeit übersetzt wird}
+}
+\newacronym[see={[Glossary:]{gls-jit}}]{jit}{JIT}{Just-in-Time\glsadd{jit}}
+\newglossaryentry{gls-dll}
+{
+	name=Dynamic Linked Library,
+	description={Bezeichnet eine dynamische Bibliothek, die zur Laufzeit dem Programmcode hinzugefügt wird},
+	plural=DLLs
+}
+\newacronym[see={[Glossary:]{gls-dll}}]{dll}{DLL}{Dynamic Linked Library\glsadd{dll}}
+\newglossaryentry{gls-cli}
+{
+	name=Common Language Infrastructure,
 	description={}
 }
-\newacronym[see={[Glossary:]{gls-ui}}]{ui}{UI}{\glsadd{ui}}
+\newacronym[see={[Glossary:]{gls-cli}}]{cli}{CLI}{Common Language Infrastructure\glsadd{cli}}
+\newglossaryentry{gls-clr}
+{
+	name=Common Language Runtime,
+	description={}
+}
+\newacronym[see={[Glossary:]{gls-clr}}]{clr}{CLR}{Common Language Runtime\glsadd{clr}}
