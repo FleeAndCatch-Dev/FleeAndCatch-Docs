@@ -186,7 +186,6 @@ Der Use Case Exception stellt den Ablauf einer auftretenden Exception in einem R
 \end{figure}
 
 \newpage
-\color{process}
 \subsection{Kommunikation}\label{kommunikation}
 
 Die Kommunikation des Schwarmverhalten basiert auf dem Standard für Netzwerkkommunikation, indem über eine \gls{tcp} Schnittstelle Zeichenketten binär versendet werden. Dabei sollen die zu übertragenen Daten als Zeichenkette serialisiert und binär versendet werden, wobei die Gegenstelle die Daten über eine vorliegende Kommandostruktur deserialisiert. Um auf die Daten entsprechend zu reagieren werden diese nach Abhängigkeiten interpretiert. Dies soll über einen Typen realisiert werden, der der jeweiligen Struktur des Kommandos entspricht. Damit die Kommandostruktur als solche von den Komponenten von anderen unterschieden werden kann, sollen diese eine zusätzliche Grundstruktur zur Identifizierung der Schnittstelle, als auch den Kommandos erhalten. 
