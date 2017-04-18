@@ -1,41 +1,81 @@
 \section{Technische Grundlagen}
 \subsection{Robotik} % Manuel ca. 8
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{process}
+\color{finishing}
 % Eigentlicher Text:
-Tatsächlich gibt es 
-Die VDI-Richtline 2860 von 1990 definiert einen Roboter wie folgt:
+Die Robotik beschäftigt sich mit dem Entwurf, der Konstruktion sowie der Programmierung, Steuerung und dem Betrieb 
+von Robotern \newline [http://wirtschaftslexikon.gabler.de/Definition/robotik.html]. Dabei umfasst die Robotik eine Vielzahl 
+von Fachgebieten wie der Elektrotechnik, dem Maschienenbau, der Informatik sowie der Biologie und der Medizin.
+\subsubsection{Roboter}
+% Farbe die angibt welchen Status der folgende Abschnitt hat:
+\color{finishing}
+% Eigentlicher Text:
+Was im Kontext der Robotik unter einem Roboter zu verstehen ist, ist gar nicht so einfach darzulegen, da es in Tat keine allgemein anerkannte Definition dieses Begriffs gibt, die seiner üblichen Verwendung entspricht [Mobile Roboter - 2].
 \newline
->>Ein Roboter ist ein frei und wieder programmierbarer, multifunktio-
+Auch ohne eine vollkommen allgemeingültige und präzise Beschreibung eines Roboters zu sein, soll hier die VDI-Richtline 2860 einen Eindruck darüber vermitteln, was in der Robotik mit Roboter gemeint ist. \newline
+Die VDI-Richtline 2860 von 1990 definiert einen Roboter wie folgt:
+\vspace{2mm}
+\newline
+>>\textit{Ein Roboter ist ein frei und wieder programmierbarer, multifunktio-
 naler Manipulator mit mindestens drei unabhängigen Achsen, um Ma-
 terialien, Teile, Werkzeuge oder spezielle Geräte auf programmierten,
 variablen Bahnen zu bewegen zur Erfüllung der verschiedensten Auf-
-gaben.<<
+gaben.}<<
+\vspace{2mm}
 \newline
-Auch wenn die Definition einige Eigenschaften eines Roboters ... So beschreibt diese Definition 
-hauptsächlich stationäre Industrieroboter, wie sie in der Automatisierungstechnik verwendet werden,
-wie beispielsweise Schweiß- oder Lackierroboter in der Automobilfertigung oder Kommissionierroboter 
-in der Logistik. Die genannten programmierten Bahnen sind dort möglich und sinn-
-voll, weil der Arbeitsprozess, dessen Teil der Roboter ist, gemeinsam mit dem
-Roboter und seiner Programmierung gestaltet wird:
+Auch wenn diese Definition einige grundlegenden Eigenschaften eines Roboters darlegt, beschreibt diese Definition den Begriff des Roboters im industriellen Kontext und trifft hauptsächlich auf stationäre Industrieroboter zu, wie sie in der Automobilfertigung beispielsweise als Schweiß- oder Lackierroboter  verwendet werden. Die genannten programmierten Bahnen sind dort möglich, weil die Arbeitsprozess und die Umgebung auf den Roboter zugeschnitten und vollständig bekannt sind [MR 2]. \newline
+Im Gegensatz dazu trifft dieser Aspekt auf mobile Roboter nicht zu. Mobile Roboter wie beispielsweise Service-Roboter bewegen sich in einer unsttrukturierten und dynamischen Umgebung.
 \subsubsection{Mobile Roboter}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{process}
 % Eigentlicher Text:
-Diese Kapitel ...
-Anders 
+Mobile Roboter sind in ihrer Position variable, bewegen sich selbständig von
+Ort zu Ort und interagieren mit ihrer Umgebung. Diese macht es notwendig das die Roboter ihre Umgebung erfassen und wahrnehmen können um auf Veränderungen wie bespielsweise Hindernisse reagieren zu können. \newline
+...
+\newline
+Zu den Vertretern mobiler Roboter zählen zum Beispiel Service-Roboter, Erkundungsroboter und Humanoide Roboter. Im Folgenden sind einige Beispiele
+für mobile Roboter dargelegt:
+\begin{itemize}
+	\item{\textbf{Shakey:}} Shakey war ein mobiler Roboter der von 1966 bis 1972 an der am Stanford Research Institute entwickelt wurde. Seine Entwicklung leistete wichtige Beiträge für die Robotik sowie in der KI-Forschung im Bereich der Handlungsplanung und dem selbständigen Lernen [MR 5f].
+	%##################################################
+	\item{\textbf{Spirit \& Opportunity:}} Spirit \& Opportunity sind zwei baugleiche Roboter die im Jahr 2003 von der NASA zum Mars geschickt wurden um den Himmelskörper zu erkunden. Die beiden Erkundungsroboter sind Radfahrzeuge mit flexiblem Fahrgestell, verfügen über eine Panoramakamera sowie Sensoren zur Untersuchung des Erdbodens und Gesteins. Obwohl die Roboter in Bezug auf ihrer gundsätzlichen Aktionen von der Erde aus ferngesteuert werden, ist eine autonome Steuerung welche auf kurzfristige, unerwartet Ereignisse wie das Wegrutschen von Rädern reagiert aufgrund der langen Signallaufzeiten unverzichtbar. Die Roboter waren für eine
+	Lebensdauer von 90 Marstagen ausgelegt, übertrafen diese aber bei weitem (mehr als das 30fache) [MR 8f]
+	%##################################################
+	\item{\textbf{Stanley:}} Stanley ist ein vollständig autonomer Roboter der 2005 am Grand Challenge Wetbewerb teilnahm und diesem gewann. Bei diesem Wettbewerb mussten Fahrzeuge ohne Eingriff von Menschen eine festgelegte, jedoch nicht markierte Strecke von rund 213 km von einem definierten Start- zu einem definierten Zielpunkt zurücklegen. Die Strecke führte durch 
+	die Mojave-Wüste in den USA. Bei Stanley handelt es sich um einen modifizierter VW Touareg, dem Sensoren zur Umgebungswahrnehmung und Bordrechner zur Bearbeitung des Kontrollprogramms eingebaut wurden. Stanleys wichtigste Umgebungssensoren waren mehrere Laserscanner und eine Kamera.Stanley meisterte die 213 km lange Strecke welche unter anderem durch felsige
+	oder sandige Bereiche sowie durch Wasserläufe führte in knapp unter 7 Stunden.
+	%##################################################
+	\item{\textbf{Tribot}} D
+\end{itemize}
+Die Beispiele zeigen wie vielfältig ...
+Neben der Forschung -> Marktpotenzial erwähnen
 \subsubsection{Sensorik}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{process}
 % Eigentlicher Text:
-Diese Kapitel ...
+Um mit der Umgebung interagieren zu können müssen mobile Roboter diese wahrnehmen, dazu dienen Sensoren. Sensoren ermöglichen es dem Roboter Informationen über seine Umwelt und über seinen Zustand zu sammeln.
 Sensoren lassen sich hinsichtliche ihrer Arbeitsweise und ... wie folgt klassifizieren:
 \begin{itemize}
-	\item{} A
-	\item{} 
-	\item{} 
-	\item{} 
+	\item{\textbf{Propriozeptive Sensoren}} -- Diese Art der Sensoren bestimmen eine Messgröße des Roboters selbst und haben keine \glqq{}Kontakt\grqq{} zur Umwelt z.B Bestimmung der Lage Aufgrund eines Neigungssensors.
+	\item{\textbf{Exterozeptive Sensoren}} -- Im Gegensatz zu den propriozeptive Sensoren gewinnen diese Sensoren Informationen aus Messgrößen der Umwelt beispielsweise die Bestimmung der Orientierung in Bezug auf die Umwelt.
+	\item{\textbf{Aktive Sensoren}} -- Aktive Sensoren senden aktive Energie in ihre Umwellt aus und Erfassen anschließend die zurückkehrenden Signale wie dies beispielsweiße ein Ultraschallsensor tut.
+	\item{\textbf{Passive Sensoren}} -- Diese Sensoren senden nicht aktiv aus sondern erfassen ausschließlich die von Natur aus vorhandenen Signale wie z.B. das einfallende Licht durch eine Kamera.
 \end{itemize}
+Die folgenden Tabelle zeigt beispielhaft die Einordnung einiger Sensoren:
+\begin{table}[ht]
+	\begin{tabular}{|p{4,5cm}|p{4,0cm}|p{4,0cm}|} \hline
+		     	                & Aktive Sensoren      & Passive Sensoren   \\ \hline
+		Propriozeptive Sensoren & 
+			(Inkrementalgeber (Photoelektrische Abtastung)) & 
+			Inkrementalgeber, \newline Neigungssensor, \newline Gyroskop   \\ \hline
+		Exterozeptive Sensoren  & 
+			Ultraschallsensor,  \newline Laserscanner, \newline Infrarotsensor, \newline Radar    & 
+			Kontaktsensor, \newline Kompass, \newline Kamera, \newline GPS      \\ \hline 
+	\end{tabular}
+	\centering
+	\caption[Einordnung von Sensoren]{Einordnung von Sensoren}
+\end{table}
+\subsubsection{Sensordatenverarbeitung}
 \subsubsection{Antriebsarten}
 \subsection{\LM}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
@@ -311,6 +351,74 @@ Mono ist eine opensource Laufzeitumgebung für Linux Betriebssysteme, um Anwendu
 
 Das .NET Framework ist eine Laufzeitumgebung für .NET Anwendungen, die verschiedene Dienste bereitstellt. Es besteht aus zwei Hauptkomponenten, der CLR, die eine Speicherverwaltung und verschiedene Systemdienste bereitstellt, sowie der .NET Bibliothek. Um Anwendungen für .NET zu entwickeln, wird die entsprechende Version von .NET \gls{framework} auf dem System benötigt. Als Programmiersprache ist der Entwickler weitgehend unabhängig, der Quellcode muss jedoch die CLI-Spezifikationen erfüllen. Dafür eignen sich unter anderem die Programmiersprachen von Microsoft, wie VisualBasic, C\#, VisulF\# und C++.
 
+\subsection{TCP-Kommunikation}
+Das Transmission Control Protocol (TCP) ist ein Transportprotokoll und ermöglicht eine Datenaustausch zwischen kommunizierenden Anwendungsinstanzen in einer Ende-zu-Ende-Beziehung zwischen. TCP ist als Transportprotokoll auf in der 4 Schicht des OSI-Modells angesiedelt und basiert auf dem Internetprotokoll (IP) mit dem zusammen es als Nahmensgeber der TCP/IP-Protokollfamilie (Internetprotokollfamilie) dient.
+TCP ist ein offenes, frei verfügbares und weit verbreitetes Protokoll. Als Mitglied der Internetprotokollfamilie ist TCP neben UDP das Transportprotokoll, auf dem die meisten Anwendungen im Internet basieren [GD189].
+\subsubsection{Gundlegendes}
+Als verbindungsorientiertes Protokoll sorgt TCP für die Erzeugung und Erhaltung einer gesicherten 
+Ende-zu-Ende-Verbindung zwischen zwei Anwendungsprozessen. TCP arbeitet paketvermittelt d.h. überträgt Daten Paketweise und ist ein zuverlässiges Protokoll.
+Durch diese Eigenschaften stellt TCP sicher dass, Daten
+\begin{itemize}
+	\item{nicht verloren gehen}
+	\item{nicht verändert werden}
+	\item{nicht dupliziert werden}
+	\item{in der richtigen Reihenfolge eintreffen}
+\end{itemize}
+Zur Gewährleistung einer vollständingen Übertragung sowie der Integrität der gesendeten Daten nutzt TCP Prüfsummen,Bestätigungen, Zeitüberwachungs- und Nachrichtenwiederholungsmechanismen sowie Sequenznummern für die Reihenfolgeüberwachung und das Sliding Windows Prinzip zur Flusskontrolle [GD].
+\newline
+TCP nutzt prinzipiell folgende Protokollmechanismen:
+\begin{itemize}
+	\item{Drei-Wege-Handshake-Verbindungsauf- und -abbau}
+	\item{Positives, kumulatives Bestätigungsverfahren mit Timerüberwachung für jede Nachricht}
+	\item{Implizites negatives Bestätigungsverfahren (NAK-Mechanismus): Bei drei ankommenden Duplikat-ACK-PDUs wird beim Sender das Fehlen des folgenden Segments angenommen. Ein sog. Fast-Retransmit-Mechanismus führt zur Neuübertragung des Segments, bevor der Timer abläuft.}
+	\item{Pipelining}
+	\item{Go-Back-N zur Übertragungswiederholung}
+	\item{Fluss- und Staukontrolle}
+\end{itemize}
+\subsubsection{Nagle-Algorithmus}
+Nagle-Algorithmus (RFC 896 und RFC 1122) ist ein Algorithmus der der Optimierung dient und der bei allen 
+TCP-Implementierungen verwendet wird. Der versuchte Nagle-Algorithmus aus Optimierungsgründen zu verhindern, dass viele kleine Nachrichten gesendet werden, da dies schlecht für die Netzauslastung ist [GD198]. \newline
+Dazu werden mehrere Nachrichten zusammengefasst und gebündelt versendent, dies geschieht nach folgendem Prinzip:
+\begin{itemize}
+	\item{Erhält der TCP-Endpunkt Daten vom Anwendungsprozess wird zunächst nur das erste Datenpaket gesendet und die restlichen Daten werden im Sendepuffer gesammelt.}
+	\item{Danach werden weiteren Daten so lange im Sendepuffer gesammelt bis alle zuvor gesendeten Datenpakete vom Empfänger bestätigt wurden oder so viele Daten im Sendepuffer liegen das die eingstellte Segmentgröße erreicht ist und ein volles Datenpaket gesendet werden kann.}
+\end{itemize}
+Dieses Verfahren sorgt zwar für eine gute Netzauslastung da das Verhältnis von Nutzdaten zu Overhead (TCP-Header etc.) steigt jedoch ist dies allerdings nicht nicht für alle Anwendungsszenarien optimal da es die Latenz erhöt. Insbesondere bei Anwendungen die eine ummittelbare Antwort der Gegenstelle benötigen wie SSH- oder Telnet-Anwendung sorgt dies für Verzögerungen. In diesem Fall ist es besser den Nagle-Algorithmus auszuschalten. [GD198 f.]
+\subsubsection{Kommunikationsablauf}
+Da es sich bei TCP um ein verbindungsorientiertes Protokoll handelt gliedert sich die Kommunikation in die drei Phasen Verbindungsaufbau, Datenaustausch und Verbindungsabbau. Bevor Daten übertragen werden können muss die Verbindung durch den Verbindungsaufbau initiert und nach Beendinung der Datenbertragung
+wieder abgebaut werden. 
+\paragraph{Client \& Server}
+Der Verbindungsaufbau einer Kommunikation erfolgt bei TCP nach dem Client-/Server-Paradigma, d.h. einer der Teilnehmern aggiert als Server und wartet auf einen Verbindungsaufbau durch den Client welchen der andere Teilnehmern darstellt. \newline
+Nach dem Verbindungsauffbau haben die beiden Rollen jedoch keine Bedeutung mehr und die beide Teilnehmern
+sind sowohl bei der Datenübertragung als auch beim Verbindungsabbau gleichberechtigt.
+\paragraph{Verbindungsaufbau} \code{}
+\newline
+\smallskip
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/Verbindungsaufbau.png}
+	\caption[TCP Verbindungsaufbau]{TCP Verbindungsaufbau}
+	\label{fig:<Sprungmakre>}
+\end{figure}
+Der Verbindungsaufbau bei TCP basiert auf dem Three-Way-Handshake. Dabei schickt der schickt der Client einen Verbindungswunsch (SYN) an den Server. Der Server bestätigt den Erhalt der Nachricht (ACK) und äußert seinerseits einen Verbindungswunsch (SYN) welchen der Client nach Erhalt der Nachricht bestätigt (ACK). Nach Abblauf dieses gegenseitigen Anfrage- und Bestätigugsvorgangs ist die Verbindung initiiert und der Datenaustausch zwischen den Teilnehmern kann beginnen [EK].
+\paragraph{Datenaustausch}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/Datenaustausch.png}
+	\caption[TCP Datenaustausch]{TCP Datenaustausch}
+	\label{fig:<Sprungmakre>}
+\end{figure}
+\paragraph{Verbindungsabbau}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/Verbindungsabbau.png}
+	\caption[TCP Verbindungsabbau]{TCP Verbindungsabbau}
+	\label{fig:<Sprungmakre>}
+\end{figure}
+Nach Abschluss der Datenübertragung wird von einer Seite (egal von welcher) ein Verbindungsabbau initiiert. Dazu dient einen etwas modifizierten Drei-Wege-Handshake-Mechanismus. Jede der beiden Verbindungsrichtungen der Vollduplex-Verbindung wird abgebaut, d.h. beide Seiten bauen ihre „Senderichtung“ ab. Die initiierende Seite schickt zuerst einen Verbindungsabbauwunsch (FIN). Die Gegenstelle bestätigt den Erhalt der Nachricht (ACK) und schickt ebenfalls einen Verbindungsabbauwunsch (FIN) woraufhin sie von der Gegenstelle noch mitgeteilt bekommt, dass die Verbindung abgebaut ist (ACK).
+\subsubsection{Socket-Programmierung}
+Als Transportzugriffsschnittstelle für die TCP-basierte Kommunikation dient die Socket-Schnittstelle.
+Obwohl es sich bei TCP ein paketvermitteltes Protokoll handlet der Anwendung eine Strom-orientierte Kommunikation, die Daten werden also von einem Anwendungsprozess Byte für Byte in einem Bytestrom geschrieben und TCP sorgt anschlieend um den Aufbau von Segmenten, die dann übertragen werden. Andere Transportdienste erwarten ihre Daten in festen Blöcken [GD].
 \subsection{Java} %Gemeinsam ca. 2
 
 \subsubsection{Grundlagen}
@@ -325,9 +433,8 @@ Das .NET Framework ist eine Laufzeitumgebung für .NET Anwendungen, die verschie
 \subsubsection{Szenarien}
 \subsubsection{Algorithmen}
 
-\subsection{Kommunikation} %Manuel ca. 5
-
-\subsubsection{Grundlagen}
-\subsubsection{TCP/IP}
-\subsubsection{Wifi}
-\subsubsection{Datenaustausch} %(JSON und Serialisierung)
+%\subsection{Kommunikation} %Manuel ca. 5
+%\subsubsection{Grundlagen}
+%\subsubsection{TCP/IP}
+%\subsubsection{Wifi}
+%\subsubsection{Datenaustausch} %(JSON und Serialisierung)

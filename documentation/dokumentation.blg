@@ -17,8 +17,6 @@ A level-1 auxiliary file: dokumente/zusammenfassungausblick.aux
 A level-1 auxiliary file: dokumente/literatur.aux
 A level-1 auxiliary file: dokumente/anhang.aux
 Database file #1: literatur.bib
-Warning--I didn't find a database entry for "Roberta"
-Warning--I didn't find a database entry for "Schobel.RobertaEV3Programmiere"
 Warning--to sort, need author or key in Xamarin.Introductionto
 Warning--empty year in Xamarin.Introductionto
 Warning--empty year in DanielWurstl.Unterschiedeund
@@ -26,7 +24,7 @@ Warning--empty year in PetraRiepe.NativeApp
 Warning--empty publisher in Scholz.DasEV3
 You've used 5 entries,
             2773 wiz_defined-function locations,
-            644 strings with 6590 characters,
+            640 strings with 6516 characters,
 and the built_in function-call counts, 1730 in all, are:
 = -- 145
 > -- 80
@@ -65,4 +63,4 @@ warning$ -- 5
 while$ -- 12
 width$ -- 0
 write$ -- 68
-(There were 7 warnings)
+(There were 5 warnings)
