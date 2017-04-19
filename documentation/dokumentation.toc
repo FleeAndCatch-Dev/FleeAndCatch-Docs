@@ -1,0 +1,80 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Einleitung}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Ausgangslage}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Zielsetzung}{1}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Erwartetes Ergebnis}{1}{subsection.1.3}
+\contentsline {section}{\numberline {2}Technische Grundlagen}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Robotik}{2}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Roboter}{2}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Mobile Roboter}{2}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Sensorik}{3}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Sensordatenverarbeitung}{4}{subsubsection.2.1.4}
+\contentsline {subsubsection}{\numberline {2.1.5}Antriebsarten}{4}{subsubsection.2.1.5}
+\contentsline {subsection}{\numberline {2.2}LEGO MINDSTORMS}{4}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Das EV3-System}{4}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Der EV3-Stein (Steuereinheit)}{5}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Motoren}{6}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Sensoren}{7}{subsubsection.2.2.4}
+\contentsline {paragraph}{Farbsensor}{7}{section*.10}
+\contentsline {paragraph}{Ultraschallsensor}{8}{section*.11}
+\contentsline {paragraph}{Ber\IeC {\"u}hrungssensor}{8}{section*.12}
+\contentsline {paragraph}{Kreiselsensor (Gyroskop)}{8}{section*.13}
+\contentsline {paragraph}{Rotationssensor (Integiert)}{8}{section*.14}
+\contentsline {subsubsection}{\numberline {2.2.5}Programmierung}{9}{subsubsection.2.2.5}
+\contentsline {paragraph}{leJOS}{9}{section*.15}
+\contentsline {subsection}{\numberline {2.3}\gls {app} Entwicklung}{11}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Native \glspl {app}}{11}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Web \glspl {app}}{11}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Hybride \glspl {app}}{12}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}Plattform\IeC {\"u}bergreifende Entwicklung}{12}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.5}Xamarin}{13}{subsubsection.2.3.5}
+\contentsline {paragraph}{Shared Projects}{13}{section*.20}
+\contentsline {paragraph}{Protable Class Libraries}{14}{section*.22}
+\contentsline {subsubsection}{\numberline {2.3.6}Mono}{15}{subsubsection.2.3.6}
+\contentsline {subsubsection}{\numberline {2.3.7}.NET Framework}{15}{subsubsection.2.3.7}
+\contentsline {subsection}{\numberline {2.4}TCP-Kommunikation}{17}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Gundlegendes}{17}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Nagle-Algorithmus}{18}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Kommunikationsablauf}{18}{subsubsection.2.4.3}
+\contentsline {paragraph}{Client \& Server}{18}{section*.27}
+\contentsline {paragraph}{Verbindungsaufbau}{18}{section*.28}
+\contentsline {paragraph}{Datenaustausch}{19}{figure.caption.31}
+\contentsline {paragraph}{Verbindungsabbau}{19}{figure.caption.33}
+\contentsline {subsubsection}{\numberline {2.4.4}Socket-Programmierung}{20}{subsubsection.2.4.4}
+\contentsline {section}{\numberline {3}Theoretische Grundlagen}{21}{section.3}
+\contentsline {subsection}{\numberline {3.1}Schwarmverhalten}{21}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Allgemein}{21}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Vorbilder aus dem Tierreich}{21}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Szenarien}{21}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}Algorithmen}{21}{subsubsection.3.1.4}
+\contentsline {section}{\numberline {4}Projektorganisation}{22}{section.4}
+\contentsline {subsection}{\numberline {4.1}Projektablaufplan}{22}{subsection.4.1}
+\contentsline {section}{\numberline {5}Konzeption}{23}{section.5}
+\contentsline {subsection}{\numberline {5.1}Anforderunsdefinitionen}{23}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Softwarearchitektur}{24}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Steuerung}{26}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Szenarien}{26}{subsection.5.4}
+\contentsline {paragraph}{Control}{27}{section*.36}
+\contentsline {paragraph}{Synchron}{27}{section*.37}
+\contentsline {paragraph}{Follow}{27}{section*.38}
+\contentsline {paragraph}{Flee}{27}{section*.39}
+\contentsline {paragraph}{Catch}{27}{section*.40}
+\contentsline {subsection}{\numberline {5.5}Use Cases}{28}{subsection.5.5}
+\contentsline {subsubsection}{\numberline {5.5.1}Connection}{28}{subsubsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.2}Synchronization}{30}{subsubsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.3}Szenario}{32}{subsubsection.5.5.3}
+\contentsline {subsubsection}{\numberline {5.5.4}Exception}{34}{subsubsection.5.5.4}
+\contentsline {subsection}{\numberline {5.6}Kommunikation}{35}{subsection.5.6}
+\contentsline {paragraph}{Connection}{35}{section*.51}
+\contentsline {paragraph}{Synchronization}{35}{section*.53}
+\contentsline {paragraph}{Scenario}{36}{section*.55}
+\contentsline {paragraph}{Exception}{36}{section*.57}
+\contentsline {paragraph}{Control}{37}{section*.59}
+\contentsline {paragraph}{Position}{37}{section*.61}
+\contentsline {section}{\numberline {6}Implementierung}{38}{section.6}
+\contentsline {subsection}{\numberline {6.1}Kommunikation}{38}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}App}{38}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Backend}{38}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Robot}{38}{subsection.6.4}
+\contentsline {section}{\numberline {7}Evaluation}{43}{section.7}
+\contentsline {section}{\numberline {8}Ausblick}{44}{section.8}

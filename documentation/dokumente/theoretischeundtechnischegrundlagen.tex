@@ -404,6 +404,27 @@ Für die Nutzung von Mono stehen verschiedene Vorteile im Vergleich zu anderen F
 
 Das .NET Framework dient zur Entwicklung, sowie Ausführung von Anwendungen, die mit Programmiersprachen implementiert werden, die auf den Standards von .NET basieren. Es besteht aus verschiedenen Komponenten, wobei der Kern des Frameworks in der \gls{clr} liegt. Diese ist verantwortlich für die Laufzeitumgebung und entsprechend für die Ausführung der Anwendungen, indem es die bereitgestellten Ressourcen des Systems nutzt.\\
 
+\begin{wrapfigure}{r}{0.45\textwidth}
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/net_aufbau.jpeg}
+	\end{center}
+	\caption{.NET Framework Ausführung}
+	\label{fig:net}
+\end{wrapfigure}
+
+\noindent
+Die \gls{clr} führt zur Laufzeit je nach System verschiedene Aktionen aus, um die entsprechende Anwendung auszuführen. Der allgemeine Ablauf ist dabei folgender. Der Quellcode wird in die \gls{clr} geladen und nach Sicherheitsanforderungen entsprechend des Systems überprüft. Anschließend wird er durch eine \gls{jit} Kompilierung in einen \gls{il} Quellcode konvertiert, um diesen nativ auf dem System ausführen zu können. Der \gls{il} Quellcode setzt dabei auf die gesetzten Standards der \gls{cli} auf, die eine sprach- und plattformunabhängige Entwicklung von Anwendungen ermöglicht.\\
+Das .NET Framework bietet zusätzlich zur unabhängigen Entwicklung verschiedene unterstützende Komponenten. Die wichtigste unter ihnen ist die .NET Class Library. Diese unterstützt den Entwickler mit einer Sammlung bereits implementierten Quellcode, wie Klassen und entsprechenden Zugang zu systemnahen Schnittstellen. Mit dem .NET Framework lässt sich eine große Bandbreite von Anwendungen entwickeln, von Konsolenanwendungen, grafischen Oberflächen, bis hin zu Webanwendungen.\\
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.65\textwidth]{images/technische_grundlagen/clr.png}
+	\caption{Common Language Runtime}
+	\label{fig:clr}
+\end{figure}
+
+\color{process}
+
 \subsection{TCP-Kommunikation}
 Das Transmission Control Protocol (TCP) ist ein Transportprotokoll und ermöglicht eine Datenaustausch zwischen kommunizierenden Anwendungsinstanzen in einer Ende-zu-Ende-Beziehung zwischen. TCP ist als Transportprotokoll auf in der 4 Schicht des OSI-Modells angesiedelt und basiert auf dem Internetprotokoll (IP) mit dem zusammen es als Nahmensgeber der TCP/IP-Protokollfamilie (Internetprotokollfamilie) dient.
 TCP ist ein offenes, frei verfügbares und weit verbreitetes Protokoll. Als Mitglied der Internetprotokollfamilie ist TCP neben UDP das Transportprotokoll, auf dem die meisten Anwendungen im Internet basieren [GD189].
@@ -472,27 +493,6 @@ Nach Abschluss der Datenübertragung wird von einer Seite (egal von welcher) ein
 \subsubsection{Socket-Programmierung}
 Als Transportzugriffsschnittstelle für die TCP-basierte Kommunikation dient die Socket-Schnittstelle.
 Obwohl es sich bei TCP ein paketvermitteltes Protokoll handlet der Anwendung eine Strom-orientierte Kommunikation, die Daten werden also von einem Anwendungsprozess Byte für Byte in einem Bytestrom geschrieben und TCP sorgt anschlieend um den Aufbau von Segmenten, die dann übertragen werden. Andere Transportdienste erwarten ihre Daten in festen Blöcken [GD].
-\subsection{Java} %Gemeinsam ca. 2
-\begin{wrapfigure}{r}{0.45\textwidth}
-	\begin{center}
-		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/net_aufbau.jpeg}
-	\end{center}
-	\caption{.NET Framework Ausführung}
-	\label{fig:net}
-\end{wrapfigure}
-
-\noindent
-Die \gls{clr} führt zur Laufzeit je nach System verschiedene Aktionen aus, um die entsprechende Anwendung auszuführen. Der allgemeine Ablauf ist dabei folgender. Der Quellcode wird in die \gls{clr} geladen und nach Sicherheitsanforderungen entsprechend des Systems überprüft. Anschließend wird er durch eine \gls{jit} Kompilierung in einen \gls{il} Quellcode konvertiert, um diesen nativ auf dem System ausführen zu können. Der \gls{il} Quellcode setzt dabei auf die gesetzten Standards der \gls{cli} auf, die eine sprach- und plattformunabhängige Entwicklung von Anwendungen ermöglicht.\\
-Das .NET Framework bietet zusätzlich zur unabhängigen Entwicklung verschiedene unterstützende Komponenten. Die wichtigste unter ihnen ist die .NET Class Library. Diese unterstützt den Entwickler mit einer Sammlung bereits implementierten Quellcode, wie Klassen und entsprechenden Zugang zu systemnahen Schnittstellen. Mit dem .NET Framework lässt sich eine große Bandbreite von Anwendungen entwickeln, von Konsolenanwendungen, grafischen Oberflächen, bis hin zu Webanwendungen.\\
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.65\textwidth]{images/technische_grundlagen/clr.png}
-	\caption{Common Language Runtime}
-	\label{fig:clr}
-\end{figure}
-
-\color{process}
 
 \newpage
 \section{Theoretische Grundlagen}
@@ -503,9 +503,3 @@ Das .NET Framework bietet zusätzlich zur unabhängigen Entwicklung verschiedene
 % Fische, Bienen, Ameisen
 \subsubsection{Szenarien}
 \subsubsection{Algorithmen}
-
-%\subsection{Kommunikation} %Manuel ca. 5
-%\subsubsection{Grundlagen}
-%\subsubsection{TCP/IP}
-%\subsubsection{Wifi}
-%\subsubsection{Datenaustausch} %(JSON und Serialisierung)
