@@ -1,4 +1,7 @@
-\section{Technische Grundlagen}
+\section{Theoretische und Technische Grundlagen}
+
+In diesem Kapitel werden die technischen Grundlagen des Projektes, die zur Umsetzung nötig sind beschrieben.
+
 \subsection{Robotik} % Manuel ca. 8
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
@@ -492,14 +495,54 @@ Der Verbindungsaufbau bei TCP basiert auf dem Three-Way-Handshake. Dabei schickt
 Nach Abschluss der Datenübertragung wird von einer Seite (egal von welcher) ein Verbindungsabbau initiiert. Dazu dient einen etwas modifizierten Drei-Wege-Handshake-Mechanismus. Jede der beiden Verbindungsrichtungen der Vollduplex-Verbindung wird abgebaut, d.h. beide Seiten bauen ihre „Senderichtung“ ab. Die initiierende Seite schickt zuerst einen Verbindungsabbauwunsch (FIN). Die Gegenstelle bestätigt den Erhalt der Nachricht (ACK) und schickt ebenfalls einen Verbindungsabbauwunsch (FIN) woraufhin sie von der Gegenstelle noch mitgeteilt bekommt, dass die Verbindung abgebaut ist (ACK).
 \subsubsection{Socket-Programmierung}
 Als Transportzugriffsschnittstelle für die TCP-basierte Kommunikation dient die Socket-Schnittstelle.
-Obwohl es sich bei TCP ein paketvermitteltes Protokoll handlet der Anwendung eine Strom-orientierte Kommunikation, die Daten werden also von einem Anwendungsprozess Byte für Byte in einem Bytestrom geschrieben und TCP sorgt anschlieend um den Aufbau von Segmenten, die dann übertragen werden. Andere Transportdienste erwarten ihre Daten in festen Blöcken [GD].
+Obwohl es sich bei TCP ein paketvermitteltes Protokoll handlet der Anwendung eine Strom-orientierte Kommunikation, die Daten werden also von einem Anwendungsprozess Byte für Byte in einem Bytestrom geschrieben und TCP sorgt anschließend um den Aufbau von Segmenten, die dann übertragen werden. Andere Transportdienste erwarten ihre Daten in festen Blöcken [GD].
 
 \newpage
-\section{Theoretische Grundlagen}
-
+\color{finishing}
 \subsection{Schwarmverhalten}
+
+Dieser Abschnitt beschäftigt sich mit dem Schwarmverhalten, welches mit Roboter imitiert werden soll.
+
 \subsubsection{Allgemein}
+
+Das Schwarmverhalten beschreibt die Verhaltensweise eines Schwarmes, welcher aus einer einheitlich formierten Tierart besteht. \footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}\label{note7}} Diese interagieren untereinander, um eine evulotionstechnische Überlegenheit durch das Bilden eines Schwarmes zu erhalten. Der Vorteil liegt dabei hauptsächlich im Schutz vor Fressfeinden des einzelnen Individuums des Schwarm, indem dieser nicht als Beutetier identifiziert werden kann. Andernfalls kann sich der Schwarm als solches effizienter gegenüber Fressfeinden behaupten und Jungtiere schützen. Zudem dient es einer Erleichterung der Fortpflanzung, da in einem Schwarm eine entsprechende Auswahl an Partnern besteht, um auch eine genetische Vielfalt zu erreichen.
+
+\color{process}
 \subsubsection{Vorbilder aus dem Tierreich}
-% Fische, Bienen, Ameisen
+
+Zur Erstellung eines Schwarmverhaltens existieren verschiedene Ideale, die aus dem Tierreich übernommen werden können. Dabei verwendet jede Tierart ihre eigenen Überlebensstrategien, sowie Regeln die in dem anzutreffenden Schwarm vorherrschen.\\
+
+\begin{wrapfigure}{r}{0.45\textwidth}
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/fischschwarm.jpg}
+	\end{center}
+	\caption{Fischschwarm}
+	\label{fig:fischschwarm}
+\end{wrapfigure}
+
+\noindent
+Ein Fischschwarm ist hierfür eines der bekanntesten Beispiele, indem die einzelnen Individuen des Schwarmes sich so verhalten, als würden sie wie ein einzelnes Tier agieren. Dabei setzt jeder Fisch feste Regeln um, die zur Umsetzung von einem Schwarmverhalten führen.\\
+\begin{enumerate}
+	\item Folge deinem Vordermann
+	\item Behalte die Geschwindigkeit deiner Nachbarn bei
+\end{enumerate}
+\noindent
+Das wichtigste hierbei ist der Schwellenwert der Steuerung. Da auch Fische aus der Reihe tanzen können und sich nicht in allen Punkten an Regeln halten existiert ein Schwellenwert für die allgemeine Steuerung des Schwarms, da das Schwarmverhalten sonst von Einzelnen dominiert werden kann. Dieser Schwellenwert liegt etwa bei fünf Prozent, woduch sich ein Schwarm durch Roboterfische lenken lassen kann, sobald dieser überschritten ist. Dieses Szenario lässt sich auf Menschen übertragen im Sinne von Veranstaltungen mit viel Menschen, um zu entscheiden an welchen Positionen SIcherheitspersonal platziert werden muss.
+
+\noindent
+Ein anderes Beispiel ist ein Termitenschwarm
+
+\begin{wrapfigure}{r}{0.45\textwidth}
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/termitenschwarm.jpg}
+	\end{center}
+	\caption{Termitenschwarm}
+	\label{fig:termitenschwarm}
+\end{wrapfigure}
+
+\newpage
 \subsubsection{Szenarien}
-\subsubsection{Algorithmen}
+
+Aus dem Schwarmverhalten von Tieren, lassen sich verschiedene Szenarien herausnehmen, um diese für Roboter weiterzuentwickeln. Dabei gibt es verschiedene Basisszenarien, die für das Schwarmverhalten eingesetzt werden. Zum einen ist es die INterpretation der direkten Umgebung, was bedeutet mit den anliegenden NAchbarn zu kommunizieren um darauf hin synchron als Schwarm agieren zu können. Zum anderen liegt es in der STeuerung einiger weniger, die den Schwarm lenken und beispielsweise ein Schwarm, der aus unterschiedlich veranlagten RObotern besteht, diese zu einer optimalen Zusammenarbeit zu bringen.
+
+\subsubsection{Implementierung}
