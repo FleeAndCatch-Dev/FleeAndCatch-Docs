@@ -505,7 +505,7 @@ Dieser Abschnitt beschäftigt sich mit dem Schwarmverhalten, welches mit Roboter
 
 \subsubsection{Allgemein}
 
-Das Schwarmverhalten beschreibt die Verhaltensweise eines Schwarmes, welcher aus einer einheitlich formierten Tierart besteht. \footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}\label{note7}} Diese interagieren untereinander, um eine evulotionstechnische Überlegenheit durch das Bilden eines Schwarmes zu erhalten. Der Vorteil liegt dabei hauptsächlich im Schutz vor Fressfeinden des einzelnen Individuums des Schwarm, indem dieser nicht als Beutetier identifiziert werden kann. Andernfalls kann sich der Schwarm als solches effizienter gegenüber Fressfeinden behaupten und Jungtiere schützen. Zudem dient es einer Erleichterung der Fortpflanzung, da in einem Schwarm eine entsprechende Auswahl an Partnern besteht, um auch eine genetische Vielfalt zu erreichen.
+Das Schwarmverhalten beschreibt die Verhaltensweise eines Schwarmes, welcher aus einer einheitlich formierten Tierart besteht. \footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}\label{note7}} Diese interagieren untereinander, um eine evulotionstechnische Überlegenheit durch das Bilden eines Schwarmes zu erhalten. Der Vorteil liegt dabei hauptsächlich im Schutz vor Fressfeinden des einzelnen Individuums im Schwarm, indem diese nicht als Beutetier identifiziert werden können. Andernfalls kann sich der Schwarm als solches effizienter gegenüber Fressfeinden behaupten und Jungtiere schützen. Zudem dient es einer Erleichterung der Fortpflanzung, da in einem Schwarm eine entsprechende Auswahl an Partnern besteht, um eine genetische Vielfalt zu erreichen.
 
 \color{process}
 \subsubsection{Vorbilder aus dem Tierreich}
@@ -521,16 +521,14 @@ Zur Erstellung eines Schwarmverhaltens existieren verschiedene Ideale, die aus d
 \end{wrapfigure}
 
 \noindent
-Ein Fischschwarm ist hierfür eines der bekanntesten Beispiele, indem die einzelnen Individuen des Schwarmes sich so verhalten, als würden sie wie ein einzelnes Tier agieren. Dabei setzt jeder Fisch feste Regeln um, die zur Umsetzung von einem Schwarmverhalten führen.\\
+\paragraph{Ein Fischschwarm}
+ist hierfür eines der bekanntesten Beispiele, indem die einzelnen Individuen des Schwarmes sich so verhalten, als würden sie wie ein einzelnes Tier agieren. Dabei setzt jeder Fisch feste Regeln um, die zur Umsetzung eines Schwarmverhaltens führen.\\
 \begin{enumerate}
 	\item Folge deinem Vordermann
-	\item Behalte die Geschwindigkeit deiner Nachbarn bei
+	\item Behalte die Geschwindigkeit deines Nachbarn bei
 \end{enumerate}
 \noindent
-Das wichtigste hierbei ist der Schwellenwert der Steuerung. Da auch Fische aus der Reihe tanzen können und sich nicht in allen Punkten an Regeln halten existiert ein Schwellenwert für die allgemeine Steuerung des Schwarms, da das Schwarmverhalten sonst von Einzelnen dominiert werden kann. Dieser Schwellenwert liegt etwa bei fünf Prozent, woduch sich ein Schwarm durch Roboterfische lenken lassen kann, sobald dieser überschritten ist. Dieses Szenario lässt sich auf Menschen übertragen im Sinne von Veranstaltungen mit viel Menschen, um zu entscheiden an welchen Positionen SIcherheitspersonal platziert werden muss.
-
-\noindent
-Ein anderes Beispiel ist ein Termitenschwarm
+Die wichtigste Rolle spielt hierbei der Schwellenwert zur Steuerung des Schwarms durch einzelne Teilnehmer. Da jedes Individuum den Schwarm durch seine Bewegung beeinflusst, existiert ein Schwellenwert, der sich einer Mindestanzahl von etwa fünf Prozent richtet, durch die der Schwarm gesteuert werden kann. Somit reagieren die Fische ausschließlich auf die Mehrheit und der Schwarm lässt sich nicht durch eine Minderheit Fehlsteuern. Dieses Szenario lässt im Sinne von Veranstaltungen auf Menschen übertragen, um zu festzustellen an welchen Positionen Sicherheitspersonal positioniert werden muss, um einen geregelten Ablauf zu gewährleisten.
 
 \begin{wrapfigure}{r}{0.45\textwidth}
 	\begin{center}
@@ -540,9 +538,29 @@ Ein anderes Beispiel ist ein Termitenschwarm
 	\label{fig:termitenschwarm}
 \end{wrapfigure}
 
+\noindent
+\paragraph{Ein Termitenschwarm} geht nach dem Prinzip der Stigmergie vor, wie verschiedene Insekten, die in einem Staat leben. Dabei kommunizieren die Individuen nicht direkt miteinander, sondern indirekt über die Beeinflussung ihrer direkten Umgebung. Durch ein inneres Bild, das jedem Beteiligten vorliegt, lässt sich dieses mit der aktuellen Umgebung vergleichen und erkennen, was sie entsprechend zu tun haben. Dieses Prinzip ermöglicht auch primitivsten Lebewesen eine Intelligenz in einem Schwarm zu erhalten, wodurch eine evolutionstechnische Überlegenheit demostriert werden kann.
+\begin{enumerate}
+	\item Erkennen der Situation
+	\item Analyse
+	\item Reaktion
+\end{enumerate}
+
+\noindent
+Dieses Szenario lässt sich ebenso auf Roboter abbilden, indem jede Einheit einen Plan erhält, was entsprechend errichtetwerden soll. Jedes Teilnehmer kann nach Sensorik entsprechend erkennen, was zu tun ist und kann nach seinem Ermessen entscheiden, was er zu tun hat.
+
 \newpage
 \subsubsection{Szenarien}
 
 Aus dem Schwarmverhalten von Tieren, lassen sich verschiedene Szenarien herausnehmen, um diese für Roboter weiterzuentwickeln. Dabei gibt es verschiedene Basisszenarien, die für das Schwarmverhalten eingesetzt werden. Zum einen ist es die INterpretation der direkten Umgebung, was bedeutet mit den anliegenden NAchbarn zu kommunizieren um darauf hin synchron als Schwarm agieren zu können. Zum anderen liegt es in der STeuerung einiger weniger, die den Schwarm lenken und beispielsweise ein Schwarm, der aus unterschiedlich veranlagten RObotern besteht, diese zu einer optimalen Zusammenarbeit zu bringen.
 
 \subsubsection{Implementierung}
+
+
+1. Separation
+
+2. Aligment
+
+3. Cohesion
+
+4. Ausseneinflüsse
