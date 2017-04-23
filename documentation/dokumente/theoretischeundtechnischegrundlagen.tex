@@ -304,7 +304,7 @@ Im folgenden sind einige Features die leJOS bietet aufgelistet:
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/App-Development.jpg}
 	\end{center}
-	\caption{App Entwicklung}
+	\caption{App Entwicklung \cite{Nethority.Web&App}}	
 	\label{fig:appentwicklung}
 \end{wrapfigure}
 
@@ -336,7 +336,7 @@ Um die Entwicklung von \glspl{app} einfach zu halten, verwenden immer mehr Entwi
 	\begin{center}
 		\includegraphics[width=0.25\textwidth]{images/technische_grundlagen/xamarin.png}
 	\end{center}
-	\caption{Xamarin}
+	\caption{Xamarin \cite{Xamarin}}
 	\label{fig:xamarin}
 \end{wrapfigure}
 
@@ -348,7 +348,7 @@ Wie viele andere \glspl{framework}, bietet auch Xamarin verschiedene nützliche 
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{images/technische_grundlagen/SharedAssetProject.png}
 	\end{center}
-	\caption{Shared Project}
+	\caption{Shared Project \cite{Xamarin.SharedProjects}}
 	\label{fig:shared}
 \end{wrapfigure}
 
@@ -360,7 +360,7 @@ ermöglichen dem Entwickler Quellcode für verschiedene Plattformen zu entwickel
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{images/technische_grundlagen/PortableClassLibrary.png}
 	\end{center}
-	\caption{Portable Class Library}
+	\caption{Portable Class Library \cite{Xamarin.PortableClass}}
 	\label{fig:portable}
 \end{wrapfigure}
 
@@ -372,7 +372,7 @@ ermöglichen dem Entwickler die Implementierung von plattformübergreifende Bibl
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{images/technische_grundlagen/pclSupport.png}
 	\end{center}
-	\caption{Unterstützung Portable Class Library}
+	\caption{Unterstützung Portable Class Library \cite{Xamarin.PortableClass}}
 	\label{fig:pcl_support}
 \end{wrapfigure}
 
@@ -397,7 +397,7 @@ Nachteile:
 	\begin{center}
 		\includegraphics[width=0.25\textwidth]{images/technische_grundlagen/mono.png}
 	\end{center}
-	\caption{Mono}
+	\caption{Mono \cite{Mono.MonoProject}}
 	\label{fig:mono}
 \end{wrapfigure}
 
@@ -406,9 +406,8 @@ Um Anwendungen auf verschieden Systemen auszuführen, nutzt Mono verschiedene Ko
 Für die Nutzung von Mono stehen verschiedene Vorteile im Vergleich zu anderen Framework. Der Hauptgrund für die Nutzung liegt vor allem in der Popularität von .NET, da dies auf den meisten Computern zur Verfügung steht, oder installiert werden kann. Ein großer Nutzen stellt die High-Level Programmierung dar, die eine Implementierung mit einer Laufzeitumgebung ermöglicht, die Funktionen wie Speicherverwaltung selbst organisiert. Durch Verwendung der \gls{clr} kann der Entwickler seine übliche Programmiersprache verwenden und ist unhabhängig vom bestehenden System.
 
 \subsubsection{.NET Framework}\label{net}
-%\footnote{\citep[vgl.][Overview of the .NET Framework]{Microsoft.Overviewof}\label{note7}}
 
-Das .NET Framework dient zur Entwicklung, sowie Ausführung von Anwendungen, die mit Programmiersprachen implementiert werden, die auf den Standards von .NET basieren. Es besteht aus verschiedenen Komponenten, wobei der Kern des Frameworks in der \gls{clr} liegt. Diese ist verantwortlich für die Laufzeitumgebung und entsprechend für die Ausführung der Anwendungen, indem es die bereitgestellten Ressourcen des Systems nutzt.\\
+Das .NET Framework dient zur Entwicklung sowie Ausführung von Anwendungen, die mit Programmiersprachen implementiert werden und auf den Standards von .NET basieren. Es besteht aus verschiedenen Komponenten, wobei der Kern des Frameworks in der \gls{clr} liegt.\footnote{\citep[vgl.][Overview of the .NET Framework]{Microsoft.Overviewof}\label{note7}} Diese ist verantwortlich für die Laufzeitumgebung und entsprechend für die Ausführung der Anwendungen, indem es die bereitgestellten Ressourcen des Systems nutzt.\\
 \begin{wrapfigure}{r}{0.45\textwidth}
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/net_aufbau.jpeg}
@@ -418,26 +417,7 @@ Das .NET Framework dient zur Entwicklung, sowie Ausführung von Anwendungen, die
 \end{wrapfigure}
 
 \noindent
-Die \gls{clr} führt zur Laufzeit je nach System verschiedene Aktionen aus, um die entsprechende Anwendung auszuführen. Der allgemeine Ablauf ist dabei folgender. Der Quellcode wird in die \gls{clr} geladen und nach Sicherheitsanforderungen entsprechend des Systems überprüft. Anschließend wird er durch eine \gls{jit} Kompilierung in einen \gls{il} Quellcode konvertiert, um diesen nativ auf dem System ausführen zu können. Der \gls{il} Quellcode setzt dabei auf die gesetzten Standards der \gls{cli} auf, die eine sprach- und plattformunabhängige Entwicklung von Anwendungen ermöglicht.\\
-Das .NET Framework bietet zusätzlich zur unabhängigen Entwicklung verschiedene unterstützende Komponenten. Die wichtigste unter ihnen ist die .NET Class Library. Diese unterstützt den Entwickler mit einer Sammlung bereits implementierten Quellcode, wie Klassen und entsprechenden Zugang zu systemnahen Schnittstellen. Mit dem .NET Framework lässt sich eine große Bandbreite von Anwendungen entwickeln, von Konsolenanwendungen, grafischen Oberflächen, bis hin zu Webanwendungen.\\
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.65\textwidth]{images/technische_grundlagen/clr.png}
-	\caption{Common Language Runtime}
-	\label{fig:clr}
-\end{figure}
-
-\begin{wrapfigure}{r}{0.45\textwidth}
-	\begin{center}
-		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/net_aufbau.jpeg}
-	\end{center}
-	\caption{.NET Framework Ausführung}
-	\label{fig:net}
-\end{wrapfigure}
-
-\noindent
-Die \gls{clr} führt zur Laufzeit je nach System verschiedene Aktionen aus, um die entsprechende Anwendung auszuführen. Der allgemeine Ablauf ist dabei folgender. Der Quellcode wird in die \gls{clr} geladen und nach Sicherheitsanforderungen entsprechend des Systems überprüft. Anschließend wird er durch eine \gls{jit} Kompilierung in einen \gls{il} Quellcode konvertiert, um diesen nativ auf dem System ausführen zu können. Der \gls{il} Quellcode setzt dabei auf die gesetzten Standards der \gls{cli} auf, die eine sprach- und plattformunabhängige Entwicklung von Anwendungen ermöglicht.\\
+Die \gls{clr} führt zur Laufzeit je nach System verschiedene Aktionen aus, um die entsprechende Anwendung auszuführen. Der allgemeine Ablauf ist dabei folgender. Der Quellcode wird in die \gls{clr} geladen und nach Sicherheitsanforderungen entsprechend des Systems überprüft.\footref{note7} Anschließend wird er durch eine \gls{jit} Kompilierung in einen \gls{il} Quellcode konvertiert, um diesen nativ auf dem System ausführen zu können.\footref{note7} Der \gls{il} Quellcode setzt dabei auf die gesetzten Standards der \gls{cli} auf, die eine sprach- und plattformunabhängige Entwicklung von Anwendungen ermöglicht.\footref{note7}\\
 Das .NET Framework bietet zusätzlich zur unabhängigen Entwicklung verschiedene unterstützende Komponenten. Die wichtigste unter ihnen ist die .NET Class Library. Diese unterstützt den Entwickler mit einer Sammlung bereits implementierten Quellcode, wie Klassen und entsprechenden Zugang zu systemnahen Schnittstellen. Mit dem .NET Framework lässt sich eine große Bandbreite von Anwendungen entwickeln, von Konsolenanwendungen, grafischen Oberflächen, bis hin zu Webanwendungen.\\
 
 \begin{figure}[h]
@@ -526,13 +506,12 @@ Dieser Abschnitt beschäftigt sich mit dem Schwarmverhalten, welches mit Roboter
 
 \subsubsection{Allgemein}
 
-Das Schwarmverhalten beschreibt die Verhaltensweise eines Schwarmes, welcher aus einer einheitlich formierten Tierart besteht. \footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}\label{note7}} Diese interagieren untereinander, um eine evulotionstechnische Überlegenheit durch das Bilden eines Schwarmes zu erhalten. Der Vorteil liegt dabei hauptsächlich im Schutz vor Fressfeinden des einzelnen Individuums im Schwarm, indem diese nicht als Beutetier identifiziert werden können. Andernfalls kann sich der Schwarm als solches effizienter gegenüber Fressfeinden behaupten und Jungtiere schützen. Zudem dient es einer Erleichterung der Fortpflanzung, da in einem Schwarm eine entsprechende Auswahl an Partnern besteht, um eine genetische Vielfalt zu erreichen.
-
+Das Schwarmverhalten beschreibt die Verhaltensweise eines Schwarmes, welcher aus einer einheitlich formierten Tierart besteht.  Diese interagieren untereinander, um eine evulotionstechnische Überlegenheit durch das Bilden eines Schwarmes zu erhalten. Der Vorteil liegt dabei hauptsächlich im Schutz vor Fressfeinden des einzelnen Individuums im Schwarm, indem diese nicht als Beutetier identifiziert werden können. Andernfalls kann sich der Schwarm als solches effizienter gegenüber Fressfeinden behaupten und Jungtiere schützen. Zudem dient es einer Erleichterung der Fortpflanzung, da in einem Schwarm eine entsprechende Auswahl an Partnern besteht, um eine genetische Vielfalt zu erreichen.
+%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}\label{note7}}
 \color{process}
 \subsubsection{Vorbilder aus dem Tierreich}
 
-Zur Erstellung eines Schwarmverhaltens existieren verschiedene Ideale, die aus dem Tierreich übernommen werden können. Dabei verwendet jede Tierart ihre eigenen Überlebensstrategien, sowie Regeln die in dem anzutreffenden Schwarm vorherrschen.\\
-
+Zur Erstellung eines Schwarmverhaltens existieren verschiedene Ideale, die aus dem Tierreich übernommen werden können. Dabei verwendet jede Tierart ihre eigenen Überlebensstrategien, sowie Regeln die in dem anzutreffenden Schwarm vorherrschen.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
 \begin{wrapfigure}{r}{0.45\textwidth}
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/fischschwarm.jpg}
@@ -543,14 +522,13 @@ Zur Erstellung eines Schwarmverhaltens existieren verschiedene Ideale, die aus d
 
 \noindent
 \paragraph{Ein Fischschwarm}
-ist hierfür eines der bekanntesten Beispiele, indem die einzelnen Individuen des Schwarmes sich so verhalten, als würden sie wie ein einzelnes Tier agieren. Dabei setzt jeder Fisch feste Regeln um, die zur Umsetzung eines Schwarmverhaltens führen.\\
+ist hierfür eines der bekanntesten Beispiele, indem die einzelnen Individuen des Schwarmes sich so verhalten, als würden sie wie ein einzelnes Tier agieren. Dabei setzt jeder Fisch feste Regeln um, die zur Umsetzung eines Schwarmverhaltens führen.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
 \begin{enumerate}
 	\item Folge deinem Vordermann
 	\item Behalte die Geschwindigkeit deines Nachbarn bei
 \end{enumerate}
 \noindent
-Die wichtigste Rolle spielt hierbei der Schwellenwert zur Steuerung des Schwarms durch einzelne Teilnehmer. Da jedes Individuum den Schwarm durch seine Bewegung beeinflusst, existiert ein Schwellenwert, der sich einer Mindestanzahl von etwa fünf Prozent richtet, durch die der Schwarm gesteuert werden kann. Somit reagieren die Fische ausschließlich auf die Mehrheit und der Schwarm lässt sich nicht durch eine Minderheit Fehlsteuern. Dieses Szenario lässt im Sinne von Veranstaltungen auf Menschen übertragen, um zu festzustellen an welchen Positionen Sicherheitspersonal positioniert werden muss, um einen geregelten Ablauf zu gewährleisten.
-
+Die wichtigste Rolle spielt hierbei der Schwellenwert zur Steuerung des Schwarms durch einzelne Teilnehmer. Da jedes Individuum den Schwarm durch seine Bewegung beeinflusst, existiert ein Schwellenwert, der sich einer Mindestanzahl von etwa fünf Prozent richtet, durch die der Schwarm gesteuert werden kann. Somit reagieren die Fische ausschließlich auf die Mehrheit und der Schwarm lässt sich nicht durch eine Minderheit Fehlsteuern. Dieses Szenario lässt im Sinne von Veranstaltungen auf Menschen übertragen, um zu festzustellen an welchen Positionen Sicherheitspersonal positioniert werden muss, um einen geregelten Ablauf zu gewährleisten.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
 \begin{wrapfigure}{r}{0.45\textwidth}
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/termitenschwarm.jpg}
@@ -560,22 +538,27 @@ Die wichtigste Rolle spielt hierbei der Schwellenwert zur Steuerung des Schwarms
 \end{wrapfigure}
 
 \noindent
-\paragraph{Ein Termitenschwarm} geht nach dem Prinzip der Stigmergie vor, wie verschiedene Insekten, die in einem Staat leben. Dabei kommunizieren die Individuen nicht direkt miteinander, sondern indirekt über die Beeinflussung ihrer direkten Umgebung. Durch ein inneres Bild, das jedem Beteiligten vorliegt, lässt sich dieses mit der aktuellen Umgebung vergleichen und erkennen, was sie entsprechend zu tun haben. Dieses Prinzip ermöglicht auch primitivsten Lebewesen eine Intelligenz in einem Schwarm zu erhalten, wodurch eine evolutionstechnische Überlegenheit demostriert werden kann.
+\paragraph{Ein Termitenschwarm} geht nach dem Prinzip der Stigmergie vor, wie andere Insekten, die vorwiegend in einem Staat leben. Dabei kommunizieren die einzelnen Individuen indirekt über die Beeinflussung ihrer direkten Umgebung, wie dem Hinterlassen von Spuren als Merkmale. Dieses Prinzip ermöglicht auch den kleinsten und primitivsten Organismen einen evolutionären Vorteil zu erlagen, indem sie sich nicht allein den Gefahren stellen, sondern in einer großen Masse zusammenarbeiten.\\
+Dies ermöglicht das Bauen riesiger Nester, indem die Insekten ihren inneren Plan, mit ihrer aktuellen Umgebung vergleichen und dadurch intuitiv erkennen, welche Arbeit sie zu erledigen haben.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon} 
+	Der Ablauf ist dabei folgender:
 \begin{enumerate}
-	\item Erkennen der Situation
-	\item Analyse
-	\item Reaktion
+	\item Erkennen
+	\item Analysieren
+	\item Reagieren
 \end{enumerate}
+Dieses Prinzip lässt sich durch festlegen von Regeln auf Roboterschwärme abbilden, um wie Insekten vollkommen autonom Gebäude und andere Objekte zu errichten. Zudem lässt sich dadurch eine indirekte Kommunikation und Zusammenarbeit zwischen Verschiedenartigen Robotern realisieren.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
 
-\noindent
-Dieses Szenario lässt sich ebenso auf Roboter abbilden, indem jede Einheit einen Plan erhält, was entsprechend errichtetwerden soll. Jedes Teilnehmer kann nach Sensorik entsprechend erkennen, was zu tun ist und kann nach seinem Ermessen entscheiden, was er zu tun hat.
-
-\newpage
 \subsubsection{Szenarien}
 
-Aus dem Schwarmverhalten von Tieren, lassen sich verschiedene Szenarien herausnehmen, um diese für Roboter weiterzuentwickeln. Dabei gibt es verschiedene Basisszenarien, die für das Schwarmverhalten eingesetzt werden. Zum einen ist es die INterpretation der direkten Umgebung, was bedeutet mit den anliegenden NAchbarn zu kommunizieren um darauf hin synchron als Schwarm agieren zu können. Zum anderen liegt es in der STeuerung einiger weniger, die den Schwarm lenken und beispielsweise ein Schwarm, der aus unterschiedlich veranlagten RObotern besteht, diese zu einer optimalen Zusammenarbeit zu bringen.
+Zur Umsetzung verschiedener Schwarmverhalten lassen sich nützliche Teile der Tierwelt auf Roboter abstrahieren, um eine Zusammenarbeit der einzelnen Individuen effizienter zu gestalten. Hierbei werden meist mehrere Basisszenarien eingesetzt, die einerseits die Kommunikation, oder Abläufe verbessern.\\
+Für die Umsetzung der Kommunikation der einzelnen Teilnehmer existieren zwei verschiedene Möglichkeiten, einerseits eine direkt, oder indirekte Kommunikation. Dabei kann bei einer direkten Kommunikation auf die bekannten Kommunikationsmittel zurückgegriffen werden und über ein existierendes Netzwerk kommuniziert werden. Bei einer indirekte Kommunikation analysiert der Roboter dagegen seine direkte Umgebung, um daraus Veränderungen zu registrieren und entsprechend darauf zu reagieren. Dabei wird bei einer Umsetzung zur Implementierung folgend vorgegangen:
+\begin{enumerate}
+	\item Datenerfassung durch Sensorik
+	\item Datenauswertung
+	\item Vergleich der Datensätze
+	\item Reaktion und Ausführung
+\end{enumerate}
 
-\subsubsection{Implementierung}
 
 
 1. Separation

@@ -1,15 +1,24 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Net()]{Nethority.Web&App}
+Web {\&} app development.
+\newblock URL \url{http://www.nethority.com/web-app-development/}.
+
 \bibitem[{Daniel W{\"u}rstl}()]{DanielWurstl.Unterschiedeund}
 {Daniel W{\"u}rstl}.
 \newblock Unterschiede und vergleich native apps vs. web apps.
 \newblock URL
   \url{http://www.app-entwickler-verzeichnis.de/faq-app-entwicklung/11-definitionen/107-unterschiede-und-vergleich-native-apps-vs-web-apps}.
+
+\bibitem[{Mono project}()]{Mono.MonoProject}
+{Mono project}.
+\newblock Mono project.
+\newblock URL \url{https://github.com/mono}.
 
 \bibitem[{Mono project}(17.03.2017)]{MonoProject.AboutMono}
 {Mono project}.
@@ -37,21 +46,26 @@ Matthias~Paul Scholz, Beate Jost, and Thorsten Leimbach.
 \newblock 1. auflage edition, 2014.
 \newblock ISBN 3-8266-9473-2.
 
-\bibitem[Xamarin({\natexlab{a}})]{Xamarin.Introductionto}
+\bibitem[Xamarin({\natexlab{a}})]{Xamarin}
 Xamarin.
-\newblock Introduction to mobile development - xamarin, {\natexlab{a}}.
+\newblock Xamarin, {\natexlab{a}}.
+\newblock URL \url{https://github.com/xamarin}.
+
+\bibitem[Xamarin({\natexlab{b}})]{Xamarin.Introductionto}
+Xamarin.
+\newblock Introduction to mobile development - xamarin, {\natexlab{b}}.
 \newblock URL
   \url{https://developer.xamarin.com/guides/cross-platform/getting_started/introduction_to_mobile_development/}.
 
-\bibitem[Xamarin({\natexlab{b}})]{Xamarin.PortableClass}
+\bibitem[Xamarin({\natexlab{c}})]{Xamarin.PortableClass}
 Xamarin.
-\newblock Introduction to portable class libraries - xamarin, {\natexlab{b}}.
+\newblock Introduction to portable class libraries - xamarin, {\natexlab{c}}.
 \newblock URL
   \url{https://developer.xamarin.com/guides/cross-platform/application_fundamentals/pcl/introduction_to_portable_class_libraries/}.
 
-\bibitem[Xamarin({\natexlab{c}})]{Xamarin.SharedProjects}
+\bibitem[Xamarin({\natexlab{d}})]{Xamarin.SharedProjects}
 Xamarin.
-\newblock Shared projects - xamarin, {\natexlab{c}}.
+\newblock Shared projects - xamarin, {\natexlab{d}}.
 \newblock URL
   \url{https://developer.xamarin.com/guides/cross-platform/application_fundamentals/shared_projects/}.
 

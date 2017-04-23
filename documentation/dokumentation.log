@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.13)  21 APR 2017 13:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.13)  23 APR 2017 15:36
 entering extended mode
 **./dokumentation.tex
 (dokumentation.tex
@@ -1126,7 +1126,7 @@ Overfull \hbox (35.99995pt too wide) in paragraph at lines 43--52
 []  
  []
 
-) <images/icon_dhbw.jpg, id=215, 138.9993pt x 66.9702pt>
+) <images/icon_dhbw.jpg, id=223, 138.9993pt x 66.9702pt>
 File: images/icon_dhbw.jpg Graphic file (type jpg)
 
 <use images/icon_dhbw.jpg>
@@ -1346,22 +1346,22 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--8
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 11.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 11.
+(babel)             in language  on input line 12.
 )
 File: images/icon_dhbw.jpg Graphic file (type jpg)
  <use images/icon_dhbw.jpg>
@@ -1409,640 +1409,636 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 31.
 File: images/icon_dhbw.jpg Graphic file (type jpg)
  <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 41.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 37.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 37.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.41 \begin{itemize}
-                     [2
+l.37 
+      [2
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 42.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 45.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 58.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 58.
 File: images/icon_dhbw.jpg Graphic file (type jpg)
- <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 61.
+
+<use images/icon_dhbw.jpg>
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 62.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 61.
+(babel)             in language  on input line 62.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 61.
+(babel)             in language  on input line 62.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 61.
+(babel)             in language  on input line 62.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 61.
+(babel)             in language  on input line 62.
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.61 \begin{itemize}
-                     [3]
-Underfull \hbox (badness 10000) in paragraph at lines 72--72
+l.62 U
+      m mit der Umgebung interagieren zu kÃ¶nnen mÃ¼ssen mobile Roboter dies...
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
 []\T1/cmr/m/n/12 (Inkrementalgeber
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--72
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
 \T1/cmr/m/n/12 (Pho-to-elek-tri-sche
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 81.
+(babel)             in language  on input line 84.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 81.
+(babel)             in language  on input line 84.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 82.
+(babel)             in language  on input line 85.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 82.
+(babel)             in language  on input line 85.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 83.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 83.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 94.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 86.
 File: images/icon_dhbw.jpg Graphic file (type jpg)
 <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 98.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 97.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 97.
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.98 D
-      er 2013 erschienene EV3 ist das dritte System der \LM{} Reihe. Die Bez...
-[4]
-<images/technische_grundlagen/EV3-Overview.png, id=435, 2007.5pt x 1370.11874pt
+l.97 \subsubsection
+                   {Das EV3-System} [4]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 97.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 97.
+
+<images/technische_grundlagen/EV3-Overview.png, id=458, 2007.5pt x 1370.11874pt
 >
 File: images/technische_grundlagen/EV3-Overview.png Graphic file (type png)
  <use images/technische_grundlagen/EV3-Overview.png>
 Package pdftex.def Info: images/technische_grundlagen/EV3-Overview.png used on 
-input line 107.
+input line 110.
 (pdftex.def)             Requested size: 409.71692pt x 279.62178pt.
 
-Overfull \hbox (0.19768pt too wide) in paragraph at lines 98--119
+Overfull \hbox (0.19768pt too wide) in paragraph at lines 101--122
 \T1/cmr/m/n/12 zeich-nung setzt sich aus EV für Evo-lu-ti-on und 3 für die 3 St
 u-fe der LE-GO MINDSTORMS-
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 122.
 File: images/icon_dhbw.jpg Graphic file (type jpg)
 <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 142.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 145.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 142.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 142.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 142.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 142.
+(babel)             in language  on input line 145.
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.142 \begin{itemize}
+l.145 \begin{itemize}
                       [5 <./images/technische_grundlagen/EV3-Overview.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 152.
+(babel)             in language  on input line 155.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 152.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 173.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 173.
+(babel)             in language  on input line 155.
 File: images/icon_dhbw.jpg Graphic file (type jpg)
 
 <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 177.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 176.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 177.
+(babel)             in language  on input line 176.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 177.
+(babel)             in language  on input line 176.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 177.
+(babel)             in language  on input line 176.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 177.
+(babel)             in language  on input line 176.
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.177 Z
-       um EV3-System gehÃ¶ren eine Reihe von verschiedenen Sensoren die es d...
-[6]
+l.176 \subsubsection
+                    {Sensoren} [6]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 176.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 176.
 File: images/icon_dhbw.jpg Graphic file (type jpg)
  <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 207.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 205.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 207.
+(babel)             in language  on input line 205.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 207.
+(babel)             in language  on input line 205.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 207.
+(babel)             in language  on input line 205.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 207.
+(babel)             in language  on input line 205.
 pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.207 	\item{
-             Messen} - In diesem Modus sendet der Sensor Ultraschall aus um ...
+l.205 D
+       iese aktive Sensor verwendet fÃ¼r den Menschen unhÃ¶rbaren Ultraschal...
 [7]
 File: images/icon_dhbw.jpg Graphic file (type jpg)
  <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 255.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 258.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 255.
+(babel)             in language  on input line 258.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 255.
+(babel)             in language  on input line 258.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 255.
+(babel)             in language  on input line 258.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 255.
+(babel)             in language  on input line 258.
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.255 \subsubsection
+l.258 \subsubsection
                     {Programmierung} [8]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 255.
+(babel)             in language  on input line 258.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 255.
+(babel)             in language  on input line 258.
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--269
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
 []\T1/cmr/m/n/12 EV3-
  []
 
 File: images/icon_dhbw.jpg Graphic file (type jpg)
 <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 286.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 289.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 289.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 289.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 289.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 289.
 pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.286 	\item{
+l.289 	\item{
              Die meisten Klassen der Pakete \code{java.lang}, \code{java.uti...
 [9]
 File: images/icon_dhbw.jpg Graphic file (type jpg)
  <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 296.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 299.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 296.
+(babel)             in language  on input line 299.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 296.
+(babel)             in language  on input line 299.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 296.
+(babel)             in language  on input line 299.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 296.
+(babel)             in language  on input line 299.
 pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.296 \newpage
+l.299 \newpage
                [10]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 301.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 301.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 298.
+(hyperref)                removing `\gls' on input line 301.
 
 
-<images/technische_grundlagen/App-Development.jpg, id=488, 421.575pt x 303.1325
+<images/technische_grundlagen/App-Development.jpg, id=511, 421.575pt x 303.1325
 pt>
 File: images/technische_grundlagen/App-Development.jpg Graphic file (type jpg)
  <use images/technische_grundlagen/App-Development.jpg>
 Package pdftex.def Info: images/technische_grundlagen/App-Development.jpg used 
-on input line 302.
+on input line 305.
 (pdftex.def)             Requested size: 182.09486pt x 130.93648pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 310.
+(babel)             in language  on input line 313.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 310.
+(babel)             in language  on input line 313.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\glspl' on input line 310.
+(hyperref)                removing `\glspl' on input line 313.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 315.
+(babel)             in language  on input line 318.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 315.
+(babel)             in language  on input line 318.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\glspl' on input line 315.
+(hyperref)                removing `\glspl' on input line 318.
 
 File: images/icon_dhbw.jpg Graphic file (type jpg)
 <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 319.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 322.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 322.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 322.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 322.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 322.
 
 [11 <./images/technische_grundlagen/App-Development.jpg>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 320.
+(babel)             in language  on input line 323.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 320.
+(babel)             in language  on input line 323.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\glspl' on input line 320.
+(hyperref)                removing `\glspl' on input line 323.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 325.
+(babel)             in language  on input line 328.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 325.
+(babel)             in language  on input line 328.
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
 
  []
 
 File: images/icon_dhbw.jpg Graphic file (type jpg)
 <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 328.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 331.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 328.
+(babel)             in language  on input line 331.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 328.
+(babel)             in language  on input line 331.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 328.
+(babel)             in language  on input line 331.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 328.
+(babel)             in language  on input line 331.
 
 [12]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 330.
+(babel)             in language  on input line 333.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 330.
- <images/technische_grundlagen/xamarin.png, id=552, 200.75pt x 200.75pt>
+(babel)             in language  on input line 333.
+ <images/technische_grundlagen/xamarin.png, id=577, 200.75pt x 200.75pt>
 File: images/technische_grundlagen/xamarin.png Graphic file (type png)
 
 <use images/technische_grundlagen/xamarin.png>
 Package pdftex.def Info: images/technische_grundlagen/xamarin.png used on input
- line 334.
+ line 337.
 (pdftex.def)             Requested size: 113.81102pt x 113.81297pt.
 
-<images/technische_grundlagen/SharedAssetProject.png, id=567, 1497.595pt x 797.
+<images/technische_grundlagen/SharedAssetProject.png, id=594, 1497.595pt x 797.
 98125pt>
 File: images/technische_grundlagen/SharedAssetProject.png Graphic file (type pn
 g)
  <use images/technische_grundlagen/SharedAssetProject.png>
 Package pdftex.def Info: images/technische_grundlagen/SharedAssetProject.png us
-ed on input line 346.
+ed on input line 349.
 (pdftex.def)             Requested size: 227.62206pt x 121.2871pt.
 File: images/icon_dhbw.jpg Graphic file (type jpg)
 
 <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 355.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 358.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 355.
+(babel)             in language  on input line 358.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 355.
+(babel)             in language  on input line 358.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 355.
+(babel)             in language  on input line 358.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 355.
+(babel)             in language  on input line 358.
 
 [13 <./images/technische_grundlagen/xamarin.png> <./images/technische_grundlage
 n/SharedAssetProject.png>]
-<images/technische_grundlagen/PortableClassLibrary.png, id=592, 1253.68375pt x 
+<images/technische_grundlagen/PortableClassLibrary.png, id=620, 1253.68375pt x 
 706.64pt>
 File: images/technische_grundlagen/PortableClassLibrary.png Graphic file (type 
 png)
  <use images/technische_grundlagen/PortableClassLibrary.png>
 Package pdftex.def Info: images/technische_grundlagen/PortableClassLibrary.png 
-used on input line 358.
+used on input line 361.
 (pdftex.def)             Requested size: 227.62206pt x 128.28952pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--367
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
 
  []
 
 
-<images/technische_grundlagen/pclSupport.png, id=597, 459.96844pt x 240.14719pt
+<images/technische_grundlagen/pclSupport.png, id=627, 459.96844pt x 240.14719pt
 >
 File: images/technische_grundlagen/pclSupport.png Graphic file (type png)
  <use images/technische_grundlagen/pclSupport.png>
 Package pdftex.def Info: images/technische_grundlagen/pclSupport.png used on in
-put line 370.
+put line 373.
 (pdftex.def)             Requested size: 227.62206pt x 118.84206pt.
 File: images/icon_dhbw.jpg Graphic file (type jpg)
  <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 390.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 393.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 390.
+(babel)             in language  on input line 393.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 390.
+(babel)             in language  on input line 393.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 390.
+(babel)             in language  on input line 393.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 390.
+(babel)             in language  on input line 393.
 
 [14 <./images/technische_grundlagen/PortableClassLibrary.png> <./images/technis
 che_grundlagen/pclSupport.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 391.
+(babel)             in language  on input line 394.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 391.
+(babel)             in language  on input line 394.
 
-<images/technische_grundlagen/mono.png, id=608, 200.75pt x 200.75pt>
+<images/technische_grundlagen/mono.png, id=639, 200.75pt x 200.75pt>
 File: images/technische_grundlagen/mono.png Graphic file (type png)
 
 <use images/technische_grundlagen/mono.png>
 Package pdftex.def Info: images/technische_grundlagen/mono.png used on input li
-ne 395.
+ne 398.
 (pdftex.def)             Requested size: 113.81102pt x 113.81297pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 405.
+(babel)             in language  on input line 408.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 405.
-
-Underfull \hbox (badness 10000) in paragraph at lines 408--409
-
- []
+(babel)             in language  on input line 408.
 
 
-<images/technische_grundlagen/net_aufbau.jpeg, id=615, 450.68375pt x 402.50375p
+Package natbib Warning: Citation `Microsoft.Overviewof' on page 15 undefined on
+ input line 410.
+
+
+<images/technische_grundlagen/net_aufbau.jpeg, id=649, 450.68375pt x 402.50375p
 t>
 File: images/technische_grundlagen/net_aufbau.jpeg Graphic file (type jpg)
  <use images/technische_grundlagen/net_aufbau.jpeg>
 Package pdftex.def Info: images/technische_grundlagen/net_aufbau.jpeg used on i
-nput line 412.
+nput line 413.
 (pdftex.def)             Requested size: 182.09486pt x 162.62619pt.
-File: images/icon_dhbw.jpg Graphic file (type jpg)
 
+Underfull \hbox (badness 10000) in paragraph at lines 410--417
+
+ []
+
+File: images/icon_dhbw.jpg Graphic file (type jpg)
 <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 418.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 417.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 418.
+(babel)             in language  on input line 417.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 418.
+(babel)             in language  on input line 417.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 418.
+(babel)             in language  on input line 417.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 418.
+(babel)             in language  on input line 417.
 
 [15 <./images/technische_grundlagen/mono.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 418--421
+Underfull \hbox (badness 10000) in paragraph at lines 419--422
 
  []
 
-<images/technische_grundlagen/clr.png, id=634, 512.91624pt x 468.75125pt>
+<images/technische_grundlagen/clr.png, id=676, 512.91624pt x 468.75125pt>
 File: images/technische_grundlagen/clr.png Graphic file (type png)
 
 <use images/technische_grundlagen/clr.png>
 Package pdftex.def Info: images/technische_grundlagen/clr.png used on input lin
-e 424.
+e 425.
 (pdftex.def)             Requested size: 295.90588pt x 270.43109pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 431.
+(babel)             in language  on input line 432.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 431.
+(babel)             in language  on input line 432.
 File: images/icon_dhbw.jpg Graphic file (type jpg)
  <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 434.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 435.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 434.
+(babel)             in language  on input line 435.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 434.
+(babel)             in language  on input line 435.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 434.
+(babel)             in language  on input line 435.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 434.
+(babel)             in language  on input line 435.
 
 [16 <./images/technische_grundlagen/net_aufbau.jpeg> <./images/technische_grund
 lagen/clr.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 434.
+(babel)             in language  on input line 435.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 434.
+(babel)             in language  on input line 435.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 455.
+(babel)             in language  on input line 456.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 455.
+(babel)             in language  on input line 456.
 File: images/icon_dhbw.jpg Graphic file (type jpg)
  <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 459.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 460.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 459.
+(babel)             in language  on input line 460.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 459.
+(babel)             in language  on input line 460.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 459.
+(babel)             in language  on input line 460.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 459.
+(babel)             in language  on input line 460.
 
 [17]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 464.
+(babel)             in language  on input line 465.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 464.
- <images/Verbindungsaufbau.png, id=645, 539.01375pt x 197.73875pt>
+(babel)             in language  on input line 465.
+ <images/Verbindungsaufbau.png, id=690, 539.01375pt x 197.73875pt>
 File: images/Verbindungsaufbau.png Graphic file (type png)
 
 <use images/Verbindungsaufbau.png>
-Package pdftex.def Info: images/Verbindungsaufbau.png used on input line 476.
+Package pdftex.def Info: images/Verbindungsaufbau.png used on input line 477.
 (pdftex.def)             Requested size: 364.19667pt x 133.60669pt.
 File: images/icon_dhbw.jpg Graphic file (type jpg)
  <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 481.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 482.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 481.
+(babel)             in language  on input line 482.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 481.
+(babel)             in language  on input line 482.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 481.
+(babel)             in language  on input line 482.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 481.
+(babel)             in language  on input line 482.
 
-[18] <images/Datenaustausch.png, id=652, 539.01375pt x 206.7725pt>
+[18] <images/Datenaustausch.png, id=697, 539.01375pt x 206.7725pt>
 File: images/Datenaustausch.png Graphic file (type png)
 
 <use images/Datenaustausch.png>
-Package pdftex.def Info: images/Datenaustausch.png used on input line 484.
+Package pdftex.def Info: images/Datenaustausch.png used on input line 485.
 (pdftex.def)             Requested size: 364.19667pt x 139.71054pt.
 
-<images/Verbindungsabbau.png, id=653, 539.01375pt x 179.67125pt>
+<images/Verbindungsabbau.png, id=698, 539.01375pt x 179.67125pt>
 File: images/Verbindungsabbau.png Graphic file (type png)
 
 <use images/Verbindungsabbau.png>
-Package pdftex.def Info: images/Verbindungsabbau.png used on input line 491.
+Package pdftex.def Info: images/Verbindungsabbau.png used on input line 492.
 (pdftex.def)             Requested size: 364.19667pt x 121.39896pt.
 File: images/icon_dhbw.jpg Graphic file (type jpg)
  <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 496.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 497.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 496.
+(babel)             in language  on input line 497.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 496.
+(babel)             in language  on input line 497.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 496.
+(babel)             in language  on input line 497.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 496.
+(babel)             in language  on input line 497.
 
 [19 <./images/Verbindungsaufbau.png> <./images/Datenaustausch.png> <./images/Ve
 rbindungsabbau.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 496.
+(babel)             in language  on input line 497.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 496.
+(babel)             in language  on input line 497.
 File: images/icon_dhbw.jpg Graphic file (type jpg)
  <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 500.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 501.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 500.
+(babel)             in language  on input line 501.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 500.
+(babel)             in language  on input line 501.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 500.
+(babel)             in language  on input line 501.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 500.
+(babel)             in language  on input line 501.
 
 [20]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 502.
+(babel)             in language  on input line 503.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 502.
+(babel)             in language  on input line 503.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 506.
+(babel)             in language  on input line 507.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 506.
-
-
-Package natbib Warning: Citation `Spektrum.SchwarmverhaltenKompaktlexikon' on p
-age 21 undefined on input line 508.
-
+(babel)             in language  on input line 507.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 511.
+(babel)             in language  on input line 512.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 511.
+(babel)             in language  on input line 512.
 
-Underfull \hbox (badness 10000) in paragraph at lines 513--514
-
- []
-
-<images/technische_grundlagen/fischschwarm.jpg, id=668, 903.375pt x 602.25pt>
+<images/technische_grundlagen/fischschwarm.jpg, id=712, 903.375pt x 602.25pt>
 File: images/technische_grundlagen/fischschwarm.jpg Graphic file (type jpg)
 
 <use images/technische_grundlagen/fischschwarm.jpg>
@@ -2050,64 +2046,99 @@ Package pdftex.def Info: images/technische_grundlagen/fischschwarm.jpg used on
 input line 517.
 (pdftex.def)             Requested size: 182.09486pt x 121.39438pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 525--526
-
+Underfull \hbox (badness 10000) in paragraph at lines 514--521
+\T1/cmr/m/n/12 stra-te-gi-en, so-wie Re-geln die in dem an-zu-tref-fen-den Schw
+arm vor-herr-schen.
  []
 
-File: images/icon_dhbw.jpg Graphic file (type jpg)
-<use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 532.
-(pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
-Overfull \vbox (40.2772pt too high) has occurred while \output is active []
+Package wrapfig Warning: Collision between wrapping environments on input line 
+532.
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 532.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 532.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 532.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 532.
 
-[21 <./images/technische_grundlagen/fischschwarm.jpg>]
-<images/technische_grundlagen/termitenschwarm.jpg, id=679, 57.816pt x 38.544pt>
+<images/technische_grundlagen/termitenschwarm.jpg, id=713, 57.816pt x 38.544pt>
 File: images/technische_grundlagen/termitenschwarm.jpg Graphic file (type jpg)
 <use images/technische_grundlagen/termitenschwarm.jpg>
 Package pdftex.def Info: images/technische_grundlagen/termitenschwarm.jpg used 
-on input line 535.
+on input line 534.
 (pdftex.def)             Requested size: 182.09486pt x 121.40305pt.
 
-Underfull \hbox (badness 6173) in paragraph at lines 542--543
- []\T1/cmr/bx/n/12 Ein Ter-mi-ten-schwarm[] \T1/cmr/m/n/12 geht nach dem
+Underfull \hbox (badness 1019) in paragraph at lines 530--538
+\T1/cmr/m/n/12 ein-flusst, exis-tiert ein Schwel-len-wert, der sich ei-ner Min-
+de-stan-zahl von et-wa fünf
+ []
+
+
+Underfull \hbox (badness 1360) in paragraph at lines 530--538
+\T1/cmr/m/n/12 Pro-zent rich-tet, durch die der Schwarm ge-steu-ert wer-den kan
+n. So-mit rea-gie-ren
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 530--538
+\T1/cmr/m/n/12 ei-ne Min-der-heit Fehl-steu-ern. Die-ses Sze-na-rio lässt im Si
+n-ne von Ver-an-stal-tun-gen
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 530--538
+\T1/cmr/m/n/12 auf Men-schen über-tra-gen, um zu fest-zu-stel-len an wel-chen P
+o-si-tio-nen Si-cher-heits-
+ []
+
+
+Underfull \hbox (badness 1242) in paragraph at lines 530--538
+\T1/cmr/m/n/12 per-so-nal po-si-tio-niert wer-den muss, um einen ge-re-gel-ten 
+Ab-lauf zu ge-währ-leis-ten.
  []
 
 File: images/icon_dhbw.jpg Graphic file (type jpg)
 <use images/icon_dhbw.jpg>
-Package pdftex.def Info: images/icon_dhbw.jpg used on input line 552.
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 538.
 (pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
 
 Overfull \vbox (40.2772pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 552.
+(babel)             in language  on input line 538.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 552.
+(babel)             in language  on input line 538.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 552.
+(babel)             in language  on input line 538.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 552.
+(babel)             in language  on input line 538.
 
-[22 <./images/technische_grundlagen/termitenschwarm.jpg>]
+[21 <./images/technische_grundlagen/fischschwarm.jpg>]
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 53
+8.
+
+
+Underfull \hbox (badness 6173) in paragraph at lines 541--544
+ []\T1/cmr/bx/n/12 Ein Ter-mi-ten-schwarm[] \T1/cmr/m/n/12 geht nach dem
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 553.
+(babel)             in language  on input line 551.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 553.
+(babel)             in language  on input line 551.
+File: images/icon_dhbw.jpg Graphic file (type jpg)
+<use images/icon_dhbw.jpg>
+Package pdftex.def Info: images/icon_dhbw.jpg used on input line 555.
+(pdftex.def)             Requested size: 97.29883pt x 46.87881pt.
+
+Overfull \vbox (40.2772pt too high) has occurred while \output is active []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 557.
+(babel)             in language  on input line 555.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 557.
-)
+(babel)             in language  on input line 555.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 555.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 555.
+
+[22 <./images/technische_grundlagen/termitenschwarm.jpg>])
 File: images/icon_dhbw.jpg Graphic file (type jpg)
 
 <use images/icon_dhbw.jpg>
@@ -2183,7 +2214,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 30.
 
 [25]
-<images/konzeption/Softwarearchitecture.png, id=720, 538.01pt x 938.50626pt>
+<images/konzeption/Softwarearchitecture.png, id=766, 538.01pt x 938.50626pt>
 File: images/konzeption/Softwarearchitecture.png Graphic file (type png)
 
 <use images/konzeption/Softwarearchitecture.png>
@@ -2216,7 +2247,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
-<images/Controling.png, id=728, 522.95375pt x 417.56pt>
+<images/Controling.png, id=774, 522.95375pt x 417.56pt>
 File: images/Controling.png Graphic file (type png)
 
 <use images/Controling.png>
@@ -2243,7 +2274,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 59.
 
 [27 <./images/Controling.png>]
-<images/logos/UWP/FleeAndCatch_Logo.png, id=735, 1003.75pt x 1003.75pt>
+<images/logos/UWP/FleeAndCatch_Logo.png, id=781, 1003.75pt x 1003.75pt>
 File: images/logos/UWP/FleeAndCatch_Logo.png Graphic file (type png)
 
 <use images/logos/UWP/FleeAndCatch_Logo.png>
@@ -2280,14 +2311,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--94
 
  []
 
-<images/mockups/Connection.png, id=751, 381.425pt x 756.8275pt>
+<images/mockups/Connection.png, id=797, 381.425pt x 756.8275pt>
 File: images/mockups/Connection.png Graphic file (type png)
 
 <use images/mockups/Connection.png>
 Package pdftex.def Info: images/mockups/Connection.png used on input line 97.
 (pdftex.def)             Requested size: 113.81102pt x 225.82588pt.
 
-<images/mockups/Home.png, id=752, 381.425pt x 756.8275pt>
+<images/mockups/Home.png, id=798, 381.425pt x 756.8275pt>
 File: images/mockups/Home.png Graphic file (type png)
 
 <use images/mockups/Home.png>
@@ -2310,7 +2341,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 102.
 
 [29 <./images/mockups/Connection.png> <./images/mockups/Home.png>]
-<images/use_cases/Connect.png, id=764, 804.00375pt x 724.7075pt>
+<images/use_cases/Connect.png, id=810, 804.00375pt x 724.7075pt>
 File: images/use_cases/Connect.png Graphic file (type png)
 
 <use images/use_cases/Connect.png>
@@ -2342,14 +2373,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
-<images/mockups/RobotList.png, id=773, 381.425pt x 756.8275pt>
+<images/mockups/RobotList.png, id=819, 381.425pt x 756.8275pt>
 File: images/mockups/RobotList.png Graphic file (type png)
 
 <use images/mockups/RobotList.png>
 Package pdftex.def Info: images/mockups/RobotList.png used on input line 120.
 (pdftex.def)             Requested size: 113.81102pt x 225.82588pt.
 
-<images/mockups/Control.png, id=774, 381.425pt x 756.8275pt>
+<images/mockups/Control.png, id=820, 381.425pt x 756.8275pt>
 File: images/mockups/Control.png Graphic file (type png)
 
 <use images/mockups/Control.png>
@@ -2372,7 +2403,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 125.
 
 [31 <./images/mockups/RobotList.png> <./images/mockups/Control.png>]
-<images/use_cases/Synchronization.png, id=783, 500.87125pt x 614.295pt>
+<images/use_cases/Synchronization.png, id=829, 500.87125pt x 614.295pt>
 File: images/use_cases/Synchronization.png Graphic file (type png)
 
 <use images/use_cases/Synchronization.png>
@@ -2380,7 +2411,7 @@ Package pdftex.def Info: images/use_cases/Synchronization.png used on input lin
 e 130.
 (pdftex.def)             Requested size: 159.33821pt x 195.4161pt.
 
-<images/use_cases/Update.png, id=784, 428.60126pt x 734.745pt>
+<images/use_cases/Update.png, id=830, 428.60126pt x 734.745pt>
 File: images/use_cases/Update.png Graphic file (type png)
 
 <use images/use_cases/Update.png>
@@ -2417,7 +2448,7 @@ File: images/mockups/Control.png Graphic file (type png)
 Package pdftex.def Info: images/mockups/Control.png used on input line 151.
 (pdftex.def)             Requested size: 113.81102pt x 225.82588pt.
 
-<images/mockups/Spectator.png, id=792, 381.425pt x 756.8275pt>
+<images/mockups/Spectator.png, id=838, 381.425pt x 756.8275pt>
 File: images/mockups/Spectator.png Graphic file (type png)
 
 <use images/mockups/Spectator.png>
@@ -2440,14 +2471,14 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 156.
 
 [33 <./images/mockups/Spectator.png>]
-<images/use_cases/Szenario.png, id=801, 724.7075pt x 724.7075pt>
+<images/use_cases/Szenario.png, id=847, 724.7075pt x 724.7075pt>
 File: images/use_cases/Szenario.png Graphic file (type png)
 
 <use images/use_cases/Szenario.png>
 Package pdftex.def Info: images/use_cases/Szenario.png used on input line 161.
 (pdftex.def)             Requested size: 193.48013pt x 193.47307pt.
 
-<images/use_cases/Spectator.png, id=802, 505.89pt x 724.7075pt>
+<images/use_cases/Spectator.png, id=848, 505.89pt x 724.7075pt>
 File: images/use_cases/Spectator.png Graphic file (type png)
 
 <use images/use_cases/Spectator.png>
@@ -2480,7 +2511,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
-<images/use_cases/Exception.png, id=810, 654.445pt x 654.445pt>
+<images/use_cases/Exception.png, id=856, 654.445pt x 654.445pt>
 File: images/use_cases/Exception.png Graphic file (type png)
 
 <use images/use_cases/Exception.png>
@@ -2605,7 +2636,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 5.
 
-<images/uml/full_class_diagram.png, id=854, 1089.31969pt x 502.12593pt>
+<images/uml/full_class_diagram.png, id=900, 1089.31969pt x 502.12593pt>
 File: images/uml/full_class_diagram.png Graphic file (type png)
 
 <use images/uml/full_class_diagram.png>
@@ -2613,7 +2644,7 @@ Package pdftex.def Info: images/uml/full_class_diagram.png used on input line 9
 .
 (pdftex.def)             Requested size: 432.48051pt x 199.35275pt.
 
-<images/uml/commands.png, id=855, 414.04688pt x 391.4625pt>
+<images/uml/commands.png, id=901, 414.04688pt x 391.4625pt>
 File: images/uml/commands.png Graphic file (type png)
 
 <use images/uml/commands.png>
@@ -2623,7 +2654,7 @@ Package pdftex.def Info: images/uml/commands.png used on input line 17.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/uml/identification.png, id=856, 382.42876pt x 380.17032pt>
+<images/uml/identification.png, id=902, 382.42876pt x 380.17032pt>
 File: images/uml/identification.png Graphic file (type png)
 
 <use images/uml/identification.png>
@@ -2633,7 +2664,7 @@ Package pdftex.def Info: images/uml/identification.png used on input line 25.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/uml/devices.png, id=857, 401.24907pt x 303.38344pt>
+<images/uml/devices.png, id=903, 401.24907pt x 303.38344pt>
 File: images/uml/devices.png Graphic file (type png)
 
 <use images/uml/devices.png>
@@ -2643,7 +2674,7 @@ Package pdftex.def Info: images/uml/devices.png used on input line 33.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/uml/szenarios.png, id=858, 412.54124pt x 357.58594pt>
+<images/uml/szenarios.png, id=904, 412.54124pt x 357.58594pt>
 File: images/uml/szenarios.png Graphic file (type png)
 
 <use images/uml/szenarios.png>
@@ -2653,7 +2684,7 @@ Package pdftex.def Info: images/uml/szenarios.png used on input line 41.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/uml/json_converter.png, id=859, 384.6872pt x 185.19188pt>
+<images/uml/json_converter.png, id=905, 384.6872pt x 185.19188pt>
 File: images/uml/json_converter.png Graphic file (type png)
 
 <use images/uml/json_converter.png>
@@ -2668,13 +2699,29 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 62.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 73.
+(babel)             in language  on input line 64.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 73.
+(babel)             in language  on input line 64.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 82.
+(babel)             in language  on input line 70.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 82.
+(babel)             in language  on input line 70.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\acrfull' on input line 70.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 72.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 72.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 74.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 74.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 83.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 83.
 )
 File: images/icon_dhbw.jpg Graphic file (type jpg)
  <use images/icon_dhbw.jpg>
@@ -2824,49 +2871,66 @@ Package babel Info: Redefining ngerman shorthand "~
 \openout2 = `dokumente/literatur.aux'.
 
  (dokumente/literatur.tex (dokumentation.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\T1/cmtt/m/n/12 www . app-[]entwickler-[]verzeichnis . de / faq-[]app-[]entwick
-lung / 11-[]definitionen /
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
+[]\T1/cmr/m/n/12 Web & app de-ve-lop-ment.  URL [][]$\T1/cmtt/m/n/12 http : / /
+ www . nethority . com /
  []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 20--25
+Underfull \hbox (badness 10000) in paragraph at lines 13--17
+[]\T1/cmr/m/n/12 Daniel Würstl.  Un-ter-schie-de und ver-gleich na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--17
+\T1/cmr/m/n/12 ti-ve ap-ps vs. web ap-ps.  URL [][]$\T1/cmtt/m/n/12 http : / / 
+www .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--17
+\T1/cmtt/m/n/12 app-[]entwickler-[]verzeichnis . de / faq-[]app-[]entwicklung /
+ 11-[]definitionen /
+ []
+
+
+Underfull \hbox (badness 1215) in paragraph at lines 29--34
 []\T1/cmr/m/n/12 Petra Rie-pe.  Na-ti-ve app, web app und hy-brid app im über-b
 lick: Warum
  []
 
 
-Underfull \hbox (badness 1803) in paragraph at lines 20--25
+Underfull \hbox (badness 1199) in paragraph at lines 29--34
 \T1/cmr/m/n/12 na-ti-ve wenn es auch hy-brid geht?  URL [][]$\T1/cmtt/m/n/12 ht
 tp : / / www . computerwoche . de / a /
  []
 
 
-Underfull \hbox (badness 2050) in paragraph at lines 28--32
+Underfull \hbox (badness 1490) in paragraph at lines 37--41
 []\T1/cmr/m/n/12 Maximilian Schö-bel, Thors-ten Leim-bach, and Bea-te Jost.  \T
 1/cmr/m/it/12 Ro-ber-ta - EV3-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--45
+Underfull \hbox (badness 7540) in paragraph at lines 55--59
 []\T1/cmr/m/n/12 Xamarin.  In-tro-duc-ti-on to mo-bi-le de-ve-lop-ment - xa-ma-
 rin, .  URL
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--45
+Underfull \hbox (badness 10000) in paragraph at lines 55--59
 [][]$\T1/cmtt/m/n/12 https : / / developer . xamarin . com / guides / cross-[]p
 latform / getting _ started /
  []
 
 
-Underfull \hbox (badness 4686) in paragraph at lines 47--51
+Underfull \hbox (badness 3849) in paragraph at lines 61--65
 []\T1/cmr/m/n/12 Xamarin.  In-tro-duc-ti-on to por-ta-ble class li-bra-ri-es - 
 xa-ma-rin, .  URL
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 [][]$\T1/cmtt/m/n/12 https : / / developer . xamarin . com / guides / cross-[]p
 latform / application _
  []
@@ -2928,17 +2992,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
 Package rerunfilecheck Info: File `dokumentation.out' has not changed.
-(rerunfilecheck)             Checksum: 64A4CA7B0513A308B6248F546462B288;3614.
+(rerunfilecheck)             Checksum: D690254532D3EF4D9671EBAA203DDD3B;3745.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 20949 strings out of 493329
- 338332 string characters out of 3139063
- 630388 words of memory out of 3000000
- 23772 multiletter control sequences out of 15000+200000
+ 21036 strings out of 493329
+ 339716 string characters out of 3139063
+ 631465 words of memory out of 3000000
+ 23843 multiletter control sequences out of 15000+200000
  17021 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,16n,108p,1951b,557s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2968,6 +3032,15 @@ replaced by a fixed one
 
 pdfTeX warning (dest): name{glo:tcp} has been referenced but does not exist, re
 placed by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{glo:clr} has been referenced but does not exist, re
 placed by a fixed one
@@ -3035,6 +3108,9 @@ st, replaced by a fixed one
 pdfTeX warning (dest): name{glo:json} has been referenced but does not exist, r
 eplaced by a fixed one
 
+pdfTeX warning (dest): name{glo:gui} has been referenced but does not exist, re
+placed by a fixed one
+
 pdfTeX warning (dest): name{glo:app} has been referenced but does not exist, re
 placed by a fixed one
 
@@ -3051,9 +3127,9 @@ m Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/cm-super/sfrm1440.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/cm-super/sfti1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/cm-super/sftt1200.pfb>
-Output written on dokumentation.pdf (57 pages, 3732501 bytes).
+Output written on dokumentation.pdf (57 pages, 3760792 bytes).
 PDF statistics:
- 1008 PDF objects out of 1200 (max. 8388607)
- 234 named destinations out of 1000 (max. 500000)
- 600 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1068 PDF objects out of 1200 (max. 8388607)
+ 250 named destinations out of 1000 (max. 500000)
+ 616 words of extra memory for PDF output out of 10000 (max. 10000000)
 

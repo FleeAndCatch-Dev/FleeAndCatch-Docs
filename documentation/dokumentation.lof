@@ -1,11 +1,11 @@
 \select@language {ngerman}
 \contentsline {figure}{\numberline {1}{\ignorespaces Zentrale Komponenten des EV3-Systems}}{5}{figure.caption.8}
-\contentsline {figure}{\numberline {2}{\ignorespaces App Entwicklung\relax }}{11}{figure.caption.17}
-\contentsline {figure}{\numberline {3}{\ignorespaces Xamarin\relax }}{13}{figure.caption.18}
-\contentsline {figure}{\numberline {4}{\ignorespaces Shared Project\relax }}{13}{figure.caption.19}
-\contentsline {figure}{\numberline {5}{\ignorespaces Portable Class Library\relax }}{14}{figure.caption.21}
-\contentsline {figure}{\numberline {6}{\ignorespaces Unterst\IeC {\"u}tzung Portable Class Library\relax }}{14}{figure.caption.23}
-\contentsline {figure}{\numberline {7}{\ignorespaces Mono\relax }}{15}{figure.caption.24}
+\contentsline {figure}{\numberline {2}{\ignorespaces App Entwicklung \cite {Nethority.Web&App}\relax }}{11}{figure.caption.17}
+\contentsline {figure}{\numberline {3}{\ignorespaces Xamarin \cite {Xamarin}\relax }}{13}{figure.caption.18}
+\contentsline {figure}{\numberline {4}{\ignorespaces Shared Project \cite {Xamarin.SharedProjects}\relax }}{13}{figure.caption.19}
+\contentsline {figure}{\numberline {5}{\ignorespaces Portable Class Library \cite {Xamarin.PortableClass}\relax }}{14}{figure.caption.21}
+\contentsline {figure}{\numberline {6}{\ignorespaces Unterst\IeC {\"u}tzung Portable Class Library \cite {Xamarin.PortableClass}\relax }}{14}{figure.caption.23}
+\contentsline {figure}{\numberline {7}{\ignorespaces Mono \cite {Mono.MonoProject}\relax }}{15}{figure.caption.24}
 \contentsline {figure}{\numberline {8}{\ignorespaces .NET Framework Ausf\IeC {\"u}hrung\relax }}{16}{figure.caption.25}
 \contentsline {figure}{\numberline {9}{\ignorespaces Common Language Runtime\relax }}{16}{figure.caption.26}
 \contentsline {figure}{\numberline {10}{\ignorespaces TCP Verbindungsaufbau}}{19}{figure.caption.29}
