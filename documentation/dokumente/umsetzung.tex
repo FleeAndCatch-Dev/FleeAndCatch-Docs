@@ -28,7 +28,7 @@ Der Kern zur Implementierung der Kommunikation erfolgt in zwei Methoden, die auf
 \end{figure}
 
 \newpage
-\paragraph{Kommando}
+\paragraph{Kommandos}
 
 \begin{wrapfigure}{r}{0.55\textwidth}
 	\begin{center}
@@ -43,11 +43,11 @@ Der Kern zur Implementierung der Kommunikation erfolgt in zwei Methoden, die auf
 	\label{fig:identification_classdiagram}
 \end{wrapfigure}
 
-Objekte stellen die Basis der Kommunikationsstruktur sowie den aktuellen Kontext dar, in dem sich die Software befindet, siehe \ref{fig:commands_classdiagram}. Sie enthalten grundlegende Attribute zur allgemeinen Identifikation des Kommandos, die zur Interpretation verwendet werden. Je nach Kommando sind zusätzliche Objekte enthalten, die durch die jeweilige Id vordefiniert sind.\\
+stellen die Basis der Kommunikationsstruktur sowie den aktuellen Kontext dar, indem sich die Software befindet, siehe \ref{fig:commands_classdiagram}. Sie enthalten grundlegende Attribute zur allgemeinen Identifikation des Kommandos, die zur Interpretation verwendet, welche über definierte Enums ausgewählt werden. Je nach Kommando sind zusätzliche Objekte enthalten, die durch die jeweilige Id vordefiniert sind.\\
 
-\paragraph{Identifikation}
+\paragraph{Identifikationen}
 
-Objekte stellen wie ihr Name die einzlnen Komponenten, mit ihren definierten Attributen dar un dienen eldiglich der Identifikation, von welcher Komponente das aktuelle KOmmando stammt. DIese Objekte sind daher in allesn definierten Kommandos zu finden.
+stellt die individuelle Identität der einzelnen Komponente dar, siehe \ref{fig:identification_classdiagram}. Diese wird durch eine fortlaufende Identifikationsnummer, Typen und je nach Ableitung weiteren Attributen erreicht. Um die jeweiligen Kommandos entsprechend zuzuordnen, sind diese in jedem Kommando vorhanden und bilden die Basisobjekte. Die unterschiedlichen Typen sind dabei für verschiedene Kontexte der Software zuständig. Die ClientIdentification stellt einerseits die Verbindung einer allgemeinen Komponente zur Desktopanwendung dar, wogegen die Robot- bzw. AppIdentification die spezifische Identifikation der Komponente darstellt. Die Erstellung der Identifikation erfolgt wiederholt zur Anmeldung der Komponente am System. Zunächst wird ein leeres Objekt erzeugt, dass anschließend durch abfragende Kommandos an die entsprechende Komponente befüllt wird, welche hinterher eine berechnete Identifikationsnummer erhält.
 
 \newpage
 \paragraph{Geräte}
@@ -65,10 +65,14 @@ Objekte stellen wie ihr Name die einzlnen Komponenten, mit ihren definierten Att
 	\label{fig:szenarios_classdiagram}
 \end{wrapfigure}
 
-Die Device Objekte stellen die KOmponenten im ganzen dar und enthalten zu speziellen Identifikations Attribute die allgemeinen Daten, sowie die Steuerungsoperatoren. Dabei wird unter den zwei existierenden KOmponenten unterschieden und kann durch einen vorliegenden COnverter serialisiert werden.
+stellen die Komponenten dar, die an einem Szenario eines Schwarmverhaltens teilnehmen, siehe \ref{fig:devices_classdiagram}. Sie enthalten jeweils spezifische Identifikations Objekte, zur gegenseitigen Zuordnung, sowie die erfassten Daten der entsprechenden Systeme. Die Unterscheidung erfolgt in zwei Komponenten, dem Robot und der App, wobei der Roboter in die jeweiligen Untertypen gegliedert werden kann. 
 
 \paragraph{Szenarios}
-Die Szenarios stellen den aktuellen Kontext des Schwarmverhaltens dar und enthalten zu Identifikations Attributen zusätzliche die teilnehmenden Devices um diese zuordnen zu könnn. Diese Objekte werden laufend aktualisiert und haben nur zur Laufzeit des entsprechenden Szenarios ihre Gültigkeit, wobei sie bei Beendigung gelöscht werden.
+
+stellen den aktuellen Kontext des Schwarmverhaltens dar, in dem sich der Nutzer befindet, siehe \ref{fig:szenarios_classdiagram}. Sie enthalten die jeweiligen Teilnehmer des Szenarios, sowie die Steuerungsinformationen und damit die gesamten Daten des aktuellen Kontextes. Diese Objekte werden laufend aktualisiert und besitzen lediglich zur Laufzeit des Szenarios ihre Gültigkeit, wobei diese anschließend gelöscht werden.
+
+
+%Die Szenarios stellen den aktuellen Kontext des Schwarmverhaltens dar und enthalten zu Identifikations Attributen zusätzliche %die teilnehmenden Devices um diese zuordnen zu könnn. Diese Objekte werden laufend aktualisiert und haben nur zur Laufzeit des %entsprechenden Szenarios ihre Gültigkeit, wobei sie bei Beendigung gelöscht werden.
 
 \newpage
 \paragraph{Konverter}
