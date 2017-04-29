@@ -4,7 +4,7 @@ In diesem Kapitel wird die Implementierung des Projektes mit Fokussierung auf di
 
 \subsection{Kommunikation}
 
-Die Kommunikation der einzelnen Komponenten des Schwarmverhaltens baut auf einer klar definierten Struktur, um ein verteiltes System zu ermöglichen, siehe \ref{fig:full_classdiagram}. Die Daten werden dabei als \gls{json} Objekte zur optimalen plattformübergreifenden Interpretation versendet, wobei jeweils die entsprechende Bibliothek zur Serialisierung verwendet wird.
+Die Kommunikation der einzelnen Komponenten des Schwarmverhaltens baut auf einer klar definierten Struktur, um ein verteiltes System zu ermöglichen, siehe Abbildung \ref{fig:full_classdiagram}. Die Daten werden dabei als \gls{json} Objekte zur optimalen plattformübergreifenden Interpretation versendet, wobei jeweils die entsprechende Bibliothek zur Serialisierung verwendet wird.
 \begin{verbatim}
 \end{verbatim}
 \begin{figure}[h]
@@ -43,11 +43,11 @@ Der Kern zur Implementierung der Kommunikation erfolgt in zwei Methoden, die auf
 	\label{fig:identification_classdiagram}
 \end{wrapfigure}
 
-stellen die Basis der Kommunikationsstruktur sowie den aktuellen Kontext dar, indem sich die Software befindet, siehe \ref{fig:commands_classdiagram}. Sie enthalten grundlegende Attribute zur allgemeinen Identifikation des Kommandos, die zur Interpretation verwendet, welche über definierte Enums ausgewählt werden. Je nach Kommando sind zusätzliche Objekte enthalten, die durch die jeweilige Id vordefiniert sind.\\
+stellen die Basis der Kommunikationsstruktur sowie den aktuellen Kontext dar, indem sich die Software befindet, siehe Abbildung \ref{fig:commands_classdiagram}. Sie enthalten grundlegende Attribute zur allgemeinen Identifikation des Kommandos, die zur Interpretation verwendet, welche über definierte Enums ausgewählt werden. Je nach Kommando sind zusätzliche Objekte enthalten, die durch die jeweilige Id vordefiniert sind.\\
 
 \paragraph{Identifikationen}
 
-stellt die individuelle Identität der einzelnen Komponente dar, siehe \ref{fig:identification_classdiagram}. Diese wird durch eine fortlaufende Identifikationsnummer, Typen und je nach Ableitung weiteren Attributen erreicht. Um die jeweiligen Kommandos entsprechend zuzuordnen, sind diese in jedem Kommando vorhanden und bilden die Basisobjekte. Die unterschiedlichen Typen sind dabei für verschiedene Kontexte der Software zuständig. Die ClientIdentification stellt einerseits die Verbindung einer allgemeinen Komponente zur Desktopanwendung dar, wogegen die Robot- bzw. AppIdentification die spezifische Identifikation der Komponente darstellt. Die Erstellung der Identifikation erfolgt wiederholt zur Anmeldung der Komponente am System. Zunächst wird ein leeres Objekt erzeugt, dass anschließend durch abfragende Kommandos an die entsprechende Komponente befüllt wird, welche hinterher eine berechnete Identifikationsnummer erhält.
+stellt die individuelle Identität der einzelnen Komponente dar, siehe Abbildung \ref{fig:identification_classdiagram}. Diese wird durch eine fortlaufende Identifikationsnummer, Typen und je nach Ableitung weiteren Attributen erreicht. Um die jeweiligen Kommandos entsprechend zuzuordnen, sind diese in jedem Kommando vorhanden und bilden die Basisobjekte. Die unterschiedlichen Typen sind dabei für verschiedene Kontexte der Software zuständig. Die ClientIdentification stellt einerseits die Verbindung einer allgemeinen Komponente zur Desktopanwendung dar, wogegen die Robot- bzw. AppIdentification die spezifische Identifikation der Komponente darstellt. Die Erstellung der Identifikation erfolgt wiederholt zur Anmeldung der Komponente am System. Zunächst wird ein leeres Objekt erzeugt, dass anschließend durch abfragende Kommandos an die entsprechende Komponente befüllt wird, welche hinterher eine berechnete Identifikationsnummer erhält.
 
 \newpage
 \paragraph{Geräte}
@@ -65,28 +65,32 @@ stellt die individuelle Identität der einzelnen Komponente dar, siehe \ref{fig:
 	\label{fig:szenarios_classdiagram}
 \end{wrapfigure}
 
-stellen die Komponenten dar, die an einem Szenario eines Schwarmverhaltens teilnehmen, siehe \ref{fig:devices_classdiagram}. Sie enthalten jeweils spezifische Identifikations Objekte, zur gegenseitigen Zuordnung, sowie die erfassten Daten der entsprechenden Systeme. Die Unterscheidung erfolgt in zwei Komponenten, dem Robot und der App, wobei der Roboter in die jeweiligen Untertypen gegliedert werden kann. 
+stellen die Komponenten dar, die an einem Szenario eines Schwarmverhaltens teilnehmen, siehe Abbildung \ref{fig:devices_classdiagram}. Sie enthalten jeweils spezifische Identifikations Objekte, zur gegenseitigen Zuordnung, sowie die erfassten Daten der entsprechenden Systeme. Die Unterscheidung erfolgt in zwei Komponenten, dem Robot und der App, wobei der Roboter in die jeweiligen Untertypen gegliedert werden kann. 
 
 \paragraph{Szenarios}
 
-stellen den aktuellen Kontext des Schwarmverhaltens dar, in dem sich der Nutzer befindet, siehe \ref{fig:szenarios_classdiagram}. Sie enthalten die jeweiligen Teilnehmer des Szenarios, sowie die Steuerungsinformationen und damit die gesamten Daten des aktuellen Kontextes. Diese Objekte werden laufend aktualisiert und besitzen lediglich zur Laufzeit des Szenarios ihre Gültigkeit, wobei diese anschließend gelöscht werden.
-
-
-%Die Szenarios stellen den aktuellen Kontext des Schwarmverhaltens dar und enthalten zu Identifikations Attributen zusätzliche %die teilnehmenden Devices um diese zuordnen zu könnn. Diese Objekte werden laufend aktualisiert und haben nur zur Laufzeit des %entsprechenden Szenarios ihre Gültigkeit, wobei sie bei Beendigung gelöscht werden.
+stellen den Ablauf des Schwarmverhaltens dar, in dem sich der Nutzer befindet, siehe Abbildung \ref{fig:szenarios_classdiagram}. Sie enthalten die jeweiligen Teilnehmer des Szenarios, sowie die Steuerungsinformationen und damit die gesamten Daten des aktuellen Kontextes. Diese Objekte werden laufend aktualisiert und besitzen lediglich zur Laufzeit des Szenarios ihre Gültigkeit. Dabei existieren verschiedene Kategorien von Szenarien, siehe Abschnitt \ref{szenarien}. Diese definieren jeweils einen unterschiedlichen Kontext und besitzen daher je nach Szenario zusätzliche Attribute.
 
 \newpage
 \paragraph{Konverter}
+
 \begin{wrapfigure}{r}{0.55\textwidth}
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{images/uml/json_converter.png}
 	\end{center}
-	\caption{JSON Converter}
+	\caption{JsonConverter}
 	\label{fig:converter_classdiagram}
 \end{wrapfigure}
 
-Um Objekte spezifisch zu abstrahieren, werden sogenannte Converter verwendet, um abstrahierte Objekte direkt abgeleiteten Klassen zuzuordenn und entsprechende Programmlogik auszuführen. Dabei wird auf die entsprechende Bibliothek mit Grundlogik zurückgegriffen und entsprechende Bedingungen hinzugefügt. siehe \ref{fig:converter_classdiagram}
+dienen der Deserialisierung von abstrakten \gls{json} Objekten, welche nicht direkt identifiziert werden können, siehe Abbildung \ref{fig:converter_classdiagram}. Dazu gehören abstrakte Klassen, sowie Schnittstellen, welche keinem spezifischen Objekt zugeordnet werden kann. Die Implementierung erfolgt durch die Überschreibung der entsprechenden Methoden zur Deserialisierung und Serialisierung, siehe Abbildung \ref{fig:ConverterRead} und \ref{fig:ConverterWrite}. Je nach Anwendung, wird ein Parameter übergeben, der das Objekt als Zeichenkette beinhaltet. Dieses wird durch eine Abfolge von Bedingungen auf den Typen geprüft wird, um das Objekt zu erstellen.\\
 
-
+\begin{figure}[h]
+	\centering
+	\subfloat[ReadJson]{\includegraphics[width=0.6\textwidth]{images/code/DeviceConverterRead.png}\label{fig:ConverterRead}}
+	\qquad
+	\subfloat[WriteJson]{\includegraphics[width=0.6\textwidth]{images/code/DeviceConverterWrite.png}\label{fig:ConverterWrite}}
+	\caption{Device JsonConverter}
+\end{figure}
 
 \newpage
 \subsection{App}

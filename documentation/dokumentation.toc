@@ -78,9 +78,9 @@
 \contentsline {paragraph}{Konverter}{43}{figure.caption.76}
 \contentsline {subsection}{\numberline {4.2}App}{44}{subsection.4.2}
 \contentsline {subsubsection}{\numberline {4.2.1}Workflow}{44}{subsubsection.4.2.1}
-\contentsline {paragraph}{Design Pattern}{44}{section*.77}
-\contentsline {paragraph}{\acrfull {mvvm}}{44}{section*.78}
-\contentsline {paragraph}{Bindings}{44}{section*.79}
+\contentsline {paragraph}{Design Pattern}{44}{section*.78}
+\contentsline {paragraph}{\acrfull {mvvm}}{44}{section*.79}
+\contentsline {paragraph}{Bindings}{44}{section*.80}
 \contentsline {subsubsection}{\numberline {4.2.2}\acrfull {gui}}{44}{subsubsection.4.2.2}
 \contentsline {subsubsection}{\numberline {4.2.3}Buisnesslogic}{44}{subsubsection.4.2.3}
 \contentsline {subsection}{\numberline {4.3}Backend}{44}{subsection.4.3}

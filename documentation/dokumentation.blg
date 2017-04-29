@@ -16,6 +16,7 @@ Database file #1: literatur.bib
 Warning--to sort, need author or key in Nethority.Web&App
 Warning--empty year in Nethority.Web&App
 Warning--empty year in DanielWurstl.Unterschiedeund
+Warning--empty year in Microsoft.Introductionto
 Warning--empty year in Microsoft.Overviewof
 Warning--empty year in Mono.MonoProject
 Warning--empty year in PetraRiepe.NativeApp
@@ -24,4 +25,4 @@ Warning--empty year in Xamarin
 Warning--empty year in Xamarin.Introductionto
 Warning--empty year in Xamarin.PortableClass
 Warning--empty year in Xamarin.SharedProjects
-(There were 11 warnings)
+(There were 12 warnings)

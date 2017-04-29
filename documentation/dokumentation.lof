@@ -6,8 +6,8 @@
 \contentsline {figure}{\numberline {5}{\ignorespaces Portable Class Library \cite {Xamarin.PortableClass}\relax }}{14}{figure.caption.21}
 \contentsline {figure}{\numberline {6}{\ignorespaces Unterst\IeC {\"u}tzung Portable Class Library \cite {Xamarin.PortableClass}\relax }}{14}{figure.caption.23}
 \contentsline {figure}{\numberline {7}{\ignorespaces Mono \cite {Mono.MonoProject}\relax }}{15}{figure.caption.24}
-\contentsline {figure}{\numberline {8}{\ignorespaces .NET Framework Ausf\IeC {\"u}hrung\relax }}{15}{figure.caption.25}
-\contentsline {figure}{\numberline {9}{\ignorespaces Common Language Runtime\relax }}{16}{figure.caption.26}
+\contentsline {figure}{\numberline {8}{\ignorespaces .NET Framework Ausf\IeC {\"u}hrung \cite {Microsoft.Introductionto}\relax }}{16}{figure.caption.25}
+\contentsline {figure}{\numberline {9}{\ignorespaces Common Language Runtime \cite {Microsoft.Overviewof}\relax }}{16}{figure.caption.26}
 \contentsline {figure}{\numberline {10}{\ignorespaces TCP Verbindungsaufbau}}{19}{figure.caption.29}
 \contentsline {figure}{\numberline {11}{\ignorespaces TCP Datenaustausch}}{19}{figure.caption.31}
 \contentsline {figure}{\numberline {12}{\ignorespaces TCP Verbindungsabbau}}{19}{figure.caption.33}
@@ -39,4 +39,7 @@
 \contentsline {figure}{\numberline {30}{\ignorespaces Identifikation\relax }}{41}{figure.caption.70}
 \contentsline {figure}{\numberline {31}{\ignorespaces Devices\relax }}{42}{figure.caption.73}
 \contentsline {figure}{\numberline {32}{\ignorespaces Scenarios\relax }}{42}{figure.caption.73}
-\contentsline {figure}{\numberline {33}{\ignorespaces JSON Converter\relax }}{44}{figure.caption.76}
+\contentsline {figure}{\numberline {33}{\ignorespaces JsonConverter\relax }}{43}{figure.caption.76}
+\contentsline {figure}{\numberline {34}{\ignorespaces Device JsonConverter\relax }}{43}{figure.caption.77}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ReadJson}}}{43}{subfigure.34.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {WriteJson}}}{43}{subfigure.34.2}

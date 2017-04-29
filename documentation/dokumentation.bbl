@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -15,9 +15,15 @@ Web {\&} app development.
 \newblock URL
   \url{http://www.app-entwickler-verzeichnis.de/faq-app-entwicklung/11-definitionen/107-unterschiede-und-vergleich-native-apps-vs-web-apps}.
 
-\bibitem[Microsoft()]{Microsoft.Overviewof}
+\bibitem[Microsoft({\natexlab{a}})]{Microsoft.Introductionto}
 Microsoft.
-\newblock Overview of the .net framework.
+\newblock Introduction to the c{\#} language and the .net framework,
+  {\natexlab{a}}.
+\newblock URL \url{https://msdn.microsoft.com/de-de/library/z1zx9t92.aspx}.
+
+\bibitem[Microsoft({\natexlab{b}})]{Microsoft.Overviewof}
+Microsoft.
+\newblock Overview of the .net framework, {\natexlab{b}}.
 \newblock URL
   \url{https://msdn.microsoft.com/en-us/library/zw4w595w(v=vs.110).aspx}.
 
