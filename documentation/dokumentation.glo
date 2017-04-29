@@ -6,6 +6,7 @@
 (indexentry :tkey (("TypeScript" "\\glossentry{typescript}") ) :locref "{}{12}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("Framework" "\\glossentry{framework}") ) :locref "{}{12}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("Framework" "\\glossentry{framework}") ) :locref "{}{13}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("Framework" "\\glossentry{framework}") ) :locref "{}{13}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("Java" "\\glossentry{java}") ) :locref "{}{13}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("Objective-C" "\\glossentry{objectivc}") ) :locref "{}{13}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("Framework" "\\glossentry{framework}") ) :locref "{}{13}" :attr "pageglsnumberformat" ) 

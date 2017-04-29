@@ -26,7 +26,7 @@
 \contentsline {subsubsection}{\numberline {2.3.1}Native \glspl {app}}{11}{subsubsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.2}Web \glspl {app}}{11}{subsubsection.2.3.2}
 \contentsline {subsubsection}{\numberline {2.3.3}Hybride \glspl {app}}{12}{subsubsection.2.3.3}
-\contentsline {subsubsection}{\numberline {2.3.4}Plattform\IeC {\"u}bergreifende Entwicklung}{12}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.4}Plattform\IeC {\"u}bergreifende \glspl {app}}{12}{subsubsection.2.3.4}
 \contentsline {subsubsection}{\numberline {2.3.5}Xamarin}{13}{subsubsection.2.3.5}
 \contentsline {paragraph}{Shared Projects}{13}{section*.20}
 \contentsline {paragraph}{Protable Class Libraries}{14}{section*.22}
