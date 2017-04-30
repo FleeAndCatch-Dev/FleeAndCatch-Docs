@@ -93,17 +93,61 @@ dienen der Deserialisierung von abstrakten \gls{json} Objekten, welche nicht dir
 \end{figure}
 
 \newpage
-\subsection{App}
+\subsection{\gls{app}}
+
+Die App erfolgt in einer plattformübergreifenden Implementierung durch Xamarin in C\#. Kernelemente sind hierbei die Struktur, Oberfläche, Buisnesslogik und die Kommunikation. Dabei sind diese in zwei Projekten unterteilt. Die Kommunikation, mite den benötigten Strukturen zur Kommunikation bildet eine einbindbare Bibliothek (PCL), wie sie auch in den jeweiligen anderen Komponenten zu finden ist. Somit können die einzelnen ALgorithmen übertragen werden und müssen lediglich einmalig implementiert werden. Die eigentliche App besteht aus einer pcl, welches die jeweiligen plattformen, einbindet und daraus den plattformspezifischen Quellcode erzeugt. Der allgemeine Quellcode ist dabei im portable projekt und kann plattformübergreifend implementiert werden. Anpassungen können dabei in den plattformspezifischen Projekten unternommen werden. 
+
+% Package Manager NuGet
 
 \subsubsection{Workflow} %Struktur
 
-\paragraph{Design Pattern}
+Die Struktur der \gls{app} basiert auf dem in Xamarin weit verbreiteten ModelViewModelView Design Pattern, wobei die View durch Bindings aktualisiert werden kann. 
+
 \paragraph{\acrfull{mvvm}}
+
+ist ein Design Pattern, welches eine grundlegende Struktur in den Quellcode bringt. Dabei wird die erstellte Benutzeroberfläche von der Logik, sowie den Daten getrennt, um Änderungen unabhängig voneinander durchführen zu können. Um die Teile des Quellcodes zu verbinden wird auf Bindings gesetzt, die dafür zuständig sind, die jeweiligen Objekte gegenseitig zu aktualisieren.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{images/implementation/mvvm.png}
+		\caption{ModelViewModelView \cite{Brecht.MVVMEntity}}
+	\end{center}
+	
+	\label{fig:mvvm}
+\end{figure}
+
 \paragraph{Bindings}
+
+sind für die gegenseitige aktualisierung von Daten der jeweiligen Objekte zuständig. SIe entsprechen ihrem Sinn nach dem Observer Design Pattern und knüpfen an die VIewModels des MVVM an, wobei die dort definierten Objekte mit die der gleichnamigen View und den MOdel Objekten verbunden sind. Durch eine aktualisierung der Daten werden dabei die jeweilig verbundennen aktualisiert. DIes kann auf zwei verschiedenen wegen von statten gehen. Manuell, durch das aufrufen der entsprechenden Methode im ViewModel, andererseits automatisch, durch Attribute, wobei bei einer Änderung, die Methode automatisch angestoßen wird.
+
+% Observer Pattern
 
 \subsubsection{\acrfull{gui}} %Oberfläche
 
+Die Oberfläche der \gls{app} wird mittels XAML erstellt, welche auf der Basis von XML ist. Dabei werden die einzelnen ELemente untereinnander Strukturuert, wobei der ENtwickler in Xamarin verschiedene Möglichkeiten des Designs besitzt. Grundlegend ist die entscheidung, ob eine plattformspezifisches Design sinnn macht, oder aber ein plattformübergreifendes, wobei dieses weniger Freiheiten bietet. Die plattformübergreifendes Design besitzt eine Reihe von grundlegeneden Layouts, die für Xamamrin eingesetzt werden können, sowie unterschiedliche Seitenarten. Views
+Seiten (ContentPage, MasterDetailPage, NavigationPage, TabbedPage, TemplatedPage, CaruselPage)
+View (ContentPresenter, ContentVIew, ScrollVIew, Frame, TemplatedVIew)
+Layout (Stacklayout, absolutLayout, RelativeLayout, GridLayout)
+
+Weitere standardelemente
+
+Durch verschiednene Packages könenn dabei viele Zusätzliche DInge erstellt werden
+
+%General, XAML stuff
+
+\paragraph{LogIn Page}
+
+\paragraph{Home Page}
+
+\paragraph{Option Page}
+
+\paragraph{List Page}
+
+\paragraph{Szenario Page}
+
 \subsubsection{Buisnesslogic} %Logik
+
+\subsubsection{Deployment}
 
 \subsection{Backend}
 
