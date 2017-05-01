@@ -1,7 +1,12 @@
 \section{Theoretische und Technische Grundlagen}
-
+% Farbe die angibt welchen Status der folgende Abschnitt hat:
+\color{finishing}
+% Eigentlicher Text:
 In diesem Kapitel werden die technischen Grundlagen des Projektes, die zur Umsetzung nötig sind beschrieben.
-
+\\Platzhalter kommt noch Text
+\\Platzhalter kommt noch Text
+\\Platzhalter kommt noch Text
+\\Platzhalter kommt noch Text
 \subsection{Robotik} % Manuel ca. 8
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
@@ -27,20 +32,17 @@ gaben.}<<
 \vspace{2mm}
 \newline
 Auch wenn diese Definition einige grundlegenden Eigenschaften eines Roboters darlegt, beschreibt diese Definition den Begriff des Roboters im industriellen Kontext und trifft hauptsächlich auf stationäre Industrieroboter zu, wie sie in der Automobilfertigung beispielsweise als Schweiß- oder Lackierroboter verwendet werden. Die genannten programmierten Bahnen sind dort möglich, weil die Arbeitsprozess und die Umgebung auf den Roboter zugeschnitten und vollständig bekannt sind [MR 2]. \newline
-Im Gegensatz dazu trifft dieser Aspekt auf mobile Roboter nicht zu, sich diese meist in einer unbekannten, unsttrukturierten und dynamischen Umgebung bewegen.
+Im Gegensatz dazu, trifft dieser Aspekt auf mobile Roboter nicht zu, da sich diese meist in einer unbekannten, unsttrukturierten und dynamischen Umgebung bewegen.
 \subsubsection{Mobile Roboter}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{process}
+\color{finishing}
 % Eigentlicher Text:
-Mobile Roboter bewegen sich selbständig duch eine sich meist ständig ändernde Umwelt, so dass alle ihre Aktionen von ihrer aktuellen Umgebung abhängen und diese erst zum Zeitpunkt der Ausführung dieser Aktionen bekannt ist im Detail. Dieser grundsätzliche Unterschied zu stationären Robotern macht es unerlässlich das mobile Roboter ihre Umgebung mittels Sensoren
-erfassen, diese Sensordaten auswerten und auf Grundlage dessen ihre nächsten Aktionen planen.
-
-der Hinsicht, 
-Diese macht es notwendig das die Roboter ihre Umgebung erfassen und wahrnehmen können um auf Veränderungen wie bespielsweise Hindernisse reagieren zu können. \newline
-...
+Mobile Roboter bewegen sich selbständig duch eine sich meist ständig ändernde Umwelt. All ihre Aktionen sind somit von ihrer aktuellen Umgebung abhängen, die in ihrer konkrete Ausprägung erst zum Zeitpunkt der Aktionsausführung im Detail bekannt ist. 
 \newline
-Zu den Vertretern mobiler Roboter zählen zum Beispiel Service-Roboter, Erkundungsroboter und Humanoide Roboter.
-Im Folgenden werden einige Beispielefür mobile Roboter dargelegt:
+Dieser grundsätzliche Unterschied zu stationären Robotern macht es unerlässlich das mobile Roboter ihre Umgebung ständig mittels Sensoren selbständig erfassen, diese Sensordaten auswerten und auf Grundlage dessen ihre nächsten Aktionen planen [MR 2].
+\newline
+Hinter dem Begiff des mobilen Roboters verbergen sich eine Vielzahl unterschiedlicher mobiler Systeme, welche
+sich hinsichtlich ihrer Gestalltung, Arbeitsweise und ihrer Einsatzszenarien unterscheiden. Im Folgenden werden einige Beispiele für mobile Roboter dargelegt:
 \begin{itemize}
 	\item{\textbf{Shakey:}} Shakey war ein mobiler Roboter der von 1966 bis 1972 an der am Stanford Research Institute entwickelt wurde. Seine Entwicklung leistete wichtige Beiträge für die Robotik sowie in der KI-Forschung im Bereich der Handlungsplanung und dem selbständigen Lernen [MR 5f].
 	%##################################################
@@ -51,16 +53,20 @@ Im Folgenden werden einige Beispielefür mobile Roboter dargelegt:
 	die Mojave-Wüste in den USA. Bei Stanley handelt es sich um einen modifizierter VW Touareg, dem Sensoren zur Umgebungswahrnehmung und Bordrechner zur Bearbeitung des Kontrollprogramms eingebaut wurden. Stanleys wichtigste Umgebungssensoren waren mehrere Laserscanner und eine Kamera.Stanley meisterte die 213 km lange Strecke welche unter anderem durch felsige
 	oder sandige Bereiche sowie durch Wasserläufe führte in knapp unter 7 Stunden.
 	%##################################################
-	\item{\textbf{Tribot}} D
 \end{itemize}
-Die Beispiele zeigen wie vielfältig ...
-Neben der Forschung -> Marktpotenzial erwähnen
+Allein diese drei Beispiele zeigen wie sehr sich mobile Roboter im Aufbau, Einsatzort und Aufgabe unterscheiden. Neben reinen forschungs sowie wissenschaftlich-technischen Gründen Mobile Roboter zu bauen, sind diese auch aus wirtschaftlicher Perspektive interessant und haben gerade in den letzen Jahren an Marktpotenzial gewonnen.
+\newline
+Zu den Vertretern mobiler Roboter im kommerziellen Breich zählen zum Beispiel Service-Roboter, Erkundungsroboter und Bergungsroboter, Humanoide Roboter sowie Haushaltsroboter.
 \subsubsection{Sensorik}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{process}
+\color{finishing}
 % Eigentlicher Text:
-Um mit der Umgebung interagieren zu können müssen mobile Roboter diese wahrnehmen, dazu dienen Sensoren. Sensoren ermöglichen es dem Roboter Informationen über seine Umwelt und über seinen Zustand zu sammeln.
-Sensoren lassen sich hinsichtliche ihrer Arbeitsweise und ... wie folgt klassifizieren:
+Um mit der Umgebung interagieren zu können müssen mobile Roboter diese wahrnehmen, dazu dienen Sensoren. Diese ermöglichen es dem Roboter Informationen über seine Umwelt und über seinen Zustand zu sammeln um darauf Aufbauen seine nächsten Interaktionsschritte zu planen.
+\paragraph{Klassifizierung}
+% Farbe die angibt welchen Status der folgende Abschnitt hat:
+\color{finishing}
+% Eigentlicher Text:
+Sensoren lassen sich hinsichtliche zwei Aspekten klassifizieren, zum einen über was die Sensoren Informationen liefern (die Umwelt oder den Roboter selbest) und andereseits hinsichtlich ihrer Arbeitsweise. [MR 24]
 \begin{itemize}
 	\item{\textbf{Propriozeptive Sensoren}} -- Diese Art der Sensoren bestimmen eine Messgröße des Roboters selbst und haben keine \glqq{}Kontakt\grqq{} zur Umwelt z.B Bestimmung der Lage Aufgrund eines Neigungssensors.
 	\item{\textbf{Exterozeptive Sensoren}} -- Im Gegensatz zu den propriozeptive Sensoren gewinnen diese Sensoren Informationen aus Messgrößen der Umwelt beispielsweise die Bestimmung der Orientierung in Bezug auf die Umwelt.
@@ -72,7 +78,7 @@ Die folgenden Tabelle zeigt beispielhaft die Einordnung einiger Sensoren:
 	\begin{tabular}{|p{4,5cm}|p{4,0cm}|p{4,0cm}|} \hline
 		     	                & Aktive Sensoren      & Passive Sensoren   \\ \hline
 		Propriozeptive Sensoren & 
-			(Inkrementalgeber (Photoelektrische Abtastung)) & 
+			-- & 
 			Inkrementalgeber, \newline Neigungssensor, \newline Gyroskop   \\ \hline
 		Exterozeptive Sensoren  & 
 			Ultraschallsensor,  \newline Laserscanner, \newline Infrarotsensor, \newline Radar    & 
@@ -81,8 +87,194 @@ Die folgenden Tabelle zeigt beispielhaft die Einordnung einiger Sensoren:
 	\centering
 	\caption[Einordnung von Sensoren]{Einordnung von Sensoren}
 \end{table}
-\subsubsection{Sensordatenverarbeitung}
-\subsubsection{Antriebsarten}
+\paragraph{Eigenschaften}
+% Farbe die angibt welchen Status der folgende Abschnitt hat:
+\color{finishing}
+% Eigentlicher Text:
+Neben der Arbeitsweise gibt es noch weitere Eigenschaften die maßgeblich beeinflussen wann, wie und für welchen Zweck ein jeweiliger Sensor eingesetzt wird. Zu den wichtigsten Eigenschaften zählen [MR 26 f.]:
+\begin{itemize}
+	\item{\textbf{Messbereich}} -- Jeder Sensor hat einen bestimmten Bereich, in dem die 	gemessenen Daten valide sind d.h. der Bereich in dem die Messabweichungen innerhalb der festgelegten Grenzen bleibt.
+	\item{\textbf{Dynamik}} -- Die Dynamik beschreibt das Verhältnis von Ober- zu Untergrenze des Messwerts.
+	\item{\textbf{Auflösung}} -- Die Auflösung beschreibt wie granular eine physikalische Größe ermittelt werden kann d.h sie gibt den kleinsten messbaren Unterschied zweier Messwerte an.
+	\item{\textbf{Linearität}} -- Unter der Linearität eines Sensors versteht man die Abhängig-
+	keit des Messwerts von der tatsächlichen Größe.
+	\item{\textbf{Messfrequenz}} -- Die Messfrequenz gibt an wie viele einzelne Messungen inner-
+	halb eines bestimmten Zeitraums der Senosor liefert.
+\end{itemize}
+Da jegliche Messunge fehlerbehaftet ist weisen auch die von Sensoren ermittelnten Messwerte gewisse Fehler auf [MR27]. 
+\newline
+Damit die Robotersteuerung darauf Rücksicht nehmen kann müssen die entsprechenden Kenngrößen der Sensoren bekannt sein. Folgende Größen sind mit Bezug auf Sensorfehler von Bedeutung [MR 27 f.]:
+\begin{itemize}
+	\item{\textbf{Empfindlichkeit}} -- Wie groß eine Wertänderung der Ausgangsgröße sein muss damit dies der Senosr registiert wird als Empfindlichkeit bezeichnet. Eine hohe Empfindlichkeit hat oft eine hohe Störanfälligkeit zur Folge.
+	\item{\textbf{Messfehler}} -- Als Messfehler oder absoluten Fehler bezeichnet man die Differenz des gemessenen Wertes m und des tatsächlichen Wertes.
+	\item{\textbf{Genauigkeit}} -- Die Genauigkeit oder der relative Fehler ist der prozentuale
+	Wert einer Abweichung in Bezug zum tatsächlichen Wert.
+\end{itemize}
+\paragraph{Kenngrößen}
+% Farbe die angibt welchen Status der folgende Abschnitt hat:
+\color{finishing}
+% Eigentlicher Text:
+In der Robotik finden zahlreiche Sensoren Anwendung um es einem mobilen Systems zu ermöglichen
+verschiedene Kenngrößen zu ermitteln. Im Folgenden werden einiger dieser und die dazu geeigenten Senoren vorgestellt.
+\begin{itemize}
+	\item{\textbf{Bewegungsmessung}} -- Eine Möglichkeit der Bewegungsmessung ist die Drehwinkelmessung. Diese ermöglicht die Erfassung der Drehungen von Rädern oder 
+	anderen rotierenden Elementen eines mobilen Roboters. Dies ermöglicht es mittels Odometire (siehe Abschnitt X.X) die Geschwindiingkeit und Orierntierung eines mobilen Roboters zu bestimmen. Zur Drehwinkelmessung dienen Impuls- sowie Inkrementalgeber welche mechanisch, photo-elektrisch und elektro-magnetisch arbeiten [MR 28 ff.].
+	\newline
+	Eine weitere Möglichkeit der Bewegungsmessung ist die Beschleunigungsmessung. Dabei werden Bewegungen über die Massenträgheit bei Beschleunigungen gemessen und über die Zeit integriert, weshalb man auch von Trägheitsmessung spricht [MR 31]. Dazu werden heute meist
+	piezo-elektronische Gyroskope verwendet welche Dreh- und Linearbeschleunigungen bezüglich aller drei Raumachsen erfassen [MR 32].
+	%############################################################
+	\item{\textbf{Ausrichtungsmessung}} -- Neben der Bestimmung der geografische Position eines Roboters mittels Beschleunigung- und Drehratensensoren ist auch dessen Ausrichtung bzw. Lage im Raum eine wichtige Größe. Zur Bestimmung der Ausrichtung werden Kompasse sowie Inklinometer welche den Neigungswinkel zur Erdanziehungsrichtung bestimmen, verwendet [MR 32 f.].
+	%############################################################
+	\item{\textbf{Entfernungsmessung}} -- Die Entfernungsmessung dient der Bestimmung des Abstands zu Objekten z.B. zur Kollisionsvermeidung. 
+	\newline
+	Es gibt verschiedene Arten von Sensoren zur Entfernungsmessung viele basieren auf dem Prinzip der Laufzeitmessung wie Ultraschallsensoren oder Laserentfernungsmesser. Es gibt aber auch Sensoren die mittels Triangulation (Inrarotsensor) oder dem Verhältnis zwischen ausgesandter und zurückkerendeer Energie (Radar) die Entfernung zu Obkjekten bestimmen [MR 36 f.]. 
+\end{itemize}
+Neben diesen elementaren Kenngrößen gibt es noch zahlreiche weitere die für ein entsprechendes
+mobile System von Bedeutung sind. Dies ist beispielweise eine globale Positionsbestimmung 
+mittels GPS oder die Dedektion von Objekten und geografischen Struktueren durch Kameras oder 2D-/3D-Laserscanner.
+\subsubsection{Sensordatenverarbeitung \& Steuerung}
+% Farbe die angibt welchen Status der folgende Abschnitt hat:
+\color{process}
+% Eigentlicher Text:
+Generell unterscheidet man zwischen zwei grundlegenden Arten der Steuerung einer offenen und geschlossenen. Das typische Kontrollprogramm eines Roboters in der Automatisierung läuft in einer offenen Steuerung d.h. es werden keine Sensordaten aus der Umgebung erfasst bzw. berücksichtigt. Dies ist dort möglich da 
+sich dort Roboter auf vordefinierten Bahnen und in eine auf sie zugeschnittenen Umbegung bewegen.
+\newline
+Prozesssteuerungen dieser Art haben jedoch ihre Grenzen nämlich da, wo sich ein Roboter in einer unstrukturierten Umgebung aggiert und von Ereignissen oder Parametern abhängt, die nicht kontrollierbar bzw. vorab nicht bekannt sind [MR 3].
+Mobile Roboter verfügen über eine geschlossene Steuerung bei der eine Rückkopplung der Umgebeung durch Sensorendaten erfolgt. In einem iterativen Verfahren werden die von den Sensoren ermittelten Umgebeungsdaten bei der Planung von Steuerbefehle einbezogen, die resultierenden Aktionen ausgeführt was ggf. die Umgebung verändert, woraufhin der Regelkreis erneut beginnt.
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=0.90\textwidth]{images/technische_grundlagen/Steuerungsarten.png}
+		\caption[Vergleich Offene und Geschlossene Steuerung]{Links: Offene Steuerung. Rechts: Geschlossene Regelung mit Rückkopplung}
+	\label{fig:<Sprungmakre>}
+\end{figure}
+\newline
+Die Sensordatenverarbeitung hat die Aufgabe die durch die Sensoren erfassten Daten zu verarbeiten, aufzubereiten und sie für komplexere Anwendungen nutzbar zu machen. Dazu gehören die Filterung der Daten, Extraktion bestimmter Merkmale sowie weiterführende Berechnung von Kenngrößen und Informationen [MR 67]
+\paragraph{Odometrie \& Koppelnavigation}
+% Farbe die angibt welchen Status der folgende Abschnitt hat:
+\color{process}
+% Eigentlicher Text:
+Die Odometrie bezeichnet eine Methode zur Berechnung von Position und Orientierung eines mobilen Systems anhand von Bewegungsdaten. Räderbasierte Systeme benutzen dafür die Anzahl der Radumdrehungen, während laufende Systeme die Anzahl ihrer Schritte verwenden. Ist beispielsweise der Raddurchmesser bekannt, so kann über die Anzahl $n$ der Radumdrehungen (welche z.B. mittels Inkrementalgebern erfasst wird) zwischen zwei Messzeitpunkten und dem Radumfang $\pi \cdot d$, wobei $d$ den Raddurchmesser darstellt, die zurückgelegte Wegstrecke $\Delta{}s$ breechnet werden:
+\begin{equation}
+\Delta{}s = \pi \cdot d \cdot n
+\end{equation}
+Unter Koppelnavigation versteht man die Bestimmung der Position eines mobilen Systems relativ zu einem Referenzpunkt (Startposition) entweder durch die inkrementelle Integration der zurückgelegten Wegstrecken unter Berücksichtigung der Orientierung (Winkeländerung) oder der Geschwindigkeit des Systems unter Berücksichtigung der Winkelgeschwindingkeit [MREPE 98]. 
+\newline
+Ist der Ausgangspunkt eines Roboters, die zurückgelegte Strecke bzw. Geschwindigkeit sowie die Fahrtrichtung genau bekannt sind, kann die Navigationskomponente einfach die Bewegung des Roboterssystms über die Zeit integrieren und so die aktuelle Position und Orientierung des Roboters bestimmen [HR 107 f.]
+\newline
+Im eindimensionalen Fall (keine Richtungsäderungen) ergibt sich aus dem Startpunkt $s_{alt}$ und  der zurückgelegten Wegstrecke $\Delta{}s$ aus Gleichung (1), für die aktuelle Position $s_{neu}$ die Gleichung:
+\begin{equation}
+s_{neu} = s_{alt} + \Delta{}s
+\end{equation}
+Für eine zweidimensionale Bewegung in einem 2-dimensionalen kartesische Bezugssystem in dem sich die Position eines Roboters als Koordinate durch x- und y-Punkt darstellen lässt ergibt sich die
+Position $(x_{n},y_{n})$ und die Orientierung $\theta{}_{n}$ zum Interationsschritt (Messpunkt) $n$ durch die Formeln:
+\begin{equation}
+x_{n} = x_{0} + \sum_{i=1}^{n} \Delta{}s_{i} \cdot cos(\theta{}_{i})
+\end{equation}
+\begin{equation}
+y_{n} = y_{0} + \sum_{i=1}^{n} \Delta{}s_{i} \cdot sin(\theta{}_{i})
+\end{equation}
+\begin{equation}
+\theta{}_{n} = \theta{}_{0} + \sum_{i=1}^{n} \Delta{}\theta{}_{i}
+\end{equation}
+Wobei $(x_{0},y_{0})$ der Startpunkt und $\theta{}_{0}$ die Startorienterung sowie $\Delta{}s_{i}$ die zurückgelegte Wegstrecke und $\Delta{}\theta{}_{i}$ die Richtungsänderung innerhalb eines Interationsschritt darstellt.
+\newline
+Die Odometrie ist im Zusammenspiel mit der Koppelnavigation ein grundlegendes Navigationsverfahren für bodengebundene Fahrzeuge aller Art. Allerdings besteht ein wesentliches Problem darin, das ein Robotersystem seine Bewegungen absolut präzise messen können muss, damit die Odometrie bzw. Koppelnavigation richtige Werte liefert. Dies ist unter Umständen aufgrund
+von Problemen wie beispielsweise varierender Raddurchmesser dem Durchdrehen oder Gleiten der Räder erschwert wird [HR 108].
+\newline
+Wegen diesen Problemen finden sich kaum Roboternavigationssysteme, welche ausschließlich eine Koppelnavigation zur Bestimmung von Position und Orientierung verwenden. Es gibt zwar Navigationssysteme welche die Koppelnaviagtion verwenden, jedoch beziehen diese noch weitere Sensorinformationen wie beispielsweise Beschleunigungswerte zur Bestimmung der Position und Ausrichtung mit ein [MREPE 115].
+\subsubsection{Antriebsarten}als Koordinaten (x,y,z-Punkte)
+% Farbe die angibt welchen Status der folgende Abschnitt hat:
+\color{process}
+% Eigentlicher Text:
+Die entscheidenede Eigenschaft des mobilen Roboters ist die Fähigkeit sich (selbständig) durch seine Umwelt zu bewegen. Um dies zu realisiern gibt es eine Vielzahl unterschiedlichster Fortbewergungsarten beispielsweise in Form von schreitenden, kriechenden oder krabbelnden, sowie fliegenden, schwimmende oder tauchenden Robotern [MR 103].
+\newline
+Um den Umfang dieser Ausarbeitung überschaubar zu halten, beschränken wir uns auf radgetriebene Roboter.
+\newline
+Hinsichtlich Rad- und Achsenanzahl, Anordnung der Räder sowie dem Verhältnis zwischen angetrieben und freilaufenden als auch lenkbaren zu unleknbaren Rädern gibt es eine Vielzahl von Möglichkeiten den Antrieb von mobilen Robotern zu konzipieren. Die folgende Abschnitte geben einen Überblick über die gängigsten radbasierten Antriebskonzepte [MR 107 f.]
+\begin{wrapfigure}{r}{0.30\textwidth}
+	\vspace{+0.5cm}
+	\begin{center}
+		\includegraphics[width=0.25\textwidth]{images/technische_grundlagen/Differentialantrieb.png}
+	\end{center}
+	\caption{Einachsige Lenkung}
+	\label{fig:einachsenlenkung}
+\end{wrapfigure}
+\paragraph{Differentialantrieb}
+% Farbe die angibt welchen Status der folgende Abschnitt hat:
+\color{process}
+% Eigentlicher Text:
+Dieser Antrieb besteht aus zwei voneinander unabhängig angetriebene, starren Rädern die sich auf einer Achse befinden. Zusätzlich gibt es meist ein oder auch mehrere passiv mitlaufenden Stützrädern die sich frei drehen können. Je nachdem wie und in welchem Verhältnis zueinander die beiden Antreibsräder sich drehen fährt der Roboter gerade aus, eine mehr oder weniger weite Rechts- oder Linkskurve oder dreht sich auf der Stelle.
+\newline
+Vorteile diese Antriebs sind seine einfache Mechanik und gute Manövierbarkeit jedoch erfordert diser Antrieb eine Radregelung in Echtzeit.
+\begin{wrapfigure}{r}{0.30\textwidth}
+	\vspace{-0.75cm}
+	\begin{center}
+		\includegraphics[width=0.20\textwidth]{images/technische_grundlagen/Einachsenlenkung.png}
+	\end{center}
+	\caption{Einachsige Lenkung}
+	\label{fig:einachsenlenkung}
+\end{wrapfigure}
+\paragraph{Einachsige Lenkung}
+% Farbe die Differentialantriebangibt welchen Status der folgende Abschnitt hat:
+\color{process}
+% Eigentlicher Text:
+Dieses Antriebsprinzip entspricht dem aus gängigen PKWs bekannten Konzept. Von den vier Rädern von denen jeweils zwei an einer Achse angebracht sind sind die beiden Räder einer Achse lenkbar. Für den Antrieb ist es möglich ein der beiden Achsen als auch beide für den anzutreiben. 
+\newline
+Der Vorteil dieses Antreibskonzeptes ist die gute Stabilität und die Möglichkeit der Trennung von Antrieb und Lenkkung jedoch ist die Nanövierbarkeit eingeschränkter als bei den anderen Antriebsarten.
+\pagebreak
+\begin{wrapfigure}{r}{0.30\textwidth}
+	\vspace{+0.25cm}
+	\begin{center}
+		\includegraphics[width=0.20\textwidth]{images/technische_grundlagen/Dreiradantrieb.png}
+	\end{center}
+	\caption{Dreirad-Antrieb}
+	\label{fig:einachsenlenkung}
+\end{wrapfigure}
+\paragraph{Dreirad-Antrieb}
+% Farbe die angibt welchen Status der folgende Abschnitt hat:
+\color{process}
+% Eigentlicher Text:
+Bei diesem Antriebskonzept verfügt der mobile Roboter über zwei freilaufenden Räder auf einer Achse sowie einem einzelnen angetriebenen und gelenkten Rad welches zentral vor den beiden anderen Rädern angebracht ist. Es ist aber auch möglich, dass ein Motor die beiden Hinterräder
+antreibt, und das Vorrderrad allein der Lenkung dient.
+\newline
+Die einfache Mechanik dieser Antriebsform ist ein Vorteil jedoch ist die Manövierbarkeit eingeschränkter als beim Synchro- oder Differentialantrieb und die Stabilität ist geringer als bei der Einachsen Lenkung die über ein zusätzliches Rad an der Vorderachse verfügt.
+\begin{wrapfigure}{r}{0.30\textwidth}
+	\vspace{-0.8cm}
+	\begin{center}
+		\includegraphics[width=0.25\textwidth]{images/technische_grundlagen/Synchroantrieb.png}
+	\end{center}
+	\caption{Einachsige Lenkung}
+	\label{fig:einachsenlenkung}
+\end{wrapfigure}
+\paragraph{Synchro-Andrieb}
+% Farbe die angibt welchen Status der folgende Abschnitt hat:
+\color{process}
+% Eigentlicher Text:
+Der Synchro-Antrieb hat die selbe Radanordnung wie der Dreirad-Antrieb, jedoch werden die drei Räder synchron angetriebene und sind auch nur synchron drehbare drehbar. Die Räder haben somit immer die selbe Ausrichtung und drehen sich auch mit der selben Geschwindigkeit. Eine Drehung 
+des Roboters bzw. der auf dem Antrieb angebrachte Plattform ist nicht direkt möglich.
+\newline
+Durch die synchrone Lenkung und den synchronen Antrieb der Räder erfordert diese Antriebsform eine weitaus komplexere Mechanik als die anderen Antriebsarten, garantiert jedoch einen stetigen
+Geradeauslauf und erfordert keine komplexe Regelung [MR 107 f.].
+\begin{wrapfigure}{r}{0.30\textwidth}
+	\vspace{-1.0cm}
+	\begin{center}
+		\includegraphics[width=0.25\textwidth]{images/technische_grundlagen/Omniantrieb.png}
+	\end{center}
+	\caption{Einachsige Lenkung}
+	\label{fig:einachsenlenkung}
+\end{wrapfigure}
+\paragraph{Omni-Antrieb}
+% Farbe die angibt welchen Status der folgende Abschnitt hat:
+\color{process}
+% Eigentlicher Text:
+Beim Omni-Antrieb kommen omnidirektionale Räder wie Allseitenräder oder Mecanum-Räder zum Einsatz durch ihren speziellen Aufbau ist der Roboter in der Lage, sich sowohl auf der Stelle zu Drehen als auch in alle Richtungen zu bewegen ohne sich vorher drehen zu müssen. Dies verleit dem Antrieb eine uneingeschränkte Beweglichkeit in jede Richtungen (x, y und $\omega{}$).
+\newline
+Der Große Vorteil dieser Antriebsform ist die uneingeschränkte Beweglichkeit. Jedoch birgt diese Art des Antriebs eine gewisse mechanische Kompläxität und erfordert eine Aufwändige Steuerung.
+\pagebreak
+% Farbe die angibt welchen Status der folgende Abschnitt hat:
+\color{process}
+% Eigentlicher Text:
+Im folgenden soll hier der Differentialantrieb detailierte behandelt werden da dieser für dieses Projekt von besonderer Bedeutung ist.
 \subsection{\LM}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
