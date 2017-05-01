@@ -496,30 +496,30 @@ Im folgenden sind einige Features die leJOS bietet aufgelistet:
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/App-Development.jpg}
 	\end{center}
-	\caption{App Entwicklung}
+	\caption{App-Entwicklung \cite{Nethority.Web&App}}	
 	\label{fig:appentwicklung}
 \end{wrapfigure}
 
-Eine \gls{app} ist ein ausführbares Programm für mobile Geräte, wie Smartphones oder Tablets. Um eine \gls{app} für ein mobiles Gerät zu entwickeln, müssen wie für andere Anwendungen im Voraus Anforderungen definiert werden, die diese erfüllen soll. Je nach festgelegten Anforderungen, die an das System gestellt werden, besteht eine bestimmte Anzahl von Möglichkeiten der Entwicklung. Allgemein kennt die \gls{app} Entwicklung drei verschiedene Arten, die native, web und hybride Entwicklung, siehe \eqref{native}, \eqref{web} und \eqref{hybride}. Dabei werden verschiedene \glspl{framework} verwendet, um mit unterschiedlichsten Programmiersprachen den Aufbau der Logik zu beschreiben. Eine App besteht immer aus zwei Teile, dem \gls{ui}, das meist mit einer \gls{xml} ähnlichen Sprache beschrieben wird und dem Programmcode, der sich auf viele Klassen verteilt und die Funktionalitäten der \gls{app} beschreiben.
+Eine \gls{app} ist ein ausführbares Programm für mobile Geräte, wie Smartphones oder Tablets. Um eine \gls{app} für ein mobiles Gerät zu entwickeln, müssen vor Start der Entwicklung Anforderungen definiert, damit die Software spezifisch angepasst werden kann. Je nach Art der Anforderungen die an das System gestellt werden, bestehen verschiedene Möglichkeiten der Entwicklung. Allgemein kennt die \gls{app} Entwicklung drei verschiedene Arten, die Native-, Web- und Hybride-Entwicklung, siehe Abschnitt \eqref{native}, \eqref{web} und \eqref{hybride}. Dabei werden verschiedene \glspl{framework} verwendet, um mit unterschiedlichen Programmiersprachen den Aufbau der Logik zu beschreiben. Eine App besteht immer aus zwei Teile, dem \gls{ui}, das meist mit einer \gls{xml} ähnlichen Sprache beschrieben wird und dem Programmcode, der sich auf viele Klassen verteilt und die Funktionalitäten der \gls{app} beschreiben.
 
 \subsubsection{Native \glspl{app}}\label{native}
 
-In der Entwicklung von nativen \glspl{app} werden die direkten Ressourcen des Gerätes verwendet. Dazu gehört die Laufzeitumgebung des Betriebssystemes, Bibliotheken und Hardwareschnittstellen. Der Vorteil von einer nativen Entwicklung liegt hauptsächlich darin, dass diese für das Betriebssystem optimiert ist und die vorhandenen Schnittstellen genutzt werden können, um komplexe und rechenintensive Anwendungen zu ermöglichen.\footnote{\citep[vgl.][Unterschiede und Vergleich native Apps vs. Web Apps]{DanielWurstl.Unterschiedeund}\label{note1}}\\
-Vertreter diese Entwicklung finden sich für verschiedene Betriebssysteme. Der populärste unter ihnen ist bei weitem Android mit einer nativen Java Entwicklung über Android Studio von Google. Sie besitzt aktuellen den höchsten Marktanteil und eine entsprechende Popularität unter Entwickler und Nutzer.
+In der Entwicklung von nativen \glspl{app} werden die direkten Ressourcen des Gerätes verwendet. Dazu gehört die Laufzeitumgebung des Betriebssystems, Bibliotheken und Hardwareschnittstellen. Der Vorteil von einer nativen Entwicklung liegt hauptsächlich darin, dass diese für das Betriebssystem optimiert ist und die vorhandenen Schnittstellen genutzt werden können, um komplexe und rechenintensive Anwendungen zu ermöglichen.\footnote{\citep[vgl.][Unterschiede und Vergleich native Apps vs. Web Apps]{DanielWurstl.Unterschiedeund}\label{note1}}\\
+Vertreter diese Entwicklung finden sich für verschiedene Betriebssysteme. Der populärste unter ihnen ist bei weitem Android mit einer nativen Java Entwicklung über Android Studio von Google. Native \glspl{app} besitzt aktuellen den höchsten Marktanteil und eine entsprechende Popularität unter Entwickler und Nutzer.
 
 \subsubsection{Web \glspl{app}}\label{web}
 
 Die Entwicklung von web \glspl{app} arbeitet mit systemübergreifenden Ressourcen und greift auf gängige Webtechnologien, wie \gls{html}, \gls{css} und \gls{javascript} zurück. Die \gls{app} wird hierbei nicht wie normale Anwendungen direkt auf dem System des Gerätes ausgeführt, sondern kommt in dessen Browser zur Ausführung. Der Vorteil hierbei ist vor allem, dass diese Art von \gls{app} auf allen Betriebssystemen lauffähig ist und direkt über das Internet veröffentlicht und aktualisiert werden kann, jedoch wird eine stabile Internetverbindung vorausgesetzt.\footref{note1}\\
-Von dieser Entwicklung finden sich viele Vertreter mit der Unterstützung diverser \glspl{framework}. Das populärste unter ihnen ist aktuell AngularJS von Google, was auf \gls{javascript} basiert. In Kombination mit anderen Webtechnologien, wie \gls{html} und \gls{css} lassen sich perfomante web \glspl{app} entwickeln.
+Diese Entwicklung besitzt viele Vertreter mit der Unterstützung diverser \glspl{framework}. Das populärste unter ihnen ist aktuell AngularJS von Google, was auf \gls{javascript} basiert. In Kombination mit anderen Webtechnologien, wie \gls{html} und \gls{css} lassen sich perfomante Web-\glspl{app} entwickeln.
 
 \subsubsection{Hybride \glspl{app}}\label{hybride}
 
-Die Entwicklung von hybride \glspl{app} vereinigt die beiden Entwicklungen von native und web. Sie besteht dabei aus einem nativen Rahmen, in der eine web \gls{app} zur Ausführung kommt, diese besitzt entsprechende Zugriffsrechte auf Hardwareschnittstellen, um diese mit \glspl{api} anzusprechen.\footnote{\citep[vgl.][Native App, Web App und Hybrid App im Überblick]{PetraRiepe.NativeApp}\label{note2}}\\
-Diese Entwicklung ist aktuell noch sehr jung, jedoch stechen hier bereits verschiedene Vertreter hervor. Der populärste unter ihnen ist Ionic von Drifty, welches auf Apache Cordova als Basis zurückgreift. In Kombination mit AngularJS, \gls{typescript} und anderen Webtechnologien lässt sich die web \gls{app} entwickeln und auf einem beliebigen Gerät unter einem nativen Browser ausführen. Es unterstützt dabei verschiedenste Betriebssystem, wie Android, iOS und Windows. Diese Entwicklungen können dabei meist nicht nur mobil, sondern unter anderem auf weiteren Systemen, wie stationäre bereitgestellt werden.
+Die Entwicklung von hybriden \glspl{app} vereinigt die native- und webbasierte Entwicklung. Sie besteht dabei aus einem nativen Rahmen, in der eine Web-\gls{app} zur Ausführung kommt, diese besitzt entsprechende Zugriffsrechte auf Hardwareschnittstellen, um diese mit \glspl{api} anzusprechen.\footnote{\citep[vgl.][Native App, Web App und Hybrid App im Überblick]{PetraRiepe.NativeApp}\label{note2}}\\
+Diese Entwicklung ist aktuell noch sehr jung, jedoch treten hier bereits verschiedene Vertreter hervor. Der populärste unter ihnen ist Ionic von Drifty, welches auf Apache Cordova als Basis zurückgreift. In Kombination mit AngularJS, \gls{typescript} und anderen Webtechnologien lässt sich die hybride \gls{app} entwickeln und auf einem beliebigen Gerät unter einem nativen Browser ausführen. Hybride \glspl{app} unterstützten dabei verschiedene Betriebssystem, wie Android, iOS und Windows. Diese \glspl{app} können dabei meist nicht nur mobil, sondern unter anderem auf weiteren Systemen, wie stationäre zum Beispiel Desktop Rechner bereitgestellt werden.
 
-\subsubsection{Plattformübergreifende Entwicklung}
+\subsubsection{Plattformübergreifende \glspl{app}}
 
-Um die Entwicklung von \glspl{app} einfach zu halten, verwenden immer mehr Entwickler die Form der plattformübergreifenden Entwicklung. Dadurch lässt sich die \gls{app} unabhängig des Betriebssystems entwickeln und kann somit eine größere Menge von Nutzern erreichen. Diese Entwicklung greift dabei meist auf plattformübergreifende Konzepte, wie eine native Laufzeitumgebung, oder Browser zurück, um darin die \gls{app} auszuführen. Der große Vorteil in dieser Entwicklung, liegt in der Wiederverwendbarkeit des Quellcodes und der verbesserten Wartbarkeit, da hier lediglich ein Projekt gewartet werden muss und der Quellcode für viele Betriebssysteme übernommen werden kann. Zur plattformübergreifenden Entwicklung wurden die letzten Jahre viele Ansätze mit verschiedenen \glspl{framework} entwickelt. Beispiele hierfür sind Ionic, Unity, Qt oder Xamarin.\\
+Um die Entwicklung von \glspl{app} einfach zu gestalten, verwenden immer mehr Entwickler die Form der plattformübergreifenden Entwicklung. Dadurch lässt sich die \gls{app} unabhängig des Betriebssystem entwickeln und kann somit eine größere Menge von Nutzern erreichen. Diese Entwicklung greift dabei meist auf plattformübergreifende Konzepte, wie eine native Laufzeitumgebung, oder einen nativen Browser zurück, um darin die \gls{app} auszuführen. Der große Vorteil dieser \glspl{app}, liegt in der Wiederverwendbarkeit des Quellcodes und der verbesserten Wartbarkeit, da hier lediglich ein Projekt gewartet werden muss und der Quellcode für viele Betriebssysteme übernommen werden kann. Zur plattformübergreifenden Entwicklung wurden in den letzten Jahre viele Ansätze mit verschiedenen \glspl{framework} entwickelt. Beispiele hierfür sind Ionic, Unity, Qt oder Xamarin.\\
 \newpage
 
 \subsubsection{Xamarin}
@@ -528,43 +528,44 @@ Um die Entwicklung von \glspl{app} einfach zu halten, verwenden immer mehr Entwi
 	\begin{center}
 		\includegraphics[width=0.25\textwidth]{images/technische_grundlagen/xamarin.png}
 	\end{center}
-	\caption{Xamarin}
+	\caption{Xamarin \cite{Xamarin}}
 	\label{fig:xamarin}
 \end{wrapfigure}
 
-Xamarin ist ein \gls{framework} zur Entwicklung von nativen plattformübergreifenden Apps, welches auf Mono basiert, siehe \eqref{mono}. Um nativen Quellcode auf den verschiedenen Systemen auszuführen, setzt Xamarin auf verschiedene Softwarekomponenten, um aus einem mit .NET entwickelten Projekt nativen Quellcode zu erzeugen.\\
-Für iOS Systeme verwendet Xamarin den \gls{aot} Compiler, um aus einem Xamarin.iOS Projekt \gls{arm} Maschinencode zur erzeugen, der entsprechend schnell auf dem System ausgeführt werden kann.\footnote{\citep[vgl.][Introduction to Mobile Development - Xamarin]{Xamarin.Introductionto}\label{note3}} Bei Android hingegen wird der Quellcode in \gls{il} übersetzt, welches \gls{jit} nutzt um zur Laufzeit Maschinencode für das entsprechende Gerät zu erzeugen.\footref{note3} Dazu nutzt Xamarin Softwarekomponenten, während der Laufzeit, um bestimmte Prozesse, wie Speicherverwaltung und Plattformoperationen. Zur Entwicklung bringt Xamarin eine große Bandbreite von Funktionalitäten für den Entwickler, wie Bibliotheken, eine Test Cloud, sowie Unterstützung von nativen Bibliotheken, wie für \gls{java} oder \gls{objectivc}. Xamarin bietet Unterstützung für diverse Betriebssysteme, wie zum Beispiel Android, iOS, Windows und Windows Phone. Um mit Xamarin zu entwickeln, gibt es aktuell verschiedene Möglichkeiten mit Unterstützung auf unterschiedlichen Betriebssystemen. Einerseits kann mit Xamarin Studio auf einem OSX System, oder mit Visual Studio auf Windows und Linux entwickelt werden.\\
-Wie viele andere \glspl{framework}, bietet auch Xamarin verschiedene nützliche \glspl{template}, die jeweils andere Nutzen besitzen. Diese bauen dabei auf zwei Hauptkomponenten von Bibliotheken, einerseits Shared Projects und Protable Class Libraries.
+Xamarin ist ein \gls{framework} zur Entwicklung von nativen, plattformübergreifenden \glspl{app}. Es basiert auf dem Mono Projekt, siehe Abschnitt \eqref{mono}, um damit auf verschiedenen Betriebssysteme, wie Android, iOS, Windows und Windows Phone ausgeführt werden kann. Um nativen Quellcode auf den verschiedenen Systemen auszuführen, setzt Xamarin auf verschiedene Softwarekomponenten, um aus einem mit .NET entwickelten Projekt nativen Quellcode zu erzeugen.\\
+Für iOS Systeme verwendet Xamarin den \gls{aot} Compiler, um aus einem Xamarin.iOS Projekt, \gls{arm} Maschinencode zur erzeugen, der entsprechend schnell auf dem System ausgeführt werden kann.\footnote{\citep[vgl.][Introduction to Mobile Development - Xamarin]{Xamarin.Introductionto}\label{note3}} Bei Android hingegen wird der Quellcode in \gls{il} übersetzt, eine plattformübergreifende Assemblersprache, die durch das .NET \gls{framework} zur Ausführung gebracht wird. Die Übersetzung in \gls{il} geschieht mittels \gls{jit}, um zur Laufzeit Maschinencode für das entsprechende Gerät zu erzeugen.\footref{note3} Damit dies bewerkstelligt werden kann, nutzt Xamarin zur Laufzeit Softwarekomponenten, die bestimmte Prozesse, wie Speicherverwaltung und Plattformoperationen verwalten.\\
+Für eine effiziente Entwicklung bringt Xamarin eine große Bandbreite von Funktionalitäten für einen Entwickler. Beispiele sind dafür Bibliotheken, eine Test Cloud, sowie eine Unterstützung von nativen Bibliotheken, beispielsweise für \gls{java} oder \gls{objectivc}. Um mit Xamarin zu entwickeln, gibt es aktuell verschiedene Möglichkeiten auf unterschiedlichen Betriebssystemen. Einerseits kann mit Xamarin Studio auf einem OSX-System, oder mit Visual Studio auf Windows und Linux entwickelt werden.\\
+Wie viele andere \glspl{framework}, bietet auch Xamarin für verschiedene Zwecke nützliche \glspl{template}, die jeweils andere Nutzen besitzen. Die Entwicklung der App baut dabei vor allem auf zwei Hauptkomponenten von Bibliotheken, den Shared Projects und Protable Class Libraries.
 
 \begin{wrapfigure}{r}{0.55\textwidth}
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{images/technische_grundlagen/SharedAssetProject.png}
 	\end{center}
-	\caption{Shared Project}
+	\caption{Shared Project \cite{Xamarin.SharedProjects}}
 	\label{fig:shared}
 \end{wrapfigure}
 
 \paragraph{Shared Projects}
 
-ermöglichen dem Entwickler Quellcode für verschiedene Plattformen zu entwickeln, wobei die plattformspezifischen Projekte das entsprechende shared Project referenzieren. Somit besitzt diese Projektart keinen direkten Output, sondern kopiert den Quellcode in das zu entsprechend bauende Projekt, siehe Abbildung \eqref{fig:shared}.\footnote{\citep[vgl.][Shared Projects - Xamarin]{Xamarin.SharedProjects}\label{note4}} Der Hauptunterschied zu Standardprojekten liegt vor allem darin, dass ein shared Project keine Abhängigkeiten haben darf und daher lediglich als Referenz für andere Projekte dienen kann.
+ermöglichen dem Entwickler Quellcode für verschiedene Plattformen zu entwickeln, wobei die plattformspezifischen Projekte das entsprechende Shared Project referenzieren. Somit besitzt diese Projektart keinen direkten Output, sondern kopiert den Quellcode entsprechend in das zu bauende Projekt, siehe Abbildung \eqref{fig:shared}.\footnote{\citep[vgl.][Shared Projects - Xamarin]{Xamarin.SharedProjects}\label{note4}} Der Hauptunterschied zu Standardprojekten liegt vor allem darin, dass ein Shared Project keine Abhängigkeiten haben darf und daher lediglich als Referenz für andere Projekte dienen kann.
 
 \begin{wrapfigure}{r}{0.55\textwidth}
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{images/technische_grundlagen/PortableClassLibrary.png}
 	\end{center}
-	\caption{Portable Class Library}
+	\caption{Portable Class Library \cite{Xamarin.PortableClass}}
 	\label{fig:portable}
 \end{wrapfigure}
 
 \paragraph{Protable Class Libraries}
 
-ermöglichen dem Entwickler die Implementierung von plattformübergreifende Bibliotheken, aus denen \glspl{dll} erzeugt werden können. Das Besondere an Portable Class Libraries ist dabei, dass die Plattformen spezifisch ausgewählt werden können, wobei auf die Unterstützung verschiedener Betriebssysteme zu achten ist, siehe Abbildung \eqref{fig:pcl_support}.\footnote{\citep[vgl.][Introduction to Portable Class Libraries - Xamarin]{Xamarin.PortableClass}\label{note5}} Eine Portable Class Library besitzt darüber hinaus verschiedene Vor- bzw. Nachteile, die für oder Gegen ihre Nutzung sprechen.\\
+ermöglichen dem Entwickler die Implementierung von plattformübergreifenden Bibliotheken, aus denen \glspl{dll} erzeugt werden können. Das Besondere an Portable Class Libraries ist dabei, dass die Plattformen spezifisch ausgewählt werden können, wobei auf die Unterstützung verschiedener Betriebssysteme zu achten ist, siehe Abbildung \eqref{fig:pcl_support}.\footnote{\citep[vgl.][Introduction to Portable Class Libraries - Xamarin]{Xamarin.PortableClass}\label{note5}} Eine Portable Class Library besitzt darüber hinaus verschiedene Vor- bzw. Nachteile, die für oder gegen ihre Nutzung sprechen.\\
 
 \begin{wrapfigure}{r}{0.55\textwidth}
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{images/technische_grundlagen/pclSupport.png}
+		\caption{Unterstützung Portable Class Library \cite{Xamarin.PortableClass}}
 	\end{center}
-	\caption{Unterstützung Portable Class Library}
 	\label{fig:pcl_support}
 \end{wrapfigure}
 
@@ -578,7 +579,7 @@ Vorteile:
 \noindent
 Nachteile:
 \begin{itemize}
-	\item Keine Referenzierung von Plattform spezifischem Quellcode
+	\item Keine Referenzierung von plattformspezifischen Quellcode
 	\item Keine Standardbibliotheken vorhanden
 \end{itemize}
 
@@ -589,53 +590,34 @@ Nachteile:
 	\begin{center}
 		\includegraphics[width=0.25\textwidth]{images/technische_grundlagen/mono.png}
 	\end{center}
-	\caption{Mono}
+	\caption{Mono \cite{Mono.MonoProject}}
 	\label{fig:mono}
 \end{wrapfigure}
 
-Mono ist ein opensource Framework, das auf dem .NET Framework von Microsoft basiert. Die Implementierung von Mono greift dabei auf die Standards von .NET für die Programmiersprache \gls{csharp}, sowie die \gls{cli} zurück.\footnote{\citep[vgl.][About Mono]{MonoProject.AboutMono}\label{note6}} Dies ermöglicht Entwicklern die Erstellung von plattformübergreifenden Anwendungen, welche mittels einer zur Verfügung gestellten Laufzeitumgebung auf verschiedenen Systemen ausgeführt werden können.\\
-Um Anwendungen auf verschieden Systemen auszuführen, nutzt Mono verschiedene Komponenten. Dazu gehört an vorderster Stelle ein Compiler, um den erstellten Quellcode in die jeweilige Maschinensprache zu übersetzen. Die Übersetzung findet dabei in Kooperation der Mono Runtime statt, die die entsprechende Infrastruktur zur Ausführung der Anwendung bereitstellt. Für eine effiziente Entwicklung stellt Mono zwei Bibliotheken zur Verfügung, einerseits die .NET Class Library, die die Grundelemente von .NET enthält, sowie die Mono Class Library mit zusätzlichen Funktionen für plattformübergreifende Anwendungen.\\
-Für die Nutzung von Mono stehen verschiedene Vorteile im Vergleich zu anderen Framework. Der Hauptgrund für die Nutzung liegt vor allem in der Popularität von .NET, da dies auf den meisten Computern zur Verfügung steht, oder installiert werden kann. Ein großer Nutzen stellt die High-Level Programmierung dar, die eine Implementierung mit einer Laufzeitumgebung ermöglicht, die Funktionen wie Speicherverwaltung selbst organisiert. Durch Verwendung der \gls{clr} kann der Entwickler seine übliche Programmiersprache verwenden und ist unhabhängig vom bestehenden System.
+Mono ist ein Open-Source-Framework, das auf dem .NET Framework von Microsoft basiert. Die Implementierung von Mono greift dabei auf die Standards von .NET für die Programmiersprache \gls{csharp}, sowie die \gls{cli} zurück.\footnote{\citep[vgl.][About Mono]{MonoProject.AboutMono}\label{note6}} Dies ermöglicht Entwicklern die Erstellung von plattformübergreifenden Anwendungen, welche mittels einer zur Verfügung gestellten Laufzeitumgebung auf verschiedenen Systemen ausgeführt werden können.\\
+Um Anwendungen auf verschieden Systemen auszuführen, nutzt Mono verschiedene Komponenten. Dazu gehört an vorderster Stelle ein Compiler, um den erstellten Quellcode in die jeweilige Maschinensprache zu übersetzen. Die Übersetzung findet dabei in Kooperation mit der Mono Runtime statt, welche die entsprechende Infrastruktur zur Ausführung der Anwendung bereitstellt. Für eine effiziente Entwicklung stellt Mono zwei Bibliotheken zur Verfügung, einerseits die .NET Class Library, die die Grundelemente von .NET enthält, sowie die Mono Class Library mit zusätzlichen Funktionen für plattformübergreifende Anwendungen.\\
+Im Vergleich mit anderen Frameworks sprechen verschiedenen Vorteile für die Nutzung von Mono. Der Hauptgrund für die Nutzung liegt vor allem in der Popularität von .NET, da dies auf den meisten Rechnern zur Verfügung steht, oder installiert werden kann. Ein großer Nutzen stellt die High-Level-Programmierung dar, die eine Implementierung mit einer Laufzeitumgebung ermöglicht, die Funktionen wie Speicherverwaltung selbst organisiert. Durch Verwendung der \gls{clr} kann der Entwickler seine übliche Programmiersprache verwenden und ist unhabhängig vom bestehenden System.
 
 \subsubsection{.NET Framework}\label{net}
-%\footnote{\citep[vgl.][Overview of the .NET Framework]{Microsoft.Overviewof}\label{note7}}
 
-Das .NET Framework dient zur Entwicklung, sowie Ausführung von Anwendungen, die mit Programmiersprachen implementiert werden, die auf den Standards von .NET basieren. Es besteht aus verschiedenen Komponenten, wobei der Kern des Frameworks in der \gls{clr} liegt. Diese ist verantwortlich für die Laufzeitumgebung und entsprechend für die Ausführung der Anwendungen, indem es die bereitgestellten Ressourcen des Systems nutzt.\\
+Das .NET Framework dient zur Entwicklung sowie Ausführung von Anwendungen, die mit Programmiersprachen implementiert werden und auf den Standards von .NET basieren. Es besteht aus verschiedenen Komponenten, wobei der Kern des Frameworks in der \gls{clr} liegt.\footnote{\citep[vgl.][Overview of the .NET Framework]{Microsoft.Overviewof}\label{note7}} Diese ist verantwortlich für die Laufzeitumgebung und somit für die Ausführung der Anwendungen, indem es die bereitgestellten Ressourcen des Systems nutzt.
+\newpage
 \begin{wrapfigure}{r}{0.45\textwidth}
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/net_aufbau.jpeg}
 	\end{center}
-	\caption{.NET Framework Ausführung}
+	\caption{.NET Framework Ausführung \cite{Microsoft.Introductionto}}
 	\label{fig:net}
 \end{wrapfigure}
 
 \noindent
-Die \gls{clr} führt zur Laufzeit je nach System verschiedene Aktionen aus, um die entsprechende Anwendung auszuführen. Der allgemeine Ablauf ist dabei folgender. Der Quellcode wird in die \gls{clr} geladen und nach Sicherheitsanforderungen entsprechend des Systems überprüft. Anschließend wird er durch eine \gls{jit} Kompilierung in einen \gls{il} Quellcode konvertiert, um diesen nativ auf dem System ausführen zu können. Der \gls{il} Quellcode setzt dabei auf die gesetzten Standards der \gls{cli} auf, die eine sprach- und plattformunabhängige Entwicklung von Anwendungen ermöglicht.\\
-Das .NET Framework bietet zusätzlich zur unabhängigen Entwicklung verschiedene unterstützende Komponenten. Die wichtigste unter ihnen ist die .NET Class Library. Diese unterstützt den Entwickler mit einer Sammlung bereits implementierten Quellcode, wie Klassen und entsprechenden Zugang zu systemnahen Schnittstellen. Mit dem .NET Framework lässt sich eine große Bandbreite von Anwendungen entwickeln, von Konsolenanwendungen, grafischen Oberflächen, bis hin zu Webanwendungen.\\
+Die \gls{clr} führt zur Laufzeit je nach System verschiedene Aktionen aus, um die entsprechende Anwendung auszuführen. Der allgemeine Ablauf ist dabei folgender: Der Quellcode wird in die \gls{clr} geladen und nach entsprechenden Sicherheitsanforderungen des Systems überprüft.\footref{note7} Anschließend wird er durch eine \gls{jit} Kompilierung in einen \gls{il}-Quellcode konvertiert, um diesen nativ auf dem System ausführen zu können.\footref{note7} Der \gls{il}-Quellcode setzt dabei auf die gesetzten Standards der \gls{cli} auf, die eine sprach- und plattformunabhängige Entwicklung von Anwendungen ermöglicht.\footref{note7}\\
+Das .NET Framework bietet zusätzlich zur unabhängigen Entwicklung verschiedene unterstützende Komponenten. Die wichtigste unter ihnen ist die .NET Class Library. Diese unterstützt den Entwickler mit einer Sammlung bereits implementierten Quellcodes, wie Klassen und entsprechenden Zugang zu systemnahen Schnittstellen. Mit dem .NET Framework lässt sich eine große Bandbreite von Anwendungen entwickeln, von Konsolenanwendungen, über grafischen Oberflächen, bis hin zu Webanwendungen.\\
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.65\textwidth]{images/technische_grundlagen/clr.png}
-	\caption{Common Language Runtime}
-	\label{fig:clr}
-\end{figure}
-
-\begin{wrapfigure}{r}{0.45\textwidth}
-	\begin{center}
-		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/net_aufbau.jpeg}
-	\end{center}
-	\caption{.NET Framework Ausführung}
-	\label{fig:net}
-\end{wrapfigure}
-
-\noindent
-Die \gls{clr} führt zur Laufzeit je nach System verschiedene Aktionen aus, um die entsprechende Anwendung auszuführen. Der allgemeine Ablauf ist dabei folgender. Der Quellcode wird in die \gls{clr} geladen und nach Sicherheitsanforderungen entsprechend des Systems überprüft. Anschließend wird er durch eine \gls{jit} Kompilierung in einen \gls{il} Quellcode konvertiert, um diesen nativ auf dem System ausführen zu können. Der \gls{il} Quellcode setzt dabei auf die gesetzten Standards der \gls{cli} auf, die eine sprach- und plattformunabhängige Entwicklung von Anwendungen ermöglicht.\\
-Das .NET Framework bietet zusätzlich zur unabhängigen Entwicklung verschiedene unterstützende Komponenten. Die wichtigste unter ihnen ist die .NET Class Library. Diese unterstützt den Entwickler mit einer Sammlung bereits implementierten Quellcode, wie Klassen und entsprechenden Zugang zu systemnahen Schnittstellen. Mit dem .NET Framework lässt sich eine große Bandbreite von Anwendungen entwickeln, von Konsolenanwendungen, grafischen Oberflächen, bis hin zu Webanwendungen.\\
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.65\textwidth]{images/technische_grundlagen/clr.png}
-	\caption{Common Language Runtime}
+	\caption{Common Language Runtime \cite{Microsoft.Overviewof}}
 	\label{fig:clr}
 \end{figure}
 
@@ -718,13 +700,12 @@ Dieser Abschnitt beschäftigt sich mit dem Schwarmverhalten, welches mit Roboter
 
 \subsubsection{Allgemein}
 
-Das Schwarmverhalten beschreibt die Verhaltensweise eines Schwarmes, welcher aus einer einheitlich formierten Tierart besteht. \footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}\label{note7}} Diese interagieren untereinander, um eine evulotionstechnische Überlegenheit durch das Bilden eines Schwarmes zu erhalten. Der Vorteil liegt dabei hauptsächlich im Schutz vor Fressfeinden des einzelnen Individuums im Schwarm, indem diese nicht als Beutetier identifiziert werden können. Andernfalls kann sich der Schwarm als solches effizienter gegenüber Fressfeinden behaupten und Jungtiere schützen. Zudem dient es einer Erleichterung der Fortpflanzung, da in einem Schwarm eine entsprechende Auswahl an Partnern besteht, um eine genetische Vielfalt zu erreichen.
-
+Das Schwarmverhalten beschreibt die Verhaltensweise eines Schwarmes, welcher aus einer einheitlich formierten Tierart besteht.  Diese interagieren untereinander, um eine evulotionstechnische Überlegenheit durch das Bilden eines Schwarmes zu erhalten. Der Vorteil liegt dabei hauptsächlich im Schutz vor Fressfeinden des einzelnen Individuums im Schwarm, indem diese nicht als Beutetier identifiziert werden können. Andernfalls kann sich der Schwarm als solches effizienter gegenüber Fressfeinden behaupten und Jungtiere schützen. Zudem dient es einer Erleichterung der Fortpflanzung, da in einem Schwarm eine entsprechende Auswahl an Partnern besteht, um eine genetische Vielfalt zu erreichen.
+%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}\label{note7}}
 \color{process}
 \subsubsection{Vorbilder aus dem Tierreich}
 
-Zur Erstellung eines Schwarmverhaltens existieren verschiedene Ideale, die aus dem Tierreich übernommen werden können. Dabei verwendet jede Tierart ihre eigenen Überlebensstrategien, sowie Regeln die in dem anzutreffenden Schwarm vorherrschen.\\
-
+Zur Erstellung eines Schwarmverhaltens existieren verschiedene Ideale, die aus dem Tierreich übernommen werden können. Dabei verwendet jede Tierart ihre eigenen Überlebensstrategien, sowie Regeln die in dem anzutreffenden Schwarm vorherrschen.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
 \begin{wrapfigure}{r}{0.45\textwidth}
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/fischschwarm.jpg}
@@ -735,14 +716,13 @@ Zur Erstellung eines Schwarmverhaltens existieren verschiedene Ideale, die aus d
 
 \noindent
 \paragraph{Ein Fischschwarm}
-ist hierfür eines der bekanntesten Beispiele, indem die einzelnen Individuen des Schwarmes sich so verhalten, als würden sie wie ein einzelnes Tier agieren. Dabei setzt jeder Fisch feste Regeln um, die zur Umsetzung eines Schwarmverhaltens führen.\\
+ist hierfür eines der bekanntesten Beispiele, indem die einzelnen Individuen des Schwarmes sich so verhalten, als würden sie wie ein einzelnes Tier agieren. Dabei setzt jeder Fisch feste Regeln um, die zur Umsetzung eines Schwarmverhaltens führen.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
 \begin{enumerate}
 	\item Folge deinem Vordermann
 	\item Behalte die Geschwindigkeit deines Nachbarn bei
 \end{enumerate}
 \noindent
-Die wichtigste Rolle spielt hierbei der Schwellenwert zur Steuerung des Schwarms durch einzelne Teilnehmer. Da jedes Individuum den Schwarm durch seine Bewegung beeinflusst, existiert ein Schwellenwert, der sich einer Mindestanzahl von etwa fünf Prozent richtet, durch die der Schwarm gesteuert werden kann. Somit reagieren die Fische ausschließlich auf die Mehrheit und der Schwarm lässt sich nicht durch eine Minderheit Fehlsteuern. Dieses Szenario lässt im Sinne von Veranstaltungen auf Menschen übertragen, um zu festzustellen an welchen Positionen Sicherheitspersonal positioniert werden muss, um einen geregelten Ablauf zu gewährleisten.
-
+Die wichtigste Rolle spielt hierbei der Schwellenwert zur Steuerung des Schwarms durch einzelne Teilnehmer. Da jedes Individuum den Schwarm durch seine Bewegung beeinflusst, existiert ein Schwellenwert, der sich einer Mindestanzahl von etwa fünf Prozent richtet, durch die der Schwarm gesteuert werden kann. Somit reagieren die Fische ausschließlich auf die Mehrheit und der Schwarm lässt sich nicht durch eine Minderheit Fehlsteuern. Dieses Szenario lässt im Sinne von Veranstaltungen auf Menschen übertragen, um zu festzustellen an welchen Positionen Sicherheitspersonal positioniert werden muss, um einen geregelten Ablauf zu gewährleisten.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
 \begin{wrapfigure}{r}{0.45\textwidth}
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/termitenschwarm.jpg}
@@ -752,22 +732,27 @@ Die wichtigste Rolle spielt hierbei der Schwellenwert zur Steuerung des Schwarms
 \end{wrapfigure}
 
 \noindent
-\paragraph{Ein Termitenschwarm} geht nach dem Prinzip der Stigmergie vor, wie verschiedene Insekten, die in einem Staat leben. Dabei kommunizieren die Individuen nicht direkt miteinander, sondern indirekt über die Beeinflussung ihrer direkten Umgebung. Durch ein inneres Bild, das jedem Beteiligten vorliegt, lässt sich dieses mit der aktuellen Umgebung vergleichen und erkennen, was sie entsprechend zu tun haben. Dieses Prinzip ermöglicht auch primitivsten Lebewesen eine Intelligenz in einem Schwarm zu erhalten, wodurch eine evolutionstechnische Überlegenheit demostriert werden kann.
+\paragraph{Ein Termitenschwarm} geht nach dem Prinzip der Stigmergie vor, wie andere Insekten, die vorwiegend in einem Staat leben. Dabei kommunizieren die einzelnen Individuen indirekt über die Beeinflussung ihrer direkten Umgebung, wie dem Hinterlassen von Spuren als Merkmale. Dieses Prinzip ermöglicht auch den kleinsten und primitivsten Organismen einen evolutionären Vorteil zu erlagen, indem sie sich nicht allein den Gefahren stellen, sondern in einer großen Masse zusammenarbeiten.\\
+Dies ermöglicht das Bauen riesiger Nester, indem die Insekten ihren inneren Plan, mit ihrer aktuellen Umgebung vergleichen und dadurch intuitiv erkennen, welche Arbeit sie zu erledigen haben.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon} 
+	Der Ablauf ist dabei folgender:
 \begin{enumerate}
-	\item Erkennen der Situation
-	\item Analyse
-	\item Reaktion
+	\item Erkennen
+	\item Analysieren
+	\item Reagieren
 \end{enumerate}
+Dieses Prinzip lässt sich durch festlegen von Regeln auf Roboterschwärme abbilden, um wie Insekten vollkommen autonom Gebäude und andere Objekte zu errichten. Zudem lässt sich dadurch eine indirekte Kommunikation und Zusammenarbeit zwischen Verschiedenartigen Robotern realisieren.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
 
-\noindent
-Dieses Szenario lässt sich ebenso auf Roboter abbilden, indem jede Einheit einen Plan erhält, was entsprechend errichtetwerden soll. Jedes Teilnehmer kann nach Sensorik entsprechend erkennen, was zu tun ist und kann nach seinem Ermessen entscheiden, was er zu tun hat.
-
-\newpage
 \subsubsection{Szenarien}
 
-Aus dem Schwarmverhalten von Tieren, lassen sich verschiedene Szenarien herausnehmen, um diese für Roboter weiterzuentwickeln. Dabei gibt es verschiedene Basisszenarien, die für das Schwarmverhalten eingesetzt werden. Zum einen ist es die INterpretation der direkten Umgebung, was bedeutet mit den anliegenden NAchbarn zu kommunizieren um darauf hin synchron als Schwarm agieren zu können. Zum anderen liegt es in der STeuerung einiger weniger, die den Schwarm lenken und beispielsweise ein Schwarm, der aus unterschiedlich veranlagten RObotern besteht, diese zu einer optimalen Zusammenarbeit zu bringen.
+Zur Umsetzung verschiedener Schwarmverhalten lassen sich nützliche Teile der Tierwelt auf Roboter abstrahieren, um eine Zusammenarbeit der einzelnen Individuen effizienter zu gestalten. Hierbei werden meist mehrere Basisszenarien eingesetzt, die einerseits die Kommunikation, oder Abläufe verbessern.\\
+Für die Umsetzung der Kommunikation der einzelnen Teilnehmer existieren zwei verschiedene Möglichkeiten, einerseits eine direkt, oder indirekte Kommunikation. Dabei kann bei einer direkten Kommunikation auf die bekannten Kommunikationsmittel zurückgegriffen werden und über ein existierendes Netzwerk kommuniziert werden. Bei einer indirekte Kommunikation analysiert der Roboter dagegen seine direkte Umgebung, um daraus Veränderungen zu registrieren und entsprechend darauf zu reagieren. Dabei wird bei einer Umsetzung zur Implementierung folgend vorgegangen:
+\begin{enumerate}
+	\item Datenerfassung durch Sensorik
+	\item Datenauswertung
+	\item Vergleich der Datensätze
+	\item Reaktion und Ausführung
+\end{enumerate}
 
-\subsubsection{Implementierung}
 
 
 1. Separation
