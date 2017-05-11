@@ -95,7 +95,14 @@ dienen der Deserialisierung von abstrakten \gls{json} Objekten, welche nicht dir
 \newpage
 \subsection{\gls{app}}
 
-Die App erfolgt in einer plattformübergreifenden Implementierung durch Xamarin in C\#. Kernelemente sind hierbei die Struktur, Oberfläche, Buisnesslogik und die Kommunikation. Dabei sind diese in zwei Projekten unterteilt. Die Kommunikation, mite den benötigten Strukturen zur Kommunikation bildet eine einbindbare Bibliothek (PCL), wie sie auch in den jeweiligen anderen Komponenten zu finden ist. Somit können die einzelnen ALgorithmen übertragen werden und müssen lediglich einmalig implementiert werden. Die eigentliche App besteht aus einer pcl, welches die jeweiligen plattformen, einbindet und daraus den plattformspezifischen Quellcode erzeugt. Der allgemeine Quellcode ist dabei im portable projekt und kann plattformübergreifend implementiert werden. Anpassungen können dabei in den plattformspezifischen Projekten unternommen werden. 
+
+
+
+\begin{comment}
+	Die App erfolgt in einer plattformübergreifenden Implementierung durch Xamarin in C\#. Kernelemente sind hierbei die Struktur, Oberfläche, Buisnesslogik und die Kommunikation. Dabei sind diese in zwei Projekten unterteilt. Die Kommunikation, mite den benötigten Strukturen zur Kommunikation bildet eine einbindbare Bibliothek (PCL), wie sie auch in den jeweiligen anderen Komponenten zu finden ist. Somit können die einzelnen ALgorithmen übertragen werden und müssen lediglich einmalig implementiert werden. Die eigentliche App besteht aus einer pcl, welches die jeweiligen plattformen, einbindet und daraus den plattformspezifischen Quellcode erzeugt. Der allgemeine Quellcode ist dabei im portable projekt und kann plattformübergreifend implementiert werden. Anpassungen können dabei in den plattformspezifischen Projekten unternommen werden. 
+\end{comment}
+
+
 
 % Package Manager NuGet
 
