@@ -1,15 +1,18 @@
 \setcounter{page}{1}
 \ofoot{\pagemark}
 
+\color{finishing}
 \section{Einleitung}
 
-Heutzutage werden viele Arbeitsschritte im Industrie-, Dienstleistungs- und Agrarsektor von Maschinen verrichtet, da diese eine effizientere Arbeit leisten und weniger Kosten als Menschen verursachen. Diese Technik erfuhr in den letzten Jahren eine immer stärkere Verbesserung durch technische Inovationen, die den Arbeitsablauf verbessern. Um diesem laufenden Wandel gerecht zu werden setzen immer mehr Unternehmen auf automatisierte Technologien, wie in Form von Schwarmverhalten. Dies fördert die Unterstützung des gegeenseitigen Arbeitsablaufes, um die bestehenden Schwächen des anderen auszugleichen. Diese Verhaltensstrukturen stammen meist aus der Tierwelt, wie am Beispiel von Fischschwärmen, Ameisen oder Bienen, wobei jedes Individuum des Schwarms seine Aufgaben für ein gemeinsames Überleben des Schwarmes erfüllt.\\
-In diesem Projekt werden die grundlegenden Verhaltensstrukturen von in Schwärmen lebenden Tieren aufgegriffen, welche für ein Verfolgungsszenario, wie am Beispiel eines autonom fahrenden Autos, benötigt werden. Diese werden anhand festgelegter Regeln durchgeführt, auf welche entsprechende Aktionen ausgeführt werden, um ein autonomes Fahren der Kleinroboter zu erreichen. Die Einsatzgebiete diese Szenarios is dabei rießig und geht von autonom fahrenden Fahrzeugen für eine optimierte Verkehrsführung, als auch für die Optimierung des ARbeitsablaufes zur Produktion, indem sich ROboter durch ein Kommunikationssystem verständigen.
+Heutzutage werden viele Arbeitsschritte im Agrar-, Industrie- und Dienstleistungssektor von Computern und Roboter verrichtet, da diese eine effizientere Arbeit leisten und weniger Kosten als Menschen verursachen. Diese Technologien erfuhren in den letzten Jahren einen immer stärkeren Wandel durch laufende technische Innovationen, die deren Arbeitsablauf verbessern und somit produktiver gestalten.
+Eine dieser Technologien stellt das theoretische Konzept eines Schwarmverhaltens dar, welches Unternehmen zur Kooperation verschiedener Computer und Roboter einsetzen. Dies ermöglicht die gegenseitige Unterstützung der Komponenten und somit einen geteilten Arbeitsablauf, um die jeweiligen Stärken zu nutzen. Diese Verhaltensstrukturen stammen meist aus der Tierwelt, wie am Beispiel von Fischschwärmen, Ameisen oder Bienen, wobei jedes Individuum des Schwarms seine Aufgeben für das Überleben des Schwarms erfüllt.\\
+In diesem Projekt werden die grundlegenden Verhaltensstrukturen von in Schwärmen lebenden Tieren zur Umsetzung eines Verfolgungsszenarios, wie am Beispiel eines autonom fahrenden Autos, aufgegriffen. Dabei werden feste Regeln anhand von Benutzerszenarios definiert, auf welche der Roboterschwarm entsprechend der Nutzerhandlungen reagiert. Dies wird durch ein zentrales Kommunikationssystem umgesetzt, an welches alle teilnehmenden Komponenten angeschlossen sind.\\
+Die Einsatzgebiete dieses Projektes sind dabei entsprechend groß und kann überall eingesetzt werden, wo technische Komponenten für ein gemeinsames Produkt zusammenarbeiten müssen. Beispiele hierfür ist die Optimierung von Produktionsanlagen, oder Verkehrsführungen in Form von autonom fahrenden Autos.
 
 \newpage
 \subsection{Ausgangslage}
 
-Die Ausgangslage des Projektes stellen verschiedene Maschinen und Roboter ohne intelligentes System dar, welche einen Mehrwert durch eine Dienstleistung oder die Bearbeitung eines Produktes erwirtschaften. In diesem Projekt wird dies dargestellt durch den Einsatz von LEGO Mindstorm EV3 Roboter, welche mittels Struktur orientierter Programmierung verwendet werden können.
+Die Ausgangslage des Projektes stellen verschiedene Computer und Roboter ohne intelligentes Kommunikationssystem dar, welche einen Mehrwert durch eine Dienstleistung oder die Bearbeitung eines Produktes erwirtschaften. In diesem Projekt wird dies durch den Einsatz von LEGO Mindstorm EV3 Roboter dargestellt, welche mittels Struktur orientierter Programmierung verwendet werden können. Diese verfügen über verschiedene Schnittstellen sowie Sensorik, um mit ihrer Umwelt interagieren zu können und stellen damit die Basis eines Schwarmes dar.
 
 \begin{itemize}
 	\item LEGO Mindstorm EV3
@@ -17,16 +20,12 @@ Die Ausgangslage des Projektes stellen verschiedene Maschinen und Roboter ohne i
 	\item Kabellose Netzwerkschnittstelle
 \end{itemize}
 
-\begin{comment}
-	Die Aufgangslage stellen die einzelnen ROboter dar, die unter der Mindstorm SOftware funktionieren und dadurch einzeln agieren können. Dabei ist keinerlei Kommunikation zwischen den einzelnen ROboter möglich und somit keinerlei Realisierung für ein Schwarmverhalten. Die Roboter haben verschiedene Möglichkeiten durch WLAN, Bluetooth zur KOmmunikation, wobei keines von LEGO MIndstorm dirket zur Verfügung steht. Diese Schnittstellen werden lediglich zur Nutzerinteraktion, sowie dem drahtlosen starten und debuugen der Software genutzt.
-\end{comment}
-
 \subsection{Zielsetzung}
 
-Das Ziel dieser Studienarbeit stellt die Implementierung eines komplexen Schwarmverhalten mit einem Verfolgungsszenario zwischen Kleinrobotern. Dabei soll ein KOmmunikationssystem aufgebaut werden, auf dessen Grundlage die Komponenten funktionieren. Dabei sollen entsprechende Grundaktionen, wie Bewegen der ROboter und Sensorikansteuerung realisiert werden.
+Das Ziel dieser Studienarbeit stellt die Implementierung eines komplexen Schwarmverhaltens mit dem Fokus auf ein Verfolgungsszenario zwischen Kleinrobotern dar. Dabei soll ein zentrales Kommunikationssystem aufgebaut werden, auf dessen Grundlage die Komponenten miteinander interagieren. Die Roboter enthalten hierbei Grundfunktionen, die über Kommandos des Kommunikationssystems angesprochen werden, um die definierten Benutzerszenarios auszuführen und den Roboter zu bewegen.
 
 \begin{itemize}
-	\item Kommunikationssystem
+	\item Zentrales Kommunikationssystem
 	\item Grundlegende Steuerungsfunktionen
 	\item Abbildung von Schwarmverhalten
 	\item Nutzereinsicht in erfasste Daten
