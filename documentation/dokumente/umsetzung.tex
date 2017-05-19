@@ -95,29 +95,24 @@ dienen der Deserialisierung von abstrakten \gls{json} Objekten, welche nicht dir
 \newpage
 \subsection{\gls{app}}
 
+Die Erstellung der App erfolgt in einer plattformübergreifenden Implementierung durch Xamarin in C\#. Kernelemente stellen hierbei die Struktur, Oberfläche, Businesslogik sowie das Kommunikationssystem dar.
+Diese gliedern sich in zwei Projekte, der \gls{app} sowie das Kommunikationssystem mit seinen Strukturen, welches eine Bibliothek als \acrshort{pcl} bildet, wie sie in anderen Komponenten von Xamarin zu finden sind. Somit lässt sich die Logik einmalig implementieren und kann auf andere Systemen entsprechend übertragen werden.\\
+Die \gls{app} besteht dabei aus einer \acrshort{pcl}, welche die jeweiligen Plattformen je nach eingestelltem System einbindet und einen plattformspezifischen Quellcode als \gls{il} erzeugt. Der plattformübergreifende Quellcode kann dabei in der \acrshort{pcl} implementiert werden, wobei plattformspezifische Anpassungen über die entsprechenden Projekte vorgenommen werden können.
 
-
-
-\begin{comment}
-	Die App erfolgt in einer plattformübergreifenden Implementierung durch Xamarin in C\#. Kernelemente sind hierbei die Struktur, Oberfläche, Buisnesslogik und die Kommunikation. Dabei sind diese in zwei Projekten unterteilt. Die Kommunikation, mite den benötigten Strukturen zur Kommunikation bildet eine einbindbare Bibliothek (PCL), wie sie auch in den jeweiligen anderen Komponenten zu finden ist. Somit können die einzelnen ALgorithmen übertragen werden und müssen lediglich einmalig implementiert werden. Die eigentliche App besteht aus einer pcl, welches die jeweiligen plattformen, einbindet und daraus den plattformspezifischen Quellcode erzeugt. Der allgemeine Quellcode ist dabei im portable projekt und kann plattformübergreifend implementiert werden. Anpassungen können dabei in den plattformspezifischen Projekten unternommen werden. 
-\end{comment}
-
-
-
-% Package Manager NuGet
+%Screenshot visual studio
 
 \subsubsection{Workflow} %Struktur
 
-Die Struktur der \gls{app} basiert auf dem in Xamarin weit verbreiteten ModelViewModelView Design Pattern, wobei die View durch Bindings aktualisiert werden kann. 
+Die Struktur der \gls{app} basiert auf dem in Xamarin weit verbreiteten Design Pattern \acrlong{mvvm}, welches durch ein Benachrichtigungssystem eine Abspaltung der Daten, \gls{gui} und dem Businesscode erlaubt. Die einzelnen Seiten der App sind code behind, indem zunächst die Page dargestellt ist, indem diese durch xaml designd wird und dahinter die entsprechende Klasse mit dem dazugehörigen businesscode abgelegt ist.
 
 \paragraph{\acrfull{mvvm}}
 
-ist ein Design Pattern, welches eine grundlegende Struktur in den Quellcode bringt. Dabei wird die erstellte Benutzeroberfläche von der Logik, sowie den Daten getrennt, um Änderungen unabhängig voneinander durchführen zu können. Um die Teile des Quellcodes zu verbinden wird auf Bindings gesetzt, die dafür zuständig sind, die jeweiligen Objekte gegenseitig zu aktualisieren.
+stellt ein Design Pattern dar, welches eine grundlegende Struktur im Quellcode ermöglicht. Dabei wird die erstellte Benutzeroberfläche von der Logik, sowie den Daten getrennt, um Änderungen unabhängig voneinander durchführen zu können. Um die Teile des Quellcodes zu verbinden wird auf Bindings gesetzt, die dafür zuständig sind, die jeweiligen Objekte gegenseitig zu aktualisieren.
 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=0.95\textwidth]{images/implementation/mvvm.png}
-		\caption{ModelViewModelView \cite{Brecht.MVVMEntity}}
+		\caption{\acrlong{mvvm} \cite{Brecht.MVVMEntity}}
 	\end{center}
 	
 	\label{fig:mvvm}

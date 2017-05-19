@@ -49,4 +49,4 @@
 \contentsline {figure}{\numberline {40}{\ignorespaces Device JsonConverter\relax }}{50}{figure.caption.96}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ReadJson}}}{50}{subfigure.40.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {WriteJson}}}{50}{subfigure.40.2}
-\contentsline {figure}{\numberline {41}{\ignorespaces ModelViewModelView \cite {Brecht.MVVMEntity}\relax }}{51}{figure.caption.98}
+\contentsline {figure}{\numberline {41}{\ignorespaces \acrlong {mvvm} \cite {Brecht.MVVMEntity}\relax }}{51}{figure.caption.98}

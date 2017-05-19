@@ -87,8 +87,8 @@
 \contentsline {subsection}{\numberline {4.2}\gls {app}}{51}{subsection.4.2}
 \contentsline {subsubsection}{\numberline {4.2.1}Workflow}{51}{subsubsection.4.2.1}
 \contentsline {paragraph}{\acrfull {mvvm}}{51}{section*.97}
-\contentsline {paragraph}{Bindings}{51}{section*.99}
-\contentsline {subsubsection}{\numberline {4.2.2}\acrfull {gui}}{51}{subsubsection.4.2.2}
+\contentsline {paragraph}{Bindings}{52}{section*.99}
+\contentsline {subsubsection}{\numberline {4.2.2}\acrfull {gui}}{52}{subsubsection.4.2.2}
 \contentsline {paragraph}{LogIn Page}{52}{section*.100}
 \contentsline {paragraph}{Home Page}{52}{section*.101}
 \contentsline {paragraph}{Option Page}{52}{section*.102}
