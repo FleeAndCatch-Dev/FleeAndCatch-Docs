@@ -89,14 +89,16 @@
 \contentsline {subsubsection}{\numberline {4.2.1}Workflow}{54}{subsubsection.4.2.1}
 \contentsline {paragraph}{\acrfull {mvvm}}{54}{section*.103}
 \contentsline {subsubsection}{\numberline {4.2.2}\acrfull {gui}}{55}{subsubsection.4.2.2}
-\contentsline {paragraph}{LogIn Page}{55}{figure.caption.106}
-\contentsline {paragraph}{Home Page}{55}{figure.caption.108}
-\contentsline {paragraph}{Option Page}{55}{figure.caption.110}
-\contentsline {paragraph}{List Page}{55}{figure.caption.112}
-\contentsline {paragraph}{Szenario Page}{55}{figure.caption.114}
-\contentsline {subsubsection}{\numberline {4.2.3}Buisnesslogic}{56}{subsubsection.4.2.3}
-\contentsline {subsubsection}{\numberline {4.2.4}Deployment}{56}{subsubsection.4.2.4}
-\contentsline {subsection}{\numberline {4.3}Backend}{56}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Robot}{56}{subsection.4.4}
-\contentsline {section}{\numberline {5}Evaluation}{60}{section.5}
-\contentsline {section}{\numberline {6}Ausblick}{61}{section.6}
+\contentsline {paragraph}{SignIn Page}{55}{section*.105}
+\contentsline {paragraph}{Home Page}{56}{section*.107}
+\contentsline {paragraph}{Option Page}{57}{section*.109}
+\contentsline {paragraph}{List Page}{58}{section*.111}
+\contentsline {paragraph}{Szenario Page}{59}{section*.113}
+\contentsline {subsubsection}{\numberline {4.2.3}Buisnesslogic}{60}{subsubsection.4.2.3}
+\contentsline {paragraph}{Authorization}{60}{section*.115}
+\contentsline {paragraph}{Create Szenario}{60}{section*.116}
+\contentsline {paragraph}{Szenario}{60}{section*.117}
+\contentsline {subsection}{\numberline {4.3}Backend}{61}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Robot}{61}{subsection.4.4}
+\contentsline {section}{\numberline {5}Evaluation}{62}{section.5}
+\contentsline {section}{\numberline {6}Ausblick}{63}{section.6}

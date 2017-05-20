@@ -115,14 +115,13 @@ Die Struktur der \gls{app} basiert auf dem in Xamarin verbreiteten Design Patter
 
 stellt ein Design Pattern dar, welches eine grundlegende Struktur im Quellcode ermöglicht, siehe Abbildung \ref{fig:mvvm}. Dabei wird die erstellte Benutzeroberfläche von der Logik, sowie den Daten getrennt, um Änderungen unabhängig voneinander durchführen zu können. Die einzelnen Objekte werden dabei durch Referenzen verbunden um diese durch Events entsprechend zu aktualisieren.\\
 
-\noindent
-\textbf{Model:} Datenschicht, welche durch den Benutzer über die \gls{gui} verändert werden kann und über Datenänderungen die entsprechenden Elemente benachrichtigt\\
+\begin{tabular}{p{2.5cm} p{12.25cm}}
+	\textbf{Model:} & Datenschicht, welche durch den Benutzer über die \gls{gui} verändert werden kann und über Datenänderungen die entsprechenden Elemente benachrichtigt \\
+	\textbf{View:} & \gls{gui} mit den anzuzeigenden Elementen, welche an das ViewModel gebunden sind und der Benutzerinteraktion dienen. \\
+	\textbf{ViewModel:} & Logik des \gls{ui} als zentrale Schnittstelle zwischen dem Model und der View zum Austausch von Informationen, indem entsprechende Methoden und Dienste ausgeführt werden. \\
+\end{tabular}
 
-\noindent
-\textbf{View:} \gls{gui} mit den anzuzeigenden Elementen, welche an das ViewModel gebunden sind und der Benutzerinteraktion dienen.\\
-
-\noindent
-\textbf{ViewModel:} Logik des \gls{ui} als zentrale Schnittstelle zwischen dem Model und der View zum Austausch von Informationen, indem entsprechende Methoden und Dienste ausgeführt werden.\\
+\bigskip
 
 \begin{figure}[h]
 	\begin{center}
@@ -132,6 +131,7 @@ stellt ein Design Pattern dar, welches eine grundlegende Struktur im Quellcode e
 	\label{fig:mvvm}
 \end{figure}
 
+\newpage
 \subsubsection{\acrfull{gui}} %Oberfläche
 
 Die Oberfläche der \gls{app} wird mittels \gls{xaml} realisiert, welche auf der Basis von \gls{xml} aufsetzt., siehe Abbildung \ref{fig:xaml}. Dabei werden die einzelnen Elemente untereinander in der typischen \gls{xml} Struktur angeordnet und stellen damit das Layout sowie die Elemente einer Seite dar. Zur Strukturierung bietet Xamarin verschiedene Arten von Layouts, wobei diese \gls{app} auf die Stacklayout zur Struktureirung und einer NavigationPage zur Naviagtion, sowie einem Carousel der Szenario auswahl setzt.
@@ -151,60 +151,69 @@ Die Oberfläche der \gls{app} wird mittels \gls{xaml} realisiert, welche auf der
 
 %General, XAML stuff
 
-\paragraph{LogIn Page}
+\paragraph{SignIn Page} stellt die Benutzerschnittstelle zur Anmeldung des Nutzers am System dar, siehe Abbildung \ref{fig:signin}. Dabei gibt dieser die entsprechende IP-Adresse der laufenden Desktopanwendung zur Verbindung an. Durch eine implementierte Logik wird diese IP-Adresse auf ihre Richtigkeit geprüft und die Verbindung gestartet. Bei einer erfolgreichen Verbindung wird der Benutzer zur \gls{app} weitergeleitet, wodurch ihm die entsprechenden Funktionalitäten zur Verfügung stehen. Andernfalls erscheint nach einem definierten Timeout eine Fehlermeldung, welche dem User Informationen vorlegt. Zur Speicherung der IP-Adresse ist zusätzlich die Möglichkeit durch ein Switch Element gegeben, wobei diese bei Start der \gls{app} automatisch eingefügt wird.
 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/implementation/signin.png}
 	\end{center}	
-	\caption{\acrlong{mvvm}}
+	\caption{SignIn Page}
 	\label{fig:signin}
 \end{figure}
 
-\paragraph{Home Page}
+\paragraph{Home Page} stellt die Hauptseite mit der grundlegenden Navigation der \gls{app} dar, indem der Benutzer die Möglichkeit besitzt ein neues Szenario eines Schwarmverhaltens zu starten, Informationen über die \gls{app} abzurufen, oder sich vom aktuelles System abzumelden.
 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/implementation/home.png}
 	\end{center}	
-	\caption{\acrlong{mvvm}}
-	\label{fig:signin}
+	\caption{Home Page}
+	\label{fig:home}
 \end{figure}
 
-\paragraph{Option Page}
+\newpage
+\paragraph{Option Page} stellt die Benutzerschnittstelle dar, welche diesen durch die vorhandenen Szenarien anhand eines Carousels leitet und ein entsprechends auswählt.
 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/implementation/option.png}
 	\end{center}	
-	\caption{\acrlong{mvvm}}
-	\label{fig:signin}
+	\caption{Option Page}
+	\label{fig:option}
 \end{figure}
 
-\paragraph{List Page}
+\newpage
+\paragraph{List Page} stellt die Benutzerschnittstelle zur Auswahl der Robotern, welche im Szenario involviert werden sollen. Dabei kann der Benutzer unter den verschiedenen Typen wählen, welche vorhanden sind, wobei die Anzahl der Roboter vom gewählten Szenario abhängt.
 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/implementation/list.png}
 	\end{center}	
-	\caption{\acrlong{mvvm}}
-	\label{fig:signin}
+	\caption{List Page}
+	\label{fig:list}
 \end{figure}
 
-\paragraph{Szenario Page}
+\newpage
+\paragraph{Szenario Page} stellt die Benutzerschnittselle dar, die einerseits der Steuerung und Überwachung des Schwarmverhaltens dient. Dabei werden laufend die aktuellen Daten der Roboter angezeigt und können durch die Neigungssensoren der eräte gesteuert werden. Diese verhalten sich entsprechend dem ausgewählten SZenario.
 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/implementation/szenario.png}
 	\end{center}	
-	\caption{\acrlong{mvvm}}
-	\label{fig:signin}
+	\caption{Szenario Page}
+	\label{fig:szenario}
 \end{figure}
 
+\newpage
 \subsubsection{Buisnesslogic} %Logik
 
-\subsubsection{Deployment}
+\paragraph{Authorization}
 
+\paragraph{Create Szenario}
+
+\paragraph{Szenario}
+
+\newpage
 \subsection{Backend}
 
 \begin{comment}
