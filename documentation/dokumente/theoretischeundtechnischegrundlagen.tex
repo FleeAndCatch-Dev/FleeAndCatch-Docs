@@ -1,6 +1,5 @@
 \section{Theoretische und Technische Grundlagen}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
 % Eigentlicher Text:
 In diesem Kapitel werden die technischen Grundlagen des Projektes, die zur Umsetzung nötig sind beschrieben.
 \\Platzhalter kommt noch Text
@@ -12,66 +11,61 @@ In diesem Kapitel werden die technischen Grundlagen des Projektes, die zur Umset
 \color{finishing}
 % Eigentlicher Text:
 Die Robotik beschäftigt sich mit dem Entwurf, der Konstruktion sowie der Programmierung, Steuerung und dem Betrieb 
-von Robotern \newline [http://wirtschaftslexikon.gabler.de/Definition/robotik.html]. Dabei umfasst die Robotik eine Vielzahl 
+von Robotern.\footnote{\citep[vgl.][Definition Robotik]{Bendel.DefinitionRobotik}\label{note1}} Dabei umfasst die Robotik eine Vielzahl 
 von Fachgebieten wie der Elektrotechnik, dem Maschienenbau, der Informatik sowie der Biologie und der Medizin.
 \subsubsection{Roboter}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-Was im Kontext der Robotik unter einem Roboter zu verstehen ist, ist gar nicht so einfach darzulegen, da es in Tat keine allgemein anerkannte Definition dieses Begriffs gibt, die seiner üblichen Verwendung entspricht [Mobile Roboter - 2].
+Was im Kontext der Robotik unter einem Roboter zu verstehen ist, ist gar nicht so einfach darzulegen, da es in Tat keine allgemein anerkannte Definition dieses Begriffs gibt, die seiner üblichen Verwendung entspricht.\footnote{\citep[vgl.][Mobile Roboter, Seite 2]{Hertzberg.MobileRoboter}\label{note2}}
 \newline
-Auch ohne eine vollkommen allgemeingültige und präzise Beschreibung eines Roboters zu sein, soll hier die VDI-Richtline 2860 einen Eindruck darüber vermitteln, was in der Robotik mit Roboter gemeint ist. \newline
-Die VDI-Richtline 2860 von 1990 definiert einen Roboter wie folgt:
+Auch ohne eine vollkommen allgemeingültige und präzise Beschreibung eines Roboters zu sein, soll hier die \gls{vdi}-Richtline 2860 einen Eindruck darüber vermitteln, was in der Robotik mit Roboter gemeint ist. \newline
+Die \gls{vdi}-Richtline 2860 von 1990 definiert einen Roboter wie folgt:\footref{note2}
 \vspace{2mm}
 \newline
->>\textit{Ein Roboter ist ein frei und wieder programmierbarer, multifunktio-
-naler Manipulator mit mindestens drei unabhängigen Achsen, um Ma-
-terialien, Teile, Werkzeuge oder spezielle Geräte auf programmierten,
-variablen Bahnen zu bewegen zur Erfüllung der verschiedensten Auf-
-gaben.}<<
+\glqq{}\textit{Ein Roboter ist ein frei und wieder programmierbarer, multifunktionaler Manipulator mit mindestens drei unabhängigen Achsen, um Materialien, Teile, Werkzeuge oder spezielle Geräte auf programmierten,
+variablen Bahnen zu bewegen zur Erfüllung der verschiedensten Aufgaben.}\grqq{}
 \vspace{2mm}
 \newline
-Auch wenn diese Definition einige grundlegenden Eigenschaften eines Roboters darlegt, beschreibt diese Definition den Begriff des Roboters im industriellen Kontext und trifft hauptsächlich auf stationäre Industrieroboter zu, wie sie in der Automobilfertigung beispielsweise als Schweiß- oder Lackierroboter verwendet werden. Die genannten programmierten Bahnen sind dort möglich, weil die Arbeitsprozess und die Umgebung auf den Roboter zugeschnitten und vollständig bekannt sind [MR 2]. \newline
-Im Gegensatz dazu, trifft dieser Aspekt auf mobile Roboter nicht zu, da sich diese meist in einer unbekannten, unsttrukturierten und dynamischen Umgebung bewegen.
+Auch wenn diese Definition einige grundlegenden Eigenschaften eines Roboters darlegt, beschreibt diese den Begriff des Roboters im industriellen Kontext und trifft hauptsächlich auf stationäre Industrieroboter zu, wie sie in der Automobilfertigung beispielsweise als Schweiß- oder Lackierroboter verwendet werden. Die genannten programmierten Bahnen sind dort möglich, da die Arbeitsprozess und Umgebung auf den Roboter zugeschnitten und vollständig bekannt sind.\footref{note2} \newline
+Im Gegensatz dazu, trifft dieser Aspekt auf mobile Roboter nicht zu, da sich diese meist in einer unbekannten, unstrukturierten und dynamischen Umgebung bewegen.
 \subsubsection{Mobile Roboter}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-Mobile Roboter bewegen sich selbständig duch eine sich meist ständig ändernde Umwelt. All ihre Aktionen sind somit von ihrer aktuellen Umgebung abhängen, die in ihrer konkrete Ausprägung erst zum Zeitpunkt der Aktionsausführung im Detail bekannt ist. 
+Mobile Roboter bewegen sich selbständig durch eine sich meist ständig ändernde Umwelt. All ihre Aktionen sind somit von ihrer aktuellen Umgebung abhängen, die in ihrer konkrete Ausprägung erst zum Zeitpunkt der Aktionsausführung im Detail bekannt ist. 
 \newline
-Dieser grundsätzliche Unterschied zu stationären Robotern macht es unerlässlich das mobile Roboter ihre Umgebung ständig mittels Sensoren selbständig erfassen, diese Sensordaten auswerten und auf Grundlage dessen ihre nächsten Aktionen planen [MR 2].
+Dieser grundsätzliche Unterschied zu stationären Robotern macht es unerlässlich das mobile Roboter ihre Umgebung ständig mittels Sensoren selbständig erfassen, die Sensordaten auswerten und auf Grundlage dessen ihre nächsten Aktionen planen.\footnote{\citep[vgl.][Mobile Roboter, Seite 2]{Hertzberg.MobileRoboter}\label{note3}}
 \newline
-Hinter dem Begiff des mobilen Roboters verbergen sich eine Vielzahl unterschiedlicher mobiler Systeme, welche
-sich hinsichtlich ihrer Gestalltung, Arbeitsweise und ihrer Einsatzszenarien unterscheiden. Im Folgenden werden einige Beispiele für mobile Roboter dargelegt:
+Hinter dem Begriff des mobilen Roboters verbergen sich eine Vielzahl unterschiedlicher mobiler Systeme, welche
+sich hinsichtlich ihrer Gestaltung, Arbeitsweise und ihrer Einsatzszenarien unterscheiden. Im Folgenden werden einige Beispiele für mobile Roboter dargelegt:
 \begin{itemize}
-	\item{\textbf{Shakey:}} Shakey war ein mobiler Roboter der von 1966 bis 1972 an der am Stanford Research Institute entwickelt wurde. Seine Entwicklung leistete wichtige Beiträge für die Robotik sowie in der KI-Forschung im Bereich der Handlungsplanung und dem selbständigen Lernen [MR 5f].
+	\item{\textbf{Shakey:}} Shakey ist ein mobiler Roboter der von 1966 bis 1972 an der am Stanford Research Institute entwickelt wurde. Seine Entwicklung leistete wichtige Beiträge für die Robotik sowie in der KI-Forschung im Bereich der Handlungsplanung und dem selbständigen Lernen.\footnote{\citep[vgl.][Mobile Roboter, Seite 5 f.]{Hertzberg.MobileRoboter}\label{note4}}
 	%##################################################
-	\item{\textbf{Spirit \& Opportunity:}} Spirit \& Opportunity sind zwei baugleiche Roboter die im Jahr 2003 von der NASA zum Mars geschickt wurden um den Himmelskörper zu erkunden. Die beiden Erkundungsroboter sind Radfahrzeuge mit flexiblem Fahrgestell, verfügen über eine Panoramakamera sowie Sensoren zur Untersuchung des Erdbodens und Gesteins. Obwohl die Roboter in Bezug auf ihrer gundsätzlichen Aktionen von der Erde aus ferngesteuert werden, ist eine autonome Steuerung welche auf kurzfristige, unerwartet Ereignisse wie das Wegrutschen von Rädern reagiert aufgrund der langen Signallaufzeiten unverzichtbar. Die Roboter waren für eine
-	Lebensdauer von 90 Marstagen ausgelegt, übertrafen diese aber bei weitem (mehr als das 30fache) [MR 8f]
+	\item{\textbf{Spirit \& Opportunity:}} Spirit \& Opportunity sind zwei baugleiche Roboter die im Jahr 2003 von der NASA zum Mars geschickt wurden um den Himmelskörper zu erkunden. Die beiden Erkundungsroboter sind Radfahrzeuge mit flexiblem Fahrgestell, verfügen über eine Panoramakamera sowie Sensoren zur Untersuchung des Erdbodens und Gesteins. Obwohl die Roboter in Bezug auf ihrer grundsätzlichen Aktionen von der Erde aus ferngesteuert werden, ist eine autonome Steuerung, welche auf kurzfristige unerwartet Ereignisse, wie das Wegrutschen von Rädern reagiert aufgrund der langen Signallaufzeiten unverzichtbar. Die Roboter waren für eine
+	Lebensdauer von 90 Marstagen ausgelegt, übertrafen diese aber bei weitem mit mehr als dem dreißig fachen.\footnote{\citep[vgl.][Mobile Roboter, Seite 8 f.]{Hertzberg.MobileRoboter}\label{note4}}
 	%##################################################
-	\item{\textbf{Stanley:}} Stanley ist ein vollständig autonomer Roboter der 2005 am Grand Challenge Wetbewerb teilnahm und diesem gewann. Bei diesem Wettbewerb mussten Fahrzeuge ohne Eingriff von Menschen eine festgelegte, jedoch nicht markierte Strecke von rund 213 km von einem definierten Start- zu einem definierten Zielpunkt zurücklegen. Die Strecke führte durch 
-	die Mojave-Wüste in den USA. Bei Stanley handelt es sich um einen modifizierter VW Touareg, dem Sensoren zur Umgebungswahrnehmung und Bordrechner zur Bearbeitung des Kontrollprogramms eingebaut wurden. Stanleys wichtigste Umgebungssensoren waren mehrere Laserscanner und eine Kamera.Stanley meisterte die 213 km lange Strecke welche unter anderem durch felsige
-	oder sandige Bereiche sowie durch Wasserläufe führte in knapp unter 7 Stunden.
+	\item{\textbf{Stanley:}} Stanley ist ein vollständig autonomer Roboter der 2005 am Grand Challenge Wetbewerb teilnahm und diesen gewann. Bei diesem Wettbewerb mussten Fahrzeuge ohne Eingriff von Menschen eine festgelegte, jedoch nicht markierte Strecke von rund 213 km von einem definierten Start- zu einem definierten Zielpunkt zurücklegen. Die Strecke führte durch die Mojave-Wüste in den USA. Bei Stanley handelt es sich um einen modifizierter VW Touareg, dem Sensoren zur Umgebungswahrnehmung und Bordrechner zur Bearbeitung des Kontrollprogramms eingebaut wurden. Stanleys wichtigste Umgebungssensoren waren mehrere Laserscanner und eine Kamera. Stanley meisterte die 213 km lange Strecke welche unter anderem durch felsige oder sandige Bereiche sowie durch Wasserläufe führte in knapp unter 7 Stunden.\footnote{\citep[vgl.][Mobile Roboter, Seite 9 f.]{Hertzberg.MobileRoboter}\label{note5}}
 	%##################################################
 \end{itemize}
-Allein diese drei Beispiele zeigen wie sehr sich mobile Roboter im Aufbau, Einsatzort und Aufgabe unterscheiden. Neben reinen forschungs sowie wissenschaftlich-technischen Gründen Mobile Roboter zu bauen, sind diese auch aus wirtschaftlicher Perspektive interessant und haben gerade in den letzen Jahren an Marktpotenzial gewonnen.
+Allein diese drei Beispiele zeigen wie sehr sich mobile Roboter im Aufbau, Einsatzort und Aufgabe unterscheiden. Neben reinen Forschungs- sowie wissenschaftlich-technischen Gründen Mobile Roboter zu bauen, sind diese auch aus wirtschaftlicher Perspektive interessant und haben gerade in den letzten Jahren an Marktpotenzial gewonnen.
 \newline
-Zu den Vertretern mobiler Roboter im kommerziellen Breich zählen zum Beispiel Service-Roboter, Erkundungsroboter und Bergungsroboter, Humanoide Roboter sowie Haushaltsroboter.
+Zu den Vertretern mobiler Roboter im kommerziellen Bereich zählen zum Beispiel Service-Roboter, Erkundungsroboter und Bergungsroboter, Humanoide Roboter sowie Haushaltsroboter.
 \subsubsection{Sensorik}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-Um mit der Umgebung interagieren zu können müssen mobile Roboter diese wahrnehmen, dazu dienen Sensoren. Diese ermöglichen es dem Roboter Informationen über seine Umwelt und über seinen Zustand zu sammeln um darauf Aufbauen seine nächsten Interaktionsschritte zu planen.
+Um mit der Umgebung interagieren zu können, müssen mobile Roboter diese wahrnehmen, dazu dienen Sensoren. Diese ermöglichen es dem Roboter Informationen über seine Umwelt und über seinen Zustand zu sammeln um darauf Aufbauen seine nächsten Interaktionsschritte zu planen.
 \paragraph{Klassifizierung}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-Sensoren lassen sich hinsichtliche zwei Aspekten klassifizieren, zum einen über was die Sensoren Informationen liefern (die Umwelt oder den Roboter selbest) und andereseits hinsichtlich ihrer Arbeitsweise. [MR 24]
+Sensoren lassen sich anhand zweier Aspekten klassifizieren, zum einen hinsichtlich des Objektes über welches sie Informationen liefern (die Umwelt oder den Roboter selbst) und anderseits hinsichtlich ihrer Arbeitsweise.\footnote{\citep[vgl.][Mobile Roboter, Seite 24]{Hertzberg.MobileRoboter}\label{note6}}
 \begin{itemize}
 	\item{\textbf{Propriozeptive Sensoren}} -- Diese Art der Sensoren bestimmen eine Messgröße des Roboters selbst und haben keine \glqq{}Kontakt\grqq{} zur Umwelt z.B Bestimmung der Lage Aufgrund eines Neigungssensors.
 	\item{\textbf{Exterozeptive Sensoren}} -- Im Gegensatz zu den propriozeptive Sensoren gewinnen diese Sensoren Informationen aus Messgrößen der Umwelt beispielsweise die Bestimmung der Orientierung in Bezug auf die Umwelt.
-	\item{\textbf{Aktive Sensoren}} -- Aktive Sensoren senden aktive Energie in ihre Umwellt aus und Erfassen anschließend die zurückkehrenden Signale wie dies beispielsweiße ein Ultraschallsensor tut.
-	\item{\textbf{Passive Sensoren}} -- Diese Sensoren senden nicht aktiv aus sondern erfassen ausschließlich die von Natur aus vorhandenen Signale wie z.B. das einfallende Licht durch eine Kamera.
+	\item{\textbf{Aktive Sensoren}} -- Aktive Sensoren senden aktive Energie in ihre Umwelt aus und Erfassen anschließend die zurückkehrenden Signale wie dies beispielsweise ein Ultraschallsensor tut.
+	\item{\textbf{Passive Sensoren}} -- Diese Sensoren senden nicht aktiv aus sondern erfassen ausschließlich die von der Natur aus vorhandenen Signale wie z.B. das einfallende Licht durch eine Kamera.
 \end{itemize}
 Die folgenden Tabelle zeigt beispielhaft die Einordnung einiger Sensoren:
 \begin{table}[ht]
@@ -91,82 +85,74 @@ Die folgenden Tabelle zeigt beispielhaft die Einordnung einiger Sensoren:
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-Neben der Arbeitsweise gibt es noch weitere Eigenschaften die maßgeblich beeinflussen wann, wie und für welchen Zweck ein jeweiliger Sensor eingesetzt wird. Zu den wichtigsten Eigenschaften zählen [MR 26 f.]:
+Neben der Arbeitsweise gibt es noch weitere Eigenschaften die maßgeblich beeinflussen wann, wie und für welchen Zweck ein jeweiliger Sensor eingesetzt wird. Zu den wichtigsten Eigenschaften zählen:\footnote{\citep[vgl.][Mobile Roboter, Seite 26 f.]{Hertzberg.MobileRoboter}\label{note7}}
 \begin{itemize}
-	\item{\textbf{Messbereich}} -- Jeder Sensor hat einen bestimmten Bereich, in dem die 	gemessenen Daten valide sind d.h. der Bereich in dem die Messabweichungen innerhalb der festgelegten Grenzen bleibt.
+	\item{\textbf{Messbereich}} -- Jeder Sensor hat einen bestimmten Bereich, in dem die gemessenen Daten valide sind d.h. der Bereich in dem die Messabweichungen innerhalb der festgelegten Grenzen bleibt.
 	\item{\textbf{Dynamik}} -- Die Dynamik beschreibt das Verhältnis von Ober- zu Untergrenze des Messwerts.
 	\item{\textbf{Auflösung}} -- Die Auflösung beschreibt wie granular eine physikalische Größe ermittelt werden kann d.h sie gibt den kleinsten messbaren Unterschied zweier Messwerte an.
-	\item{\textbf{Linearität}} -- Unter der Linearität eines Sensors versteht man die Abhängig-
-	keit des Messwerts von der tatsächlichen Größe.
-	\item{\textbf{Messfrequenz}} -- Die Messfrequenz gibt an wie viele einzelne Messungen inner-
-	halb eines bestimmten Zeitraums der Senosor liefert.
+	\item{\textbf{Linearität}} -- Unter der Linearität eines Sensors versteht man die Abhängigkeit des Messwerts von der tatsächlichen Größe.
+	\item{\textbf{Messfrequenz}} -- Die Messfrequenz gibt an wie viele einzelne Messungen innerhalb eines bestimmten Zeitraums der Sensor liefert.
 \end{itemize}
-Da jegliche Messunge fehlerbehaftet ist weisen auch die von Sensoren ermittelnten Messwerte gewisse Fehler auf [MR27]. 
+Da jegliche Messung fehlerbehaftet ist, weisen auch die von Sensoren ermittelte Messwerte gewisse Fehler auf.\footnote{\citep[vgl.][Mobile Roboter, Seite 27]{Hertzberg.MobileRoboter}\label{note8}}
 \newline
-Damit die Robotersteuerung darauf Rücksicht nehmen kann müssen die entsprechenden Kenngrößen der Sensoren bekannt sein. Folgende Größen sind mit Bezug auf Sensorfehler von Bedeutung [MR 27 f.]:
+Damit die Robotersteuerung darauf Rücksicht nehmen kann müssen die entsprechenden Kenngrößen der Sensoren bekannt sein. Folgende Größen sind mit Bezug auf Sensorfehler von Bedeutung:\footnote{\citep[vgl.][Mobile Roboter, Seite 27 f.]{Hertzberg.MobileRoboter}\label{note9}}
 \begin{itemize}
-	\item{\textbf{Empfindlichkeit}} -- Wie groß eine Wertänderung der Ausgangsgröße sein muss damit dies der Senosr registiert wird als Empfindlichkeit bezeichnet. Eine hohe Empfindlichkeit hat oft eine hohe Störanfälligkeit zur Folge.
+	\item{\textbf{Empfindlichkeit}} -- Wie groß eine Wertänderung der Ausgangsgröße sein muss damit dies der Sensor registriert, wird als Empfindlichkeit bezeichnet. Eine hohe Empfindlichkeit hat oft eine hohe Störanfälligkeit zur Folge.
 	\item{\textbf{Messfehler}} -- Als Messfehler oder absoluten Fehler bezeichnet man die Differenz des gemessenen Wertes m und des tatsächlichen Wertes.
-	\item{\textbf{Genauigkeit}} -- Die Genauigkeit oder der relative Fehler ist der prozentuale
-	Wert einer Abweichung in Bezug zum tatsächlichen Wert.
+	\item{\textbf{Genauigkeit}} -- Die Genauigkeit oder der relative Fehler ist der prozentuale	Wert einer Abweichung in Bezug zum tatsächlichen Wert.
 \end{itemize}
 \paragraph{Kenngrößen}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-In der Robotik finden zahlreiche Sensoren Anwendung um es einem mobilen Systems zu ermöglichen
-verschiedene Kenngrößen zu ermitteln. Im Folgenden werden einiger dieser und die dazu geeigenten Senoren vorgestellt.
+In der Robotik finden zahlreiche Sensoren Anwendung, um es einem mobilen Systems zu ermöglichen verschiedene Kenngrößen zu ermitteln. Im Folgenden werden einiger dieser und die dazu geeigneten Sensoren vorgestellt.
 \begin{itemize}
-	\item{\textbf{Bewegungsmessung}} -- Eine Möglichkeit der Bewegungsmessung ist die Drehwinkelmessung. Diese ermöglicht die Erfassung der Drehungen von Rädern oder 
-	anderen rotierenden Elementen eines mobilen Roboters. Dies ermöglicht es mittels Odometire (siehe Abschnitt X.X) die Geschwindiingkeit und Orierntierung eines mobilen Roboters zu bestimmen. Zur Drehwinkelmessung dienen Impuls- sowie Inkrementalgeber welche mechanisch, photo-elektrisch und elektro-magnetisch arbeiten [MR 28 ff.].
+	\item{\textbf{Bewegungsmessung}} -- Eine Möglichkeit der Bewegungsmessung ist die Drehwinkelmessung. Diese ermöglicht die Erfassung der Drehungen von Rädern oder anderen rotierenden Elementen eines mobilen Roboters. Dies ermöglicht es mittels Odometire die Geschwindigkeit und Orientierung eines mobilen Roboters zu bestimmen, siehe Abschnitt \eqref{odometrie}. Zur Drehwinkelmessung dienen Impuls- sowie Inkrementalgeber welche mechanisch, photo-elektrisch und elektro-magnetisch arbeiten.\footnote{\citep[vgl.][Mobile Roboter, Seite 28 ff.]{Hertzberg.MobileRoboter}\label{note10}}
 	\newline
-	Eine weitere Möglichkeit der Bewegungsmessung ist die Beschleunigungsmessung. Dabei werden Bewegungen über die Massenträgheit bei Beschleunigungen gemessen und über die Zeit integriert, weshalb man auch von Trägheitsmessung spricht [MR 31]. Dazu werden heute meist
-	piezo-elektronische Gyroskope verwendet welche Dreh- und Linearbeschleunigungen bezüglich aller drei Raumachsen erfassen [MR 32].
+	Eine weitere Möglichkeit der Bewegungsmessung ist die Beschleunigungsmessung. Dabei werden Bewegungen über die Massenträgheit bei Beschleunigungen gemessen und über die Zeit integriert, weshalb man auch von Trägheitsmessung spricht.\footnote{\citep[vgl.][Mobile Roboter, Seite 31]{Hertzberg.MobileRoboter}\label{note11}} Dazu werden heute meist
+	piezo-elektronische Gyroskope verwendet welche Dreh- und Linearbeschleunigungen bezüglich aller drei Raumachsen erfassen.\footnote{\citep[vgl.][Mobile Roboter, Seite 32 ff.]{Hertzberg.MobileRoboter}\label{note11}}
 	%############################################################
-	\item{\textbf{Ausrichtungsmessung}} -- Neben der Bestimmung der geografische Position eines Roboters mittels Beschleunigung- und Drehratensensoren ist auch dessen Ausrichtung bzw. Lage im Raum eine wichtige Größe. Zur Bestimmung der Ausrichtung werden Kompasse sowie Inklinometer welche den Neigungswinkel zur Erdanziehungsrichtung bestimmen, verwendet [MR 32 f.].
+	\item{\textbf{Ausrichtungsmessung}} -- Neben der Bestimmung der geografische Position eines Roboters mittels Beschleunigung- und Drehratensensoren ist auch dessen Ausrichtung bzw. Lage im Raum eine wichtige Größe. Zur Bestimmung der Ausrichtung werden Kompasse sowie Inklinometer verwendet, welche den Neigungswinkel zur Erdanziehungsrichtung bestimmen.\footnote{\citep[vgl.][Mobile Roboter, Seite 32 f.]{Hertzberg.MobileRoboter}\label{note12}}
 	%############################################################
 	\item{\textbf{Entfernungsmessung}} -- Die Entfernungsmessung dient der Bestimmung des Abstands zu Objekten z.B. zur Kollisionsvermeidung. 
 	\newline
-	Es gibt verschiedene Arten von Sensoren zur Entfernungsmessung viele basieren auf dem Prinzip der Laufzeitmessung wie Ultraschallsensoren oder Laserentfernungsmesser. Es gibt aber auch Sensoren die mittels Triangulation (Inrarotsensor) oder dem Verhältnis zwischen ausgesandter und zurückkerendeer Energie (Radar) die Entfernung zu Obkjekten bestimmen [MR 36 f.]. 
+	Es gibt verschiedene Arten von Sensoren zur Entfernungsmessung viele basieren auf dem Prinzip der Laufzeitmessung, wie Ultraschallsensoren oder Laserentfernungsmesser. Darüber hinaus gibt es auch Sensoren, die mittels Triangulation (Inrarotsensor) oder dem Verhältnis zwischen ausgesandter und zurückkehrender Energie (Radar) die Entfernung zu Objekten bestimmen.\footnote{\citep[vgl.][Mobile Roboter, Seite 36 f.]{Hertzberg.MobileRoboter}\label{note13}}
 \end{itemize}
-Neben diesen elementaren Kenngrößen gibt es noch zahlreiche weitere die für ein entsprechendes
-mobile System von Bedeutung sind. Dies ist beispielweise eine globale Positionsbestimmung 
-mittels GPS oder die Dedektion von Objekten und geografischen Struktueren durch Kameras oder 2D-/3D-Laserscanner.
+Neben diesen elementaren Kenngrößen gibt es zahlreiche weitere die für ein entsprechendes mobile System von Bedeutung sind. Dies ist beispielsweise eine globale Positionsbestimmung mittels \gls{gps} oder die Dedektion von Objekten und geografischen Strukturen durch Kameras oder 2D-/3D-Laserscanner.
 \subsubsection{Sensordatenverarbeitung \& Steuerung}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{process}
 % Eigentlicher Text:
-Generell unterscheidet man zwischen zwei grundlegenden Arten der Steuerung einer offenen und geschlossenen. Das typische Kontrollprogramm eines Roboters in der Automatisierung läuft in einer offenen Steuerung d.h. es werden keine Sensordaten aus der Umgebung erfasst bzw. berücksichtigt. Dies ist dort möglich da 
-sich dort Roboter auf vordefinierten Bahnen und in eine auf sie zugeschnittenen Umbegung bewegen.
+Generell unterscheidet man zwischen zwei grundlegenden Arten der Steuerung, einer offenen und geschlossenen. Das typische Kontrollprogramm eines Roboters in der Automatisierung läuft in einer offenen Steuerung d.h. es werden keine Sensordaten aus der Umgebung erfasst bzw. berücksichtigt. Dies ist dort möglich, da sich dort Roboter auf vordefinierten Bahnen und in eine auf sie zugeschnittenen Umgebung bewegen.
 \newline
-Prozesssteuerungen dieser Art haben jedoch ihre Grenzen nämlich da, wo sich ein Roboter in einer unstrukturierten Umgebung aggiert und von Ereignissen oder Parametern abhängt, die nicht kontrollierbar bzw. vorab nicht bekannt sind [MR 3].
-Mobile Roboter verfügen über eine geschlossene Steuerung bei der eine Rückkopplung der Umgebeung durch Sensorendaten erfolgt. In einem iterativen Verfahren werden die von den Sensoren ermittelten Umgebeungsdaten bei der Planung von Steuerbefehle einbezogen, die resultierenden Aktionen ausgeführt was ggf. die Umgebung verändert, woraufhin der Regelkreis erneut beginnt.
+Prozesssteuerungen dieser Art haben ihre Grenzen da, wo sich ein Roboter in einer unstrukturierten Umgebung bewegt und von Ereignissen oder Parametern abhängt, die nicht kontrollierbar bzw. vorab nicht bekannt sind.\footnote{\citep[vgl.][Mobile Roboter, Seite 3 f.]{Hertzberg.MobileRoboter}\label{note14}}
+Mobile Roboter verfügen über eine geschlossene Steuerung bei der eine Rückkopplung der Umgebung durch Sensordaten erfolgt. In einem iterativen Verfahren werden die von den Sensoren ermittelten Umgebungsdaten bei der Planung von Steuerbefehle einbezogen, die resultierenden Aktionen ausgeführt was ggf. die Umgebung verändert, woraufhin der Regelkreis erneut beginnt.
 \begin{figure}[ht]
 	\centering
 		\includegraphics[width=0.90\textwidth]{images/technische_grundlagen/Steuerungsarten.png}
 		\caption[Vergleich Offene und Geschlossene Steuerung]{Links: Offene Steuerung. Rechts: Geschlossene Regelung mit Rückkopplung}
-	\label{fig:<Sprungmakre>}
+		\cite{Hertzberg.MobileRoboter}
 \end{figure}
 \newline
-Die Sensordatenverarbeitung hat die Aufgabe die durch die Sensoren erfassten Daten zu verarbeiten, aufzubereiten und sie für komplexere Anwendungen nutzbar zu machen. Dazu gehören die Filterung der Daten, Extraktion bestimmter Merkmale sowie weiterführende Berechnung von Kenngrößen und Informationen [MR 67]
-\paragraph{Odometrie \& Koppelnavigation}
+Die Sensordatenverarbeitung hat die Aufgabe, die durch die Sensoren erfassten Daten zu verarbeiten, aufzubereiten und sie für komplexere Anwendungen nutzbar zu machen. Dazu gehören die Filterung der Daten, Extraktion bestimmter Merkmale sowie weiterführende Berechnung von Kenngrößen und Informationen.\footnote{\citep[vgl.][Mobile Roboter, Seite 67]{Hertzberg.MobileRoboter}\label{note15}}
+\paragraph{Odometrie \& Koppelnavigation}\label{odometrie}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{process}
 % Eigentlicher Text:
-Die Odometrie bezeichnet eine Methode zur Berechnung von Position und Orientierung eines mobilen Systems anhand von Bewegungsdaten. Räderbasierte Systeme benutzen dafür die Anzahl der Radumdrehungen, während laufende Systeme die Anzahl ihrer Schritte verwenden. Ist beispielsweise der Raddurchmesser bekannt, so kann über die Anzahl $n$ der Radumdrehungen (welche z.B. mittels Inkrementalgebern erfasst wird) zwischen zwei Messzeitpunkten und dem Radumfang $\pi \cdot d$, wobei $d$ den Raddurchmesser darstellt, die zurückgelegte Wegstrecke $\Delta{}s$ breechnet werden:
+Die Odometrie bezeichnet eine Methode zur Berechnung von Position und Orientierung eines mobilen Systems anhand von Bewegungsdaten. Räder basierte Systeme benutzen dafür die Anzahl der Radumdrehungen, während laufende Systeme die Anzahl ihrer Schritte verwenden. Ist beispielsweise der Raddurchmesser bekannt, so kann über die Anzahl $n$ der Radumdrehungen (welche z.B. mittels Inkrementalgebern erfasst wird) zwischen zwei Messzeitpunkten und dem Radumfang $\pi \cdot d$, wobei $d$ den Raddurchmesser darstellt, die zurückgelegte Wegstrecke $\Delta{}s$ berechnet werden:
 \begin{equation}
 \Delta{}s = \pi \cdot d \cdot n
 \end{equation}
-Unter Koppelnavigation versteht man die Bestimmung der Position eines mobilen Systems relativ zu einem Referenzpunkt (Startposition) entweder durch die inkrementelle Integration der zurückgelegten Wegstrecken unter Berücksichtigung der Orientierung (Winkeländerung) oder der Geschwindigkeit des Systems unter Berücksichtigung der Winkelgeschwindingkeit [MREPE 98]. 
+Unter Koppelnavigation versteht man die Bestimmung der Position eines mobilen Systems relativ zu einem Referenzpunkt (Startposition) entweder durch die inkrementelle Integration der zurückgelegten Wegstrecken unter Berücksichtigung der Orientierung (Winkeländerung) oder der Geschwindigkeit des Systems unter Berücksichtigung der Winkelgeschwindigkeit.\footnote{\citep[vgl.][Mobile Robotik, Seite 98]{Nehmzow.MobileRobotik}\label{note16}}
 \newline
-Ist der Ausgangspunkt eines Roboters, die zurückgelegte Strecke bzw. Geschwindigkeit sowie die Fahrtrichtung genau bekannt sind, kann die Navigationskomponente einfach die Bewegung des Roboterssystms über die Zeit integrieren und so die aktuelle Position und Orientierung des Roboters bestimmen [HR 107 f.]
+Ist der Ausgangspunkt eines Roboters, die zurückgelegte Strecke bzw. Geschwindigkeit sowie die Fahrtrichtung genau bekannt, kann die Navigationskomponente die Bewegung des Roboterssystms über die Zeit integrieren und so die aktuelle Position und Orientierung des Roboters bestimmen.\footnote{\citep[vgl.][Handbuch Robotik, Seite 107 f.]{Haun.HandbuchRobotik}\label{note17}}
 \newline
-Im eindimensionalen Fall (keine Richtungsäderungen) ergibt sich aus dem Startpunkt $s_{alt}$ und  der zurückgelegten Wegstrecke $\Delta{}s$ aus Gleichung (1), für die aktuelle Position $s_{neu}$ die Gleichung:
+Im eindimensionalen Fall (keine Richtungsänderungen) ergibt sich aus dem Startpunkt $s_{alt}$ und  der zurückgelegten Wegstrecke $\Delta{}s$ aus Gleichung (1), für die aktuelle Position $s_{neu}$ die Gleichung:
 \begin{equation}
 s_{neu} = s_{alt} + \Delta{}s
 \end{equation}
 Für eine zweidimensionale Bewegung in einem 2-dimensionalen kartesische Bezugssystem in dem sich die Position eines Roboters als Koordinate durch x- und y-Punkt darstellen lässt ergibt sich die
-Position $(x_{n},y_{n})$ und die Orientierung $\theta{}_{n}$ zum Interationsschritt (Messpunkt) $n$ durch die Formeln:
+Position $(x_{n},y_{n})$ und die Orientierung $\theta{}_{n}$ zum Iterationsschritt (Messpunkt) $n$ durch die Formeln:
 \begin{equation}
 x_{n} = x_{0} + \sum_{i=1}^{n} \Delta{}s_{i} \cdot cos(\theta{}_{i})
 \end{equation}
@@ -176,21 +162,22 @@ y_{n} = y_{0} + \sum_{i=1}^{n} \Delta{}s_{i} \cdot sin(\theta{}_{i})
 \begin{equation}
 \theta{}_{n} = \theta{}_{0} + \sum_{i=1}^{n} \Delta{}\theta{}_{i}
 \end{equation}
-Wobei $(x_{0},y_{0})$ der Startpunkt und $\theta{}_{0}$ die Startorienterung sowie $\Delta{}s_{i}$ die zurückgelegte Wegstrecke und $\Delta{}\theta{}_{i}$ die Richtungsänderung innerhalb eines Interationsschritt darstellt.
+Wobei $(x_{0},y_{0})$ der Startpunkt und $\theta{}_{0}$ die Startorientierung sowie $\Delta{}s_{i}$ die zurückgelegte Wegstrecke und $\Delta{}\theta{}_{i}$ die Richtungsänderung innerhalb eines Iterationsschritt darstellt.
 \newline
-Die Odometrie ist im Zusammenspiel mit der Koppelnavigation ein grundlegendes Navigationsverfahren für bodengebundene Fahrzeuge aller Art. Allerdings besteht ein wesentliches Problem darin, das ein Robotersystem seine Bewegungen absolut präzise messen können muss, damit die Odometrie bzw. Koppelnavigation richtige Werte liefert. Dies ist unter Umständen aufgrund
-von Problemen wie beispielsweise varierender Raddurchmesser dem Durchdrehen oder Gleiten der Räder erschwert wird [HR 108].
+Die Odometrie ist im Zusammenspiel mit der Koppelnavigation ein grundlegendes Navigationsverfahren für bodengebundene Fahrzeuge aller Art. Allerdings besteht ein wesentliches Problem darin, dass ein Robotersystem seine Bewegungen absolut präzise messen können muss, damit die Odometrie bzw. Koppelnavigation richtige Werte liefert. Dies ist unter Umständen aufgrund
+von Problemen wie beispielsweise variierender Raddurchmesser dem Durchdrehen oder Gleiten der Räder erschwert wird.\footnote{\citep[vgl.][Handbuch Robotik, Seite 108]{Haun.HandbuchRobotik}\label{note18}}
 \newline
-Wegen diesen Problemen finden sich kaum Roboternavigationssysteme, welche ausschließlich eine Koppelnavigation zur Bestimmung von Position und Orientierung verwenden. Es gibt zwar Navigationssysteme welche die Koppelnaviagtion verwenden, jedoch beziehen diese noch weitere Sensorinformationen wie beispielsweise Beschleunigungswerte zur Bestimmung der Position und Ausrichtung mit ein [MREPE 115].
-\subsubsection{Antriebsarten}als Koordinaten (x,y,z-Punkte)
+Wegen diesen Problemen finden sich kaum Roboternavigationssysteme, welche ausschließlich eine Koppelnavigation zur Bestimmung von Position und Orientierung verwenden. Es gibt zwar Navigationssysteme, welche die Koppelnavigation verwenden, jedoch beziehen diese noch weitere Sensorinformationen, wie beispielsweise Beschleunigungswerte zur Bestimmung der Position und Ausrichtung mit ein.\footnote{\citep[vgl.][Mobile Robotik, Seite 115]{Nehmzow.MobileRobotik}\label{note19}}
+\subsubsection{Antriebsarten}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{process}
 % Eigentlicher Text:
-Die entscheidenede Eigenschaft des mobilen Roboters ist die Fähigkeit sich (selbständig) durch seine Umwelt zu bewegen. Um dies zu realisiern gibt es eine Vielzahl unterschiedlichster Fortbewergungsarten beispielsweise in Form von schreitenden, kriechenden oder krabbelnden, sowie fliegenden, schwimmende oder tauchenden Robotern [MR 103].
+Die entscheidende Eigenschaft des mobilen Roboters ist die Fähigkeit sich selbständig durch seine Umwelt zu bewegen. Um dies zu realisieren gibt es eine Vielzahl unterschiedlichster Fortbewegungsarten, beispielsweise in Form von schreitenden, kriechenden oder krabbelnden, sowie fliegenden, schwimmenden oder tauchenden Robotern.\footnote{\citep[vgl.][Mobile Roboter, Seite 103]{Hertzberg.MobileRoboter}\label{note20}}
 \newline
-Um den Umfang dieser Ausarbeitung überschaubar zu halten, beschränken wir uns auf radgetriebene Roboter.
+Um den Umfang dieser Ausarbeitung überschaubar zu halten, beschränken wir uns auf die Darstellung von radgetriebenen Robotern.
+\medskip
 \newline
-Hinsichtlich Rad- und Achsenanzahl, Anordnung der Räder sowie dem Verhältnis zwischen angetrieben und freilaufenden als auch lenkbaren zu unleknbaren Rädern gibt es eine Vielzahl von Möglichkeiten den Antrieb von mobilen Robotern zu konzipieren. Die folgende Abschnitte geben einen Überblick über die gängigsten radbasierten Antriebskonzepte [MR 107 f.]
+Hinsichtlich Rad- und Achsenanzahl, Anordnung der Räder sowie dem Verhältnis zwischen angetrieben und freilaufenden, als auch lenkbaren zu unlenkbaren Rädern gibt es eine Vielzahl von Möglichkeiten den Antrieb von mobilen Robotern zu konzipieren. Die folgende Abschnitte geben einen Überblick über die gängigsten radbasierten Antriebskonzepte.\footnote{\citep[vgl.][Mobile Roboter, Seite 107 f.]{Hertzberg.MobileRoboter}\label{note21}}
 \begin{wrapfigure}{r}{0.30\textwidth}
 	\vspace{+0.5cm}
 	\begin{center}
@@ -203,11 +190,10 @@ Hinsichtlich Rad- und Achsenanzahl, Anordnung der Räder sowie dem Verhältnis z
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{process}
 % Eigentlicher Text:
-Dieser Antrieb besteht aus zwei voneinander unabhängig angetriebene, starren Rädern die sich auf einer Achse befinden. Zusätzlich gibt es meist ein oder auch mehrere passiv mitlaufenden Stützrädern die sich frei drehen können. Je nachdem wie und in welchem Verhältnis zueinander die beiden Antreibsräder sich drehen fährt der Roboter gerade aus, eine mehr oder weniger weite Rechts- oder Linkskurve oder dreht sich auf der Stelle.
-\newline
-Vorteile diese Antriebs sind seine einfache Mechanik und gute Manövierbarkeit jedoch erfordert diser Antrieb eine Radregelung in Echtzeit.
+Dieser Antrieb besteht aus zwei voneinander unabhängig angetriebene, starren Rädern die sich auf einer Achse befinden. Zusätzlich gibt es meist ein oder auch mehrere passiv mitlaufenden Stützrädern, die sich frei drehen können. Je nachdem, wie und in welchem Verhältnis zueinander die beiden Antriebsräder sich drehen, fährt der Roboter gerade aus, eine mehr oder weniger weite Rechts- oder Linkskurve oder dreht sich auf der Stelle.\\
+Vorteile dieses Antriebs sind seine einfache Mechanik und gute Manövierbarkeit, welcher jedoch eine Radregelung des Antriebs in Echtzeit erfordert.
 \begin{wrapfigure}{r}{0.30\textwidth}
-	\vspace{-0.75cm}
+	\vspace{-0.25cm}
 	\begin{center}
 		\includegraphics[width=0.20\textwidth]{images/technische_grundlagen/Einachsenlenkung.png}
 	\end{center}
@@ -218,10 +204,9 @@ Vorteile diese Antriebs sind seine einfache Mechanik und gute Manövierbarkeit j
 % Farbe die Differentialantriebangibt welchen Status der folgende Abschnitt hat:
 \color{process}
 % Eigentlicher Text:
-Dieses Antriebsprinzip entspricht dem aus gängigen PKWs bekannten Konzept. Von den vier Rädern von denen jeweils zwei an einer Achse angebracht sind sind die beiden Räder einer Achse lenkbar. Für den Antrieb ist es möglich ein der beiden Achsen als auch beide für den anzutreiben. 
+Dieses Antriebsprinzip entspricht dem aus gängigen PKWs bekannten Konzept. Von den vier Rädern, von denen jeweils zwei an einer Achse angebracht sind, sind beide Räder einer Achse lenkbar. Für den Antrieb ist es möglich eine der beide Achsen, als auch beide anzutreiben. 
 \newline
-Der Vorteil dieses Antreibskonzeptes ist die gute Stabilität und die Möglichkeit der Trennung von Antrieb und Lenkkung jedoch ist die Nanövierbarkeit eingeschränkter als bei den anderen Antriebsarten.
-\pagebreak
+Der Vorteil dieses Antriebskonzeptes ist die gute Stabilität und die Möglichkeit der Trennung von Antrieb und Lenkung jedoch ist die Nanövierbarkeit eingeschränkter als bei den anderen Antriebsarten.
 \begin{wrapfigure}{r}{0.30\textwidth}
 	\vspace{+0.25cm}
 	\begin{center}
@@ -234,10 +219,9 @@ Der Vorteil dieses Antreibskonzeptes ist die gute Stabilität und die Möglichke
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{process}
 % Eigentlicher Text:
-Bei diesem Antriebskonzept verfügt der mobile Roboter über zwei freilaufenden Räder auf einer Achse sowie einem einzelnen angetriebenen und gelenkten Rad welches zentral vor den beiden anderen Rädern angebracht ist. Es ist aber auch möglich, dass ein Motor die beiden Hinterräder
-antreibt, und das Vorrderrad allein der Lenkung dient.
+Bei diesem Antriebskonzept verfügt der mobile Roboter über zwei freilaufenden Räder auf einer Achse sowie einem einzelnen angetriebenen und gelenkten Rad, welches zentral vor den beiden anderen Rädern angebracht ist. Es ist auch möglich, dass ein Motor beide Hinterräder antreibt, und das Vorderrad allein der Lenkung dient.
 \newline
-Die einfache Mechanik dieser Antriebsform ist ein Vorteil jedoch ist die Manövierbarkeit eingeschränkter als beim Synchro- oder Differentialantrieb und die Stabilität ist geringer als bei der Einachsen Lenkung die über ein zusätzliches Rad an der Vorderachse verfügt.
+Die einfache Mechanik dieser Antriebsform ist ein Vorteil, jedoch ist die Manövierbarkeit eingeschränkter als beim Synchro- oder Differentialantrieb und die Stabilität ist geringer, als bei der Einachsen Lenkung, die über ein zusätzliches Rad an der Vorderachse verfügt.
 \begin{wrapfigure}{r}{0.30\textwidth}
 	\vspace{-0.8cm}
 	\begin{center}
@@ -246,17 +230,15 @@ Die einfache Mechanik dieser Antriebsform ist ein Vorteil jedoch ist die Manövi
 	\caption{Einachsige Lenkung}
 	\label{fig:einachsenlenkung}
 \end{wrapfigure}
-\paragraph{Synchro-Andrieb}
+\paragraph{Synchro-Antrieb}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{process}
 % Eigentlicher Text:
-Der Synchro-Antrieb hat die selbe Radanordnung wie der Dreirad-Antrieb, jedoch werden die drei Räder synchron angetriebene und sind auch nur synchron drehbare drehbar. Die Räder haben somit immer die selbe Ausrichtung und drehen sich auch mit der selben Geschwindigkeit. Eine Drehung 
-des Roboters bzw. der auf dem Antrieb angebrachte Plattform ist nicht direkt möglich.
+Der Synchro-Antrieb hat die selbe Radanordnung, wie der Dreirad-Antrieb, jedoch werden die drei Räder synchron angetriebene und sind auch nur synchron drehbar. Die Räder haben somit immer die selbe Ausrichtung und drehen sich auch mit der selben Geschwindigkeit. Eine Drehung des Roboters bzw. der auf dem Antrieb angebrachte Plattform ist nicht direkt möglich.
 \newline
-Durch die synchrone Lenkung und den synchronen Antrieb der Räder erfordert diese Antriebsform eine weitaus komplexere Mechanik als die anderen Antriebsarten, garantiert jedoch einen stetigen
-Geradeauslauf und erfordert keine komplexe Regelung [MR 107 f.].
+Durch die synchrone Lenkung und den synchronen Antrieb der Räder erfordert diese Antriebsform eine weitaus komplexere Mechanik, als die anderen Antriebsarten, garantiert jedoch einen stetigen Geradeauslauf und erfordert keine komplexe Regelung.\footnote{\citep[vgl.][Mobile Roboter, Seite 107 f.]{Hertzberg.MobileRoboter}\label{note22}}
 \begin{wrapfigure}{r}{0.30\textwidth}
-	\vspace{-1.0cm}
+	\vspace{-0.5cm}
 	\begin{center}
 		\includegraphics[width=0.25\textwidth]{images/technische_grundlagen/Omniantrieb.png}
 	\end{center}
@@ -267,20 +249,17 @@ Geradeauslauf und erfordert keine komplexe Regelung [MR 107 f.].
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{process}
 % Eigentlicher Text:
-Beim Omni-Antrieb kommen omnidirektionale Räder wie Allseitenräder oder Mecanum-Räder zum Einsatz durch ihren speziellen Aufbau ist der Roboter in der Lage, sich sowohl auf der Stelle zu Drehen als auch in alle Richtungen zu bewegen ohne sich vorher drehen zu müssen. Dies verleit dem Antrieb eine uneingeschränkte Beweglichkeit in jede Richtungen (x, y und $\omega{}$).
+Beim Omni-Antrieb kommen omnidirektionale Räder wie Allseitenräder oder Mecanum-Räder zum Einsatz. Durch ihren speziellen Aufbau ist der Roboter in der Lage, sich sowohl auf der Stelle zu Drehen, als auch in alle Richtungen zu bewegen, ohne sich vorher drehen zu müssen. Dies verleiht dem Antrieb eine uneingeschränkte Beweglichkeit in jede Richtungen (x, y und $\omega{}$).
 \newline
-Der Große Vorteil dieser Antriebsform ist die uneingeschränkte Beweglichkeit. Jedoch birgt diese Art des Antriebs eine gewisse mechanische Kompläxität und erfordert eine Aufwändige Steuerung.
-\pagebreak
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{process}
-% Eigentlicher Text:
-Im folgenden soll hier der Differentialantrieb detailierte behandelt werden da dieser für dieses Projekt von besonderer Bedeutung ist.
+Der Große Vorteil dieser Antriebsform ist die uneingeschränkte Beweglichkeit. Jedoch birgt diese Art des Antriebs eine gewisse mechanische Komplexität und erfordert eine aufwändige Steuerung.
+
+\newpage
 \subsection{\LM}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-\LM{} ist eine seit 1988 existierende Produktserie des Spielwarenherstellers \LE{} \cite[vgl.][21]{Scholz.DasEV3}. 
-\LM{} ermöglicht das Bauen, Programmieren und Steuern verschiedener \LE{} Roboter. Dies Roboter bestehen dabei aus
+\LM{} ist eine seit 1988 existierende Produktserie des Spielwarenherstellers \LE{}.\footnote{\citep[vgl.][Das EV3 Roboter Universum, Seite 21]{Scholz.DasEV3}\label{note23}}
+\LM{} ermöglicht das Bauen, Programmieren und Steuern verschiedener \LE{} Roboter. Diese Roboter bestehen dabei aus
 gängigen \LE{} Teilen die auch in anderen \LE{}-Produkten Verwendung finden, sowie speziellen \LE{}-Komponenten 
 wie einer zentralen Steuereinheit, Motoren und Sensoren.
 %-------------------------------------------------------------------------------------------------------------------------------------------
@@ -291,49 +270,35 @@ wie einer zentralen Steuereinheit, Motoren und Sensoren.
 \color{finishing}
 % Eigentlicher Text:
 Der 2013 erschienene EV3 ist das dritte System der \LM{} Reihe. Die Bezeichnung setzt sich aus EV für Evolution 
-und 3 für die 3 Stufe der \LM{}-Serie zusammen \cite[vgl.][Seite 21]{Scholz.DasEV3}. \\
+und 3 für die dritte Stufe der \LM{}-Serie zusammen.\footref{note23} \\
 Im Vergleich zu den Vorgängersystemen verfügt das EV3-System über eine modernere und leistungsfähigere Steuereinheit und auch die anderen elektronischen Komponenten des System wurden an den heutigen Stand der Technik 
-angepasst \cite[vgl.][Seite 22]{Scholz.DasEV3}.
+angepasst.\footnote{\citep[vgl.][Das EV3 Roboter Universum, Seite 22]{Scholz.DasEV3}\label{note24}}
 \medskip
 \newline
-Die folgende Abbildung X.X zeigt einige der zentralen Komponeten des EV3-Systems, wie die Steuereinheit (EV3-Stein), Motoren und vier Sensoren.
+Die folgende Abbildung \ref{fig:ev3system} zeigt einige der zentralen Komponenten des EV3-Systems, wie die Steuereinheit (EV3-Stein), Motoren und vier Sensoren.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.90\textwidth]{images/technische_grundlagen/EV3-Overview.png}
 	\caption[Zentrale Komponenten des EV3-Systems]{Zentrale Komponenten des EV3-Systems}
-	\label{fig:<Sprungmakre>}
+	\label{fig:ev3system}
 \end{figure}
 \newline
-Neben den elektronischen Komponeten gehören auch nicht elektronische Teile wie Verbindungsstücke, Balken und Zahnräder 
-wie sie aus gängigen \LE{} Produkten bekannt sind, zum EV3-System. Sie bilden die strukturelle und meschanische Grundlage 
-der Roboter.
+Neben den elektronischen Komponenten gehören auch nicht elektronische Teile, wie Verbindungsstücke, Balken und Zahnräder, wie sie aus gängigen \LE{} Produkten bekannt sind, zum EV3-System. Sie bilden die strukturelle und mechanische Grundlage der Roboter.
 \medskip
 \newline
-Im Folgenden wird auf die elektronischen Komponenten des EV3-Systems näher eingegangen.
-dieses Projekt eine deutlich größere Relevanzu aufweisen.
+Im Folgenden wird auf die elektronischen Komponenten des EV3-Systems näher eingegangen, da diese im Projekt eine deutlich größere Relevanz aufweisen.
 \subsubsection{Der EV3-Stein (Steuereinheit)}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-Die zentrale Komponenten und das Gehirn des LEGO MINDSTORMS EV3-Systems ist die zentrale Steuereinheit kurz (EV3-)Stein oder auch Brick genannt. Bei ihm handelt
-es sich um eine Computer welcher selbständig Programme ausführen kann. Dazu verfügt der EV3-Stein über 
-ein Linux Betriebssystem und eine spezielle Firmware, die wie die auszuführenden Programme auf einem Flash-Speicher liegen \cite[vgl.][21]{Scholz.DasEV3}. \\
-Zur Kommunikation mit dem PC verfügt der EV3-Stein über eine USB- sowie Bluetooth-Schnittstelle. Neben der 
-Kommunikation zu einem Computer kann die USB-Schnittstelle auch für den Zusammenschluss mit einem weiteren EV3-Stein (genannt Daisy Chain) 
-genutzt werden \cite[vgl.][Seite 21]{Scholz.DasEV3}.  \\
-Für den Anschluss von Motoren und Sensoren verfügt der EV3-Stein über 8 Ports, an welche die anderen System-Komponenten müber Kabel mit RJ12-Steckern angeschlossen werden. 4 der Ports dienen für den Anschluss von
-Motoren, die restlichen 4 Ports für die Abfrage von Sensorwerte \cite[vgl.][21]{Scholz.DasEV3}.  \\
-Der EV3-Stein besitzt an der Vorderseite ein LCD-Display zur Anzeige von Texten und Grafiken sowie  
-6 Knöpfe für die Bedienung durch den Benutzer. Display und Knöpfe dienen zur Bedienung der Firmware sowie zur Tätigung von Einstellungen, können aber ebenso durch Programmen angesprochen und ausgewertet werden
-Start
-Mein Kanal
-Trends
-Abos
-BIBLIOTHEK
-\cite[vgl.][21]{Scholz.DasEV3}. 
-\smallskip
+Die zentrale Komponenten und das Gehirn des LEGO MINDSTORMS EV3-Systems ist die zentrale Steuereinheit, kurz (EV3-)Stein oder auch Brick genannt. Bei ihm handelt es sich um einen Computer, welcher selbständig Programme ausführen kann. Dazu verfügt der EV3-Stein über ein Linux Betriebssystem und eine spezielle Firmware, die wie die auszuführenden Programme auf einem Flash-Speicher liegen.\footnote{\citep[vgl.][Das EV3 Roboter Universum, Seite 21]{Scholz.DasEV3}\label{note25}} \\
+Zur Kommunikation mit dem PC verfügt der EV3-Stein über eine USB- sowie Bluetooth-Schnittstelle. Neben der Kommunikation zu einem Computer kann die USB-Schnittstelle auch für den Zusammenschluss mit einem weiteren EV3-Stein (genannt Daisy Chain) genutzt werden.\footref{note25}  \\
+Für den Anschluss von Motoren und Sensoren verfügt der EV3-Stein über 8 Ports, an welche die anderen System-Komponenten über Kabel mit RJ12-Steckern angeschlossen werden. 4 der Ports dienen für den Anschluss von
+Motoren, die restlichen 4 Ports für die Abfrage von Sensorwerte.\footref{note25} \\
+Der EV3-Stein besitzt an der Vorderseite ein LCD-Display zur Anzeige von Texten und Grafiken sowie 6 Knöpfe für die Bedienung durch den Benutzer. Display und Knöpfe dienen zur Bedienung der Firmware sowie zur Tätigung von Einstellungen, können aber ebenso durch Programme angesprochen und ausgewertet werden.\footref{note25}
+\medskip
 \newline
-Die folgende Auflistung zeigt einige Leistungsmerkmale des EV3-Steins \citep[vgl.][Seite 23 f., Seite 32]{Scholz.DasEV3, Schobel.RobertaEV3Programmieren}.
+Die folgende Auflistung zeigt einige Leistungsmerkmale des EV3-Steins.\footnote{\citep[vgl.][Das EV3 Roboter Universum, Seite 23 f., EV3-Programmieren mit Java, Seite 32]{Scholz.DasEV3, Schobel.RobertaEV3Programmieren}\label{note26}}
 \begin{itemize}
 	\item{Prozessor:} ARM9 32Bit, 300 MHz, 16 MB Flash 64MB RAM
 	\item{Betriebssystem:} Linux
@@ -344,12 +309,11 @@ Die folgende Auflistung zeigt einige Leistungsmerkmale des EV3-Steins \citep[vgl
 	\item{Display:} LCD Matrix, monochrom, 178 x 128 Pixel
 	\item{Kommunikation:} Bluetooth v2.1, USB 2.0 (Kommunikation zum PC), USB 1.1 (Daisy Chain)
 \end{itemize}
-\subsubsection{Motoren}
+\subsubsection{Motoren}\label{motoren}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-Das EV3-System verfügt über zwei unterschiedliche Motoren, einen großen Motor und einen mittleren Motor. 
-Bei beiden handelt es sich um Servormotoren mit integriertem Rotationssensor, welche von außen angesteuert und abgefragt werden können \cite[vgl.][92]{Schobel.RobertaEV3Programmieren}. Die Motoren lassen sich sehr exakt steuern und ermöglichen so einen synchronen Betrieb mehrerer Motoren \cite[vgl.][Seite 29 f.]{Scholz.DasEV3}.
+Das EV3-System verfügt über zwei unterschiedliche Motoren, einen großen Motor und einen mittleren Motor. Bei beiden handelt es sich um Servomotoren mit integriertem Rotationssensor, welche von außen angesteuert und abgefragt werden können.\footnote{\citep[vgl.][EV3-Programmieren mit Java, Seite 92]{Schobel.RobertaEV3Programmieren}\label{note27}} Die Motoren lassen sich sehr exakt steuern und ermöglichen so einen synchronen Betrieb mehrerer Motoren.\footnote{\citep[vgl.][Das EV3 Roboter Universum, Seite 29 f.]{Scholz.DasEV3}\label{note28}}
 \smallskip
 \newline
 Die folgende Tabelle zeigt die wichtigsten Eigenschaften der beiden Motoren.
@@ -369,38 +333,35 @@ Die folgende Tabelle zeigt die wichtigsten Eigenschaften der beiden Motoren.
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-Zum EV3-System gehören eine Reihe von verschiedenen Sensoren die es den Robotern ermöglichen Informationen über ihre Umwelt zu sammeln sowie ihre Eigenbewegungen zu erfassen. Im folgenden Abschnitt werden die wichtigsten Sensoren mit ihren Leistungsmerkmalen beschrieben.
+Zum EV3-System gehören eine Reihe von verschiedenen Sensoren, die es den Robotern ermöglichen Informationen über ihre Umwelt zu sammeln sowie ihre Eigenbewegungen zu erfassen. Im folgenden Abschnitt werden die wichtigsten Sensoren mit ihren Leistungsmerkmalen beschrieben.
 \paragraph{Farbsensor}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-Der Frabsensor ist ein digitaler Sensor der dazu dient die Lichtintensität sowie verschiedener Farben zu erkennen. Der Sensor kann sowohl
-aktiv als auch passiv betrieben werden und verfügt dafür über vier unterschiedliche Betriebsmodi  \cite[vgl.][101]{Schobel.RobertaEV3Programmieren}:
+Der Farbsensor ist ein digitaler Sensor, der dazu dient die Lichtintensität sowie verschiedener Farben zu erkennen. Der Sensor kann sowohl
+aktiv, als auch passiv betrieben werden und verfügt dafür über vier unterschiedliche Betriebsmodi:\footnote{\citep[vgl.][EV3-Programmieren mit Java, Seite 101]{Schobel.RobertaEV3Programmieren}\label{note29}}
 \begin{itemize}
 	\item{Farbmodus (passiv)} - In diesem Modus erkennt der Sensor 7 verschiedenen Farben.
-	\item{RGB-Modus (aktiv)} - In diesem Modus sendet der Sensor nacheinander rotes, grünes und balues Licht aus, je nachdem zu welchem Anteil ein Gegenstand die einzelnen Farben reflektiert wird die Frabe des Gegenstands ermittelt.
+	\item{RGB-Modus (aktiv)} - In diesem Modus sendet der Sensor nacheinander rotes, grünes und Balles Licht aus, je nachdem zu welchem Anteil ein Gegenstand die einzelnen Farben reflektiert wird die Farbe des Gegenstands ermittelt.
 	\item{Rotlicht-Modus (aktiv)} - Bei diesem Modus wird Rotlicht ausgesendet und die Intensität des reflektierten Lichts gemessen.
-	\item{Umgebungslicht-Modus (passiv)} - Bei diesem Modus wird die Intesnsität des in das Sensorfenster eindringende Umgebungslichts gemessen.
+	\item{Umgebungslicht-Modus (passiv)} - Bei diesem Modus wird die Intensität des in das Sensorfenster eindringende Umgebungslichts gemessen.
 \end{itemize}
 \smallskip
 Eigenschaften:
 \begin{itemize}
-	\item{Erkennung der Farben:} keine Farbe, Schwarz, Blau, Grün, Gelb, Rot, Weiß, Barun
+	\item{Erkennung der Farben:} keine Farbe, Schwarz, Blau, Grün, Gelb, Rot, Weiß, Braun
 	\item{Abtastrate:} 1.000 Hz
-	\item{Entfrenung:} 15 bis 50 mm
+	\item{Entfernung:} 15 bis 50 mm
 \end{itemize}
-Durch diesen Sensor wird es beispielsweise möglich den Roboter einer frabigen Linie auf dem Boden zu folgen.
+Durch diesen Sensor wird es beispielsweise möglich, den Roboter einer farbigen Linie auf dem Boden folgen zu lassen.
 \paragraph{Ultraschallsensor}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-Diese aktive Sensor verwendet für den Menschen unhörbaren Ultraschall um die Entfernung von Objekten zu ermitteln.
-Der Sensor emmitiert dazu Untraschall und misst die Laufzeit der Schallwellen, wenn diese von einem Objekt reflektiert
-werden, aus der Laufzeit kann dann die Entfernung ermittelt werden.
-Der Senors verfügt über zwei unterschiedliche Betriebsmodi \cite[vgl.][32 f.]{Scholz.DasEV3}:
+Diese aktive Sensor verwendet einen für den Menschen unhörbaren Ultraschall, um die Entfernung von Objekten zu ermitteln. Der Sensor emittiert dazu Ultraschall und misst die Laufzeit der Schallwellen, wenn diese von einem Objekt reflektiert werden, aus der Laufzeit kann dann die Entfernung ermittelt werden. Der Sensor verfügt über zwei unterschiedliche Betriebsmodi:\footnote{\citep[vgl.][Das EV3 Roboter Universum, Seite 32 f.]{Scholz.DasEV3}\label{note30}}
 \begin{itemize}
-	\item{Messen} - In diesem Modus sendet der Sensor Ultraschall aus um die Entfernung von Objekten zu ermitteln.
-	\item{Scannen} - In diesem passiven Modus emittiert der Sensor selbst keinen Untraschall, sondern er reagiert auf >>fremden<< Ultraschall und kann so einen anderen aktiven Ultraschallsensor erkennen.
+	\item{Messen} - In diesem Modus sendet der Sensor Ultraschall aus, um die Entfernung von Objekten zu ermitteln.
+	\item{Scannen} - In diesem passiven Modus emittiert der Sensor selbst keinen Ultraschall, sondern er reagiert auf fremden Ultraschall und kann so einen anderen aktiven Ultraschallsensor erkennen.
 \end{itemize}
 \smallskip
 Eigenschaften:
@@ -412,16 +373,12 @@ Eigenschaften:
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-Der Berührungssensor ist ein einfacher mechanischer Sensor. Wird der Knopf am Ende des Senors gedrückt wird dies
-registriert. Trotz der Einfachheit dieses Sensors ist dieser dennoch sehr nützlich, da er beispielsweise die
-Kollision des Roboters mit einem Hindernis erkennen kann \cite[vgl.][33]{Scholz.DasEV3}.
+Der Berührungssensor ist ein einfacher mechanischer Sensor. Wird der Knopf am Ende des Sensors gedrückt wird dies registriert. Trotz der Einfachheit dieses Sensors ist dieser dennoch sehr nützlich, da er beispielsweise die Kollision des Roboters mit einem Hindernis erkennen kann.\footnote{\citep[vgl.][Das EV3 Roboter Universum, Seite 33]{Scholz.DasEV3}\label{note31}}
 \paragraph{Kreiselsensor (Gyroskop)}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-Der Kreiselsensor ermöglicht es Drehbewegungen um eine Achse über Rotationsgeschwindigkeit und Drehwinkel zu 
-messen. Dadurch wird es möglich die Eigenbewegung des Roboters oder einer Roboterkomponente zu registrieren 
-\cite[vgl.][33]{Scholz.DasEV3}.
+Der Kreiselsensor ermöglicht es Drehbewegungen um eine Achse über Rotationsgeschwindigkeit und Drehwinkel zu messen. Dadurch wird es möglich die Eigenbewegung des Roboters oder einer Roboterkomponente zu registrieren.\footnote{\citep[vgl.][Das EV3 Roboter Universum, Seite 33]{Scholz.DasEV3}\label{note32}}
 \medskip
 \newline
 Eigenschaften:
@@ -430,13 +387,11 @@ Eigenschaften:
 	\item{Geschwindigkeit: maximal 440 Grad/Sekunde}
 	\item{Abtastrate: 1.000 Hz}
 \end{itemize}
-\paragraph{Rotationssensor (Integiert)}
+\paragraph{Rotationssensor (Integriert)}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
 % Eigentlicher Text:
-Wie bereits im Abschnitt X.X dargelegt verfügen die beiden Motortypen über initgrierte Rotationssensoren die es
-ermöglichen, die Umdrehungen der Motoren auszulesen. Durch diese Sensoren ist es möglich durch Odometrie 
-Rückschlüsse über die Bewegung bzw. Position des Roboters zu schließen.
+Wie bereits im Abschnitt \eqref{motoren} dargelegt verfügen die beiden Motortypen über integrierte Rotationssensoren, die es ermöglichen die Umdrehungen der Motoren auszulesen. Durch diese Sensoren können mittels Odometrie Rückschlüsse über die Bewegung bzw. Position des Roboters geschlossen werden.
 \medskip
 \newline
 Eigenschaften:
@@ -445,20 +400,15 @@ Eigenschaften:
 	\item{Umdrehungen: Motorabhängig}
 \end{itemize}
 \bigskip
-Neben den hier vorgestellten Sensoren existiert noch ein Infrarotsensor, welcher in Verbindung mit einer Infrarotfernsteruerung dazu dient einen EV3-Roboter fernzusteuern.
+Neben den hier vorgestellten Sensoren existiert noch ein Infrarotsensor, welcher in Verbindung mit einer Infrarotfernsteuerung dazu dient einen EV3-Roboter fernzusteuern.
 %### Subsubsektion über XXX ################################################################################################################
 \subsubsection{Programmierung}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{process}
 % Eigentlicher Text:
-Für die Programmierung der \LM{} Produkte gibt es eine Reihe unterschiedlicher Programmiersprachen und -umgebungen. Die hauseigene \LE{}-Software zur Programmierung des EV3 richtet sich an Einsteiger. Sie ermöglicht es über eine grafische Oberfläche via vorgefertigter Programmabläufe welche durch grafische Blöcke repräsentiert werden den EV3 zu programmieren.\footnote{\citep[vgl.][25 f.]{Schobel.RobertaEV3Programmieren}\label{Roberta25psq}} \\
+Für die Programmierung der \LM{} Produkte gibt es eine Reihe unterschiedlicher Programmiersprachen und -umgebungen. Die hauseigene \LE{}-Software zur Programmierung des EV3 richtet sich an Einsteiger. Sie ermöglicht es über eine grafische Oberfläche via vorgefertigter Programmabläufe, welche durch grafische Blöcke repräsentiert werden den EV3 zu programmieren.\footnote{\citep[vgl.][EV3-Programmieren mit Java, Seite 25 f.]{Schobel.RobertaEV3Programmieren}\label{note33}} \\
 %cite[vgl.][25\psq]{Roberta}.
-Die Abbildung X.X gibt einen Überblick über verschiedene für den EV3 verfügbare Programmiersprechen sowie ihre Vor- und Nachteile.
-\paragraph{leJOS}
-Das LEGO Java Operating System abgekürzt leJOS ist ein Framework, das es ermöglicht den EV3 mit der Programmiersprache Java zu programmieren. Das leJOS-Projekt wurde 1999 gegründet und sämtliche Komponenten (wie auch Java) sind kostenlos verfügbar \cite[vgl.][21 f.]{Schobel.RobertaEV3Programmieren}. \\
-leJOS bietet eine schlanke Java Virtual Machine (JVM) für den EV3-Stein sowie eine Klassenbibliothek mit welcher die Komponenten des EV3 (Motoren, Sensoren etc.) angesprochen werden können. Installiert wird leJOS auf einer bootbaren microSD-Karte und kann anschließend davon gestartet werden, ohne die auf dem EV3 vorhandene LEGO-Software zu löschen oder zu verändern \cite[vgl.][23 f.]{Schobel.RobertaEV3Programmieren}. \\
-Durch leJOS ist es möglich den EV3 mit Hilfe der Hochsprache Java zu programmieren womit eine mächtige
-Programmiersprache zur Verfügung steht und die Vorteile der Objektorientierung für den EV3 genutzt werden können.
+Die Abbildung \eqref{tab:ev3motoreneig} gibt einen Überblick über verschiedene für den EV3 verfügbare Programmiersprechen sowie ihre Vor- und Nachteile.
 \begin{table}[ht]
 	\begin{tabular}{|p{4,5cm}|p{2,0cm}|p{2,0cm}|p{2,0cm}|p{2,0cm}|} \hline
 		Eigenschaft / Programmiersprache  & leJOS      & EV3-Software  & RobotC  & NEPO       \\ \hline
@@ -472,9 +422,14 @@ Programmiersprache zur Verfügung steht und die Vorteile der Objektorientierung 
 	\newline
 	0 = neutral; + = gut; ++ = sehr gut; +++ = hervorragend
 	\caption[Eigenschaften der EV3-Motortypen]{Eigenschaften der EV3-Motoren}
+	\label{tab:ev3motoreneig}
 \end{table}
-leJOS bietet eine umfangreiche Klassenbibliothek sowie gut dokumentierte API was unter anderem die
-Integration von weiteren Sensoren etc. erleichter \cite[vgl.][23 f.]{Schobel.RobertaEV3Programmieren}.
+\newpage
+\paragraph{leJOS}
+Das LEGO Java Operating System abgekürzt leJOS ist ein Framework, dass es ermöglicht den EV3 mit der Programmiersprache Java zu programmieren. Das leJOS-Projekt wurde 1999 gegründet und sämtliche Komponenten (wie auch Java) sind kostenlos verfügbar.\footnote{\citep[vgl.][EV3-Programmieren mit Java, Seite 21]{Schobel.RobertaEV3Programmieren}\label{note34}} \\
+leJOS bietet eine schlanke Java Virtual Machine (JVM) für den EV3-Stein sowie eine Klassenbibliothek mit welcher die Komponenten des EV3 (Motoren, Sensoren etc.) angesprochen werden können. Installiert wird leJOS auf einer bootbaren microSD-Karte und kann anschließend davon gestartet werden, ohne die auf dem EV3 vorhandene LEGO-Software zu löschen oder zu verändern.\footnote{\citep[vgl.][EV3-Programmieren mit Java, Seite 23]{Schobel.RobertaEV3Programmieren}\label{note35}} \\
+Durch leJOS ist es möglich den EV3 mit Hilfe der Hochsprache Java zu programmieren, womit eine mächtige Programmiersprache zur Verfügung steht und die Vorteile der Objektorientierung für den EV3 genutzt werden können.
+leJOS bietet eine umfangreiche Klassenbibliothek sowie gut dokumentierte API was unter anderem die Integration von weiteren Sensoren etc. erleichtert.\footref{note35}
 Im folgenden sind einige Features die leJOS bietet aufgelistet:
 \begin{itemize}
 	\item{Objektorientierte Programmierung mit Java}
@@ -483,9 +438,9 @@ Im folgenden sind einige Features die leJOS bietet aufgelistet:
 	\item{Synchronisation}
 	\item{Multithreading}
 	\item{Exceptions}
-	\item{Vollständige Bluetooth unterstützung}
-	\item{Unfangreiche Klassenbibliothek zum Steuern und Auslesen der EV3-Komponeten}
-	\item{High-Level-Robotik-Tasks (Navigation, Localization etc.)}
+	\item{Vollständige Bluetooth Unterstützung}
+	\item{Umfangreiche Klassenbibliothek zum Steuern und Auslesen der EV3-Komponenten}
+	\item{High-Level-Robotik-Tasks (Navigation, Lokalisation etc.)}
 \end{itemize}
 
 \newpage
@@ -504,17 +459,17 @@ Eine \gls{app} ist ein ausführbares Programm für mobile Geräte, wie Smartphon
 
 \subsubsection{Native \glspl{app}}\label{native}
 
-In der Entwicklung von nativen \glspl{app} werden die direkten Ressourcen des Gerätes verwendet. Dazu gehört die Laufzeitumgebung des Betriebssystems, Bibliotheken und Hardwareschnittstellen. Der Vorteil von einer nativen Entwicklung liegt hauptsächlich darin, dass diese für das Betriebssystem optimiert ist und die vorhandenen Schnittstellen genutzt werden können, um komplexe und rechenintensive Anwendungen zu ermöglichen.\footnote{\citep[vgl.][Unterschiede und Vergleich native Apps vs. Web Apps]{DanielWurstl.Unterschiedeund}\label{note1}}\\
+In der Entwicklung von nativen \glspl{app} werden die direkten Ressourcen des Gerätes verwendet. Dazu gehört die Laufzeitumgebung des Betriebssystems, Bibliotheken und Hardwareschnittstellen. Der Vorteil von einer nativen Entwicklung liegt hauptsächlich darin, dass diese für das Betriebssystem optimiert ist und die vorhandenen Schnittstellen genutzt werden können, um komplexe und rechenintensive Anwendungen zu ermöglichen.\footnote{\citep[vgl.][Unterschiede und Vergleich native Apps vs. Web Apps]{DanielWurstl.Unterschiedeund}\label{note1x}}\\
 Vertreter diese Entwicklung finden sich für verschiedene Betriebssysteme. Der populärste unter ihnen ist bei weitem Android mit einer nativen Java Entwicklung über Android Studio von Google. Native \glspl{app} besitzt aktuellen den höchsten Marktanteil und eine entsprechende Popularität unter Entwickler und Nutzer.
 
 \subsubsection{Web \glspl{app}}\label{web}
 
-Die Entwicklung von web \glspl{app} arbeitet mit systemübergreifenden Ressourcen und greift auf gängige Webtechnologien, wie \gls{html}, \gls{css} und \gls{javascript} zurück. Die \gls{app} wird hierbei nicht wie normale Anwendungen direkt auf dem System des Gerätes ausgeführt, sondern kommt in dessen Browser zur Ausführung. Der Vorteil hierbei ist vor allem, dass diese Art von \gls{app} auf allen Betriebssystemen lauffähig ist und direkt über das Internet veröffentlicht und aktualisiert werden kann, jedoch wird eine stabile Internetverbindung vorausgesetzt.\footref{note1}\\
+Die Entwicklung von web \glspl{app} arbeitet mit systemübergreifenden Ressourcen und greift auf gängige Webtechnologien, wie \gls{html}, \gls{css} und \gls{javascript} zurück. Die \gls{app} wird hierbei nicht wie normale Anwendungen direkt auf dem System des Gerätes ausgeführt, sondern kommt in dessen Browser zur Ausführung. Der Vorteil hierbei ist vor allem, dass diese Art von \gls{app} auf allen Betriebssystemen lauffähig ist und direkt über das Internet veröffentlicht und aktualisiert werden kann, jedoch wird eine stabile Internetverbindung vorausgesetzt.\footref{note1x}\\
 Diese Entwicklung besitzt viele Vertreter mit der Unterstützung diverser \glspl{framework}. Das populärste unter ihnen ist aktuell AngularJS von Google, was auf \gls{javascript} basiert. In Kombination mit anderen Webtechnologien, wie \gls{html} und \gls{css} lassen sich perfomante Web-\glspl{app} entwickeln.
 
 \subsubsection{Hybride \glspl{app}}\label{hybride}
 
-Die Entwicklung von hybriden \glspl{app} vereinigt die native- und webbasierte Entwicklung. Sie besteht dabei aus einem nativen Rahmen, in der eine Web-\gls{app} zur Ausführung kommt, diese besitzt entsprechende Zugriffsrechte auf Hardwareschnittstellen, um diese mit \glspl{api} anzusprechen.\footnote{\citep[vgl.][Native App, Web App und Hybrid App im Überblick]{PetraRiepe.NativeApp}\label{note2}}\\
+Die Entwicklung von hybriden \glspl{app} vereinigt die native- und webbasierte Entwicklung. Sie besteht dabei aus einem nativen Rahmen, in der eine Web-\gls{app} zur Ausführung kommt, diese besitzt entsprechende Zugriffsrechte auf Hardwareschnittstellen, um diese mit \glspl{api} anzusprechen.\footnote{\citep[vgl.][Native App, Web App und Hybrid App im Überblick]{PetraRiepe.NativeApp}\label{note2x}}\\
 Diese Entwicklung ist aktuell noch sehr jung, jedoch treten hier bereits verschiedene Vertreter hervor. Der populärste unter ihnen ist Ionic von Drifty, welches auf Apache Cordova als Basis zurückgreift. In Kombination mit AngularJS, \gls{typescript} und anderen Webtechnologien lässt sich die hybride \gls{app} entwickeln und auf einem beliebigen Gerät unter einem nativen Browser ausführen. Hybride \glspl{app} unterstützten dabei verschiedene Betriebssystem, wie Android, iOS und Windows. Diese \glspl{app} können dabei meist nicht nur mobil, sondern unter anderem auf weiteren Systemen, wie stationäre zum Beispiel Desktop Rechner bereitgestellt werden.
 
 \subsubsection{Plattformübergreifende \glspl{app}}
@@ -533,7 +488,7 @@ Um die Entwicklung von \glspl{app} einfach zu gestalten, verwenden immer mehr En
 \end{wrapfigure}
 
 Xamarin ist ein \gls{framework} zur Entwicklung von nativen, plattformübergreifenden \glspl{app}. Es basiert auf dem Mono Projekt, siehe Abschnitt \eqref{mono}, um damit auf verschiedenen Betriebssysteme, wie Android, iOS, Windows und Windows Phone ausgeführt werden kann. Um nativen Quellcode auf den verschiedenen Systemen auszuführen, setzt Xamarin auf verschiedene Softwarekomponenten, um aus einem mit .NET entwickelten Projekt nativen Quellcode zu erzeugen.\\
-Für iOS Systeme verwendet Xamarin den \gls{aot} Compiler, um aus einem Xamarin.iOS Projekt, \gls{arm} Maschinencode zur erzeugen, der entsprechend schnell auf dem System ausgeführt werden kann.\footnote{\citep[vgl.][Introduction to Mobile Development - Xamarin]{Xamarin.Introductionto}\label{note3}} Bei Android hingegen wird der Quellcode in \gls{il} übersetzt, eine plattformübergreifende Assemblersprache, die durch das .NET \gls{framework} zur Ausführung gebracht wird. Die Übersetzung in \gls{il} geschieht mittels \gls{jit}, um zur Laufzeit Maschinencode für das entsprechende Gerät zu erzeugen.\footref{note3} Damit dies bewerkstelligt werden kann, nutzt Xamarin zur Laufzeit Softwarekomponenten, die bestimmte Prozesse, wie Speicherverwaltung und Plattformoperationen verwalten.\\
+Für iOS Systeme verwendet Xamarin den \gls{aot} Compiler, um aus einem Xamarin.iOS Projekt, \gls{arm} Maschinencode zur erzeugen, der entsprechend schnell auf dem System ausgeführt werden kann.\footnote{\citep[vgl.][Introduction to Mobile Development - Xamarin]{Xamarin.Introductionto}\label{note3x}} Bei Android hingegen wird der Quellcode in \gls{il} übersetzt, eine plattformübergreifende Assemblersprache, die durch das .NET \gls{framework} zur Ausführung gebracht wird. Die Übersetzung in \gls{il} geschieht mittels \gls{jit}, um zur Laufzeit Maschinencode für das entsprechende Gerät zu erzeugen.\footref{note3} Damit dies bewerkstelligt werden kann, nutzt Xamarin zur Laufzeit Softwarekomponenten, die bestimmte Prozesse, wie Speicherverwaltung und Plattformoperationen verwalten.\\
 Für eine effiziente Entwicklung bringt Xamarin eine große Bandbreite von Funktionalitäten für einen Entwickler. Beispiele sind dafür Bibliotheken, eine Test Cloud, sowie eine Unterstützung von nativen Bibliotheken, beispielsweise für \gls{java} oder \gls{objectivc}. Um mit Xamarin zu entwickeln, gibt es aktuell verschiedene Möglichkeiten auf unterschiedlichen Betriebssystemen. Einerseits kann mit Xamarin Studio auf einem OSX-System, oder mit Visual Studio auf Windows und Linux entwickelt werden.\\
 Wie viele andere \glspl{framework}, bietet auch Xamarin für verschiedene Zwecke nützliche \glspl{template}, die jeweils andere Nutzen besitzen. Die Entwicklung der App baut dabei vor allem auf zwei Hauptkomponenten von Bibliotheken, den Shared Projects und Protable Class Libraries.
 
@@ -547,7 +502,7 @@ Wie viele andere \glspl{framework}, bietet auch Xamarin für verschiedene Zwecke
 
 \paragraph{Shared Projects}
 
-ermöglichen dem Entwickler Quellcode für verschiedene Plattformen zu entwickeln, wobei die plattformspezifischen Projekte das entsprechende Shared Project referenzieren. Somit besitzt diese Projektart keinen direkten Output, sondern kopiert den Quellcode entsprechend in das zu bauende Projekt, siehe Abbildung \eqref{fig:shared}.\footnote{\citep[vgl.][Shared Projects - Xamarin]{Xamarin.SharedProjects}\label{note4}} Der Hauptunterschied zu Standardprojekten liegt vor allem darin, dass ein Shared Project keine Abhängigkeiten haben darf und daher lediglich als Referenz für andere Projekte dienen kann.
+ermöglichen dem Entwickler Quellcode für verschiedene Plattformen zu entwickeln, wobei die plattformspezifischen Projekte das entsprechende Shared Project referenzieren. Somit besitzt diese Projektart keinen direkten Output, sondern kopiert den Quellcode entsprechend in das zu bauende Projekt, siehe Abbildung \eqref{fig:shared}.\footnote{\citep[vgl.][Shared Projects - Xamarin]{Xamarin.SharedProjects}\label{note4x}} Der Hauptunterschied zu Standardprojekten liegt vor allem darin, dass ein Shared Project keine Abhängigkeiten haben darf und daher lediglich als Referenz für andere Projekte dienen kann.
 
 \begin{wrapfigure}{r}{0.55\textwidth}
 	\begin{center}
@@ -559,7 +514,7 @@ ermöglichen dem Entwickler Quellcode für verschiedene Plattformen zu entwickel
 
 \paragraph{Protable Class Libraries}
 
-ermöglichen dem Entwickler die Implementierung von plattformübergreifenden Bibliotheken, aus denen \glspl{dll} erzeugt werden können. Das Besondere an Portable Class Libraries ist dabei, dass die Plattformen spezifisch ausgewählt werden können, wobei auf die Unterstützung verschiedener Betriebssysteme zu achten ist, siehe Abbildung \eqref{fig:pcl_support}.\footnote{\citep[vgl.][Introduction to Portable Class Libraries - Xamarin]{Xamarin.PortableClass}\label{note5}} Eine Portable Class Library besitzt darüber hinaus verschiedene Vor- bzw. Nachteile, die für oder gegen ihre Nutzung sprechen.\\
+ermöglichen dem Entwickler die Implementierung von plattformübergreifenden Bibliotheken, aus denen \glspl{dll} erzeugt werden können. Das Besondere an Portable Class Libraries ist dabei, dass die Plattformen spezifisch ausgewählt werden können, wobei auf die Unterstützung verschiedener Betriebssysteme zu achten ist, siehe Abbildung \eqref{fig:pcl_support}.\footnote{\citep[vgl.][Introduction to Portable Class Libraries - Xamarin]{Xamarin.PortableClass}\label{note5x}} Eine Portable Class Library besitzt darüber hinaus verschiedene Vor- bzw. Nachteile, die für oder gegen ihre Nutzung sprechen.\\
 
 \begin{wrapfigure}{r}{0.55\textwidth}
 	\begin{center}
@@ -639,13 +594,13 @@ Xamarin.Forms setzt mit seinem Layout auf bekannte Designprinzipien, welche bere
 	\label{fig:mono}
 \end{wrapfigure}
 
-Mono ist ein Open-Source-Framework, das auf dem .NET Framework von Microsoft basiert. Die Implementierung von Mono greift dabei auf die Standards von .NET für die Programmiersprache \gls{csharp}, sowie die \gls{cli} zurück.\footnote{\citep[vgl.][About Mono]{MonoProject.AboutMono}\label{note6}} Dies ermöglicht Entwicklern die Erstellung von plattformübergreifenden Anwendungen, welche mittels einer zur Verfügung gestellten Laufzeitumgebung auf verschiedenen Systemen ausgeführt werden können.\\
+Mono ist ein Open-Source-Framework, das auf dem .NET Framework von Microsoft basiert. Die Implementierung von Mono greift dabei auf die Standards von .NET für die Programmiersprache \gls{csharp}, sowie die \gls{cli} zurück.\footnote{\citep[vgl.][About Mono]{MonoProject.AboutMono}\label{note6x}} Dies ermöglicht Entwicklern die Erstellung von plattformübergreifenden Anwendungen, welche mittels einer zur Verfügung gestellten Laufzeitumgebung auf verschiedenen Systemen ausgeführt werden können.\\
 Um Anwendungen auf verschieden Systemen auszuführen, nutzt Mono verschiedene Komponenten. Dazu gehört an vorderster Stelle ein Compiler, um den erstellten Quellcode in die jeweilige Maschinensprache zu übersetzen. Die Übersetzung findet dabei in Kooperation mit der Mono Runtime statt, welche die entsprechende Infrastruktur zur Ausführung der Anwendung bereitstellt. Für eine effiziente Entwicklung stellt Mono zwei Bibliotheken zur Verfügung, einerseits die .NET Class Library, die die Grundelemente von .NET enthält, sowie die Mono Class Library mit zusätzlichen Funktionen für plattformübergreifende Anwendungen.\\
 Im Vergleich mit anderen Frameworks sprechen verschiedenen Vorteile für die Nutzung von Mono. Der Hauptgrund für die Nutzung liegt vor allem in der Popularität von .NET, da dies auf den meisten Rechnern zur Verfügung steht, oder installiert werden kann. Ein großer Nutzen stellt die High-Level-Programmierung dar, die eine Implementierung mit einer Laufzeitumgebung ermöglicht, die Funktionen wie Speicherverwaltung selbst organisiert. Durch Verwendung der \gls{clr} kann der Entwickler seine übliche Programmiersprache verwenden und ist unhabhängig vom bestehenden System.
 
 \subsubsection{.NET Framework}\label{net}
 
-Das .NET Framework dient zur Entwicklung sowie Ausführung von Anwendungen, die mit Programmiersprachen implementiert werden und auf den Standards von .NET basieren. Es besteht aus verschiedenen Komponenten, wobei der Kern des Frameworks in der \gls{clr} liegt.\footnote{\citep[vgl.][Overview of the .NET Framework]{Microsoft.Overviewof}\label{note7}} Diese ist verantwortlich für die Laufzeitumgebung und somit für die Ausführung der Anwendungen, indem es die bereitgestellten Ressourcen des Systems nutzt.
+Das .NET Framework dient zur Entwicklung sowie Ausführung von Anwendungen, die mit Programmiersprachen implementiert werden und auf den Standards von .NET basieren. Es besteht aus verschiedenen Komponenten, wobei der Kern des Frameworks in der \gls{clr} liegt.\footnote{\citep[vgl.][Overview of the .NET Framework]{Microsoft.Overviewof}\label{note7x}} Diese ist verantwortlich für die Laufzeitumgebung und somit für die Ausführung der Anwendungen, indem es die bereitgestellten Ressourcen des Systems nutzt.
 \newpage
 \begin{wrapfigure}{r}{0.45\textwidth}
 	\begin{center}
