@@ -583,6 +583,51 @@ Nachteile:
 	\item Keine Standardbibliotheken vorhanden
 \end{itemize}
 
+\begin{verbatim}
+\end{verbatim}
+
+\newpage
+
+\begin{wrapfigure}{r}{0.45\textwidth}
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/forms.png}
+	\end{center}	
+	\caption{Design Xamarin.Forms \cite{Xamarin.Builda}}
+	\label{fig:forms}
+\end{wrapfigure}
+
+\paragraph{Xamarin.Forms} ist ein plattformübergreifendes \gls{ui} Werkzeug zur Implementierung einer nativen \gls{gui} durch \gls{xaml}, siehe Abbildung \ref{fig:forms}. Dieses basiert auf den typischen \gls{xml} Strukturrichtlinien, womit sich die verschiedenen Elemente als klaren übersichtlichen Text darstellen lassen, siehe Abbildung \ref{fig:xaml}. Zur Strukturierung des Designs bietet Xamarin verschiedene Arten von Seiten-, Layout- und Navigationsprinzipien, welche durch Xamarin.Forms auf die nativen Elemente zurückgreifen. Damit lässt sich durch Xamarin.Forms native Designs schaffen, welche plattformübergreifend in Android, iOS und Windows angewendet werden können. Die vorhandenen Designs stellen dabei Klassen dar, die vom Entwickler entsprechend verwendet, oder bei Bedarf durch eigene Implementierungen angepasst werden können.\\
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{images/technische_grundlagen/xaml.png}
+	\end{center}	
+	\caption{SignInPage in \acrshort{xaml}}
+	\label{fig:xaml}
+\end{figure}
+
+\newpage
+\noindent
+Xamarin.Forms setzt mit seinem Layout auf bekannte Designprinzipien, welche bereits in anderen Frameworks, wie .NET vorzufinden sind, siehe Abbildung \ref{fig:layout} und \ref{fig:pages}. Diese können in drei Kategorien eingeteilt werden, einerseits die eigentliche Seite, die in verschiedene \glspl{ui} dargestellt werden kann und somit die Nutzerinteraktion beeinflusst. Andererseits das Layout, welches die Darstellung der vorhandenen Elemente regelt und den Pages, die für die Navigation unter den einzelnen Seiten zuständig sind. Dem Entwickler sind dabei keinerlei Grenzen gesetzt, wobei dieser frei sämtliche zur Verfügung stehenden Ressourcen miteinander kombinieren kann.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{images/technische_grundlagen/layout.png}
+	\end{center}	
+	\caption{Xamarin.Forms Layouts \cite{Xamarin.Xamarin.FormsLayouts}}
+	\label{fig:layout}
+\end{figure}
+
+\noindent
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{images/technische_grundlagen/pages.png}
+	\end{center}	
+	\caption{Xamarin.Forms Pages \cite{Xamarin.Xamarin.FormsPages}}
+	\label{fig:pages}
+\end{figure}
+
 \newpage
 \subsubsection{Mono}\label{mono}
 

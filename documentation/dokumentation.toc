@@ -38,65 +38,65 @@
 \contentsline {subsubsection}{\numberline {2.3.5}Xamarin}{20}{subsubsection.2.3.5}
 \contentsline {paragraph}{Shared Projects}{20}{section*.39}
 \contentsline {paragraph}{Protable Class Libraries}{21}{section*.41}
-\contentsline {subsubsection}{\numberline {2.3.6}Mono}{22}{subsubsection.2.3.6}
-\contentsline {subsubsection}{\numberline {2.3.7}.NET Framework}{22}{subsubsection.2.3.7}
-\contentsline {subsection}{\numberline {2.4}TCP-Kommunikation}{24}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Gundlegendes}{24}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}Nagle-Algorithmus}{25}{subsubsection.2.4.2}
-\contentsline {subsubsection}{\numberline {2.4.3}Kommunikationsablauf}{25}{subsubsection.2.4.3}
-\contentsline {paragraph}{Client \& Server}{25}{section*.46}
-\contentsline {paragraph}{Verbindungsaufbau}{25}{section*.47}
-\contentsline {paragraph}{Datenaustausch}{26}{figure.caption.50}
-\contentsline {paragraph}{Verbindungsabbau}{26}{figure.caption.52}
-\contentsline {subsubsection}{\numberline {2.4.4}Socket-Programmierung}{27}{subsubsection.2.4.4}
-\contentsline {subsection}{\numberline {2.5}Schwarmverhalten}{28}{subsection.2.5}
-\contentsline {subsubsection}{\numberline {2.5.1}Allgemein}{28}{subsubsection.2.5.1}
-\contentsline {subsubsection}{\numberline {2.5.2}Vorbilder aus dem Tierreich}{28}{subsubsection.2.5.2}
-\contentsline {paragraph}{Ein Fischschwarm}{28}{section*.54}
-\contentsline {paragraph}{Ein Termitenschwarm}{29}{section*.56}
-\contentsline {subsubsection}{\numberline {2.5.3}Szenarien}{29}{subsubsection.2.5.3}
-\contentsline {section}{\numberline {3}Konzeption}{31}{section.3}
-\contentsline {subsection}{\numberline {3.1}Anforderunsdefinitionen}{31}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Softwarearchitektur}{32}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Steuerung}{34}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Szenarien}{34}{subsection.3.4}
-\contentsline {paragraph}{Control}{35}{section*.59}
-\contentsline {paragraph}{Synchron}{35}{section*.60}
-\contentsline {paragraph}{Follow}{35}{section*.61}
-\contentsline {paragraph}{Flee}{35}{section*.62}
-\contentsline {paragraph}{Catch}{35}{section*.63}
-\contentsline {subsection}{\numberline {3.5}Use Cases}{36}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}Connection}{36}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}Synchronization}{38}{subsubsection.3.5.2}
-\contentsline {subsubsection}{\numberline {3.5.3}Szenario}{40}{subsubsection.3.5.3}
-\contentsline {subsubsection}{\numberline {3.5.4}Exception}{42}{subsubsection.3.5.4}
-\contentsline {subsection}{\numberline {3.6}Kommunikation}{43}{subsection.3.6}
-\contentsline {paragraph}{Connection}{43}{section*.74}
-\contentsline {paragraph}{Synchronization}{43}{section*.76}
-\contentsline {paragraph}{Scenario}{44}{section*.78}
-\contentsline {paragraph}{Exception}{44}{section*.80}
-\contentsline {paragraph}{Control}{45}{section*.82}
-\contentsline {paragraph}{Position}{45}{section*.84}
-\contentsline {section}{\numberline {4}Implementierung}{46}{section.4}
-\contentsline {subsection}{\numberline {4.1}Kommunikation}{46}{subsection.4.1}
-\contentsline {paragraph}{Kommandos}{48}{figure.caption.89}
-\contentsline {paragraph}{Identifikationen}{48}{section*.90}
-\contentsline {paragraph}{Ger\IeC {\"a}te}{49}{figure.caption.92}
-\contentsline {paragraph}{Szenarios}{49}{section*.93}
-\contentsline {paragraph}{Konverter}{50}{figure.caption.95}
-\contentsline {subsection}{\numberline {4.2}\gls {app}}{51}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Workflow}{51}{subsubsection.4.2.1}
-\contentsline {paragraph}{\acrfull {mvvm}}{51}{section*.97}
-\contentsline {paragraph}{Bindings}{52}{section*.99}
-\contentsline {subsubsection}{\numberline {4.2.2}\acrfull {gui}}{52}{subsubsection.4.2.2}
-\contentsline {paragraph}{LogIn Page}{52}{section*.100}
-\contentsline {paragraph}{Home Page}{52}{section*.101}
-\contentsline {paragraph}{Option Page}{52}{section*.102}
-\contentsline {paragraph}{List Page}{52}{section*.103}
-\contentsline {paragraph}{Szenario Page}{52}{section*.104}
-\contentsline {subsubsection}{\numberline {4.2.3}Buisnesslogic}{52}{subsubsection.4.2.3}
-\contentsline {subsubsection}{\numberline {4.2.4}Deployment}{52}{subsubsection.4.2.4}
-\contentsline {subsection}{\numberline {4.3}Backend}{52}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Robot}{52}{subsection.4.4}
-\contentsline {section}{\numberline {5}Evaluation}{53}{section.5}
-\contentsline {section}{\numberline {6}Ausblick}{54}{section.6}
+\contentsline {paragraph}{Xamarin.Forms}{22}{section*.44}
+\contentsline {subsubsection}{\numberline {2.3.6}Mono}{24}{subsubsection.2.3.6}
+\contentsline {subsubsection}{\numberline {2.3.7}.NET Framework}{24}{subsubsection.2.3.7}
+\contentsline {subsection}{\numberline {2.4}TCP-Kommunikation}{26}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Gundlegendes}{26}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Nagle-Algorithmus}{27}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Kommunikationsablauf}{27}{subsubsection.2.4.3}
+\contentsline {paragraph}{Client \& Server}{27}{section*.51}
+\contentsline {paragraph}{Verbindungsaufbau}{27}{section*.52}
+\contentsline {paragraph}{Datenaustausch}{28}{figure.caption.55}
+\contentsline {paragraph}{Verbindungsabbau}{28}{figure.caption.57}
+\contentsline {subsubsection}{\numberline {2.4.4}Socket-Programmierung}{29}{subsubsection.2.4.4}
+\contentsline {subsection}{\numberline {2.5}Schwarmverhalten}{30}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Allgemein}{30}{subsubsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.2}Vorbilder aus dem Tierreich}{30}{subsubsection.2.5.2}
+\contentsline {paragraph}{Ein Fischschwarm}{30}{section*.59}
+\contentsline {paragraph}{Ein Termitenschwarm}{31}{section*.61}
+\contentsline {subsubsection}{\numberline {2.5.3}Szenarien}{31}{subsubsection.2.5.3}
+\contentsline {section}{\numberline {3}Konzeption}{33}{section.3}
+\contentsline {subsection}{\numberline {3.1}Anforderunsdefinitionen}{33}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Softwarearchitektur}{34}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Steuerung}{36}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Szenarien}{36}{subsection.3.4}
+\contentsline {paragraph}{Control}{37}{section*.64}
+\contentsline {paragraph}{Synchron}{37}{section*.65}
+\contentsline {paragraph}{Follow}{37}{section*.66}
+\contentsline {paragraph}{Flee}{37}{section*.67}
+\contentsline {paragraph}{Catch}{37}{section*.68}
+\contentsline {subsection}{\numberline {3.5}Use Cases}{38}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Connection}{38}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Synchronization}{40}{subsubsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.3}Szenario}{42}{subsubsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.4}Exception}{44}{subsubsection.3.5.4}
+\contentsline {subsection}{\numberline {3.6}Kommunikation}{45}{subsection.3.6}
+\contentsline {paragraph}{Connection}{45}{section*.79}
+\contentsline {paragraph}{Synchronization}{45}{section*.81}
+\contentsline {paragraph}{Scenario}{46}{section*.83}
+\contentsline {paragraph}{Exception}{46}{section*.85}
+\contentsline {paragraph}{Control}{47}{section*.87}
+\contentsline {paragraph}{Position}{47}{section*.89}
+\contentsline {section}{\numberline {4}Implementierung}{48}{section.4}
+\contentsline {subsection}{\numberline {4.1}Kommunikation}{48}{subsection.4.1}
+\contentsline {paragraph}{Kommandos}{50}{figure.caption.94}
+\contentsline {paragraph}{Identifikationen}{50}{section*.95}
+\contentsline {paragraph}{Ger\IeC {\"a}te}{51}{figure.caption.97}
+\contentsline {paragraph}{Szenarios}{51}{section*.98}
+\contentsline {paragraph}{Konverter}{52}{figure.caption.100}
+\contentsline {subsection}{\numberline {4.2}\gls {app}}{53}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Workflow}{54}{subsubsection.4.2.1}
+\contentsline {paragraph}{\acrfull {mvvm}}{54}{section*.103}
+\contentsline {subsubsection}{\numberline {4.2.2}\acrfull {gui}}{55}{subsubsection.4.2.2}
+\contentsline {paragraph}{LogIn Page}{55}{figure.caption.106}
+\contentsline {paragraph}{Home Page}{55}{figure.caption.108}
+\contentsline {paragraph}{Option Page}{55}{figure.caption.110}
+\contentsline {paragraph}{List Page}{55}{figure.caption.112}
+\contentsline {paragraph}{Szenario Page}{55}{figure.caption.114}
+\contentsline {subsubsection}{\numberline {4.2.3}Buisnesslogic}{56}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.4}Deployment}{56}{subsubsection.4.2.4}
+\contentsline {subsection}{\numberline {4.3}Backend}{56}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Robot}{56}{subsection.4.4}
+\contentsline {section}{\numberline {5}Evaluation}{60}{section.5}
+\contentsline {section}{\numberline {6}Ausblick}{61}{section.6}

@@ -11,42 +11,52 @@
 \contentsline {figure}{\numberline {10}{\ignorespaces Shared Project \cite {Xamarin.SharedProjects}\relax }}{20}{figure.caption.38}
 \contentsline {figure}{\numberline {11}{\ignorespaces Portable Class Library \cite {Xamarin.PortableClass}\relax }}{21}{figure.caption.40}
 \contentsline {figure}{\numberline {12}{\ignorespaces Unterst\IeC {\"u}tzung Portable Class Library \cite {Xamarin.PortableClass}\relax }}{21}{figure.caption.42}
-\contentsline {figure}{\numberline {13}{\ignorespaces Mono \cite {Mono.MonoProject}\relax }}{22}{figure.caption.43}
-\contentsline {figure}{\numberline {14}{\ignorespaces .NET Framework Ausf\IeC {\"u}hrung \cite {Microsoft.Introductionto}\relax }}{23}{figure.caption.44}
-\contentsline {figure}{\numberline {15}{\ignorespaces Common Language Runtime \cite {Microsoft.Overviewof}\relax }}{23}{figure.caption.45}
-\contentsline {figure}{\numberline {16}{\ignorespaces TCP Verbindungsaufbau}}{26}{figure.caption.48}
-\contentsline {figure}{\numberline {17}{\ignorespaces TCP Datenaustausch}}{26}{figure.caption.50}
-\contentsline {figure}{\numberline {18}{\ignorespaces TCP Verbindungsabbau}}{26}{figure.caption.52}
-\contentsline {figure}{\numberline {19}{\ignorespaces Fischschwarm\relax }}{28}{figure.caption.53}
-\contentsline {figure}{\numberline {20}{\ignorespaces Termitenschwarm\relax }}{29}{figure.caption.55}
-\contentsline {figure}{\numberline {21}{\ignorespaces Softwarearchitektur\relax }}{33}{figure.caption.57}
-\contentsline {figure}{\numberline {22}{\ignorespaces Steuerung\relax }}{34}{figure.caption.58}
-\contentsline {figure}{\numberline {23}{\ignorespaces Logo\relax }}{35}{figure.caption.64}
-\contentsline {figure}{\numberline {24}{\ignorespaces Mockup Connection\relax }}{36}{figure.caption.65}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Log in}}}{36}{subfigure.24.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Home}}}{36}{subfigure.24.2}
-\contentsline {figure}{\numberline {25}{\ignorespaces Use Case Connection\relax }}{37}{figure.caption.66}
-\contentsline {figure}{\numberline {26}{\ignorespaces Mockup Synchronization\relax }}{38}{figure.caption.67}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Log in}}}{38}{subfigure.26.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Home}}}{38}{subfigure.26.2}
-\contentsline {figure}{\numberline {27}{\ignorespaces Use Case Synchronization\relax }}{39}{figure.caption.68}
-\contentsline {figure}{\numberline {28}{\ignorespaces Use Case Update\relax }}{39}{figure.caption.69}
-\contentsline {figure}{\numberline {29}{\ignorespaces Mockup Szenario\relax }}{40}{figure.caption.70}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Szenario}}}{40}{subfigure.29.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Spectator}}}{40}{subfigure.29.2}
-\contentsline {figure}{\numberline {30}{\ignorespaces Use Case Szenario\relax }}{41}{figure.caption.71}
-\contentsline {figure}{\numberline {31}{\ignorespaces Use Case Spectator\relax }}{41}{figure.caption.72}
-\contentsline {figure}{\numberline {32}{\ignorespaces Use Case Exception\relax }}{42}{figure.caption.73}
-\contentsline {figure}{\numberline {33}{\ignorespaces Aufbau Commands\relax }}{46}{figure.caption.86}
-\contentsline {figure}{\numberline {34}{\ignorespaces Kommunikation\relax }}{47}{figure.caption.87}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Versende Kommando}}}{47}{subfigure.34.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Empfange Kommando}}}{47}{subfigure.34.2}
-\contentsline {figure}{\numberline {35}{\ignorespaces Kommandos\relax }}{48}{figure.caption.89}
-\contentsline {figure}{\numberline {36}{\ignorespaces Identifikation\relax }}{48}{figure.caption.89}
-\contentsline {figure}{\numberline {37}{\ignorespaces Devices\relax }}{49}{figure.caption.92}
-\contentsline {figure}{\numberline {38}{\ignorespaces Scenarios\relax }}{49}{figure.caption.92}
-\contentsline {figure}{\numberline {39}{\ignorespaces JsonConverter\relax }}{50}{figure.caption.95}
-\contentsline {figure}{\numberline {40}{\ignorespaces Device JsonConverter\relax }}{50}{figure.caption.96}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ReadJson}}}{50}{subfigure.40.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {WriteJson}}}{50}{subfigure.40.2}
-\contentsline {figure}{\numberline {41}{\ignorespaces \acrlong {mvvm} \cite {Brecht.MVVMEntity}\relax }}{51}{figure.caption.98}
+\contentsline {figure}{\numberline {13}{\ignorespaces Design Xamarin.Forms \cite {Xamarin.Builda}\relax }}{22}{figure.caption.43}
+\contentsline {figure}{\numberline {14}{\ignorespaces SignInPage in \acrshort {xaml}\relax }}{22}{figure.caption.45}
+\contentsline {figure}{\numberline {15}{\ignorespaces Xamarin.Forms Layouts \cite {Xamarin.Xamarin.FormsLayouts}\relax }}{23}{figure.caption.46}
+\contentsline {figure}{\numberline {16}{\ignorespaces Xamarin.Forms Pages \cite {Xamarin.Xamarin.FormsPages}\relax }}{23}{figure.caption.47}
+\contentsline {figure}{\numberline {17}{\ignorespaces Mono \cite {Mono.MonoProject}\relax }}{24}{figure.caption.48}
+\contentsline {figure}{\numberline {18}{\ignorespaces .NET Framework Ausf\IeC {\"u}hrung \cite {Microsoft.Introductionto}\relax }}{25}{figure.caption.49}
+\contentsline {figure}{\numberline {19}{\ignorespaces Common Language Runtime \cite {Microsoft.Overviewof}\relax }}{25}{figure.caption.50}
+\contentsline {figure}{\numberline {20}{\ignorespaces TCP Verbindungsaufbau}}{28}{figure.caption.53}
+\contentsline {figure}{\numberline {21}{\ignorespaces TCP Datenaustausch}}{28}{figure.caption.55}
+\contentsline {figure}{\numberline {22}{\ignorespaces TCP Verbindungsabbau}}{28}{figure.caption.57}
+\contentsline {figure}{\numberline {23}{\ignorespaces Fischschwarm\relax }}{30}{figure.caption.58}
+\contentsline {figure}{\numberline {24}{\ignorespaces Termitenschwarm\relax }}{31}{figure.caption.60}
+\contentsline {figure}{\numberline {25}{\ignorespaces Softwarearchitektur\relax }}{35}{figure.caption.62}
+\contentsline {figure}{\numberline {26}{\ignorespaces Steuerung\relax }}{36}{figure.caption.63}
+\contentsline {figure}{\numberline {27}{\ignorespaces Logo\relax }}{37}{figure.caption.69}
+\contentsline {figure}{\numberline {28}{\ignorespaces Mockup Connection\relax }}{38}{figure.caption.70}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Log in}}}{38}{subfigure.28.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Home}}}{38}{subfigure.28.2}
+\contentsline {figure}{\numberline {29}{\ignorespaces Use Case Connection\relax }}{39}{figure.caption.71}
+\contentsline {figure}{\numberline {30}{\ignorespaces Mockup Synchronization\relax }}{40}{figure.caption.72}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Log in}}}{40}{subfigure.30.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Home}}}{40}{subfigure.30.2}
+\contentsline {figure}{\numberline {31}{\ignorespaces Use Case Synchronization\relax }}{41}{figure.caption.73}
+\contentsline {figure}{\numberline {32}{\ignorespaces Use Case Update\relax }}{41}{figure.caption.74}
+\contentsline {figure}{\numberline {33}{\ignorespaces Mockup Szenario\relax }}{42}{figure.caption.75}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Szenario}}}{42}{subfigure.33.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Spectator}}}{42}{subfigure.33.2}
+\contentsline {figure}{\numberline {34}{\ignorespaces Use Case Szenario\relax }}{43}{figure.caption.76}
+\contentsline {figure}{\numberline {35}{\ignorespaces Use Case Spectator\relax }}{43}{figure.caption.77}
+\contentsline {figure}{\numberline {36}{\ignorespaces Use Case Exception\relax }}{44}{figure.caption.78}
+\contentsline {figure}{\numberline {37}{\ignorespaces Aufbau Commands\relax }}{48}{figure.caption.91}
+\contentsline {figure}{\numberline {38}{\ignorespaces Kommunikation\relax }}{49}{figure.caption.92}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Versende Kommando}}}{49}{subfigure.38.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Empfange Kommando}}}{49}{subfigure.38.2}
+\contentsline {figure}{\numberline {39}{\ignorespaces Kommandos\relax }}{50}{figure.caption.94}
+\contentsline {figure}{\numberline {40}{\ignorespaces Identifikation\relax }}{50}{figure.caption.94}
+\contentsline {figure}{\numberline {41}{\ignorespaces Devices\relax }}{51}{figure.caption.97}
+\contentsline {figure}{\numberline {42}{\ignorespaces Scenarios\relax }}{51}{figure.caption.97}
+\contentsline {figure}{\numberline {43}{\ignorespaces JsonConverter\relax }}{52}{figure.caption.100}
+\contentsline {figure}{\numberline {44}{\ignorespaces Device JsonConverter\relax }}{52}{figure.caption.101}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ReadJson}}}{52}{subfigure.44.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {WriteJson}}}{52}{subfigure.44.2}
+\contentsline {figure}{\numberline {45}{\ignorespaces Projektstruktur\relax }}{53}{figure.caption.102}
+\contentsline {figure}{\numberline {46}{\ignorespaces \acrlong {mvvm} \cite {Brecht.MVVMEntity}\relax }}{54}{figure.caption.104}
+\contentsline {figure}{\numberline {47}{\ignorespaces \acrlong {mvvm}\relax }}{55}{figure.caption.106}
+\contentsline {figure}{\numberline {48}{\ignorespaces \acrlong {mvvm}\relax }}{56}{figure.caption.108}
+\contentsline {figure}{\numberline {49}{\ignorespaces \acrlong {mvvm}\relax }}{57}{figure.caption.110}
+\contentsline {figure}{\numberline {50}{\ignorespaces \acrlong {mvvm}\relax }}{58}{figure.caption.112}
+\contentsline {figure}{\numberline {51}{\ignorespaces \acrlong {mvvm}\relax }}{59}{figure.caption.114}

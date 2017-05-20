@@ -95,57 +95,111 @@ dienen der Deserialisierung von abstrakten \gls{json} Objekten, welche nicht dir
 \newpage
 \subsection{\gls{app}}
 
-Die Erstellung der App erfolgt in einer plattformübergreifenden Implementierung durch Xamarin in C\#. Kernelemente stellen hierbei die Struktur, Oberfläche, Businesslogik sowie das Kommunikationssystem dar.
-Diese gliedern sich in zwei Projekte, der \gls{app} sowie das Kommunikationssystem mit seinen Strukturen, welches eine Bibliothek als \acrshort{pcl} bildet, wie sie in anderen Komponenten von Xamarin zu finden sind. Somit lässt sich die Logik einmalig implementieren und kann auf andere Systemen entsprechend übertragen werden.\\
-Die \gls{app} besteht dabei aus einer \acrshort{pcl}, welche die jeweiligen Plattformen je nach eingestelltem System einbindet und einen plattformspezifischen Quellcode als \gls{il} erzeugt. Der plattformübergreifende Quellcode kann dabei in der \acrshort{pcl} implementiert werden, wobei plattformspezifische Anpassungen über die entsprechenden Projekte vorgenommen werden können.
+Die Erstellung der App erfolgt in einer plattformübergreifenden Implementierung durch Xamarin in C\#. Kernelemente stellen hierbei die Struktur, Oberfläche, Businesslogik sowie das Kommunikationssystem dar. Durch die zentrale Verwendung des Kommunikationssystems wird dieses in ein separates Projekt untergliedert, siehe Abbildung \ref{fig:solution} und wird als solches von der \gls{app} als Bibliothek eingebunden. Somit lässt sich die Logik einmalig implementieren und kann auf andere Systemen entsprechend übertragen werden.\\
+Die \gls{app} setzt sich aus vier verschiedenen Projekten zusammen, einer \acrshort{pcl} als Projekt zur plattformübergreifenden Entwicklung und den plattformspezifischen Projekten. Diese werden dem Zielsystem entsprechend ausgewählt und erzeugen durch ihre bestehende Referenz auf die \acrshort{pcl} einen plattformspezifischen Quellcode als \gls{il}, der anschließend ausgeführt werden kann.\\
 
-%Screenshot visual studio
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{images/implementation/solution.png}
+	\end{center}
+	\caption{Projektstruktur}
+	\label{fig:solution}
+\end{figure}
 
+\newpage
 \subsubsection{Workflow} %Struktur
 
-Die Struktur der \gls{app} basiert auf dem in Xamarin weit verbreiteten Design Pattern \acrlong{mvvm}, welches durch ein Benachrichtigungssystem eine Abspaltung der Daten, \gls{gui} und dem Businesscode erlaubt. Die einzelnen Seiten der App sind code behind, indem zunächst die Page dargestellt ist, indem diese durch xaml designd wird und dahinter die entsprechende Klasse mit dem dazugehörigen businesscode abgelegt ist.
+Die Struktur der \gls{app} basiert auf dem in Xamarin verbreiteten Design Pattern \acrlong{mvvm}, welches durch ein Benachrichtigungssystem zwischen den verschiedenen Strukturen der \gls{app} eine Abspaltung der Daten, \gls{gui} und dem Businesscode erlaubt. Zusätzlich wird die standardmäßig vorhandene CodeBehind Struktur der einzelnen Seiten verwendet, wobei der Businesscode an das Layout der Seite gebunden ist, um diese miteinander zu verbinden. Zur lokalen Speicherung der Daten wird SQLite durch eine implementierte Schnittstelle verwendet, welche plattformübergreifend ansprechbar ist.
 
 \paragraph{\acrfull{mvvm}}
 
-stellt ein Design Pattern dar, welches eine grundlegende Struktur im Quellcode ermöglicht. Dabei wird die erstellte Benutzeroberfläche von der Logik, sowie den Daten getrennt, um Änderungen unabhängig voneinander durchführen zu können. Um die Teile des Quellcodes zu verbinden wird auf Bindings gesetzt, die dafür zuständig sind, die jeweiligen Objekte gegenseitig zu aktualisieren.
+stellt ein Design Pattern dar, welches eine grundlegende Struktur im Quellcode ermöglicht, siehe Abbildung \ref{fig:mvvm}. Dabei wird die erstellte Benutzeroberfläche von der Logik, sowie den Daten getrennt, um Änderungen unabhängig voneinander durchführen zu können. Die einzelnen Objekte werden dabei durch Referenzen verbunden um diese durch Events entsprechend zu aktualisieren.\\
+
+\noindent
+\textbf{Model:} Datenschicht, welche durch den Benutzer über die \gls{gui} verändert werden kann und über Datenänderungen die entsprechenden Elemente benachrichtigt\\
+
+\noindent
+\textbf{View:} \gls{gui} mit den anzuzeigenden Elementen, welche an das ViewModel gebunden sind und der Benutzerinteraktion dienen.\\
+
+\noindent
+\textbf{ViewModel:} Logik des \gls{ui} als zentrale Schnittstelle zwischen dem Model und der View zum Austausch von Informationen, indem entsprechende Methoden und Dienste ausgeführt werden.\\
 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=0.95\textwidth]{images/implementation/mvvm.png}
-		\caption{\acrlong{mvvm} \cite{Brecht.MVVMEntity}}
-	\end{center}
-	
+	\end{center}	
+	\caption{\acrlong{mvvm} \cite{Brecht.MVVMEntity}}
 	\label{fig:mvvm}
 \end{figure}
 
-\paragraph{Bindings}
-
-sind für die gegenseitige aktualisierung von Daten der jeweiligen Objekte zuständig. SIe entsprechen ihrem Sinn nach dem Observer Design Pattern und knüpfen an die VIewModels des MVVM an, wobei die dort definierten Objekte mit die der gleichnamigen View und den MOdel Objekten verbunden sind. Durch eine aktualisierung der Daten werden dabei die jeweilig verbundennen aktualisiert. DIes kann auf zwei verschiedenen wegen von statten gehen. Manuell, durch das aufrufen der entsprechenden Methode im ViewModel, andererseits automatisch, durch Attribute, wobei bei einer Änderung, die Methode automatisch angestoßen wird.
-
-% Observer Pattern
-
 \subsubsection{\acrfull{gui}} %Oberfläche
 
-Die Oberfläche der \gls{app} wird mittels XAML erstellt, welche auf der Basis von XML ist. Dabei werden die einzelnen ELemente untereinnander Strukturuert, wobei der ENtwickler in Xamarin verschiedene Möglichkeiten des Designs besitzt. Grundlegend ist die entscheidung, ob eine plattformspezifisches Design sinnn macht, oder aber ein plattformübergreifendes, wobei dieses weniger Freiheiten bietet. Die plattformübergreifendes Design besitzt eine Reihe von grundlegeneden Layouts, die für Xamamrin eingesetzt werden können, sowie unterschiedliche Seitenarten. Views
-Seiten (ContentPage, MasterDetailPage, NavigationPage, TabbedPage, TemplatedPage, CaruselPage)
-View (ContentPresenter, ContentVIew, ScrollVIew, Frame, TemplatedVIew)
-Layout (Stacklayout, absolutLayout, RelativeLayout, GridLayout)
+Die Oberfläche der \gls{app} wird mittels \gls{xaml} realisiert, welche auf der Basis von \gls{xml} aufsetzt., siehe Abbildung \ref{fig:xaml}. Dabei werden die einzelnen Elemente untereinander in der typischen \gls{xml} Struktur angeordnet und stellen damit das Layout sowie die Elemente einer Seite dar. Zur Strukturierung bietet Xamarin verschiedene Arten von Layouts, wobei diese \gls{app} auf die Stacklayout zur Struktureirung und einer NavigationPage zur Naviagtion, sowie einem Carousel der Szenario auswahl setzt.
 
-Weitere standardelemente
 
-Durch verschiednene Packages könenn dabei viele Zusätzliche DInge erstellt werden
+\begin{comment}
+	Die Oberfläche der \gls{app} wird mittels XAML erstellt, welche auf der Basis von XML ist. Dabei werden die einzelnen ELemente untereinnander Strukturuert, wobei der ENtwickler in Xamarin verschiedene Möglichkeiten des Designs besitzt. Grundlegend ist die entscheidung, ob eine plattformspezifisches Design sinnn macht, oder aber ein plattformübergreifendes, wobei dieses weniger Freiheiten bietet. Die plattformübergreifendes Design besitzt eine Reihe von grundlegeneden Layouts, die für Xamamrin eingesetzt werden können, sowie unterschiedliche Seitenarten. Views
+	Seiten (ContentPage, MasterDetailPage, NavigationPage, TabbedPage, TemplatedPage, CaruselPage)
+	View (ContentPresenter, ContentVIew, ScrollVIew, Frame, TemplatedVIew)
+	Layout (Stacklayout, absolutLayout, RelativeLayout, GridLayout)
+	
+	Weitere standardelemente
+	
+	Durch verschiednene Packages könenn dabei viele Zusätzliche DInge erstellt werden
+\end{comment}
+
 
 %General, XAML stuff
 
 \paragraph{LogIn Page}
 
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{images/implementation/signin.png}
+	\end{center}	
+	\caption{\acrlong{mvvm}}
+	\label{fig:signin}
+\end{figure}
+
 \paragraph{Home Page}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{images/implementation/home.png}
+	\end{center}	
+	\caption{\acrlong{mvvm}}
+	\label{fig:signin}
+\end{figure}
 
 \paragraph{Option Page}
 
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{images/implementation/option.png}
+	\end{center}	
+	\caption{\acrlong{mvvm}}
+	\label{fig:signin}
+\end{figure}
+
 \paragraph{List Page}
 
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{images/implementation/list.png}
+	\end{center}	
+	\caption{\acrlong{mvvm}}
+	\label{fig:signin}
+\end{figure}
+
 \paragraph{Szenario Page}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{images/implementation/szenario.png}
+	\end{center}	
+	\caption{\acrlong{mvvm}}
+	\label{fig:signin}
+\end{figure}
 
 \subsubsection{Buisnesslogic} %Logik
 

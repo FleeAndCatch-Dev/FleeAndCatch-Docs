@@ -1,4 +1,4 @@
-\begin{thebibliography}{14}
+\begin{thebibliography}{16}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -86,5 +86,17 @@ Xamarin.
 \newblock Shared projects - xamarin, {\natexlab{d}}.
 \newblock URL
   \url{https://developer.xamarin.com/guides/cross-platform/application_fundamentals/shared_projects/}.
+
+\bibitem[Xamarin({\natexlab{e}})]{Xamarin.Xamarin.FormsLayouts}
+Xamarin.
+\newblock Xamarin.forms layouts - xamarin, {\natexlab{e}}.
+\newblock URL
+  \url{https://developer.xamarin.com/guides/xamarin-forms/user-interface/controls/layouts/}.
+
+\bibitem[Xamarin({\natexlab{f}})]{Xamarin.Xamarin.FormsPages}
+Xamarin.
+\newblock Xamarin.forms pages - xamarin, {\natexlab{f}}.
+\newblock URL
+  \url{https://developer.xamarin.com/guides/xamarin-forms/user-interface/controls/pages/}.
 
 \end{thebibliography}
