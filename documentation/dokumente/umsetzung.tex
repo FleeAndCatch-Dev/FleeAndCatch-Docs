@@ -134,8 +134,24 @@ stellt ein Design Pattern dar, welches eine grundlegende Struktur im Quellcode e
 \newpage
 \subsubsection{\acrfull{gui}} %Oberfläche
 
-Die Oberfläche der \gls{app} wird mittels \gls{xaml} realisiert, welche auf der Basis von \gls{xml} aufsetzt., siehe Abbildung \ref{fig:xaml}. Dabei werden die einzelnen Elemente untereinander in der typischen \gls{xml} Struktur angeordnet und stellen damit das Layout sowie die Elemente einer Seite dar. Zur Strukturierung bietet Xamarin verschiedene Arten von Layouts, wobei diese \gls{app} auf die Stacklayout zur Struktureirung und einer NavigationPage zur Naviagtion, sowie einem Carousel der Szenario auswahl setzt.
+Die Oberfläche der \gls{app} wird mittels \gls{xaml} durch verschiedene von Xamarin zur Verfügung gestellten Elementen realisiert. Da eine \gls{app} ein einfaches Bedienkonzept voraussetzt, damit es von jedem beliebigen Benutzer verwendet werden kann,
 
+
+Dabei wird für das Layout der einzelnen Seiten vor allem auf ein StackLayout gesetzt. Dieses ist sehr einfach umzusetzen, indem eine Orientierung zur Anordnung der verschiedenen Elemente festgelegt wird, welche anschließend nacheinander eingefügt werden. 
+
+
+
+
+ Dabei wird für die Navigation der einzelnen Seiten vor allem auf die Verwendung der NavigationPage sowie zur Auswahl des Szenarios auf ein Carousel gesetzt. 
+
+
+
+
+ mit den Aufbau eines STacks durch pushund pop aufrufe die entsprechenden Seiten gewechselt werden, siehe Abbildung xx. 
+
+\begin{comment}
+	Die Oberfläche der \gls{app} wird mittels \gls{xaml} realisiert. Dabei werden die einzelnen Elemente untereinander in der typischen \gls{xml} Struktur angeordnet und stellen damit die \gls{gui} dar, welche die einzelnen Elemente zur Benutzerinteraktion beinhaltet. Zur Strukturierung des Design bietet Xamarin verschiedene Arten von Layouts, wobei diese \gls{app} auf die Stacklayout zur Struktureirung und einer NavigationPage zur Naviagtion, sowie einem Carousel der Szenario auswahl setzt.
+\end{comment}
 
 \begin{comment}
 	Die Oberfläche der \gls{app} wird mittels XAML erstellt, welche auf der Basis von XML ist. Dabei werden die einzelnen ELemente untereinnander Strukturuert, wobei der ENtwickler in Xamarin verschiedene Möglichkeiten des Designs besitzt. Grundlegend ist die entscheidung, ob eine plattformspezifisches Design sinnn macht, oder aber ein plattformübergreifendes, wobei dieses weniger Freiheiten bietet. Die plattformübergreifendes Design besitzt eine Reihe von grundlegeneden Layouts, die für Xamamrin eingesetzt werden können, sowie unterschiedliche Seitenarten. Views
@@ -150,6 +166,19 @@ Die Oberfläche der \gls{app} wird mittels \gls{xaml} realisiert, welche auf der
 
 
 %General, XAML stuff
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{images/implementation/push.png}
+	\end{center}	
+	\caption{Wechsel auf neue Seite}
+	\label{fig:push}
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{images/implementation/pop.png}
+	\end{center}	
+	\caption{Wechsel auf alte Seite}
+	\label{fig:pop}
+\end{figure}
 
 \paragraph{SignIn Page} stellt die Benutzerschnittstelle zur Anmeldung des Nutzers am System dar, siehe Abbildung \ref{fig:signin}. Dabei gibt dieser die entsprechende IP-Adresse der laufenden Desktopanwendung zur Verbindung an. Durch eine implementierte Logik wird diese IP-Adresse auf ihre Richtigkeit geprüft und die Verbindung gestartet. Bei einer erfolgreichen Verbindung wird der Benutzer zur \gls{app} weitergeleitet, wodurch ihm die entsprechenden Funktionalitäten zur Verfügung stehen. Andernfalls erscheint nach einem definierten Timeout eine Fehlermeldung, welche dem User Informationen vorlegt. Zur Speicherung der IP-Adresse ist zusätzlich die Möglichkeit durch ein Switch Element gegeben, wobei diese bei Start der \gls{app} automatisch eingefügt wird.
 
