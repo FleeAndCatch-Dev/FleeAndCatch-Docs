@@ -455,26 +455,26 @@ Im folgenden sind einige Features die leJOS bietet aufgelistet:
 	\label{fig:appentwicklung}
 \end{wrapfigure}
 
-Eine \gls{app} ist ein ausführbares Programm für mobile Geräte, wie Smartphones oder Tablets. Um eine \gls{app} für ein mobiles Gerät zu entwickeln, müssen vor Start der Entwicklung Anforderungen definiert, damit die Software spezifisch angepasst werden kann. Je nach Art der Anforderungen die an das System gestellt werden, bestehen verschiedene Möglichkeiten der Entwicklung. Allgemein kennt die \gls{app} Entwicklung drei verschiedene Arten, die Native-, Web- und Hybride-Entwicklung, siehe Abschnitt \eqref{native}, \eqref{web} und \eqref{hybride}. Dabei werden verschiedene \glspl{framework} verwendet, um mit unterschiedlichen Programmiersprachen den Aufbau der Logik zu beschreiben. Eine App besteht immer aus zwei Teile, dem \gls{ui}, das meist mit einer \gls{xml} ähnlichen Sprache beschrieben wird und dem Programmcode, der sich auf viele Klassen verteilt und die Funktionalitäten der \gls{app} beschreiben.
+Eine \gls{app} ist ein ausführbares Programm für mobile Geräte, wie Smartphones oder Tablets. Um eine \gls{app} für ein mobiles Gerät zu entwickeln, müssen vor Start der Entwicklung Anforderungen definiert sein, damit die Software spezifisch angepasst werden kann. Je nach Art der Anforderungen die an das System gestellt werden, bestehen verschiedene Möglichkeiten der Entwicklung. Allgemein kennt die \gls{app} Entwicklung drei verschiedene Arten, die Native-, Web- und Hybride-Entwicklung, siehe Abschnitt \eqref{native}, \eqref{web} und \eqref{hybride}. Dabei werden verschiedene \glspl{framework} verwendet, um mit unterschiedlichen Programmiersprachen den Aufbau der Logik zu beschreiben. Eine \gls{app} besteht immer aus zwei Teile, dem \gls{ui}, das meist mit einer \gls{xml} oder \gls{html} und \gls{css} ähnlichen Sprache beschrieben wird und dem Programmcode, der sich auf viele Klassen verteilt und die Funktionalitäten der \gls{app} beschreiben.
 
 \subsubsection{Native \glspl{app}}\label{native}
 
-In der Entwicklung von nativen \glspl{app} werden die direkten Ressourcen des Gerätes verwendet. Dazu gehört die Laufzeitumgebung des Betriebssystems, Bibliotheken und Hardwareschnittstellen. Der Vorteil von einer nativen Entwicklung liegt hauptsächlich darin, dass diese für das Betriebssystem optimiert ist und die vorhandenen Schnittstellen genutzt werden können, um komplexe und rechenintensive Anwendungen zu ermöglichen.\footnote{\citep[vgl.][Unterschiede und Vergleich native Apps vs. Web Apps]{DanielWurstl.Unterschiedeund}\label{note1x}}\\
-Vertreter diese Entwicklung finden sich für verschiedene Betriebssysteme. Der populärste unter ihnen ist bei weitem Android mit einer nativen Java Entwicklung über Android Studio von Google. Native \glspl{app} besitzt aktuellen den höchsten Marktanteil und eine entsprechende Popularität unter Entwickler und Nutzer.
+In der Entwicklung von nativen \glspl{app} werden die direkten Ressourcen des Gerätes verwendet. Dazu gehört die Laufzeitumgebung des Betriebssystems, Bibliotheken und Hardwareschnittstellen. Der Vorteil von einer nativen Entwicklung liegt hauptsächlich darin, dass diese für das Betriebssystem optimiert ist und die vorhandenen Schnittstellen genutzt werden können, um komplexe und rechenintensive Anwendungen zu ermöglichen.\footnote{\citep[vgl.][Unterschiede und Vergleich native Apps vs. Web Apps]{DanielWurstl.Unterschiedeund}\label{note36}}\\
+Vertreter diese Entwicklung finden sich für verschiedene Betriebssysteme. Der populärste unter ihnen ist bei weitem Android mit einer nativen Java Entwicklung über Android Studio von Google. Native \glspl{app} besitzt aktuell den höchsten Marktanteil und eine entsprechende Popularität unter Entwicklern und Nutzern.
 
 \subsubsection{Web \glspl{app}}\label{web}
 
-Die Entwicklung von web \glspl{app} arbeitet mit systemübergreifenden Ressourcen und greift auf gängige Webtechnologien, wie \gls{html}, \gls{css} und \gls{javascript} zurück. Die \gls{app} wird hierbei nicht wie normale Anwendungen direkt auf dem System des Gerätes ausgeführt, sondern kommt in dessen Browser zur Ausführung. Der Vorteil hierbei ist vor allem, dass diese Art von \gls{app} auf allen Betriebssystemen lauffähig ist und direkt über das Internet veröffentlicht und aktualisiert werden kann, jedoch wird eine stabile Internetverbindung vorausgesetzt.\footref{note1x}\\
+Die Entwicklung von web \glspl{app} arbeitet mit systemübergreifenden Ressourcen und greift auf gängige Webtechnologien, wie \gls{html}, \gls{css} und \gls{javascript} zurück. Die \gls{app} wird hierbei nicht wie normale Anwendungen direkt auf dem System des Gerätes ausgeführt, sondern kommt in dessen Browser zur Ausführung. Der Vorteil hierbei ist vor allem, dass diese Art von \gls{app} auf allen Betriebssystemen lauffähig ist und direkt über das Internet veröffentlicht und aktualisiert werden kann, jedoch wird eine stabile Internetverbindung vorausgesetzt.\footref{note36}\\
 Diese Entwicklung besitzt viele Vertreter mit der Unterstützung diverser \glspl{framework}. Das populärste unter ihnen ist aktuell AngularJS von Google, was auf \gls{javascript} basiert. In Kombination mit anderen Webtechnologien, wie \gls{html} und \gls{css} lassen sich perfomante Web-\glspl{app} entwickeln.
 
 \subsubsection{Hybride \glspl{app}}\label{hybride}
 
-Die Entwicklung von hybriden \glspl{app} vereinigt die native- und webbasierte Entwicklung. Sie besteht dabei aus einem nativen Rahmen, in der eine Web-\gls{app} zur Ausführung kommt, diese besitzt entsprechende Zugriffsrechte auf Hardwareschnittstellen, um diese mit \glspl{api} anzusprechen.\footnote{\citep[vgl.][Native App, Web App und Hybrid App im Überblick]{PetraRiepe.NativeApp}\label{note2x}}\\
+Die Entwicklung von hybriden \glspl{app} vereinigt die native- und webbasierte Entwicklung. Sie besteht dabei aus einem nativen Rahmen, in der eine Web-\gls{app} zur Ausführung kommt, diese besitzt entsprechende Zugriffsrechte auf Hardwareschnittstellen, um diese mit \glspl{api} anzusprechen.\footnote{\citep[vgl.][Native App, Web App und Hybrid App im Überblick]{PetraRiepe.NativeApp}\label{note37}}\\
 Diese Entwicklung ist aktuell noch sehr jung, jedoch treten hier bereits verschiedene Vertreter hervor. Der populärste unter ihnen ist Ionic von Drifty, welches auf Apache Cordova als Basis zurückgreift. In Kombination mit AngularJS, \gls{typescript} und anderen Webtechnologien lässt sich die hybride \gls{app} entwickeln und auf einem beliebigen Gerät unter einem nativen Browser ausführen. Hybride \glspl{app} unterstützten dabei verschiedene Betriebssystem, wie Android, iOS und Windows. Diese \glspl{app} können dabei meist nicht nur mobil, sondern unter anderem auf weiteren Systemen, wie stationäre zum Beispiel Desktop Rechner bereitgestellt werden.
 
 \subsubsection{Plattformübergreifende \glspl{app}}
 
-Um die Entwicklung von \glspl{app} einfach zu gestalten, verwenden immer mehr Entwickler die Form der plattformübergreifenden Entwicklung. Dadurch lässt sich die \gls{app} unabhängig des Betriebssystem entwickeln und kann somit eine größere Menge von Nutzern erreichen. Diese Entwicklung greift dabei meist auf plattformübergreifende Konzepte, wie eine native Laufzeitumgebung, oder einen nativen Browser zurück, um darin die \gls{app} auszuführen. Der große Vorteil dieser \glspl{app}, liegt in der Wiederverwendbarkeit des Quellcodes und der verbesserten Wartbarkeit, da hier lediglich ein Projekt gewartet werden muss und der Quellcode für viele Betriebssysteme übernommen werden kann. Zur plattformübergreifenden Entwicklung wurden in den letzten Jahre viele Ansätze mit verschiedenen \glspl{framework} entwickelt. Beispiele hierfür sind Ionic, Unity, Qt oder Xamarin.\\
+Um die Entwicklung von \glspl{app} einfach zu gestalten, verwenden immer mehr Entwickler die Form der plattformübergreifenden Entwicklung. Dadurch lässt sich die \gls{app} unabhängig des Betriebssystem entwickeln und kann somit eine größere Menge von Nutzern erreichen. Diese Entwicklung greift dabei meist auf plattformübergreifende Konzepte, wie eine native Laufzeitumgebung oder einen nativen Browser zurück, um darin die \gls{app} auszuführen. Der große Vorteil dieser \glspl{app}, liegt in der Wiederverwendbarkeit des Quellcodes und der verbesserten Wartbarkeit, da hier lediglich ein Projekt gewartet werden muss und der Quellcode für viele Betriebssysteme übernommen werden kann. Zur plattformübergreifenden Entwicklung wurden in den letzten Jahre viele Ansätze mit verschiedenen \glspl{framework} entwickelt. Beispiele hierfür sind Ionic, Unity, Qt oder Xamarin.\\
 \newpage
 
 \subsubsection{Xamarin}
@@ -487,11 +487,12 @@ Um die Entwicklung von \glspl{app} einfach zu gestalten, verwenden immer mehr En
 	\label{fig:xamarin}
 \end{wrapfigure}
 
-Xamarin ist ein \gls{framework} zur Entwicklung von nativen, plattformübergreifenden \glspl{app}. Es basiert auf dem Mono Projekt, siehe Abschnitt \eqref{mono}, um damit auf verschiedenen Betriebssysteme, wie Android, iOS, Windows und Windows Phone ausgeführt werden kann. Um nativen Quellcode auf den verschiedenen Systemen auszuführen, setzt Xamarin auf verschiedene Softwarekomponenten, um aus einem mit .NET entwickelten Projekt nativen Quellcode zu erzeugen.\\
-Für iOS Systeme verwendet Xamarin den \gls{aot} Compiler, um aus einem Xamarin.iOS Projekt, \gls{arm} Maschinencode zur erzeugen, der entsprechend schnell auf dem System ausgeführt werden kann.\footnote{\citep[vgl.][Introduction to Mobile Development - Xamarin]{Xamarin.Introductionto}\label{note3x}} Bei Android hingegen wird der Quellcode in \gls{il} übersetzt, eine plattformübergreifende Assemblersprache, die durch das .NET \gls{framework} zur Ausführung gebracht wird. Die Übersetzung in \gls{il} geschieht mittels \gls{jit}, um zur Laufzeit Maschinencode für das entsprechende Gerät zu erzeugen.\footref{note3} Damit dies bewerkstelligt werden kann, nutzt Xamarin zur Laufzeit Softwarekomponenten, die bestimmte Prozesse, wie Speicherverwaltung und Plattformoperationen verwalten.\\
+Xamarin ist ein \gls{framework} zur Entwicklung von nativen, plattformübergreifenden \glspl{app}. Es basiert auf dem Mono Projekt, siehe Abschnitt \eqref{mono}, um damit auf verschiedenen Betriebssysteme, wie Android, iOS, Windows und Windows Phone ausgeführt werden zu können. Um nativen Quellcode auf den verschiedenen Systemen auszuführen, setzt Xamarin auf verschiedene Softwarekomponenten, um aus einem mit .NET entwickelten Projekt nativen Quellcode zu erzeugen.\\
+Für iOS Systeme verwendet Xamarin den \gls{aot} Compiler, um aus einem Xamarin.iOS Projekt, \gls{arm} Maschinencode zur erzeugen, der entsprechend schnell auf dem System ausgeführt werden kann.\footnote{\citep[vgl.][Introduction to Mobile Development - Xamarin]{Xamarin.Introductionto}\label{note38}} Bei Android hingegen wird der Quellcode in \gls{il} übersetzt, eine plattformübergreifende Assemblersprache, die durch das .NET \gls{framework} zur Ausführung gebracht wird. Die Übersetzung in \gls{il} geschieht mittels \gls{jit}, um zur Laufzeit Maschinencode für das entsprechende Gerät zu erzeugen.\footref{note38} Damit dies bewerkstelligt werden kann, nutzt Xamarin zur Laufzeit Softwarekomponenten, die bestimmte Prozesse, wie Speicherverwaltung und Plattformoperationen verwalten.\\
 Für eine effiziente Entwicklung bringt Xamarin eine große Bandbreite von Funktionalitäten für einen Entwickler. Beispiele sind dafür Bibliotheken, eine Test Cloud, sowie eine Unterstützung von nativen Bibliotheken, beispielsweise für \gls{java} oder \gls{objectivc}. Um mit Xamarin zu entwickeln, gibt es aktuell verschiedene Möglichkeiten auf unterschiedlichen Betriebssystemen. Einerseits kann mit Xamarin Studio auf einem OSX-System, oder mit Visual Studio auf Windows und Linux entwickelt werden.\\
-Wie viele andere \glspl{framework}, bietet auch Xamarin für verschiedene Zwecke nützliche \glspl{template}, die jeweils andere Nutzen besitzen. Die Entwicklung der App baut dabei vor allem auf zwei Hauptkomponenten von Bibliotheken, den Shared Projects und Protable Class Libraries.
+Wie viele andere \glspl{framework}, bietet auch Xamarin für verschiedene Zwecke nützliche \glspl{template}, die jeweils andere Nutzen besitzen. Die Entwicklung der \gls{app} baut dabei vor allem auf zwei Hauptkomponenten von Bibliotheken, den Shared Projects und Protable Class Libraries.
 
+\newpage
 \begin{wrapfigure}{r}{0.55\textwidth}
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{images/technische_grundlagen/SharedAssetProject.png}
@@ -502,7 +503,7 @@ Wie viele andere \glspl{framework}, bietet auch Xamarin für verschiedene Zwecke
 
 \paragraph{Shared Projects}
 
-ermöglichen dem Entwickler Quellcode für verschiedene Plattformen zu entwickeln, wobei die plattformspezifischen Projekte das entsprechende Shared Project referenzieren. Somit besitzt diese Projektart keinen direkten Output, sondern kopiert den Quellcode entsprechend in das zu bauende Projekt, siehe Abbildung \eqref{fig:shared}.\footnote{\citep[vgl.][Shared Projects - Xamarin]{Xamarin.SharedProjects}\label{note4x}} Der Hauptunterschied zu Standardprojekten liegt vor allem darin, dass ein Shared Project keine Abhängigkeiten haben darf und daher lediglich als Referenz für andere Projekte dienen kann.
+ermöglichen dem Entwickler Quellcode für verschiedene Plattformen zu entwickeln, wobei die plattformspezifischen Projekte das entsprechende Shared Project referenzieren. Somit besitzt diese Projektart keinen direkten Output, sondern kopiert den Quellcode entsprechend in das zu bauende Projekt, siehe Abbildung \eqref{fig:shared}.\footnote{\citep[vgl.][Shared Projects - Xamarin]{Xamarin.SharedProjects}\label{note39}} Der Hauptunterschied zu Standardprojekten liegt vor allem darin, dass ein Shared Project keine Abhängigkeiten haben darf und daher lediglich als Referenz für andere Projekte dienen kann.
 
 \begin{wrapfigure}{r}{0.55\textwidth}
 	\begin{center}
@@ -514,16 +515,16 @@ ermöglichen dem Entwickler Quellcode für verschiedene Plattformen zu entwickel
 
 \paragraph{Protable Class Libraries}
 
-ermöglichen dem Entwickler die Implementierung von plattformübergreifenden Bibliotheken, aus denen \glspl{dll} erzeugt werden können. Das Besondere an Portable Class Libraries ist dabei, dass die Plattformen spezifisch ausgewählt werden können, wobei auf die Unterstützung verschiedener Betriebssysteme zu achten ist, siehe Abbildung \eqref{fig:pcl_support}.\footnote{\citep[vgl.][Introduction to Portable Class Libraries - Xamarin]{Xamarin.PortableClass}\label{note5x}} Eine Portable Class Library besitzt darüber hinaus verschiedene Vor- bzw. Nachteile, die für oder gegen ihre Nutzung sprechen.\\
+ermöglichen dem Entwickler die Implementierung von plattformübergreifenden Bibliotheken, aus denen \glspl{dll} erzeugt werden können. Das Besondere an Portable Class Libraries ist dabei, dass die Plattformen spezifisch ausgewählt werden können, wobei auf die Unterstützung verschiedener Betriebssysteme zu achten ist, siehe Abbildung \eqref{fig:pcl_support}.\footnote{\citep[vgl.][Introduction to Portable Class Libraries - Xamarin]{Xamarin.PortableClass}\label{note40}} Eine Portable Class Library besitzt darüber hinaus verschiedene Vor- bzw. Nachteile, die für oder gegen ihre Nutzung sprechen.\\
 
-\begin{wrapfigure}{r}{0.55\textwidth}
+\begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{images/technische_grundlagen/pclSupport.png}
-		\caption{Unterstützung Portable Class Library \cite{Xamarin.PortableClass}}
-	\end{center}
-	\label{fig:pcl_support}
-\end{wrapfigure}
+	\end{center}	
+	\caption{Unterstützung Portable Class Library \cite{Xamarin.PortableClass}}
+\end{figure}
 
+\newpage
 \noindent
 Vorteile:
 \begin{itemize}
@@ -538,11 +539,6 @@ Nachteile:
 	\item Keine Standardbibliotheken vorhanden
 \end{itemize}
 
-\begin{verbatim}
-\end{verbatim}
-
-\newpage
-
 \begin{wrapfigure}{r}{0.45\textwidth}
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/forms.png}
@@ -551,11 +547,11 @@ Nachteile:
 	\label{fig:forms}
 \end{wrapfigure}
 
-\paragraph{Xamarin.Forms} ist ein plattformübergreifendes \gls{ui} Werkzeug zur Implementierung einer nativen \gls{gui} durch \gls{xaml}, siehe Abbildung \ref{fig:forms}. Dieses basiert auf den typischen \gls{xml} Strukturrichtlinien, womit sich die verschiedenen Elemente als klaren übersichtlichen Text darstellen lassen, siehe Abbildung \ref{fig:xaml}. Zur Strukturierung des Designs bietet Xamarin verschiedene Arten von Seiten-, Layout- und Navigationsprinzipien, welche durch Xamarin.Forms auf die nativen Elemente zurückgreifen. Damit lässt sich durch Xamarin.Forms native Designs schaffen, welche plattformübergreifend in Android, iOS und Windows angewendet werden können. Die vorhandenen Designs stellen dabei Klassen dar, die vom Entwickler entsprechend verwendet, oder bei Bedarf durch eigene Implementierungen angepasst werden können.\\
+\paragraph{Xamarin.Forms} ist ein plattformübergreifendes \gls{ui} Werkzeug zur Implementierung eines nativen \gls{gui} durch \gls{xaml}, siehe Abbildung \ref{fig:forms}. Dieses basiert auf den typischen \gls{xml} Strukturrichtlinien, womit sich die verschiedenen Elemente als klaren, übersichtlichen Text darstellen lassen, siehe Abbildung \ref{fig:xaml}. Zur Strukturierung des Designs bietet Xamarin verschiedene Arten von Seiten-, Layout- und Navigationsprinzipien, welche durch Xamarin.Forms auf die nativen Elemente zurückgreifen. Damit lässt sich durch Xamarin.Forms native Designs schaffen, welche plattformübergreifend in Android, iOS und Windows angewendet werden können. Die vorhandenen Designs stellen dabei Klassen dar, die vom Entwickler entsprechend verwendet, oder bei Bedarf durch eigene Implementierungen angepasst werden können.\\
 
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=1\textwidth]{images/technische_grundlagen/xaml.png}
+		\includegraphics[width=0.7\textwidth]{images/technische_grundlagen/xaml.png}
 	\end{center}	
 	\caption{SignInPage in \acrshort{xaml}}
 	\label{fig:xaml}
@@ -563,7 +559,7 @@ Nachteile:
 
 \newpage
 \noindent
-Xamarin.Forms setzt mit seinem Layout auf bekannte Designprinzipien, welche bereits in anderen Frameworks, wie .NET vorzufinden sind, siehe Abbildung \ref{fig:layout} und \ref{fig:pages}. Diese können in drei Kategorien eingeteilt werden, einerseits die eigentliche Seite, die in verschiedene \glspl{ui} dargestellt werden kann und somit die Nutzerinteraktion beeinflusst. Andererseits das Layout, welches die Darstellung der vorhandenen Elemente regelt und den Pages, die für die Navigation unter den einzelnen Seiten zuständig sind. Dem Entwickler sind dabei keinerlei Grenzen gesetzt, wobei dieser frei sämtliche zur Verfügung stehenden Ressourcen miteinander kombinieren kann.
+Xamarin.Forms setzt mit seinem Layout auf bekannte Designprinzipien, welche bereits in anderen Frameworks, wie .NET vorzufinden sind, siehe Abbildung \ref{fig:layout} und \ref{fig:pages}. Diese können in drei Kategorien eingeteilt werden, einerseits die eigentliche Seite, die in verschiedene \glspl{ui} dargestellt werden können und somit die Nutzerinteraktion beeinflussen. Andererseits das Layout, welches die Darstellung der vorhandenen Elemente regelt und den Pages, die für die Navigation unter den einzelnen Seiten zuständig sind. Dem Entwickler sind dabei keinerlei Grenzen gesetzt, wobei dieser sämtliche zur Verfügung stehenden Ressourcen miteinander kombinieren kann.
 
 \begin{figure}[h]
 	\begin{center}
@@ -594,13 +590,13 @@ Xamarin.Forms setzt mit seinem Layout auf bekannte Designprinzipien, welche bere
 	\label{fig:mono}
 \end{wrapfigure}
 
-Mono ist ein Open-Source-Framework, das auf dem .NET Framework von Microsoft basiert. Die Implementierung von Mono greift dabei auf die Standards von .NET für die Programmiersprache \gls{csharp}, sowie die \gls{cli} zurück.\footnote{\citep[vgl.][About Mono]{MonoProject.AboutMono}\label{note6x}} Dies ermöglicht Entwicklern die Erstellung von plattformübergreifenden Anwendungen, welche mittels einer zur Verfügung gestellten Laufzeitumgebung auf verschiedenen Systemen ausgeführt werden können.\\
+Mono ist ein Open-Source-Framework, das auf dem .NET Framework von Microsoft basiert. Die Implementierung von Mono greift dabei auf die Standards von .NET für die Programmiersprache \gls{csharp}, sowie die \gls{cli} zurück.\footnote{\citep[vgl.][About Mono]{MonoProject.AboutMono}\label{note41}} Dies ermöglicht Entwicklern die Erstellung von plattformübergreifenden Anwendungen, welche mittels einer zur Verfügung gestellten Laufzeitumgebung auf verschiedenen Systemen ausgeführt werden können.\\
 Um Anwendungen auf verschieden Systemen auszuführen, nutzt Mono verschiedene Komponenten. Dazu gehört an vorderster Stelle ein Compiler, um den erstellten Quellcode in die jeweilige Maschinensprache zu übersetzen. Die Übersetzung findet dabei in Kooperation mit der Mono Runtime statt, welche die entsprechende Infrastruktur zur Ausführung der Anwendung bereitstellt. Für eine effiziente Entwicklung stellt Mono zwei Bibliotheken zur Verfügung, einerseits die .NET Class Library, die die Grundelemente von .NET enthält, sowie die Mono Class Library mit zusätzlichen Funktionen für plattformübergreifende Anwendungen.\\
-Im Vergleich mit anderen Frameworks sprechen verschiedenen Vorteile für die Nutzung von Mono. Der Hauptgrund für die Nutzung liegt vor allem in der Popularität von .NET, da dies auf den meisten Rechnern zur Verfügung steht, oder installiert werden kann. Ein großer Nutzen stellt die High-Level-Programmierung dar, die eine Implementierung mit einer Laufzeitumgebung ermöglicht, die Funktionen wie Speicherverwaltung selbst organisiert. Durch Verwendung der \gls{clr} kann der Entwickler seine übliche Programmiersprache verwenden und ist unhabhängig vom bestehenden System.
+Im Vergleich mit anderen Frameworks sprechen verschiedenen Vorteile für die Nutzung von Mono. Der Hauptgrund für die Nutzung liegt vor allem in der Popularität von .NET, da dies auf den meisten Rechnern zur Verfügung steht, oder installiert werden kann. Ein großer Nutzen stellt die High-Level-Programmierung dar, welche eine Implementierung mit einer Laufzeitumgebung ermöglicht, die Funktionen wie Speicherverwaltung selbst organisiert. Durch Verwendung der \gls{clr} kann der Entwickler seine übliche Programmiersprache verwenden und ist unabhängig vom bestehenden System.
 
 \subsubsection{.NET Framework}\label{net}
 
-Das .NET Framework dient zur Entwicklung sowie Ausführung von Anwendungen, die mit Programmiersprachen implementiert werden und auf den Standards von .NET basieren. Es besteht aus verschiedenen Komponenten, wobei der Kern des Frameworks in der \gls{clr} liegt.\footnote{\citep[vgl.][Overview of the .NET Framework]{Microsoft.Overviewof}\label{note7x}} Diese ist verantwortlich für die Laufzeitumgebung und somit für die Ausführung der Anwendungen, indem es die bereitgestellten Ressourcen des Systems nutzt.
+Das .NET Framework dient zur Entwicklung sowie Ausführung von Anwendungen, die mit Programmiersprachen implementiert sind, welche auf den Standards von .NET basieren. Es besteht aus verschiedenen Komponenten, wobei der Kern des Frameworks in der \gls{clr} liegt.\footnote{\citep[vgl.][Overview of the .NET Framework]{Microsoft.Overviewof}\label{note42}} Diese ist verantwortlich für die Laufzeitumgebung und somit für die Ausführung der Anwendungen, indem es die bereitgestellten Ressourcen des Systems nutzt.
 \newpage
 \begin{wrapfigure}{r}{0.45\textwidth}
 	\begin{center}
@@ -611,7 +607,7 @@ Das .NET Framework dient zur Entwicklung sowie Ausführung von Anwendungen, die 
 \end{wrapfigure}
 
 \noindent
-Die \gls{clr} führt zur Laufzeit je nach System verschiedene Aktionen aus, um die entsprechende Anwendung auszuführen. Der allgemeine Ablauf ist dabei folgender: Der Quellcode wird in die \gls{clr} geladen und nach entsprechenden Sicherheitsanforderungen des Systems überprüft.\footref{note7} Anschließend wird er durch eine \gls{jit} Kompilierung in einen \gls{il}-Quellcode konvertiert, um diesen nativ auf dem System ausführen zu können.\footref{note7} Der \gls{il}-Quellcode setzt dabei auf die gesetzten Standards der \gls{cli} auf, die eine sprach- und plattformunabhängige Entwicklung von Anwendungen ermöglicht.\footref{note7}\\
+Die \gls{clr} führt zur Laufzeit, je nach System, verschiedene Aktionen aus, um die entsprechende Anwendung auszuführen. Der allgemeine Ablauf ist dabei folgender: Der Quellcode wird in die \gls{clr} geladen und nach entsprechenden Sicherheitsanforderungen des Systems überprüft.\footref{note42} Anschließend wird er durch eine \gls{jit} Kompilierung in einen \gls{il}-Quellcode konvertiert, um diesen nativ auf dem System ausführen zu können.\footref{note7} Der \gls{il}-Quellcode setzt dabei auf die gesetzten Standards der \gls{cli} auf, die eine sprach- und plattformunabhängige Entwicklung von Anwendungen ermöglicht.\footref{not42}\\
 Das .NET Framework bietet zusätzlich zur unabhängigen Entwicklung verschiedene unterstützende Komponenten. Die wichtigste unter ihnen ist die .NET Class Library. Diese unterstützt den Entwickler mit einer Sammlung bereits implementierten Quellcodes, wie Klassen und entsprechenden Zugang zu systemnahen Schnittstellen. Mit dem .NET Framework lässt sich eine große Bandbreite von Anwendungen entwickeln, von Konsolenanwendungen, über grafischen Oberflächen, bis hin zu Webanwendungen.\\
 
 \begin{figure}[h]
@@ -624,19 +620,17 @@ Das .NET Framework bietet zusätzlich zur unabhängigen Entwicklung verschiedene
 \color{process}
 
 \subsection{TCP-Kommunikation}
-Das Transmission Control Protocol (TCP) ist ein Transportprotokoll und ermöglicht eine Datenaustausch zwischen kommunizierenden Anwendungsinstanzen in einer Ende-zu-Ende-Beziehung zwischen. TCP ist als Transportprotokoll auf in der 4 Schicht des OSI-Modells angesiedelt und basiert auf dem Internetprotokoll (IP) mit dem zusammen es als Nahmensgeber der TCP/IP-Protokollfamilie (Internetprotokollfamilie) dient.
-TCP ist ein offenes, frei verfügbares und weit verbreitetes Protokoll. Als Mitglied der Internetprotokollfamilie ist TCP neben UDP das Transportprotokoll, auf dem die meisten Anwendungen im Internet basieren [GD189].
+Das \gls{tcp} ist ein Transportprotokoll und ermöglicht eine Datenaustausch zwischen kommunizierenden Anwendungsinstanzen in einer Ende-zu-Ende-Beziehung. \gls{tcp} ist als Transportprotokoll in der vierten Schicht des \gls{osi}-Modells angesiedelt und basiert auf dem \gls{ip} mit dem es zusammen als Namensgeber der TCP/IP-Protokollfamilie (Internetprotokollfamilie) dient.
+\gls{tcp} ist ein offenes, frei verfügbares und weit verbreitetes Protokoll. Als Mitglied der Internetprotokollfamilie ist \gls{tcp} neben \gls{udp} das Transportprotokoll, auf dem die meisten Anwendungen im Internet basieren.\footnote{\citep[vgl.][Grundkurs Datenkommunikation, Seite 189]{Mandl.GrundkursDatenkommunikation}\label{note43}}
 \subsubsection{Gundlegendes}
-Als verbindungsorientiertes Protokoll sorgt TCP für die Erzeugung und Erhaltung einer gesicherten 
-Ende-zu-Ende-Verbindung zwischen zwei Anwendungsprozessen. TCP arbeitet paketvermittelt d.h. überträgt Daten Paketweise und ist ein zuverlässiges Protokoll.
-Durch diese Eigenschaften stellt TCP sicher dass, Daten
+Als verbindungsorientiertes Protokoll sorgt TCP für die Erzeugung und Erhaltung einer gesicherten Ende-zu-Ende-Verbindung zwischen zwei Anwendungsprozessen. TCP arbeitet paketvermittelt d.h. überträgt Daten Paketweise und ist ein zuverlässiges Protokoll. Durch diese Eigenschaften stellt TCP sicher, dass Daten
 \begin{itemize}
 	\item{nicht verloren gehen}
 	\item{nicht verändert werden}
 	\item{nicht dupliziert werden}
 	\item{in der richtigen Reihenfolge eintreffen}
 \end{itemize}
-Zur Gewährleistung einer vollständingen Übertragung sowie der Integrität der gesendeten Daten nutzt TCP Prüfsummen,Bestätigungen, Zeitüberwachungs- und Nachrichtenwiederholungsmechanismen sowie Sequenznummern für die Reihenfolgeüberwachung und das Sliding Windows Prinzip zur Flusskontrolle [GD].
+Zur Gewährleistung einer vollständigen Übertragung sowie der Integrität der gesendeten Daten nutzt TCP Prüfsummen, Bestätigungen, Zeitüberwachungs- und Nachrichtenwiederholungsmechanismen sowie Sequenznummern für die Reihenfolgeüberwachung und das Sliding Windows Prinzip zur Flusskontrolle.\footnote{\citep[vgl.][Grundkurs Datenkommunikation, Seite 190]{Mandl.GrundkursDatenkommunikation}\label{note44}}
 \newline
 TCP nutzt prinzipiell folgende Protokollmechanismen:
 \begin{itemize}
@@ -648,49 +642,44 @@ TCP nutzt prinzipiell folgende Protokollmechanismen:
 	\item{Fluss- und Staukontrolle}
 \end{itemize}
 \subsubsection{Nagle-Algorithmus}
-Nagle-Algorithmus (RFC 896 und RFC 1122) ist ein Algorithmus der der Optimierung dient und der bei allen 
-TCP-Implementierungen verwendet wird. Der versuchte Nagle-Algorithmus aus Optimierungsgründen zu verhindern, dass viele kleine Nachrichten gesendet werden, da dies schlecht für die Netzauslastung ist [GD198]. \newline
-Dazu werden mehrere Nachrichten zusammengefasst und gebündelt versendent, dies geschieht nach folgendem Prinzip:
+Nagle-Algorithmus (RFC 896 und RFC 1122) ist ein Algorithmus, der der Optimierung dient und der bei allen TCP-Implementierungen verwendet wird. Der Nagle-Algorithmus versucht aus Optimierungsgründen zu verhindern, dass viele kleine Nachrichten gesendet werden, da dies schlecht für die Netzauslastung ist.\footnote{\citep[vgl.][Grundkurs Datenkommunikation, Seite 198]{Mandl.GrundkursDatenkommunikation}\label{note45}} \newline
+Dazu werden mehrere Nachrichten zusammengefasst und gebündelt versendet, dies geschieht nach folgendem Prinzip:
 \begin{itemize}
-	\item{Erhält der TCP-Endpunkt Daten vom Anwendungsprozess wird zunächst nur das erste Datenpaket gesendet und die restlichen Daten werden im Sendepuffer gesammelt.}
-	\item{Danach werden weiteren Daten so lange im Sendepuffer gesammelt bis alle zuvor gesendeten Datenpakete vom Empfänger bestätigt wurden oder so viele Daten im Sendepuffer liegen das die eingstellte Segmentgröße erreicht ist und ein volles Datenpaket gesendet werden kann.}
+	\item{Erhält der \gls{tcp}-Endpunkt Daten vom Anwendungsprozess wird zunächst nur das erste Datenpaket gesendet und die restlichen Daten werden im Sendepuffer gesammelt.}
+	\item{Danach werden weitere Daten so lange im Sendepuffer gesammelt bis alle zuvor gesendeten Datenpakete vom Empfänger bestätigt wurden oder so viele Daten im Sendepuffer liegen, dass die einstellte Segmentgröße erreicht ist und ein volles Datenpaket gesendet werden kann.}
 \end{itemize}
-Dieses Verfahren sorgt zwar für eine gute Netzauslastung da das Verhältnis von Nutzdaten zu Overhead (TCP-Header etc.) steigt jedoch ist dies allerdings nicht nicht für alle Anwendungsszenarien optimal da es die Latenz erhöt. Insbesondere bei Anwendungen die eine ummittelbare Antwort der Gegenstelle benötigen wie SSH- oder Telnet-Anwendung sorgt dies für Verzögerungen. In diesem Fall ist es besser den Nagle-Algorithmus auszuschalten. [GD198 f.]
+Dieses Verfahren sorgt zwar für eine gute Netzauslastung, da das Verhältnis von Nutzdaten zu Overhead (\gls{tcp}-Header etc.) steigt, jedoch ist dies nicht für alle Anwendungsszenarien optimal, da es die Latenz erhöht. Insbesondere bei Anwendungen die eine unmittelbare Antwort der Gegenstelle benötigen wie \gls{ssh}- oder Telnet-Anwendung sorgt dies für Verzögerungen. In diesem Fall ist es besser den Nagle-Algorithmus auszuschalten.\footnote{\citep[vgl.][Grundkurs Datenkommunikation, Seite 198 f.]{Mandl.GrundkursDatenkommunikation}\label{note65}}
 \subsubsection{Kommunikationsablauf}
-Da es sich bei TCP um ein verbindungsorientiertes Protokoll handelt gliedert sich die Kommunikation in die drei Phasen Verbindungsaufbau, Datenaustausch und Verbindungsabbau. Bevor Daten übertragen werden können muss die Verbindung durch den Verbindungsaufbau initiert und nach Beendinung der Datenbertragung
-wieder abgebaut werden. 
+Da es sich bei \gls{tcp} um ein verbindungsorientiertes Protokoll handelt gliedert sich die Kommunikation in drei Phasen: Verbindungsaufbau, Datenaustausch und Verbindungsabbau. Bevor Daten übertragen werden können, muss die Verbindung durch den Verbindungsaufbau initiiert und nach Beendigung der Datenübertragung wieder abgebaut werden. 
 \paragraph{Client \& Server}
-Der Verbindungsaufbau einer Kommunikation erfolgt bei TCP nach dem Client-/Server-Paradigma, d.h. einer der Teilnehmern aggiert als Server und wartet auf einen Verbindungsaufbau durch den Client welchen der andere Teilnehmern darstellt. \newline
-Nach dem Verbindungsauffbau haben die beiden Rollen jedoch keine Bedeutung mehr und die beide Teilnehmern
-sind sowohl bei der Datenübertragung als auch beim Verbindungsabbau gleichberechtigt.
-\paragraph{Verbindungsaufbau} \code{}
-\newline
-\smallskip
-\begin{figure}[ht]
+Der Verbindungsaufbau einer Kommunikation erfolgt bei \gls{tcp} nach dem Client-/Server-Paradigma, d.h. einer der Teilnehmern agiert als Server und wartet auf einen Verbindungsaufbau durch den Client, welchen der andere Teilnehmern darstellt. \newline
+Nach dem Verbfindungsaufbau haben die beiden Rollen jedoch keine Bedeutung mehr und die beide Teilnehmern sind sowohl bei der Datenübertragung, als auch beim Verbindungsabbau gleichberechtigt.
+\paragraph{Verbindungsaufbau}
+Der Verbindungsaufbau bei \gls{tcp} basiert auf dem Three-Way-Handshake. Dabei schickt der Client einen Verbindungswunsch (SYN) an den Server. Der Server bestätigt den Erhalt der Nachricht (ACK) und äußert seinerseits einen Verbindungswunsch (SYN), welchen der Client nach Erhalt der Nachricht bestätigt (ACK). Nach Ablauf dieses gegenseitigen Anfrage- und Bestätigungsvorgangs ist die Verbindung initiiert und der Datenaustausch zwischen den Teilnehmern kann beginnen [EK].\footnote{\citep[vgl.][TCP-Kommunikation]{Schnabel.TCPKommunikation}\label{note66}}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{images/Verbindungsaufbau.png}
-	\caption[TCP Verbindungsaufbau]{TCP Verbindungsaufbau}
+	\caption[TCP Verbindungsaufbau]{TCP Verbindungsaufbau \cite{Schnabel.TCPKommunikation}}
 	\label{fig:<Sprungmakre>}
 \end{figure}
-Der Verbindungsaufbau bei TCP basiert auf dem Three-Way-Handshake. Dabei schickt der schickt der Client einen Verbindungswunsch (SYN) an den Server. Der Server bestätigt den Erhalt der Nachricht (ACK) und äußert seinerseits einen Verbindungswunsch (SYN) welchen der Client nach Erhalt der Nachricht bestätigt (ACK). Nach Abblauf dieses gegenseitigen Anfrage- und Bestätigugsvorgangs ist die Verbindung initiiert und der Datenaustausch zwischen den Teilnehmern kann beginnen [EK].
 \paragraph{Datenaustausch}
-\begin{figure}[ht]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{images/Datenaustausch.png}
-	\caption[TCP Datenaustausch]{TCP Datenaustausch}
+	\caption[TCP Datenaustausch]{TCP Datenaustausch \cite{Schnabel.TCPKommunikation}}
 	\label{fig:<Sprungmakre>}
 \end{figure}
 \paragraph{Verbindungsabbau}
-\begin{figure}[ht]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{images/Verbindungsabbau.png}
-	\caption[TCP Verbindungsabbau]{TCP Verbindungsabbau}
+	\caption[TCP Verbindungsabbau]{TCP Verbindungsabbau \cite{Schnabel.TCPKommunikation}}
 	\label{fig:<Sprungmakre>}
 \end{figure}
-Nach Abschluss der Datenübertragung wird von einer Seite (egal von welcher) ein Verbindungsabbau initiiert. Dazu dient einen etwas modifizierten Drei-Wege-Handshake-Mechanismus. Jede der beiden Verbindungsrichtungen der Vollduplex-Verbindung wird abgebaut, d.h. beide Seiten bauen ihre „Senderichtung“ ab. Die initiierende Seite schickt zuerst einen Verbindungsabbauwunsch (FIN). Die Gegenstelle bestätigt den Erhalt der Nachricht (ACK) und schickt ebenfalls einen Verbindungsabbauwunsch (FIN) woraufhin sie von der Gegenstelle noch mitgeteilt bekommt, dass die Verbindung abgebaut ist (ACK).
+Nach Abschluss der Datenübertragung wird von einer Seite (egal von welcher) ein Verbindungsabbau initiiert. Dazu dient ein etwas modifizierter Drei-Wege-Handshake-Mechanismus. Jede der beiden Verbindungsrichtungen der Vollduplex-Verbindung wird abgebaut, d.h. beide Seiten bauen ihre „Senderichtung“ ab. Die initiierende Seite schickt zuerst einen Verbindungsabbauwunsch (FIN). Die Gegenstelle bestätigt den Erhalt der Nachricht (ACK) und schickt ebenfalls einen Verbindungsabbauwunsch (FIN), woraufhin sie von der Gegenstelle noch mitgeteilt bekommt, dass die Verbindung abgebaut ist (ACK).
 \subsubsection{Socket-Programmierung}
-Als Transportzugriffsschnittstelle für die TCP-basierte Kommunikation dient die Socket-Schnittstelle.
-Obwohl es sich bei TCP ein paketvermitteltes Protokoll handlet der Anwendung eine Strom-orientierte Kommunikation, die Daten werden also von einem Anwendungsprozess Byte für Byte in einem Bytestrom geschrieben und TCP sorgt anschließend um den Aufbau von Segmenten, die dann übertragen werden. Andere Transportdienste erwarten ihre Daten in festen Blöcken [GD].
+Als Transportzugriffsschnittstelle für die \gls{tcp}-basierte Kommunikation dient die Socket-Schnittstelle.
+Obwohl es sich bei \gls{tcp} ein paketvermitteltes Protokoll handelt der Anwendung eine Strom-orientierte Kommunikation, die Daten werden also von einem Anwendungsprozess Byte für Byte in einem Bytestrom geschrieben und \gls{tcp} sorgt anschließend um den Aufbau von Segmenten, die dann übertragen werden. Andere Transportdienste erwarten ihre Daten in festen Blöcken.\footnote{\citep[vgl.][Grundkurs Datenkommunikation, Seite 96 f. f.]{Mandl.GrundkursDatenkommunikation}\label{note67}}
 
 \newpage
 \color{finishing}
