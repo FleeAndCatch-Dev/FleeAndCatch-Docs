@@ -244,7 +244,31 @@ Dabei wird für das Layout der einzelnen Seiten vor allem auf ein StackLayout ge
 
 \newpage
 \subsection{Backend}
-
+Das Backend ist die Kommunikations- und Verwaltungszentrale des Projekts und bildet das Rückgrat der Kommunikation. Es verwaltet die 
+Devices im Kontext der einzelnen Szenarien und sorgt für den Datenaustausch zwischen den verschieden Geräten. \\
+Realisiert ist des Backend wie auch der Roboter in der Programmiersprache Java. Das bringt neben der plattformunabhängigen 
+Lauffähigkeit des Programms noch weitere Vorteile mit sich. So können vor allem Programmkomponenten welche die Kommunikation und
+den Datenaustausch betreffen für die Roboter- bzw. Backend-Implementierung wiederverwendet werden und müssen nicht komplett neu
+implementiert werden.
+\subsubsection{Die GUI}
+Neben den rein Funktionalen Komponenten des Backends verfügt dieses auch über eine grafische Benutzeroberfläche die Informationen zu
+den angemeldeten Geräten und den existierenden Szenarien zur Verfügung stellt. Diese Benutzeroberfläche ist so realisiert das diese 
+komplett losgelöst von den der eigentlichen Funktionalität des Backend ist. Sie setzt lediglich auf dem eigentlichen Programm auf und
+ist zu dessen Ausführung nicht notwendig. Dadurch ist es möglich das Programm komplett ohne grafische Benutzeroberfläche zu starten so
+das es im Hintergrund laufen kann und lediglich als Verwaltungs- und Kommunikationsservice dient. Ob die grafische Benutzeroberfläche 
+aktiviert ist oder nicht wird beim Programmstart durch entsprechenden Parametern festgelegt. \\
+Der Nutzen der GUI bestand für uns hauptsächlich im Monitoring und bei der Identifikation sowie dem Aufspüren von Fehlern während der 
+Entwicklung. \\
+Realisiert ist die grafische Benutzeroberfläche mit dem JavaFX-Framework welches Bestandteil der Java-Bibliothek ist uns somit wie 
+Java ebenfalls plattformunabhängig lauffähig ist. Zu ihrer Ansteuerung dient eine spezielle Klasse namens
+>>ViewController<< welche lediglich Informationen des eigentliche Programms entgegen nimmt und an die eigentliche Benutzeroberfläche 
+(View) weiterreicht sofern diese aktiviert wurde. Umgekehrt werden jedoch keine Benutzereingaben von der GUI an das Programm 
+weitergereicht, sondern dienen lediglich zur Manipulation der Anzeige so das dieses komplett unabhängig ist. Lediglich das Beenden 
+das kompletten Programms ist über die grafische Benutzeroberfläche möglich.
+Abbildung X.X zeigt einen Screenshot der grafischen Benutzeroberfläche des Backends. \\
+\\
+Da die grafische Benutzeroberfläche jedoch nicht zur eigentlichen Funktionalität des Backends beiträgt soll an dieser Stelle nicht 
+weiter eingegangen werden.
 \begin{comment}
 Aufbau
 Interpreter
@@ -253,7 +277,163 @@ GUI
 \end{comment}
 
 \subsection{Robot}
-
+Die Implementierung des Roboters stellt das Kernstück bei der Realisierung dieses Projekts dar. 
+\\
+\\
+Da eine komplett detaillierte Beschreibung des ganzen Quellcodes den Umfang dieser Ausarbeitung bei weitem sprengen würde,
+werden in diesem Kapitel die wichtigsten Implementierungskonzepte deren Funktionswiese, sowie deren Komponenten dargestellt. 
+Für eine vollständig detaillierte Darstellung wird auf den Quellcode und den darin enthalten Kommentare sowie das zugehörige 
+github-Wiki (https://github.com/FleeAndCatch-Dev/FleeAndCatch-Docs/wiki) verwiesen.
+\subsubsection{Threads}
+Für die Umsetzung der Szenarien ist es erforderlich das der Roboter verschiedene Dinge parallel erledigt. Zum einen muss die 
+ständige und zeitnahen Kommunikation mit dem Backend aufrecht erhalten werden, um zum einen Steuerdaten sowie die Positionsdaten
+der anderen Roboter für die Bewegungsberechnung zu empfangen. Andererseits müssen über diese Verbindung die eigenen Daten übermittelt
+an das Backend übermittelt werden. Darüber hinaus muss die eigentliche Steuerung des Roboters erfolgen. \\
+Zur Realisierung all dieser Aufgaben sind innerhalb des Roboters die folgenden X Threads implementiert:
+\begin{itemize}
+	%   ###############################################################################################################################
+	\item{Hauptthread (main thread)}
+	%   ###############################################################################################################################
+	\item{Kommunikationsthread (connectionThread)}
+	%   ###############################################################################################################################
+	\item{Steuerungsthread (steeringThread)}
+	%   ###############################################################################################################################
+	\item{Datenerfassungsthread (synchronizeThread)}
+	%   ###############################################################################################################################
+\end{itemize}
+In den folgenden Abschnitten werden die einzelnen Threads sowie ihre Aufgaben dargestellt:
+\paragraph{Hauptthread}
+Der Hauptthread ist der Thread welcher beim Programmstart (Aufruf der Funktion public static void main(String[] args)) automatisch 
+erzeugt wird und der immer vorhanden ist. Durch diesen Thread werden in der Initialisierungsphase alle anderen Threads die 
+zur Kommunikation, Steuerung und Datenerfassung benötigt werden erzeugt. 
+\paragraph{Kommunikationsthread}
+\paragraph{Steuerungsthread}
+Der Steuerungsthread hat wie der Name schon sagt die Aufgabe den Roboter zu steuern das heiß seine Geschwindigkeit und Bewegungsrichtung 
+umzusetzen. Implementiert ist der Steuerungsthread in der RobotController Klasse die als Schnittstelle zwischen der Kommunikation und den
+Roboterfunktionalitäten fungiert. \\
+Die konkrete Umsetzung der Steuerung die durch diesen Thread erfolgt wird im Abschnitt X.X beschrieben.
+\paragraph{Datenerfassungsthread}
+Neben dem Empfangen von Daten und der Umsetzung der Steuerung muss der Roboter auch seine eigen Daten wie Position, Orientierung und 
+Geschwindigkeit kontinuierlich erfassen und an das Backend übermitteln so das diese Informationen den anderen Robotern zur Verfügung
+gestellt werden können. Da dieser Thread dazu auf Funktionalitäten des Roboters zugreift ist auch dieser innerhalb der RoboterController
+Klasse implementiert.
+\\
+Die Realisierung der Datenerfassung ist weit weniger komplex als die der Steuerung des Roboters. 
+Die Abbildung X.X zeigt das Zusammenspiel der einzelnen Threads bzw. den Ablauf ihrer Erzeugung und Terminierung:
+\subsubsection{Klassen}
+Neben den verschiedenen Threads enthält das Roboterprogramm zahlreiche Klassen durch welche die vielfältigen Funktionen abgebildet 
+werden die, der Roboter zur Realisierung der verschiedenen Szenarien mitbringen muss. 
+\paragraph{Klassenstruktur}
+\color{finishing}             % Farbe die angibt welchen Status der folgende Abschnitt hat!
+% Eigentlicher Text:
+Zur Strukturierung und einer sauberen Trennung der einzelnen Klassen und ihren Sichtbarkeiten, sind diese in verschiedenen 
+Paketen (Java-Packages) organisiert. Diese Klassenstruktur ist hierarchisch aufgebaut, orientiert sich an den grundlegenden 
+Bestandteilen des Programms (Kommunikation, Roboterkontrolle etc.) und granuliert in einzelnen Unterpakete anhand der Objekten 
+welche die jeweiligen Klassen darstellen bzw. welche Funktionen diese bieten. \\
+Bei der Umsetzung wurden die Klassen in den folgenden vier großen Paketbereiche strukturiert.
+\begin{itemize}
+	%   ###############################################################################################################################
+	\item{Kommunikation (\code{flee\_and\_catch.robot.communication})} -- Enthält sämtliche Klassen die für die Kommunikation mit dem
+	Backend notwendig sind dazu zählen die Eigentlichen Kommunikator (Sockets), die verschieden Kommandos sowie serialisierbare 
+	Datenobjekte.
+	%   ###############################################################################################################################
+	\item{Roboter (\code{flee\_and\_catch.robot.robot})} -- Hier befinden sich alle Klassen die direkten Zugriff bzw. Einfluss auf den 
+	physischen Roboter haben. Dies sind hauptsächlich Sensoren, das Roboter-Interface, Klassen die einen konkreten Roboter darstellen, 
+	sowie die zentrale Steuerklasse >>RoboterController<<.
+	%   ###############################################################################################################################
+	\item{View (\code{flee\_and\_catch.robot.view})} -- Enthält Klassen die der Anzeige d.h Ansteuerung des LCD-Displays des
+	Roboters dienen. Zwar ist das LCD-Display auch Bestandteil des Roboters, es wurde sich aber für eine Trennung dieser beiden 
+	Bereiche entschieden da diese möglichst unabhängig voneinander bleiben sollten.
+	%   ###############################################################################################################################
+	\item{Konfiguration (\code{flee\_and\_catch.robot.configuration})} -- Zentrales Paket welches Klassen zur Konfiguration 
+	der verschiedenen Programmteile enthält.
+	%   ###############################################################################################################################
+\end{itemize}
+Innerhalb dieser Hauptpakete existieren zahlreiche weitere Unterpakete welche die Klassen weiter strukturieren. Die saubere Einordnung
+und Trennung der Programmklassen ermöglicht es in Verbindung mit der Festlegung entsprechender Sichtbarkeiten, die Klassen gegeneinander 
+abzuschotten. So wird erreicht, dass die Programmteile lediglich über die vorgesehenen Schnittstellen miteinander interagieren und die
+einzelnen Klassen nur diejenigen sehen und ansprechen können die sie tatsächlich benötigen. Zudem hilft es dem Programmierer bei der Orientierung und dem Programmverständnis.
+\medskip
+\newline
+In den nächsten Abschnitten werden die wichtigsten Klassen und Interfaces des Programms näher beschrieben und ihre Rolle bei der 
+Realisierung des durch die Roboter abgebildeten Schwarmverhaltens erläutern.
+\paragraph{Das Roboter Interface}
+\color{process}             % Farbe die angibt welchen Status der folgende Abschnitt hat!
+% Eigentlicher Text:
+Das Roboter Interface dient als Implementierungsvorlage für Klassen die einen Roboter in seiner jeweiligen physischen Gestalt d.h. mit
+der jeweiligen Antriebsform, seinen verbauten Sensoren etc darstellen. Innerhalb dieses Interfaces sind sämtliche Funktionalitäten 
+und Methoden definiert, die ein konkreter Roboter bzw. die entsprechende Klasse, die diesen repräsentiert implementieren muss um durch 
+das Programm gesteuert und in die entsprechenden Szenarien integriert werden zu können. \\
+Innerhalb dieses Interface werden dazu verschiedene Methoden zur Steuerung sowie Abfrage von Roboterparametern definiert. Die durch 
+diese Methoden dargestellten Funktionalitäten sind von so grundlegender Natur das diese durch jeden Roboter realisiert bzw. umgesetzt 
+werden können, wenn auch abhängig von seiner Bauart auf andere Weise. \\
+Folgende Auflistung gibt einen Überblick über die wichtigsten diese Methoden und erläutert kurz die durch sie zur realisierende Funktion.
+\begin{itemize}
+	%   ###############################################################################################################################
+	\item{\code{void forward()}} -- Soll den Roboter geradeaus vorwärts fahren lassen.
+	%   ###############################################################################################################################
+	\item{\code{void backward()}} -- Soll den Roboter geradeaus rückwärts fahren lassen.
+	%   ###############################################################################################################################
+	\item{\code{void backward()}} -- Soll den Roboter sich nach rechts oder linkes bewegen lassen abhängig von der übergebenen Richtung
+	(Direction-Objekt).
+	%   ###############################################################################################################################
+	\item{\code{void stop()}} -- Soll den Roboter anhalten.
+	%   ###############################################################################################################################
+	\item{\code{void increaseSpeed()}} -- Soll die Geschwindigkeit des Roboters erhöhen (Iterativ bei jedem Aufruf).
+	%   ###############################################################################################################################
+	\item{\code{void increaseSpeed()}} -- Soll die Geschwindigkeit des Roboters verringern (Iterativ bei jedem Aufruf).
+	%   ###############################################################################################################################
+	\item{\code{boolean isMoving()}} -- Soll true zurückgeben wenn sich der Roboter bewegt.
+	%   ###############################################################################################################################
+	\item{\code{Position getPosition()}} -- Soll die aktuelle Position und Orientierung des Roboters in einem speziellen 
+	Position-Objekt zurückgeben.
+	%   ###############################################################################################################################
+	\item{\code{float getRealSpeed()}} -- Soll tatsächliche (nicht eingestellte) Geschwindigkeit des Roboters zurückgeben.
+	%   ###############################################################################################################################
+	\item{\code{Robot getJSONRobot()}} -- Soll alle wichtigen Roboterdaten einem speziellen Roboter-Objekt zurückgeben welches 
+	serialisierbar ist und damit via JSON-Objekt an des Backend übertragen werden kann.
+	%   ###############################################################################################################################
+\end{itemize}
+Durch die Vorgaben und Verwendung dieser grundlegenden und universellen Funktionalitäten für die Programm-, Szenarien- und Steuerlogik 
+ist es mögliche eine generische und flexible Implementierung zu schaffen. Da ein Roboter immer als Objekt dieses Interfaces betrachtet 
+und angesprochen wird ist das restliche Programm vollkommen unabhängig von der konkreten Ausprägung des jeweilige Roboter und kennt 
+diese nicht mal. Es beschränkt sich bei der Interaktion mit dem Roboter auf die in diesem Interface definierten Methoden. \\
+Der Vorteil dieser Implementierung liegt darin, dass durch dieses generische Programmierung lediglich eine neuen Klasse die dieses 
+Interface implementiert notwendig ist um einen neue Art von Roboter zu Realisierung und in das Projekt mit sämtlichen Szenarien zu 
+integrieren. Dadurch ist das Programm leicht erweiterbar und es steigert seine Wiederverwendbarkeit. \\
+Wie diese konkrete Implementierung der durch diese Methoden definierten Funktionen zu realisieren ist hängt natürlich vom jeweilige
+Roboter und seinem Aufbau ab und muss durch den Programmiere entsprechend umgesetzt werden.
+\paragraph{Die ThreeWheelDrive Klasse (Eine konkrete Roboter Klasse)}
+\color{process}             % Farbe die angibt welchen Status der folgende Abschnitt hat!
+% Eigentlicher Text:
+Die Klasse >>ThreeWheelDrive<< repräsentiert den \glqq{}Standard\grqq{}-Roboter im Projekt. Sie bildet den in Abbildung X.X zu 
+sehenden Roboter mit seine relevanten Komponenten wie Sensoren, Motoren sowie relevanten geometrischen und physischen Parametern ab.
+Die Klasse implementiert das Roboter-Interface mit den dort definierten Methoden. 
+\paragraph{Die RoboterController Klasse}
+Die >>RobotController<<-Klasse übernimmt eine zentrale Rolle bei der Umsetzung der Roboter-Steuerung. Die Klasse stellt die Schnittstelle
+zum physischen Roboter dar. Sämtliche Steuerkommandos und Sensorabfragen werden über diese Klasse realisiert. Durch diese einheitliche 
+Schnittstelle wird es möglich die Steuerung und ... unabhängig von dem konkreten vorhandenen Roboter (Dreirädriger, Vierrädriger etc)
+zu realisieren. Dazu nutzt der RoboterController intern eine Instanz des "Roboter" Interfaces was eine Ansteuerung des Roboters 
+\\
+Die folgende Abbildung zeigt die der verschiedenen Komponenten:
+\subsubsection{Steuerung}
+Eine der Hauptaufgaben des Roboterprogramms ist die Steuerung des Roboters. Dabei muss das Programm die folgende zwei 
+grundlegenden Steuerungsarten unterscheiden und realisieren.
+\begin{itemize}
+	%   ###############################################################################################################################
+	\item{Direkte Steuerung} -- Bei der direkten Steuerung erhält das Programm über das Backend von der App direkte Steuerbefehle wie
+	Rechts, Links, Schneller, Langsamer welche das Programm dann in die entsprechende Bewegung des Roboters umsetzen muss.
+	%   ###############################################################################################################################
+	\item{Indirekte Steuerung} -- Bei der indirekten Steuerung bekommt das Programm keinen konkreten Steuerbefehle sondern muss basierend
+	auf den Positionsdaten der anderen Roboter und dem vorherrschenden Szenario die notwendigen Steuerbefehle des Roboters berechnen.
+	%   ###############################################################################################################################
+\end{itemize}
+Dabei erfolgt das Empfangen und Verarbeiten der jeweiligen Daten jeweils zyklisch in einem konfigurierbaren Zeitintervall. Beide Steuerungsarten
+basieren auf dem grundlegenden Prinzip das die Daten (Steuerbefehle oder Positionsdaten) durch den X-Thread erfasst und gespeichert werden.
+Der Stuerungsthread widerun liest diese Daten aus und führt die entsprechenden Roboterbefehle aus.
+\paragraph{Allgemein}
+\paragraph{Realisierung beim ThreeWheelDrive}
+\subsubsection{Datenerfassung}
 \begin{comment}
 Aufbau
 Robot
