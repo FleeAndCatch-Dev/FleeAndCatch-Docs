@@ -28,6 +28,7 @@
 \glsXpageXglsnumberformat{}{7}\delimN 
 \glsXpageXglsnumberformat{}{21}, \glsseeformat[Glossary:]{gls-aot}{}}}\relax\glsresetentrylist
 \glossentry{api}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{18}\delimN 
 \glsXpageXglsnumberformat{}{20}\delimN 
 \glsXpageXglsnumberformat{}{47}\delimR 
 \glsXpageXglsnumberformat{}{49}, \glsseeformat[Glossary:]{gls-api}{}}}\relax\glsresetentrylist
@@ -42,7 +43,8 @@
 \glsXpageXglsnumberformat{}{55}\delimR 
 \glsXpageXglsnumberformat{}{59}\delimN 
 \glsXpageXglsnumberformat{}{61}\delimR 
-\glsXpageXglsnumberformat{}{64}}}\relax\glsresetentrylist
+\glsXpageXglsnumberformat{}{64}\delimN 
+\glsXpageXglsnumberformat{}{76}}}\relax\glsresetentrylist
 \glossentry{arm}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{7}\delimN 
 \glsXpageXglsnumberformat{}{21}, \glsseeformat[Glossary:]{gls-arm}{}}}\glsgroupskip
@@ -56,7 +58,8 @@
 \glsXpageXglsnumberformat{}{25}\delimN 
 \glsXpageXglsnumberformat{}{26}, \glsseeformat[Glossary:]{gls-clr}{}}}\relax\glsresetentrylist
 \glossentry{cpu}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{40}}}\relax\glsresetentrylist
+\glsXpageXglsnumberformat{}{40}\delimN 
+\glsXpageXglsnumberformat{}{76}}}\relax\glsresetentrylist
 \glossentry{css}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{7}\delimN 
 \glsXpageXglsnumberformat{}{19}\delimN 
@@ -77,7 +80,8 @@
 \glsXpageXglsnumberformat{}{57}\delimN 
 \glsXpageXglsnumberformat{}{61}\delimN 
 \glsXpageXglsnumberformat{}{63}\delimN 
-\glsXpageXglsnumberformat{}{64}, \glsseeformat[Glossary:]{gls-gui}{}}}\glsgroupskip
+\glsXpageXglsnumberformat{}{64}\delimN 
+\glsXpageXglsnumberformat{}{77}, \glsseeformat[Glossary:]{gls-gui}{}}}\glsgroupskip
 \glsgroupheading{H}\relax\glsresetentrylist
 \glossentry{html}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{7}\delimN 
@@ -90,7 +94,7 @@
 \glsXpageXglsnumberformat{}{26}\delimN 
 \glsXpageXglsnumberformat{}{55}, \glsseeformat[Glossary:]{gls-il}{}}}\relax\glsresetentrylist
 \glossentry{ip}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{10}\delimN 
+\glsXpageXglsnumberformat{}{11}\delimN 
 \glsXpageXglsnumberformat{}{27}\delimN 
 \glsXpageXglsnumberformat{}{62}\delimN 
 \glsXpageXglsnumberformat{}{63}}}\glsgroupskip
@@ -100,17 +104,23 @@
 \glsXpageXglsnumberformat{}{21}\delimN 
 \glsXpageXglsnumberformat{}{26}, \glsseeformat[Glossary:]{gls-jit}{}}}\relax\glsresetentrylist
 \glossentry{json}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{11}\delimN 
+\glsXpageXglsnumberformat{}{12}\delimN 
 \glsXpageXglsnumberformat{}{36}\delimN 
 \glsXpageXglsnumberformat{}{47}\delimR 
 \glsXpageXglsnumberformat{}{50}\delimN 
-\glsXpageXglsnumberformat{}{54}}}\glsgroupskip
+\glsXpageXglsnumberformat{}{54}}}\relax\glsresetentrylist
+\glossentry{jvm}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{18}}}\glsgroupskip
+\glsgroupheading{K}\relax\glsresetentrylist
+\glossentry{ki}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{4}}}\glsgroupskip
 \glsgroupheading{M}\relax\glsresetentrylist
 \glossentry{mvvm}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{10}\delimN 
+\glsXpageXglsnumberformat{}{11}\delimN 
 \glsXpageXglsnumberformat{}{36}\delimN 
 \glsXpageXglsnumberformat{}{56}\delimN 
-\glsXpageXglsnumberformat{}{62}}}\glsgroupskip
+\glsXpageXglsnumberformat{}{62}\delimN 
+\glsXpageXglsnumberformat{}{76}}}\glsgroupskip
 \glsgroupheading{O}\relax\glsresetentrylist
 \glossentry{osi}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{27}}}\glsgroupskip
@@ -131,7 +141,7 @@
 \glossentry{udp}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{27}}}\relax\glsresetentrylist
 \glossentry{ui}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{7}\delimN 
+\glsXpageXglsnumberformat{}{8}\delimN 
 \glsXpageXglsnumberformat{}{19}\delimN 
 \glsXpageXglsnumberformat{}{23}\delimN 
 \glsXpageXglsnumberformat{}{24}\delimN 
@@ -149,11 +159,11 @@
 \glsXpageXglsnumberformat{}{36}}}\glsgroupskip
 \glsgroupheading{X}\relax\glsresetentrylist
 \glossentry{xaml}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{9}\delimN 
+\glsXpageXglsnumberformat{}{10}\delimN 
 \glsXpageXglsnumberformat{}{23}\delimN 
 \glsXpageXglsnumberformat{}{57}}}\relax\glsresetentrylist
 \glossentry{xml}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{7}\delimN 
+\glsXpageXglsnumberformat{}{8}\delimN 
 \glsXpageXglsnumberformat{}{19}\delimN 
 \glsXpageXglsnumberformat{}{23}, \glsseeformat[Glossary:]{gls-xml}{}}}%
 \end{theglossary}\glossarypostamble

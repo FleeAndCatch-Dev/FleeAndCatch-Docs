@@ -1,11 +1,13 @@
 ;; This logfile was generated automatically by `xindy'
-;; at 21.05.2017  20:33:43
-;; Indexstyle: "C:\\Users\\SL-Th\\OneDrive\\Dokumente\\DHBW\\Studienarbeit\\FleeAndCatch-Docs\\documentation\\Koj2Zph5gb", Rawindex: "C:\\Users\\SL-Th\\OneDrive\\Dokumente\\DHBW\\Studienarbeit\\FleeAndCatch-Docs\\documentation\\ecA9HArV5a", Output: "dokumentation.acr"
+;; at 21.05.2017  23:02:43
+;; Indexstyle: "C:\\Users\\SL-Th\\OneDrive\\Dokumente\\DHBW\\Studienarbeit\\FleeAndCatch-Docs\\documentation\\Vt3PyTL09X", Rawindex: "C:\\Users\\SL-Th\\OneDrive\\Dokumente\\DHBW\\Studienarbeit\\FleeAndCatch-Docs\\documentation\\5g6_0bOeZh", Output: "dokumentation.acr"
 
 
 Building indexentry-tree:
 Hierdepth of index is :TREE
 
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
@@ -55,7 +57,9 @@ Letter-group: "»åå»" -> "M"
 Letter-group: "¨È" -> "I"
 Letter-group: "¬ÐÃ¼" -> "J"
 Letter-group: "å¨" -> "V"
+Letter-group: "®¨" -> "K"
 Letter-group: "ÈÐ" -> "G"
+Letter-group: "¬å»" -> "J"
 Letter-group: "Ú†È" -> "T"
 Letter-group: "ÃÐ¨" -> "O"
 Letter-group: "àÈ" -> "U"
@@ -78,6 +82,8 @@ sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "¨´" -> "I"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "¬¨Ú" -> "J"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "®¨" -> "K"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "»åå»" -> "M"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
