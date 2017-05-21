@@ -685,16 +685,16 @@ Obwohl es sich bei \gls{tcp} ein paketvermitteltes Protokoll handelt der Anwendu
 \color{finishing}
 \subsection{Schwarmverhalten}
 
-Dieser Abschnitt beschäftigt sich mit dem Schwarmverhalten, welches mit Roboter imitiert werden soll.
+Dieser Abschnitt beschäftigt sich mit der Theorie des Schwarmverhalten und dessen Abstammung.
 
 \subsubsection{Allgemein}
 
-Das Schwarmverhalten beschreibt die Verhaltensweise eines Schwarmes, welcher aus einer einheitlich formierten Tierart besteht.  Diese interagieren untereinander, um eine evulotionstechnische Überlegenheit durch das Bilden eines Schwarmes zu erhalten. Der Vorteil liegt dabei hauptsächlich im Schutz vor Fressfeinden des einzelnen Individuums im Schwarm, indem diese nicht als Beutetier identifiziert werden können. Andernfalls kann sich der Schwarm als solches effizienter gegenüber Fressfeinden behaupten und Jungtiere schützen. Zudem dient es einer Erleichterung der Fortpflanzung, da in einem Schwarm eine entsprechende Auswahl an Partnern besteht, um eine genetische Vielfalt zu erreichen.
+Das Schwarmverhalten beschreibt die Verhaltensweise eines Schwarmes, welcher aus einer einheitlich formierten Tierart besteht.  Diese interagieren untereinander, um eine evolutionstechnische Überlegenheit, durch das Bilden eines Schwarmes zu erhalten. Der Vorteil liegt dabei hauptsächlich im Schutz vor Fressfeinden des einzelnen Individuums, indem diese nicht als Beutetier identifiziert werden können. Andernfalls kann sich der Schwarm als solches effizienter gegenüber Fressfeinden behaupten und Jungtiere schützen. Zudem dient es einer Erleichterung der Fortpflanzung, da in einem Schwarm eine entsprechende Auswahl an Partnern besteht, um eine genetische Vielfalt zu erreichen.%Schwarm zur Beutejagd
 %\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}\label{note7}}
 \color{process}
 \subsubsection{Vorbilder aus dem Tierreich}
 
-Zur Erstellung eines Schwarmverhaltens existieren verschiedene Ideale, die aus dem Tierreich übernommen werden können. Dabei verwendet jede Tierart ihre eigenen Überlebensstrategien, sowie Regeln die in dem anzutreffenden Schwarm vorherrschen.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
+Zur Nachstellung eines Schwarmverhaltens existieren verschiedene Ideale, die aus dem Tierreich übernommen werden können. Dabei verwendet jede Tierart ihre eigenen Überlebensstrategien, sowie Regeln die in dem anzutreffenden Schwarm vorherrschen.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
 \begin{wrapfigure}{r}{0.45\textwidth}
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/fischschwarm.jpg}
@@ -722,19 +722,21 @@ Die wichtigste Rolle spielt hierbei der Schwellenwert zur Steuerung des Schwarms
 
 \noindent
 \paragraph{Ein Termitenschwarm} geht nach dem Prinzip der Stigmergie vor, wie andere Insekten, die vorwiegend in einem Staat leben. Dabei kommunizieren die einzelnen Individuen indirekt über die Beeinflussung ihrer direkten Umgebung, wie dem Hinterlassen von Spuren als Merkmale. Dieses Prinzip ermöglicht auch den kleinsten und primitivsten Organismen einen evolutionären Vorteil zu erlagen, indem sie sich nicht allein den Gefahren stellen, sondern in einer großen Masse zusammenarbeiten.\\
-Dies ermöglicht das Bauen riesiger Nester, indem die Insekten ihren inneren Plan, mit ihrer aktuellen Umgebung vergleichen und dadurch intuitiv erkennen, welche Arbeit sie zu erledigen haben.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon} 
-	Der Ablauf ist dabei folgender:
+Dies ermöglicht das Bauen riesiger Nester, indem die Insekten ihren inneren Plan, mit ihrer aktuellen Umgebung vergleichen und dadurch intuitiv erkennen, welche Arbeit sie zu erledigen haben.\\%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon} 
+
+\noindent
+Der Ablauf ist dabei folgender:
 \begin{enumerate}
 	\item Erkennen
 	\item Analysieren
 	\item Reagieren
 \end{enumerate}
-Dieses Prinzip lässt sich durch festlegen von Regeln auf Roboterschwärme abbilden, um wie Insekten vollkommen autonom Gebäude und andere Objekte zu errichten. Zudem lässt sich dadurch eine indirekte Kommunikation und Zusammenarbeit zwischen Verschiedenartigen Robotern realisieren.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
+Dieses Prinzip lässt sich durch festlegen von Regeln auf Roboterschwärme abbilden, um wie Insekten vollkommen autonom Gebäude und andere Objekte zu errichten. Zudem lässt sich dadurch eine indirekte Kommunikation und Zusammenarbeit zwischen verschiedenartigen Robotern realisieren.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
 
 \subsubsection{Szenarien}
 
-Zur Umsetzung verschiedener Schwarmverhalten lassen sich nützliche Teile der Tierwelt auf Roboter abstrahieren, um eine Zusammenarbeit der einzelnen Individuen effizienter zu gestalten. Hierbei werden meist mehrere Basisszenarien eingesetzt, die einerseits die Kommunikation, oder Abläufe verbessern.\\
-Für die Umsetzung der Kommunikation der einzelnen Teilnehmer existieren zwei verschiedene Möglichkeiten, einerseits eine direkt, oder indirekte Kommunikation. Dabei kann bei einer direkten Kommunikation auf die bekannten Kommunikationsmittel zurückgegriffen werden und über ein existierendes Netzwerk kommuniziert werden. Bei einer indirekte Kommunikation analysiert der Roboter dagegen seine direkte Umgebung, um daraus Veränderungen zu registrieren und entsprechend darauf zu reagieren. Dabei wird bei einer Umsetzung zur Implementierung folgend vorgegangen:
+Zur Umsetzung verschiedener Schwarmverhalten lassen sich nützliche Teile der Tierwelt auf Roboter abstrahieren, um eine Zusammenarbeit der einzelnen Individuen effizienter zu gestalten. Hierbei werden meist mehrere Basisszenarien eingesetzt, die einerseits die Kommunikation, oder den Abläufe verbessern.\\
+Für die Umsetzung der Kommunikation der einzelnen Teilnehmer existieren zwei verschiedene Möglichkeiten, einerseits eine direkt, oder indirekte Kommunikation. Dabei kann bei einer direkten Kommunikation auf die bekannten Kommunikationsmittel zurückgegriffen werden und über ein existierendes Netzwerk kommuniziert werden. Bei einer indirekte Kommunikation analysiert der Roboter dagegen seine Umgebung, um daraus Veränderungen zu registrieren und entsprechend darauf zu reagieren. Dabei wird bei einer Umsetzung zur Implementierung folgend vorgegangen:
 \begin{enumerate}
 	\item Datenerfassung durch Sensorik
 	\item Datenauswertung
