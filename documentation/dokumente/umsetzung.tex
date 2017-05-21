@@ -1,10 +1,11 @@
 \section{Implementierung}
 
-In diesem Kapitel wird die Implementierung des Projektes mit Fokussierung auf die einzelnen Komponenten beschrieben.
+In diesem Kapitel wird die Implementierung des Projektes mit Fokussierung auf die einzelnen Komponenten beschrieben. Da eine komplett detaillierte Beschreibung des ganzen Quellcodes den Umfang dieser Ausarbeitung bei weitem sprengen würde, werden in diesem Kapitel die wichtigsten Implementierungskonzepte deren Funktionswiese, sowie deren Komponenten dargestellt. Für eine vollständig detaillierte Darstellung wird auf den Quellcode und den darin enthalten Kommentare sowie das zugehörige 
+github-Wiki (https://github.com/FleeAndCatch-Dev/FleeAndCatch-Docs/wiki) verwiesen.
 
 \subsection{Kommunikation}
 
-Die Kommunikation der einzelnen Komponenten des Schwarmverhaltens baut auf einer klar definierten Struktur, um ein verteiltes System zu ermöglichen, siehe Abbildung \eqref{fig:full_classdiagram}. Die Daten werden dabei als \gls{json} Objekte zur optimalen plattformübergreifenden Interpretation versendet, wobei jeweils die entsprechende Bibliothek zur Serialisierung verwendet wird.
+Die Kommunikation der einzelnen Komponenten des Schwarmverhaltens baut auf einer klar definierten Struktur, um ein Schwarmverhalten als verteiltes System zu ermöglichen, siehe Abbildung \eqref{fig:full_classdiagram}. Die Daten werden dabei als \gls{json} Objekte zur optimalen plattformübergreifenden Interpretation versendet, wobei jeweils die entsprechende Bibliothek zur Serialisierung verwendet wird.
 \begin{verbatim}
 \end{verbatim}
 \begin{figure}[h]
@@ -17,7 +18,7 @@ Die Kommunikation der einzelnen Komponenten des Schwarmverhaltens baut auf einer
 
 \newpage
 \noindent
-Der Kern zur Implementierung der Kommunikation erfolgt in zwei Methoden, die auf jeder Komponente zur Verfügung stehen. Diese dienen zum Versenden, sowie Empfangen von Daten, wobei diese als Zeichenkette serialisiert und in Bytes aufgeteilt werden, siehe Abbildung \ref{fig:SendCommand}. Um den vollständigen Umfang der Daten zu erfassen, wird die Größe ermittelt und standardmäßig mittels vier Bytes übertragen. Dadurch ist eine maximale Paketgröße von 32 Byte möglich, was einer Länge von etwa 4 Milliarden Zeichen entspricht. Die Interpretation zum Empfangen erfolgt mit ähnlichem Muster, indem zunächst die Größe der Daten festgestellt wird und die Daten deserialiert werden, siehe Abbildung \ref{fig:ReceiveCommand}.
+Der Kern zur Implementierung der Kommunikation erfolgt in zwei Methoden, die auf jeder Komponente zur Verfügung stehen. Diese dienen zum Versenden, sowie Empfangen von Daten, wobei diese als Zeichenkette serialisiert und in Bytes aufgeteilt werden, siehe Abbildung \eqref{fig:SendCommand}. Um den vollständigen Umfang der Daten zu erfassen, wird die Größe ermittelt und standardmäßig mittels vier Bytes übertragen. Dadurch ist eine maximale Paketgröße von 32 Byte möglich, was einer Länge von etwa 4 Milliarden Zeichen entspricht. Die Interpretation zum Empfangen erfolgt mit ähnlichem Muster, indem zunächst die Größe der Daten festgestellt wird und die Daten deserialiert werden, siehe Abbildung \eqref{fig:ReceiveCommand}.
 
 \begin{figure}[h]
 	\centering
@@ -43,11 +44,11 @@ Der Kern zur Implementierung der Kommunikation erfolgt in zwei Methoden, die auf
 	\label{fig:identification_classdiagram}
 \end{wrapfigure}
 
-stellen die Basis der Kommunikationsstruktur sowie den aktuellen Kontext dar, indem sich die Software befindet, siehe Abbildung \ref{fig:commands_classdiagram}. Sie enthalten grundlegende Attribute zur allgemeinen Identifikation des Kommandos, die zur Interpretation verwendet, welche über definierte Enums ausgewählt werden. Je nach Kommando sind zusätzliche Objekte enthalten, die durch die jeweilige Id vordefiniert sind.\\
+stellen die Basis der Kommunikationsstruktur sowie den aktuellen Kontext dar, indem sich die Software befindet, siehe Abbildung \eqref{fig:commands_classdiagram}. Sie enthalten grundlegende Attribute zur allgemeinen Identifikation des Kommandos, die zur Interpretation verwendet und über definierte Enums ausgewählt werden. Je nach Kommando sind zusätzliche Objekte enthalten, die durch die jeweilige Id vordefiniert sind.\\
 
 \paragraph{Identifikationen}
 
-stellt die individuelle Identität der einzelnen Komponente dar, siehe Abbildung \ref{fig:identification_classdiagram}. Diese wird durch eine fortlaufende Identifikationsnummer, Typen und je nach Ableitung weiteren Attributen erreicht. Um die jeweiligen Kommandos entsprechend zuzuordnen, sind diese in jedem Kommando vorhanden und bilden die Basisobjekte. Die unterschiedlichen Typen sind dabei für verschiedene Kontexte der Software zuständig. Die ClientIdentification stellt einerseits die Verbindung einer allgemeinen Komponente zur Desktopanwendung dar, wogegen die Robot- bzw. AppIdentification die spezifische Identifikation der Komponente darstellt. Die Erstellung der Identifikation erfolgt wiederholt zur Anmeldung der Komponente am System. Zunächst wird ein leeres Objekt erzeugt, dass anschließend durch abfragende Kommandos an die entsprechende Komponente befüllt wird, welche hinterher eine berechnete Identifikationsnummer erhält.
+stellt die individuelle Identität der einzelnen Komponente dar, siehe Abbildung \eqref{fig:identification_classdiagram}. Diese wird durch eine fortlaufende Identifikationsnummer, Typen und je nach Ableitung weiteren Attributen erreicht. Um die jeweiligen Kommandos entsprechend zuzuordnen, sind die Identifikationsobjekte in jedem Kommando vorhanden und bilden die Basisobjekte. Die unterschiedlichen Typen sind dabei für verschiedene Kontexte der Software zuständig. Die ClientIdentification stellt einerseits die Verbindung einer allgemeinen Komponente zur Desktopanwendung dar, wogegen die Robot- bzw. AppIdentification die spezifische Identifikation der Komponente darstellt. Die Erstellung der Identifikation erfolgt jeweils wiederholt zur Anmeldung der Komponente am System. Zunächst wird ein leeres Objekt erzeugt, dass anschließend durch abfragende Kommandos an die entsprechende Komponente befüllt wird, welche hinterher eine berechnete Identifikationsnummer erhält.
 
 \newpage
 \paragraph{Geräte}
@@ -65,11 +66,11 @@ stellt die individuelle Identität der einzelnen Komponente dar, siehe Abbildung
 	\label{fig:szenarios_classdiagram}
 \end{wrapfigure}
 
-stellen die Komponenten dar, die an einem Szenario eines Schwarmverhaltens teilnehmen, siehe Abbildung \ref{fig:devices_classdiagram}. Sie enthalten jeweils spezifische Identifikations Objekte, zur gegenseitigen Zuordnung, sowie die erfassten Daten der entsprechenden Systeme. Die Unterscheidung erfolgt in zwei Komponenten, dem Robot und der App, wobei der Roboter in die jeweiligen Untertypen gegliedert werden kann. 
+stellen die Komponenten dar, die an einem Szenario eines Schwarmverhaltens teilnehmen, siehe Abbildung \eqref{fig:devices_classdiagram}. Sie enthalten jeweils spezifische Identifikations Objekte, zur gegenseitigen Zuordnung, sowie die erfassten Daten der entsprechenden Komponenten. Die Unterscheidung erfolgt in zwei Typen, dem Robot und der App, wobei der Roboter in seine jeweiligen Untertypen gegliedert werden kann. 
 
 \paragraph{Szenarios}
 
-stellen den Ablauf des Schwarmverhaltens dar, in dem sich der Nutzer befindet, siehe Abbildung \ref{fig:szenarios_classdiagram}. Sie enthalten die jeweiligen Teilnehmer des Szenarios, sowie die Steuerungsinformationen und damit die gesamten Daten des aktuellen Kontextes. Diese Objekte werden laufend aktualisiert und besitzen lediglich zur Laufzeit des Szenarios ihre Gültigkeit. Dabei existieren verschiedene Kategorien von Szenarien, siehe Abschnitt \ref{szenarien}. Diese definieren jeweils einen unterschiedlichen Kontext und besitzen daher je nach Szenario zusätzliche Attribute.
+stellen den Ablauf des Schwarmverhaltens dar, in dem sich der Nutzer befindet, siehe Abbildung \eqref{fig:szenarios_classdiagram}. Sie enthalten die jeweiligen Teilnehmer des Szenarios, sowie die Steuerungsinformationen und damit die gesamten Daten des aktuellen Kontextes. Diese Objekte werden laufend aktualisiert und besitzen lediglich zur Laufzeit des Szenarios ihre Gültigkeit. Dabei existieren verschiedene Kategorien von Szenarien, siehe Abschnitt \eqref{szenarien}. Diese definieren jeweils einen unterschiedlichen Kontext und besitzen daher je nach Szenario zusätzliche Attribute.
 
 \newpage
 \paragraph{Konverter}
@@ -82,22 +83,21 @@ stellen den Ablauf des Schwarmverhaltens dar, in dem sich der Nutzer befindet, s
 	\label{fig:converter_classdiagram}
 \end{wrapfigure}
 
-dienen der Deserialisierung von abstrakten \gls{json} Objekten, welche nicht direkt identifiziert werden können, siehe Abbildung \ref{fig:converter_classdiagram}. Dazu gehören abstrakte Klassen, sowie Schnittstellen, welche keinem spezifischen Objekt zugeordnet werden kann. Die Implementierung erfolgt durch die Überschreibung der entsprechenden Methoden zur Deserialisierung und Serialisierung, siehe Abbildung \ref{fig:ConverterRead} und \ref{fig:ConverterWrite}. Je nach Anwendung, wird ein Parameter übergeben, der das Objekt als Zeichenkette beinhaltet. Dieses wird durch eine Abfolge von Bedingungen auf den Typen geprüft wird, um das Objekt zu erstellen.\\
+dienen der Deserialisierung von abstrakten \gls{json} Objekten, welche nicht direkt identifiziert werden können, siehe Abbildung \eqref{fig:converter_classdiagram}. Dazu gehören abstrakte Klassen, sowie Schnittstellen, welche keinem spezifischen Objekt zugeordnet werden können. Die Implementierung erfolgt durch die Überschreibung der entsprechenden Methoden zur Deserialisierung und Serialisierung, siehe Abbildung \eqref{fig:ConverterRead} und \eqref{fig:ConverterWrite}. Je nach Anwendung, wird ein Parameter übergeben, der das Objekt als Zeichenkette beinhaltet. Dieses wird durch eine Abfolge von Bedingungen auf den Typen geprüft, um das Objekt zu erstellen.\\
 
 \begin{figure}[h]
 	\centering
-	\subfloat[ReadJson]{\includegraphics[width=0.6\textwidth]{images/code/DeviceConverterRead.png}\label{fig:ConverterRead}}
+	\subfloat[ReadJson]{\includegraphics[width=0.7\textwidth]{images/code/DeviceConverterRead.png}\label{fig:ConverterRead}}
 	\qquad
-	\subfloat[WriteJson]{\includegraphics[width=0.6\textwidth]{images/code/DeviceConverterWrite.png}\label{fig:ConverterWrite}}
+	\subfloat[WriteJson]{\includegraphics[width=0.7\textwidth]{images/code/DeviceConverterWrite.png}\label{fig:ConverterWrite}}
 	\caption{Device JsonConverter}
 \end{figure}
 
 \newpage
 \subsection{\gls{app}}
 
-Die Erstellung der App erfolgt in einer plattformübergreifenden Implementierung durch Xamarin in C\#. Kernelemente stellen hierbei die Struktur, Oberfläche, Businesslogik sowie das Kommunikationssystem dar. Durch die zentrale Verwendung des Kommunikationssystems wird dieses in ein separates Projekt untergliedert, siehe Abbildung \ref{fig:solution} und wird als solches von der \gls{app} als Bibliothek eingebunden. Somit lässt sich die Logik einmalig implementieren und kann auf andere Systemen entsprechend übertragen werden.\\
-Die \gls{app} setzt sich aus vier verschiedenen Projekten zusammen, einer \acrshort{pcl} als Projekt zur plattformübergreifenden Entwicklung und den plattformspezifischen Projekten. Diese werden dem Zielsystem entsprechend ausgewählt und erzeugen durch ihre bestehende Referenz auf die \acrshort{pcl} einen plattformspezifischen Quellcode als \gls{il}, der anschließend ausgeführt werden kann. Für eine vollständig detaillierte Darstellung wird auf den Quellcode und den darin enthalten Kommentare sowie das zugehörige 
-github-Wiki\\(https://github.com/FleeAndCatch-Dev/FleeAndCatch-Docs/wiki) verwiesen.\\
+Die Erstellung der \gls{app} erfolgt in einer plattformübergreifenden Implementierung durch Xamarin in C\#. Kernelemente stellen hierbei die Struktur, Oberfläche, Businesslogik sowie das Kommunikationssystem dar. Durch die zentrale Verwendung des Kommunikationssystems wird dieses in ein separates Projekt untergliedert, siehe Abbildung \eqref{fig:solution} und wird als solches von der \gls{app} als Bibliothek eingebunden. Somit lässt sich die Logik einmalig implementieren und kann auf andere Systemen entsprechend übertragen werden.\\
+Die \gls{app} setzt sich aus vier verschiedenen Projekten zusammen, einer \acrshort{pcl} als Projekt zur plattformübergreifenden Entwicklung und den plattformspezifischen Projekten. Diese werden dem Zielsystem entsprechend ausgewählt und erzeugen durch ihre bestehende Referenz auf die \acrshort{pcl} einen plattformspezifischen Quellcode als \gls{il}, der anschließend auf einer Plattform ausgeführt werden kann.
 
 \begin{figure}[h]
 	\begin{center}
@@ -110,11 +110,11 @@ github-Wiki\\(https://github.com/FleeAndCatch-Dev/FleeAndCatch-Docs/wiki) verwie
 \newpage
 \subsubsection{Workflow} %Struktur
 
-Die Struktur der \gls{app} basiert auf dem in Xamarin verbreiteten Design Pattern \acrlong{mvvm}, welches durch ein Benachrichtigungssystem zwischen den verschiedenen Strukturen der \gls{app} eine Abspaltung der Daten, \gls{gui} und dem Businesscode erlaubt. Zusätzlich wird die standardmäßig vorhandene CodeBehind Struktur der einzelnen Seiten verwendet, wobei der Businesscode an das Layout der Seite gebunden ist, um diese miteinander zu verbinden. Zur lokalen Speicherung der Daten wird SQLite durch eine implementierte Schnittstelle verwendet, welche plattformübergreifend ansprechbar ist.
+Die Struktur der \gls{app} basiert auf dem in Xamarin verbreiteten Design Pattern \acrlong{mvvm}, welches durch ein Benachrichtigungssystem zwischen den verschiedenen Strukturen der \gls{app} eine Abspaltung der Daten, \gls{gui} und dem Businesscode erlaubt. Zusätzlich wird die standardmäßig vorhandene CodeBehind Struktur der einzelnen Seiten verwendet, wobei der Businesscode an das Layout der Seite gebunden ist, damit diese miteinander interagieren können. Zur lokalen Speicherung der Daten wird SQLite durch eine implementierte Schnittstelle verwendet, welche plattformübergreifend ansprechbar ist.
 
 \paragraph{\acrfull{mvvm}}
 
-stellt ein Design Pattern dar, welches eine grundlegende Struktur im Quellcode ermöglicht, siehe Abbildung \ref{fig:mvvm}. Dabei wird die erstellte Benutzeroberfläche von der Logik, sowie den Daten getrennt, um Änderungen unabhängig voneinander durchführen zu können. Die einzelnen Objekte werden dabei durch Referenzen verbunden um diese durch Events entsprechend zu aktualisieren.\\
+stellt ein Design Pattern dar, welches eine grundlegende Struktur im Quellcode ermöglicht, siehe Abbildung \eqref{fig:mvvm}. Dabei wird die erstellte Benutzeroberfläche von der Logik, sowie den Daten getrennt, um Änderungen unabhängig voneinander durchführen zu können. Die einzelnen Objekte werden dabei durch Referenzen verbunden um diese durch Events entsprechend zu aktualisieren.\\
 
 \begin{tabular}{p{2.5cm} p{12.25cm}}
 	\textbf{Model:} & Datenschicht, welche durch den Benutzer über die \gls{gui} verändert werden kann und über Datenänderungen die entsprechenden Elemente benachrichtigt \\
@@ -135,7 +135,7 @@ stellt ein Design Pattern dar, welches eine grundlegende Struktur im Quellcode e
 \newpage
 \subsubsection{\acrfull{gui}} %Oberfläche
 
-Die Oberfläche der \gls{app} wird mittels \gls{xaml} durch verschiedene von Xamarin zur Verfügung gestellten Elementen realisiert. Da eine \gls{app} ein einfaches Bedienkonzept voraussetzt, damit es von jedem beliebigen Benutzer verwendet werden kann, wird in diesem Projekt, auf das Navigationsprinzip der NavigationPage gesetzt. Die Navigation wird dabei durch das Aufbauen eines Stapels realisiert, was durch das Prinzip eines Stacks in der Programmierung weit verbreitet ist. Dabei wird durch den Aufruf eines Push auf eine neu Seite gewechselt, wobei die alte deaktiviert und hinter die neue im Speicher vorhanden ist, siehe Abbildung \eqref{fig:push}. Dies wird Programm technisch durch eine Liste realisiert, welche langsam aufgebaut wird. Um nun auf eine alte Seite zurück zu gelangen, wird ein Pop verwendet, um die aktuelle Seite sowie deren Daten zu löschen, wobei die vorherige Seite aus dem Speicher geladen wird, siehe Abbildung \eqref{fig:pop}.\\
+Die Oberfläche der \gls{app} wird mittels \gls{xaml} durch verschiedene von Xamarin zur Verfügung gestellten Elementen realisiert. Da eine \gls{app} ein einfaches Bedienkonzept voraussetzt, damit es von jedem beliebigen Benutzer verwendet werden kann, wird in diesem Projekt, auf das Navigationsprinzip der NavigationPage gesetzt. Die Navigation wird dabei durch das Aufbauen eines Stapels realisiert, was durch das Prinzip eines Stacks in der Programmierung weit verbreitet ist. Dabei wird durch den Aufruf eines Push auf eine neue Seite gewechselt, wobei der Vorgänger deaktiviert und hinter die neue im Speicher angeordnet wird, siehe Abbildung \eqref{fig:push}. Dies wird Programm technisch durch eine Liste realisiert, welche langsam aufgebaut wird. Um nun auf den Vorgänger zurück zu gelangen, wird ein Pop verwendet, um die aktuelle Seite sowie deren Daten zu löschen, wobei die vorherige Seite aus dem Speicher geladen wird, siehe Abbildung \eqref{fig:pop}.\\
 
 \begin{figure}[h]
 	\begin{center}
@@ -167,7 +167,7 @@ Für das Layout der einzelnen Seiten wird vor allem auf das StackLayout gesetzt.
 \begin{verbatim}
 \end{verbatim}
 \newpage
-\paragraph{SignIn Page} stellt die Benutzerschnittstelle zur Anmeldung des Nutzers am System dar, siehe Abbildung \eqref{fig:signin}. Dabei gibt dieser die entsprechende IP-Adresse der laufenden Desktopanwendung zur Verbindung an. Durch eine implementierte Logik wird diese IP-Adresse auf ihre Richtigkeit geprüft und die Verbindung gestartet. Bei einer erfolgreichen Verbindung wird der Benutzer zur Hauptseite weitergeleitet, wodurch ihm die entsprechenden Funktionalitäten zur Verfügung stehen. Andernfalls erscheint nach einem definierten Timeout von drei Sekunden eine Fehlermeldung, welche dem User Informationen zum Fehler vorlegt. Durch ein Switch Element ist zusätzlich die Speicherung der IP-Adresse in einer lokalen Datenbank gegeben, wobei diese bei Start der \gls{app} automatisch geladen und eingefügt wird.\\
+\paragraph{Die SignIn Page} stellt die Benutzerschnittstelle zur Anmeldung des Nutzers am System dar, siehe Abbildung \eqref{fig:signin}. Dabei gibt dieser die entsprechende \gls{ip}-Adresse der laufenden Desktopanwendung zur Verbindung an. Durch eine implementierte Logik wird diese \gls{ip}-Adresse auf ihre Richtigkeit geprüft und die Verbindung gestartet. Bei einer erfolgreichen Verbindung wird der Benutzer zur Hauptseite weitergeleitet, wodurch ihm die entsprechenden Funktionalitäten zur Verfügung stehen. Andernfalls erscheint nach einem definierten Timeout von drei Sekunden eine Fehlermeldung, welche dem User Informationen zum Fehler vorlegt. Durch ein Switch Element ist zusätzlich die Speicherung der \gls{ip}-Adresse in einer lokalen Datenbank gegeben, wobei diese bei Start der \gls{app} automatisch geladen und eingefügt wird.\\
 
 \begin{figure}[h]
 	\begin{center}
@@ -178,9 +178,9 @@ Für das Layout der einzelnen Seiten wird vor allem auf das StackLayout gesetzt.
 \end{figure}
 
 \newpage
-\paragraph{Home Page} stellt die Hauptseite mit der grundlegenden Navigation der \gls{app} dar, siehe Abbildung \eqref{fig:home}. Dabei besitzt der Benutzer die Möglichkeit ein neues Szenario eines Schwarmverhaltens zu starten, Informationen über die \gls{app} abzurufen, oder sich vom aktuelles System abzumelden.
+\paragraph{Die Home Page} stellt die Hauptseite mit der grundlegenden Navigation der \gls{app} dar, siehe Abbildung \eqref{fig:home}. Dabei hat der Benutzer die Möglichkeit ein neues Szenario eines Schwarmverhaltens zu starten, Informationen über die \gls{app} abzurufen, oder sich vom aktuelles System abzumelden.
 
-\paragraph{Option Page} stellt die Benutzerschnittstelle dar, welche diesen durch die vorhandenen Szenarien anhand eines Carousels leitet, siehe Abbildung \eqref{fig:option}. Der Nutzer kann damit ein beliebiges Szenario auswählen und die Konfiguration des Schwarmes beginnen.\\
+\paragraph{Die Option Page} stellt die Benutzerschnittstelle dar, welche diesen durch die vorhandenen Szenarien anhand eines Carousels leitet, siehe Abbildung \eqref{fig:option}. Der Nutzer kann damit ein beliebiges Szenario auswählen und die Konfiguration des Schwarmes beginnen.\\
 
 \bigskip
 
@@ -193,7 +193,7 @@ Für das Layout der einzelnen Seiten wird vor allem auf das StackLayout gesetzt.
 \end{figure}
 
 \newpage
-\paragraph{List Page} stellt die Benutzerschnittstelle zur Auswahl der Robotern dar, welche im Szenario involviert sein sollen. Dabei kann der Benutzer unter den verschiedenen Typen wählen, wobei die Anzahl der Roboter vom gewählten Szenario abhängt. Sollte eine ungültige Anzahl an Robotern eingegeben werden, erhält der Benutzer eine Rückmeldung, über eine Fehlermeldung und kann dies korrigieren. Bei korrekter Eingabe wird der Benutzer auf eine Seite mit sämtlichen Informationen des Szenarios weitergeleitet und kann dieses starten.\\
+\paragraph{Die List Page} stellt die Benutzerschnittstelle zur Auswahl der Roboter dar, welche im Szenario involviert sein sollen. Dabei kann der Benutzer unter den verschiedenen Typen wählen, wobei die Anzahl der Roboter vom gewählten Szenario abhängt. Sollte eine ungültige Anzahl an Robotern eingegeben werden, erhält der Benutzer eine Rückmeldung über eine Fehlermeldung und kann dies korrigieren. Bei korrekter Eingabe wird der Benutzer auf eine Seite mit sämtlichen Informationen des Szenarios weitergeleitet und kann dieses starten.\\
 
 \bigskip
 
@@ -206,7 +206,7 @@ Für das Layout der einzelnen Seiten wird vor allem auf das StackLayout gesetzt.
 \end{figure}
 
 \newpage
-\paragraph{Szenario Page} stellt die Benutzerschnittselle dar, welche einerseits zur Steuerung und der Überwachung des Schwarmverhaltens dient. Dabei werden laufend die Daten der Roboter, die auf dem \gls{gui} zu sehen sind aktualisiert und entsprechend angezeigt. Die Neigungssensoren des Gerätes, auf dessen Gerät die \gls{app} ausgeführt wird, ermöglichen die Roboter zu steuern, wobei die Richtung und Beschleunigung durch einen Pfeil auf der Oberfläche dargestellt werden. Der Schwarm verhält sich dabei dem entsprechenden Kontext, welchen der Benutzer zuvor eingestellt hat.\\
+\paragraph{Die Szenario Page} stellt die Benutzerschnittstelle dar, welche einerseits zur Steuerung und der Überwachung des Schwarmverhaltens dient. Dabei werden laufend die Daten der Roboter, die auf dem \gls{gui} zu sehen sind aktualisiert und entsprechend angezeigt. Die Neigungssensoren des Gerätes, auf dessen Gerät die \gls{app} ausgeführt wird, ermöglichen die Roboter zu steuern, wobei die Richtung und Beschleunigung durch einen Pfeil auf der Oberfläche dargestellt werden. Der Schwarm verhält sich dabei dem entsprechenden Kontext, welchen der Benutzer zuvor eingestellt hat.\\
 
 \bigskip
 
@@ -221,7 +221,7 @@ Für das Layout der einzelnen Seiten wird vor allem auf das StackLayout gesetzt.
 \newpage
 \subsubsection{Buisnesslogic} %Logik
 
-Die Logik der \gls{app} wird mittels des .NET \gls{framework} in C\# implementiert und ist durch die Strukturierung des \gls{mvvm} Design Pattern in separate Klassen, sowie des eingebundenen Projektes als Bibliothek unterteilt. Diese Logik kann in drei Benutzerszenarien gruppiert werden.
+Die Logik der \gls{app} wird mittels des .NET \gls{framework} in C\# implementiert und ist durch die Strukturierung des \gls{mvvm} Design Pattern in separate Klassen sowie anhand eines Projektes untergliedert, welches als Bibliothek eingebunden wird. Diese Logik kann in drei Benutzerszenarien gruppiert werden.
 \begin{enumerate}
 	\item Anmeldung am System
 	\item Erstellung eines Szenario
@@ -263,7 +263,7 @@ Durch die Speicherung der Verbindung in einer lokalen Datenbank mittels SQLite, 
 \end{figure}
 
 \noindent
-Sobald eine \gls{app} sich erfolgreich mit dem System verbunden hat, läuft neben dem eigentlichen Hauptprozess, welchen der Nutzer durch seine Eingaben steuert ein Nebenprozess. Dieser wartet auf eingehende Kommandos und interpretiert diese nach einem festgelegten Bedingungen in der Interpreter Klasse, um entsprechend zu reagieren oder den Nutzer zu informieren und neue Daten anzuzeigen.
+Sobald eine \gls{app} sich erfolgreich mit dem System verbunden hat, läuft neben dem eigentlichen Hauptprozess, welchen der Nutzer durch seine Eingaben steuert ein Nebenprozess. Dieser wartet auf eingehende Kommandos und interpretiert diese nach einem festgelegten Bedingungen in der Interpreter Klasse, um entsprechend zu reagieren oder den Nutzer zu informieren sowie neue Daten anzuzeigen.
 
 \paragraph{Die Erstellung eines Szenario} beginnt mit der Auswahl eines definierten Typ, wobei jeder einen anderen Kontext besitzt, siehe Abschnitt \eqref{szenarien}. Anschließend gelangt der Nutzer zur Auswahl der verschiedenen Roboter, welche im Szenario teilnehmen sollen. Hierbei wird die entsprechende Zahl an Robotern eines Typs einer Liste hinzugefügt, welche der Nutzer durch die \gls{gui} auswählt, siehe Abbildung \eqref{fig:addrobots}. Sollte der Nutzer dabei eine ungültige Anzahl auswählen, erhält er eine entsprechende Rückmeldung, um eine Korrektur vorzunehmen. Bei erfolgreicher Überprüfung wird das Szenario als Objekt erstellt und enthält somit alle Komponenten sowie zusätzliche Informationen zur Identifikation.
 
@@ -297,7 +297,7 @@ Um das erzeugte Szenario zu verifizieren, wird das erzeugt Objekt an die Desktop
 \end{figure}
 
 \noindent
-Sobald ein Szenario abgebrochen wird, müssen sämtliche Prozesse und Daten freigegeben werden, damit der Nutzer anschließend ein neues Szenario starten kann, siehe Abbildung \eqref{fig:motionvector}. Dafür wird zunächst der Neigungssensor abgeschaltet, da dieser aktuell nicht mehr benötigt wird. Zur Freigabe der Daten wird sämtliche Aktivität der Roboter abgeschaltet sowie das Szenario entfernt. Dem Backend wird nun noch das Beenden des Szenarios mitgeteilt, damit auch dieses die anderen Komponenten informieren sowie seine Daten freigeben kann.
+Sobald ein Szenario abgebrochen wird, müssen sämtliche Prozesse und Daten freigegeben werden, damit der Nutzer anschließend ein neues Szenario starten kann, siehe Abbildung \eqref{fig:motionvector}. Dafür wird zunächst der Neigungssensor abgeschaltet, da dieser aktuell nicht mehr benötigt wird. Zur Freigabe der Daten werden sämtliche Aktivität der Roboter abgeschaltet sowie das Szenario entfernt. Dem Backend wird anschließend das Beenden des Szenarios mitgeteilt, damit auch dieses die anderen Komponenten informieren sowie seinen reservierten Speicher freigeben kann.
 
 \begin{figure}[h]
 	\begin{center}
@@ -308,7 +308,7 @@ Sobald ein Szenario abgebrochen wird, müssen sämtliche Prozesse und Daten frei
 \end{figure}
 
 \noindent
-Zur Erzeugung eines neuen Steuerungskommandos, siehe Abbildung \eqref{fig:newcommand}, werden die Neigungssensoren des mobilen Gerätes verwendet. Da bei der Implementierung der Schnittstelle auf den verschiedenen Plattformen gewisse Unterschiede bestehen, müssen diese in der plattformübergreifenden Programmierung behoben werden. Dies wird durch eine Angleichung der Faktoren sowie ein vertauschen der Attribute realisiert, wie am Beispiel von Android und Windows. Das Steuerungskommando enthält dabei keine direkten Werte, wie Geschwindigkeit und Winkel, sondern wird durch Zeichenketten (Enums) umgesetzt. Diese verändern ihre Wertigkeit entsprechend der Werten zum Neigungssensor des mobilen Gerätes.
+Zur Erzeugung eines neuen Steuerungskommandos, siehe Abbildung \eqref{fig:newcommand}, werden die Neigungssensoren des mobilen Gerätes verwendet. Da bei der Implementierung der Schnittstelle auf den verschiedenen Plattformen gewisse Unterschiede bestehen, müssen diese in der plattformübergreifenden Programmierung behoben werden. Dies wird durch eine Angleichung der Faktoren sowie ein Vertauschen der Attribute realisiert, wie am Beispiel von Android und Windows. Das Steuerungskommando enthält dabei keine direkten Werte, wie Geschwindigkeit und Winkel, sondern wird durch Zeichenketten (Enums) umgesetzt. Diese verändern ihre Wertigkeit entsprechend der Werten zum Neigungssensor des mobilen Gerätes.
 
 \begin{figure}[h]
 	\begin{center}
@@ -318,14 +318,158 @@ Zur Erzeugung eines neuen Steuerungskommandos, siehe Abbildung \eqref{fig:newcom
 	\label{fig:newcommand}
 \end{figure}
 
+\newpage
+\subsection{Backend}
+Das Backend ist die Kommunikations- und Verwaltungszentrale des Projekts und bildet das Rückgrat der Kommunikation. Es verwaltet die 
+Devices im Kontext der einzelnen Szenarien und sorgt für den Datenaustausch zwischen den verschieden Geräten. \\
+Realisiert ist des Backend wie auch der Roboter in der Programmiersprache Java. Das bringt neben der plattformunabhängigen 
+Lauffähigkeit des Programms noch weitere Vorteile mit sich. So können vor allem Programmkomponenten welche die Kommunikation und
+den Datenaustausch betreffen für die Roboter- bzw. Backend-Implementierung wiederverwendet werden und müssen nicht komplett neu
+implementiert werden.
+Im Folgenden werden die zentralen Komponenten des Backends vorgestellt.
+\subsection{Aufbau}
+\subsubsection{Server}
+Zur Realisierung der Kommunikation verfügt das Backendprogramm über eine Klasse namens Server. Innerhalb dieser Klasse ist ein
+Server-Socket implementiert welches den Endpunkt einer TCP-Verbindung darstellt Abschnitt siehe X.X. Dieses Server-Socket wird
+nach dem Programmstart durch aufrufe der Methode \code{open()} mit IP-Adresse und Port initialisiert und kann anschließend 
+darüber Nachrichten (z.B. Aufbauanfragen für eine TCP-Verbindung) entgegennehmen. \\
+Die Abbildung X zeigt die Funktion \code{open()} welche eine Server-Socket initialisiert und den listenerThread startet.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\textwidth]{images/implementation/SeverOpenMethod.png}
+	\caption[\code{open()}-Methode der Sever-Klasse im Backend]{\code{open()}-Methode der Sever-Klasse im Backend}
+	\label{fig:ev3system}
+\end{figure}
+Nach der Initialisierung des Server-Socket wird ein Thread gestartet (listenerThread), welcher zyklisch die Methode \code{listen()}
+aufruft. Die Aufgabe dieses Threads ist es kontinuierlich auf Verbindungsaufbauwünsche durch Roboter oder Apps zur warten und bei
+deren eintreffen diese zu verarbeiten. \\
+Die Abbildung X zeigt die Methode \code{listen()} in der ankommende Verbindungsaufbauwünsche verarbeitet werden.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\textwidth]{images/implementation/SeverListenMethod.png}
+	\caption[\code{listen()}-Methode der Sever-Klasse im Backend]{\code{listen()}-Methode der Sever-Klasse im Backend}
+	\label{fig:ev3system}
+\end{figure}
+Trifft ein Verbindungsaufbauwunsch ein wird für diesen, vom Server-Socket ein neues Socket Objekt zurück geliefert welches 
+ab sofort eine unabhängige Verbindung zum anfangenden Device repräsentiert und ein Senden von Nachrichten in beide Richtungen 
+ermöglicht.\\
+Anschließend werden auf diesem Socket-Objekt noch ein paar Optimierungen durchgeführt um die Latenz der Kommunikation mit dem
+Device möglichst gering zu halten. Dazu wird zum einen der Nagle-Algorithmus deaktiviert, siehe Abschnitt X sowie entsprechende
+Puffergrößen festgelegt. \\
+Danach wird ein Thread erzeugt der ab sofort die Kommunikation dieser Verbindung verwaltet. Dazu wird dieser an ein neues Client-Objekt 
+gekoppelt, welches das zugehörige Socket-Objekt aufnimmt. Mit der Erzeugung dieses Client-Objekts der Übergabe des Socket-Objekts an diese und
+die Zuordnung des entsprechenden Thread zur Verbindungsverarbeitung ist die Verbindung zu einem Device vollständig initialisiert. 
+Ab sofort wird das entsprechende Device (App oder Robot) durch das Client-Objekt repräsentiert und kann durch dieses angesprochen werden. Dazu
+werden sämtliche Clients in deiner Array-Liste gespeichert und sind durch eine eindeutige ID identifizierbar.
+\subsubsection{Client}
+Neben der Server Klasse ist die Client Klasse die zentrale Komponente zum Empfangen und Senden von Daten an die einzelnen Devices.
+Während die Server-Klasse auf Verbindungsaufbauwünsche der Geräte die sich am Backend anmelden wollen warten, repräsentieren die Clients
+eine Device inklusive einer vollwertige TCP-Verbindung.  
+\subsubsection{Interpreter}
+Die Interpreter Klasse ist zuständig für die Interpretation der am Backend eintreffenden Datenpakete der verschiedenen Devices. Dazu enthält
+jedes Client-Objekt eine eigene Instanz der Klasse Interpreter, so dass eine parallele Verarbeitung ohne Beeinflussungen oder Wartezeiten 
+möglich ist. \\
+Die Interpretation der Datenpakete besteht aus zwei grundlegenden Schritte:
+\begin{enumerate}
+	%   ###############################################################################################################################
+	\item{Parsen des als String vorliegenden Datenpakets in ein JSON-Objekt}
+	%   ###############################################################################################################################
+	\item{Weiterverarbeitung des JSON-Objekts anhand des vorliegenden Kommandotyps}
+	%   ###############################################################################################################################
+\end{enumerate}
+Den ersten Schritt realisiert die Methode \code{public void parse(String pCommand)}. Zur Umwandlung des vorliegenden Strings verwendet
+die Methode dazu eine Funktionalität der Bibliothek >>org.json<<. Anschließend wird das geparste JSON-Object abhängige von seinem
+Kommandotyp durch eine entsprechende Methode weiterverarbeitet. \\
+Die Abbildung X zeigt den Quellcode des Parse-Vorgangs in der Methode Vorgangs \code{public void parse(String pCommand)}.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\textwidth]{images/implementation/InterpreterParseMethod.png}
+	\caption[Ausschnitt der \code{parse()}-Methode der Interpreter-Klasse im Backend]{Ausschnitt der \code{parse()}-Methode der Interpreter-Klasse im Backend}
+	\label{fig:ev3system}
+\end{figure}
+\newline
+Die folgende Auflistung zeigt die Methoden der Interpreter Klasse:
+\begin{itemize}
+	%   ###############################################################################################################################
+	\item{\code{public void parse(String pCommand)}} -- Diese Methode führt den eigentlichen Parse-Vorgang durch um das als String
+	vorliegende Datenpaket (pCommand) in ein JSON-Objekt zu konvertieren.
+	%   ###############################################################################################################################
+	\item{\code{private void connection(JSONObject pCommand)}} -- Verarbeitet ein als JSON-Objekt vorliegendes Datenpaket vom Typ 
+	Kommandotyp Connection.
+	%   ###############################################################################################################################
+	\item{\code{private void synchronization(JSONObject pCommand)}} -- Verarbeitet ein als JSON-Objekt vorliegendes Datenpaket vom 
+	Typ Kommandotyp Synchronization.
+	%   ###############################################################################################################################
+	\item{\code{private void szenario(JSONObject pCommand)}} -- Verarbeitet ein als JSON-Objekt vorliegendes Datenpaket vom Typ 
+	Kommandotyp Szenario. Dazu existieren folgenden folgende Methoden die die Daten abhängig vom vorliegenden Szenario verarbeiten:
+	\begin{itemize}
+			%   ###############################################################################################################################
+			\item{\code{private void szenarioControl(SzenarioCommand pCommand)}}
+			%   ###############################################################################################################################
+			\item{\code{private void szenarioSynchron(SzenarioCommand pCommand)}}
+			%   ###############################################################################################################################
+			\item{\code{private void szenarioFollow(SzenarioCommand pCommand)}}
+			%   ###############################################################################################################################
+	\end{itemize}
+	%   ###############################################################################################################################
+	\item{\code{private void exception(JSONObject pCommand)}} -- Verarbeitet ein als JSON-Objekt vorliegendes Datenpaket vom Typ 
+	Kommandotyp Exception.
+	%   ###############################################################################################################################
+\end{itemize}
+Aus der Auflistung ist gut ersichtlich das es für jeden Kommandotyp eine eigene Methode zu dessen Verarbeitung implementiert wurde.
+Da diese immer nach dem selben Prinzip die Datenverarbeitung vornehmen wird im folgenden exemplarisch auf eine dieser Methode 
+eingegangen um dieses Prinzip zu verdeutlichen. \\
+
+\subsubsection{Device \& Szenario Controller}
+Neben den für die Kommunikation wichtigen Komponenten spielen bei der Realisierung des Backends auch die Controller-Klassen eine 
+zentrale Rolle, da diese wichtige Verwaltungsfunktionen bereit stellen. Sie sind für die Verwaltung der verschiedenen Devices 
+und Szenarien zuständig. \\
+Dazu existieren die folgenden Controller-Klassen:
+\begin{itemize}
+	%   ###############################################################################################################################
+	\item{AppController} -- Der AppContoller verwaltet alle am Backend angemeldeten Apps.
+	%   ###############################################################################################################################
+	\item{RobotContoller} -- Der RoboterContoller verwaltet alle am Backend angemeldeten Roboter.
+	%   ###############################################################################################################################
+	\item{ScenarioController} -- Der AppContoller verwaltet sämtliche aktiven Szenarien.
+	%   ###############################################################################################################################
+\end{itemize}
+Die beiden Klassen AppController und RoboterController bestehen im wesentlichen aus einer Listen-Datenstruktur (ArrayList), in 
+welcher sämtliche Apps bzw. Roboter die am Backend angemeldet sind gespeichert werden. In dieser Datenstruktur werden die Devices 
+durch Objekte entsprechender Klassen repräsentiert. \\
+Die Controller-Klassen verfügen über Datenstrukturoperationen zum Einfügen, Entfernen, Suchen oder zum Aktualisieren von Elementen
+so das durch entsprechende Methoden eine einfacher Zugriff auf die Devices sowie deren Manipulation möglich ist. \\
+Da alle drei Controller-Klassen mit statischen Datenstrukturen und Methoden arbeiten werden die angemeldeten Devices zentral 
+gespeichert und Verwaltet was einen einfachen und schnellen Zugriff auf diese ermöglicht und Redundanzen und Inkonsistenzen vermeidet.
+Durch die Verwendete Listen-Datenstruktur ist ein einfaches Suchen, Einfügen sowie Löschen möglich. Zudem kann leicht über die 
+einzelnen Devices iteriert werden was hilfreich ist wenn die selben Daten an mehrere Devices gesendet werden müssen.
+\\
+Die SzenarioController Klasse verfügt über die gleiche Listen-Datenstruktur zur Speicherung von Szenarien, jedoch bietet sie neben
+den Einfachen Operatoren noch weitere Komplexere Funktinalitäten zum ... 
+\subsubsection{Die GUI}
+Neben den rein Funktionalen Komponenten des Backends verfügt dieses auch über eine grafische Benutzeroberfläche die Informationen zu
+den angemeldeten Geräten und den existierenden Szenarien zur Verfügung stellt. Diese Benutzeroberfläche ist so realisiert das diese 
+komplett losgelöst von den der eigentlichen Funktionalität des Backend ist. Sie setzt lediglich auf dem eigentlichen Programm auf und
+ist zu dessen Ausführung nicht notwendig. Dadurch ist es möglich das Programm komplett ohne grafische Benutzeroberfläche zu starten so
+das es im Hintergrund laufen kann und lediglich als Verwaltungs- und Kommunikationsservice dient. Ob die grafische Benutzeroberfläche  
+aktiviert ist oder nicht wird beim Programmstart durch entsprechenden Parametern festgelegt. \\
+Der Nutzen der GUI bestand für uns hauptsächlich im Monitoring und bei der Identifikation sowie dem Aufspüren von Fehlern während der 
+Entwicklung. \\
+Realisiert ist die grafische Benutzeroberfläche mit dem JavaFX-Framework welches Bestandteil der Java-Bibliothek ist uns somit wie 
+Java ebenfalls plattformunabhängig lauffähig ist. Zu ihrer Ansteuerung dient eine spezielle Klasse namens
+>>ViewController<< welche lediglich Informationen des eigentliche Programms entgegen nimmt und an die eigentliche Benutzeroberfläche 
+(View) weiterreicht sofern diese aktiviert wurde. Umgekehrt werden jedoch keine Benutzereingaben von der GUI an das Programm 
+weitergereicht, sondern dienen lediglich zur Manipulation der Anzeige so das dieses komplett unabhängig ist. Lediglich das Beenden 
+das kompletten Programms ist über die grafische Benutzeroberfläche möglich.
+Abbildung X.X zeigt einen Screenshot der grafischen Benutzeroberfläche des Backends. \\
+\\
+Da die grafische Benutzeroberfläche jedoch nicht zur eigentlichen Funktionalität des Backends beiträgt soll an dieser Stelle nicht 
+weiter eingegangen werden.
+
+\newpage
 \subsection{Roboter}
-Die Implementierung des Roboters stellt das Kernstück bei der Realisierung dieses Projekts dar. 
-\\
-\\
-Da eine komplett detaillierte Beschreibung des ganzen Quellcodes den Umfang dieser Ausarbeitung bei weitem sprengen würde,
-werden in diesem Kapitel die wichtigsten Implementierungskonzepte deren Funktionswiese, sowie deren Komponenten dargestellt. 
-Für eine vollständig detaillierte Darstellung wird auf den Quellcode und den darin enthalten Kommentare sowie das zugehörige 
-github-Wiki (https://github.com/FleeAndCatch-Dev/FleeAndCatch-Docs/wiki) verwiesen.
+Die Implementierung des Roboters stellt das Kernstück bei der Realisierung dieses Projekts dar.\\
+
 \subsubsection{Threads}
 Für die Umsetzung der Szenarien ist es erforderlich das der Roboter verschiedene Dinge parallel erledigt. Zum einen muss die 
 ständige und zeitnahen Kommunikation mit dem Backend aufrecht erhalten werden, um zum einen Steuerdaten sowie die Positionsdaten
@@ -476,152 +620,6 @@ Der Stuerungsthread widerun liest diese Daten aus und führt die entsprechenden 
 \paragraph{Allgemein}
 \paragraph{Realisierung beim ThreeWheelDrive}
 \subsubsection{Datenerfassung}
-\subsection{Backend}
-Das Backend ist die Kommunikations- und Verwaltungszentrale des Projekts und bildet das Rückgrat der Kommunikation. Es verwaltet die 
-Devices im Kontext der einzelnen Szenarien und sorgt für den Datenaustausch zwischen den verschieden Geräten. \\
-Realisiert ist des Backend wie auch der Roboter in der Programmiersprache Java. Das bringt neben der plattformunabhängigen 
-Lauffähigkeit des Programms noch weitere Vorteile mit sich. So können vor allem Programmkomponenten welche die Kommunikation und
-den Datenaustausch betreffen für die Roboter- bzw. Backend-Implementierung wiederverwendet werden und müssen nicht komplett neu
-implementiert werden.
-Im Folgenden werden die zentralen Komponenten des Backends vorgestellt.
-\subsection{Aufbau}
-\subsubsection{Server}
-Zur Realisierung der Kommunikation verfügt das Backendprogramm über eine Klasse namens Server. Innerhalb dieser Klasse ist ein
-Server-Socket implementiert welches den Endpunkt einer TCP-Verbindung darstellt Abschnitt siehe X.X. Dieses Server-Socket wird
-nach dem Programmstart durch aufrufe der Methode \code{open()} mit IP-Adresse und Port initialisiert und kann anschließend 
-darüber Nachrichten (z.B. Aufbauanfragen für eine TCP-Verbindung) entgegennehmen. \\
-Die Abbildung X zeigt die Funktion \code{open()} welche eine Server-Socket initialisiert und den listenerThread startet.
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=1.0\textwidth]{images/implementation/SeverOpenMethod.png}
-	\caption[\code{open()}-Methode der Sever-Klasse im Backend]{\code{open()}-Methode der Sever-Klasse im Backend}
-	\label{fig:ev3system}
-\end{figure}
-Nach der Initialisierung des Server-Socket wird ein Thread gestartet (listenerThread), welcher zyklisch die Methode \code{listen()}
-aufruft. Die Aufgabe dieses Threads ist es kontinuierlich auf Verbindungsaufbauwünsche durch Roboter oder Apps zur warten und bei
-deren eintreffen diese zu verarbeiten. \\
-Die Abbildung X zeigt die Methode \code{listen()} in der ankommende Verbindungsaufbauwünsche verarbeitet werden.
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=1.0\textwidth]{images/implementation/SeverListenMethod.png}
-	\caption[\code{listen()}-Methode der Sever-Klasse im Backend]{\code{listen()}-Methode der Sever-Klasse im Backend}
-	\label{fig:ev3system}
-\end{figure}
-Trifft ein Verbindungsaufbauwunsch ein wird für diesen, vom Server-Socket ein neues Socket Objekt zurück geliefert welches 
-ab sofort eine unabhängige Verbindung zum anfangenden Device repräsentiert und ein Senden von Nachrichten in beide Richtungen 
-ermöglicht.\\
-Anschließend werden auf diesem Socket-Objekt noch ein paar Optimierungen durchgeführt um die Latenz der Kommunikation mit dem
-Device möglichst gering zu halten. Dazu wird zum einen der Nagle-Algorithmus deaktiviert, siehe Abschnitt X sowie entsprechende
-Puffergrößen festgelegt. \\
-Danach wird ein Thread erzeugt der ab sofort die Kommunikation dieser Verbindung verwaltet. Dazu wird dieser an ein neues Client-Objekt 
-gekoppelt, welches das zugehörige Socket-Objekt aufnimmt. Mit der Erzeugung dieses Client-Objekts der Übergabe des Socket-Objekts an diese und
-die Zuordnung des entsprechenden Thread zur Verbindungsverarbeitung ist die Verbindung zu einem Device vollständig initialisiert. 
-Ab sofort wird das entsprechende Device (App oder Robot) durch das Client-Objekt repräsentiert und kann durch dieses angesprochen werden. Dazu
-werden sämtliche Clients in deiner Array-Liste gespeichert und sind durch eine eindeutige ID identifizierbar.
-\subsubsection{Client}
-Neben der Server Klasse ist die Client Klasse die zentrale Komponente zum Empfangen und Senden von Daten an die einzelnen Devices.
-Während die Server-Klasse auf Verbindungsaufbauwünsche der Geräte die sich am Backend anmelden wollen warten, repräsentieren die Clients
-eine Device inklusive einer vollwertige TCP-Verbindung.  
-\subsubsection{Interpreter}
-Die Interpreter Klasse ist zuständig für die Interpretation der am Backend eintreffenden Datenpakete der verschiedenen Devices. Dazu enthält
-jedes Client-Objekt eine eigene Instanz der Klasse Interpreter, so dass eine parallele Verarbeitung ohne Beeinflussungen oder Wartezeiten 
-möglich ist. \\
-Die Interpretation der Datenpakete besteht aus zwei grundlegenden Schritte:
-\begin{enumerate}
-	%   ###############################################################################################################################
-	\item{Parsen des als String vorliegenden Datenpakets in ein JSON-Objekt}
-	%   ###############################################################################################################################
-	\item{Weiterverarbeitung des JSON-Objekts anhand des vorliegenden Kommandotyps}
-	%   ###############################################################################################################################
-\end{enumerate}
-Den ersten Schritt realisiert die Methode \code{public void parse(String pCommand)}. Zur Umwandlung des vorliegenden Strings verwendet
-die Methode dazu eine Funktionalität der Bibliothek >>org.json<<. Anschließend wird das geparste JSON-Object abhängige von seinem
-Kommandotyp durch eine entsprechende Methode weiterverarbeitet. \\
-Die Abbildung X zeigt den Quellcode des Parse-Vorgangs in der Methode Vorgangs \code{public void parse(String pCommand)}.
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=1.0\textwidth]{images/implementation/InterpreterParseMethod.png}
-	\caption[Ausschnitt der \code{parse()}-Methode der Interpreter-Klasse im Backend]{Ausschnitt der \code{parse()}-Methode der Interpreter-Klasse im Backend}
-	\label{fig:ev3system}
-\end{figure}
-\newline
-Die folgende Auflistung zeigt die Methoden der Interpreter Klasse:
-\begin{itemize}
-	%   ###############################################################################################################################
-	\item{\code{public void parse(String pCommand)}} -- Diese Methode führt den eigentlichen Parse-Vorgang durch um das als String
-	vorliegende Datenpaket (pCommand) in ein JSON-Objekt zu konvertieren.
-	%   ###############################################################################################################################
-	\item{\code{private void connection(JSONObject pCommand)}} -- Verarbeitet ein als JSON-Objekt vorliegendes Datenpaket vom Typ 
-	Kommandotyp Connection.
-	%   ###############################################################################################################################
-	\item{\code{private void synchronization(JSONObject pCommand)}} -- Verarbeitet ein als JSON-Objekt vorliegendes Datenpaket vom 
-	Typ Kommandotyp Synchronization.
-	%   ###############################################################################################################################
-	\item{\code{private void szenario(JSONObject pCommand)}} -- Verarbeitet ein als JSON-Objekt vorliegendes Datenpaket vom Typ 
-	Kommandotyp Szenario. Dazu existieren folgenden folgende Methoden die die Daten abhängig vom vorliegenden Szenario verarbeiten:
-	\begin{itemize}
-			%   ###############################################################################################################################
-			\item{\code{private void szenarioControl(SzenarioCommand pCommand)}}
-			%   ###############################################################################################################################
-			\item{\code{private void szenarioSynchron(SzenarioCommand pCommand)}}
-			%   ###############################################################################################################################
-			\item{\code{private void szenarioFollow(SzenarioCommand pCommand)}}
-			%   ###############################################################################################################################
-	\end{itemize}
-	%   ###############################################################################################################################
-	\item{\code{private void exception(JSONObject pCommand)}} -- Verarbeitet ein als JSON-Objekt vorliegendes Datenpaket vom Typ 
-	Kommandotyp Exception.
-	%   ###############################################################################################################################
-\end{itemize}
-Aus der Auflistung ist gut ersichtlich das es für jeden Kommandotyp eine eigene Methode zu dessen Verarbeitung implementiert wurde.
-Da diese immer nach dem selben Prinzip die Datenverarbeitung vornehmen wird im folgenden exemplarisch auf eine dieser Methode 
-eingegangen um dieses Prinzip zu verdeutlichen. \\
-
-\subsubsection{Device \& Szenario Controller}
-Neben den für die Kommunikation wichtigen Komponenten spielen bei der Realisierung des Backends auch die Controller-Klassen eine 
-zentrale Rolle, da diese wichtige Verwaltungsfunktionen bereit stellen. Sie sind für die Verwaltung der verschiedenen Devices 
-und Szenarien zuständig. \\
-Dazu existieren die folgenden Controller-Klassen:
-\begin{itemize}
-	%   ###############################################################################################################################
-	\item{AppController} -- Der AppContoller verwaltet alle am Backend angemeldeten Apps.
-	%   ###############################################################################################################################
-	\item{RobotContoller} -- Der RoboterContoller verwaltet alle am Backend angemeldeten Roboter.
-	%   ###############################################################################################################################
-	\item{ScenarioController} -- Der AppContoller verwaltet sämtliche aktiven Szenarien.
-	%   ###############################################################################################################################
-\end{itemize}
-Die beiden Klassen AppController und RoboterController bestehen im wesentlichen aus einer Listen-Datenstruktur (ArrayList), in 
-welcher sämtliche Apps bzw. Roboter die am Backend angemeldet sind gespeichert werden. In dieser Datenstruktur werden die Devices 
-durch Objekte entsprechender Klassen repräsentiert. \\
-Die Controller-Klassen verfügen über Datenstrukturoperationen zum Einfügen, Entfernen, Suchen oder zum Aktualisieren von Elementen
-so das durch entsprechende Methoden eine einfacher Zugriff auf die Devices sowie deren Manipulation möglich ist. \\
-Da alle drei Controller-Klassen mit statischen Datenstrukturen und Methoden arbeiten werden die angemeldeten Devices zentral 
-gespeichert und Verwaltet was einen einfachen und schnellen Zugriff auf diese ermöglicht und Redundanzen und Inkonsistenzen vermeidet.
-Durch die Verwendete Listen-Datenstruktur ist ein einfaches Suchen, Einfügen sowie Löschen möglich. Zudem kann leicht über die 
-einzelnen Devices iteriert werden was hilfreich ist wenn die selben Daten an mehrere Devices gesendet werden müssen.
-\\
-Die SzenarioController Klasse verfügt über die gleiche Listen-Datenstruktur zur Speicherung von Szenarien, jedoch bietet sie neben
-den Einfachen Operatoren noch weitere Komplexere Funktinalitäten zum ... 
-\subsubsection{Die GUI}
-Neben den rein Funktionalen Komponenten des Backends verfügt dieses auch über eine grafische Benutzeroberfläche die Informationen zu
-den angemeldeten Geräten und den existierenden Szenarien zur Verfügung stellt. Diese Benutzeroberfläche ist so realisiert das diese 
-komplett losgelöst von den der eigentlichen Funktionalität des Backend ist. Sie setzt lediglich auf dem eigentlichen Programm auf und
-ist zu dessen Ausführung nicht notwendig. Dadurch ist es möglich das Programm komplett ohne grafische Benutzeroberfläche zu starten so
-das es im Hintergrund laufen kann und lediglich als Verwaltungs- und Kommunikationsservice dient. Ob die grafische Benutzeroberfläche  
-aktiviert ist oder nicht wird beim Programmstart durch entsprechenden Parametern festgelegt. \\
-Der Nutzen der GUI bestand für uns hauptsächlich im Monitoring und bei der Identifikation sowie dem Aufspüren von Fehlern während der 
-Entwicklung. \\
-Realisiert ist die grafische Benutzeroberfläche mit dem JavaFX-Framework welches Bestandteil der Java-Bibliothek ist uns somit wie 
-Java ebenfalls plattformunabhängig lauffähig ist. Zu ihrer Ansteuerung dient eine spezielle Klasse namens
->>ViewController<< welche lediglich Informationen des eigentliche Programms entgegen nimmt und an die eigentliche Benutzeroberfläche 
-(View) weiterreicht sofern diese aktiviert wurde. Umgekehrt werden jedoch keine Benutzereingaben von der GUI an das Programm 
-weitergereicht, sondern dienen lediglich zur Manipulation der Anzeige so das dieses komplett unabhängig ist. Lediglich das Beenden 
-das kompletten Programms ist über die grafische Benutzeroberfläche möglich.
-Abbildung X.X zeigt einen Screenshot der grafischen Benutzeroberfläche des Backends. \\
-\\
-Da die grafische Benutzeroberfläche jedoch nicht zur eigentlichen Funktionalität des Backends beiträgt soll an dieser Stelle nicht 
-weiter eingegangen werden.
 \begin{comment}
 Aufbau
 Interpreter

@@ -44,7 +44,7 @@
 \glsXpageXglsnumberformat{}{59}\delimN 
 \glsXpageXglsnumberformat{}{61}\delimR 
 \glsXpageXglsnumberformat{}{64}\delimN 
-\glsXpageXglsnumberformat{}{76}}}\relax\glsresetentrylist
+\glsXpageXglsnumberformat{}{77}}}\relax\glsresetentrylist
 \glossentry{arm}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{7}\delimN 
 \glsXpageXglsnumberformat{}{21}, \glsseeformat[Glossary:]{gls-arm}{}}}\glsgroupskip
@@ -59,7 +59,7 @@
 \glsXpageXglsnumberformat{}{26}, \glsseeformat[Glossary:]{gls-clr}{}}}\relax\glsresetentrylist
 \glossentry{cpu}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{40}\delimN 
-\glsXpageXglsnumberformat{}{76}}}\relax\glsresetentrylist
+\glsXpageXglsnumberformat{}{77}}}\relax\glsresetentrylist
 \glossentry{css}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{7}\delimN 
 \glsXpageXglsnumberformat{}{19}\delimN 
@@ -81,7 +81,7 @@
 \glsXpageXglsnumberformat{}{61}\delimN 
 \glsXpageXglsnumberformat{}{63}\delimN 
 \glsXpageXglsnumberformat{}{64}\delimN 
-\glsXpageXglsnumberformat{}{77}, \glsseeformat[Glossary:]{gls-gui}{}}}\glsgroupskip
+\glsXpageXglsnumberformat{}{78}, \glsseeformat[Glossary:]{gls-gui}{}}}\glsgroupskip
 \glsgroupheading{H}\relax\glsresetentrylist
 \glossentry{html}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{7}\delimN 
@@ -120,7 +120,7 @@
 \glsXpageXglsnumberformat{}{36}\delimN 
 \glsXpageXglsnumberformat{}{56}\delimN 
 \glsXpageXglsnumberformat{}{62}\delimN 
-\glsXpageXglsnumberformat{}{76}}}\glsgroupskip
+\glsXpageXglsnumberformat{}{77}}}\glsgroupskip
 \glsgroupheading{O}\relax\glsresetentrylist
 \glossentry{osi}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{27}}}\glsgroupskip
