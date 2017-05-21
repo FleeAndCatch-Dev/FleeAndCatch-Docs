@@ -4,7 +4,7 @@ In diesem Kapitel wird die Implementierung des Projektes mit Fokussierung auf di
 
 \subsection{Kommunikation}
 
-Die Kommunikation der einzelnen Komponenten des Schwarmverhaltens baut auf einer klar definierten Struktur, um ein verteiltes System zu ermöglichen, siehe Abbildung \ref{fig:full_classdiagram}. Die Daten werden dabei als \gls{json} Objekte zur optimalen plattformübergreifenden Interpretation versendet, wobei jeweils die entsprechende Bibliothek zur Serialisierung verwendet wird.
+Die Kommunikation der einzelnen Komponenten des Schwarmverhaltens baut auf einer klar definierten Struktur, um ein verteiltes System zu ermöglichen, siehe Abbildung \eqref{fig:full_classdiagram}. Die Daten werden dabei als \gls{json} Objekte zur optimalen plattformübergreifenden Interpretation versendet, wobei jeweils die entsprechende Bibliothek zur Serialisierung verwendet wird.
 \begin{verbatim}
 \end{verbatim}
 \begin{figure}[h]
@@ -96,7 +96,8 @@ dienen der Deserialisierung von abstrakten \gls{json} Objekten, welche nicht dir
 \subsection{\gls{app}}
 
 Die Erstellung der App erfolgt in einer plattformübergreifenden Implementierung durch Xamarin in C\#. Kernelemente stellen hierbei die Struktur, Oberfläche, Businesslogik sowie das Kommunikationssystem dar. Durch die zentrale Verwendung des Kommunikationssystems wird dieses in ein separates Projekt untergliedert, siehe Abbildung \ref{fig:solution} und wird als solches von der \gls{app} als Bibliothek eingebunden. Somit lässt sich die Logik einmalig implementieren und kann auf andere Systemen entsprechend übertragen werden.\\
-Die \gls{app} setzt sich aus vier verschiedenen Projekten zusammen, einer \acrshort{pcl} als Projekt zur plattformübergreifenden Entwicklung und den plattformspezifischen Projekten. Diese werden dem Zielsystem entsprechend ausgewählt und erzeugen durch ihre bestehende Referenz auf die \acrshort{pcl} einen plattformspezifischen Quellcode als \gls{il}, der anschließend ausgeführt werden kann.\\
+Die \gls{app} setzt sich aus vier verschiedenen Projekten zusammen, einer \acrshort{pcl} als Projekt zur plattformübergreifenden Entwicklung und den plattformspezifischen Projekten. Diese werden dem Zielsystem entsprechend ausgewählt und erzeugen durch ihre bestehende Referenz auf die \acrshort{pcl} einen plattformspezifischen Quellcode als \gls{il}, der anschließend ausgeführt werden kann. Für eine vollständig detaillierte Darstellung wird auf den Quellcode und den darin enthalten Kommentare sowie das zugehörige 
+github-Wiki\\(https://github.com/FleeAndCatch-Dev/FleeAndCatch-Docs/wiki) verwiesen.\\
 
 \begin{figure}[h]
 	\begin{center}
@@ -134,53 +135,39 @@ stellt ein Design Pattern dar, welches eine grundlegende Struktur im Quellcode e
 \newpage
 \subsubsection{\acrfull{gui}} %Oberfläche
 
-Die Oberfläche der \gls{app} wird mittels \gls{xaml} durch verschiedene von Xamarin zur Verfügung gestellten Elementen realisiert. Da eine \gls{app} ein einfaches Bedienkonzept voraussetzt, damit es von jedem beliebigen Benutzer verwendet werden kann,
-
-
-Dabei wird für das Layout der einzelnen Seiten vor allem auf ein StackLayout gesetzt. Dieses ist sehr einfach umzusetzen, indem eine Orientierung zur Anordnung der verschiedenen Elemente festgelegt wird, welche anschließend nacheinander eingefügt werden. 
-
-
-
-
- Dabei wird für die Navigation der einzelnen Seiten vor allem auf die Verwendung der NavigationPage sowie zur Auswahl des Szenarios auf ein Carousel gesetzt. 
-
-
-
-
- mit den Aufbau eines STacks durch pushund pop aufrufe die entsprechenden Seiten gewechselt werden, siehe Abbildung xx. 
-
-\begin{comment}
-	Die Oberfläche der \gls{app} wird mittels \gls{xaml} realisiert. Dabei werden die einzelnen Elemente untereinander in der typischen \gls{xml} Struktur angeordnet und stellen damit die \gls{gui} dar, welche die einzelnen Elemente zur Benutzerinteraktion beinhaltet. Zur Strukturierung des Design bietet Xamarin verschiedene Arten von Layouts, wobei diese \gls{app} auf die Stacklayout zur Struktureirung und einer NavigationPage zur Naviagtion, sowie einem Carousel der Szenario auswahl setzt.
-\end{comment}
-
-\begin{comment}
-	Die Oberfläche der \gls{app} wird mittels XAML erstellt, welche auf der Basis von XML ist. Dabei werden die einzelnen ELemente untereinnander Strukturuert, wobei der ENtwickler in Xamarin verschiedene Möglichkeiten des Designs besitzt. Grundlegend ist die entscheidung, ob eine plattformspezifisches Design sinnn macht, oder aber ein plattformübergreifendes, wobei dieses weniger Freiheiten bietet. Die plattformübergreifendes Design besitzt eine Reihe von grundlegeneden Layouts, die für Xamamrin eingesetzt werden können, sowie unterschiedliche Seitenarten. Views
-	Seiten (ContentPage, MasterDetailPage, NavigationPage, TabbedPage, TemplatedPage, CaruselPage)
-	View (ContentPresenter, ContentVIew, ScrollVIew, Frame, TemplatedVIew)
-	Layout (Stacklayout, absolutLayout, RelativeLayout, GridLayout)
-	
-	Weitere standardelemente
-	
-	Durch verschiednene Packages könenn dabei viele Zusätzliche DInge erstellt werden
-\end{comment}
-
-
-%General, XAML stuff
+Die Oberfläche der \gls{app} wird mittels \gls{xaml} durch verschiedene von Xamarin zur Verfügung gestellten Elementen realisiert. Da eine \gls{app} ein einfaches Bedienkonzept voraussetzt, damit es von jedem beliebigen Benutzer verwendet werden kann, wird in diesem Projekt, auf das Navigationsprinzip der NavigationPage gesetzt. Die Navigation wird dabei durch das Aufbauen eines Stapels realisiert, was durch das Prinzip eines Stacks in der Programmierung weit verbreitet ist. Dabei wird durch den Aufruf eines Push auf eine neu Seite gewechselt, wobei die alte deaktiviert und hinter die neue im Speicher vorhanden ist, siehe Abbildung \eqref{fig:push}. Dies wird Programm technisch durch eine Liste realisiert, welche langsam aufgebaut wird. Um nun auf eine alte Seite zurück zu gelangen, wird ein Pop verwendet, um die aktuelle Seite sowie deren Daten zu löschen, wobei die vorherige Seite aus dem Speicher geladen wird, siehe Abbildung \eqref{fig:pop}.\\
 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{images/implementation/push.png}
 	\end{center}	
-	\caption{Wechsel auf neue Seite}
+	\caption{Wechsel auf neue Seite \cite{Xamarin.HierarchicalNavigation}}
 	\label{fig:push}
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{images/implementation/pop.png}
 	\end{center}	
-	\caption{Wechsel auf alte Seite}
+	\caption{Wechsel auf alte Seite \cite{Xamarin.HierarchicalNavigation}}
 	\label{fig:pop}
 \end{figure}
 
-\paragraph{SignIn Page} stellt die Benutzerschnittstelle zur Anmeldung des Nutzers am System dar, siehe Abbildung \ref{fig:signin}. Dabei gibt dieser die entsprechende IP-Adresse der laufenden Desktopanwendung zur Verbindung an. Durch eine implementierte Logik wird diese IP-Adresse auf ihre Richtigkeit geprüft und die Verbindung gestartet. Bei einer erfolgreichen Verbindung wird der Benutzer zur \gls{app} weitergeleitet, wodurch ihm die entsprechenden Funktionalitäten zur Verfügung stehen. Andernfalls erscheint nach einem definierten Timeout eine Fehlermeldung, welche dem User Informationen vorlegt. Zur Speicherung der IP-Adresse ist zusätzlich die Möglichkeit durch ein Switch Element gegeben, wobei diese bei Start der \gls{app} automatisch eingefügt wird.
+\bigskip
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\begin{center}
+		\vspace{-1cm}
+		\includegraphics[width=0.45\textwidth]{images/implementation/stacklayout.png}
+	\end{center}
+	\caption{StackLayout \cite{Xamarin.StackLayoutXamarin}}
+	\label{fig:stacklayout}
+\end{wrapfigure}
+
+\noindent
+Für das Layout der einzelnen Seiten wird vor allem auf das StackLayout gesetzt. Dieses ist einfach umzusetzen, indem eine vertikale oder horizontale Orientierung zur Anordnung der verschiedenen Elemente festgelegt wird, welche entsprechend ihrer Folge hinzugefügt werden. Zusätzlich können standardmäßige Positionierungen verwendet werden, um das Layout individuell zu beeinflussen.
+
+\begin{verbatim}
+\end{verbatim}
+\newpage
+\paragraph{SignIn Page} stellt die Benutzerschnittstelle zur Anmeldung des Nutzers am System dar, siehe Abbildung \eqref{fig:signin}. Dabei gibt dieser die entsprechende IP-Adresse der laufenden Desktopanwendung zur Verbindung an. Durch eine implementierte Logik wird diese IP-Adresse auf ihre Richtigkeit geprüft und die Verbindung gestartet. Bei einer erfolgreichen Verbindung wird der Benutzer zur Hauptseite weitergeleitet, wodurch ihm die entsprechenden Funktionalitäten zur Verfügung stehen. Andernfalls erscheint nach einem definierten Timeout von drei Sekunden eine Fehlermeldung, welche dem User Informationen zum Fehler vorlegt. Durch ein Switch Element ist zusätzlich die Speicherung der IP-Adresse in einer lokalen Datenbank gegeben, wobei diese bei Start der \gls{app} automatisch geladen und eingefügt wird.\\
 
 \begin{figure}[h]
 	\begin{center}
@@ -190,29 +177,25 @@ Dabei wird für das Layout der einzelnen Seiten vor allem auf ein StackLayout ge
 	\label{fig:signin}
 \end{figure}
 
-\paragraph{Home Page} stellt die Hauptseite mit der grundlegenden Navigation der \gls{app} dar, indem der Benutzer die Möglichkeit besitzt ein neues Szenario eines Schwarmverhaltens zu starten, Informationen über die \gls{app} abzurufen, oder sich vom aktuelles System abzumelden.
+\newpage
+\paragraph{Home Page} stellt die Hauptseite mit der grundlegenden Navigation der \gls{app} dar, siehe Abbildung \eqref{fig:home}. Dabei besitzt der Benutzer die Möglichkeit ein neues Szenario eines Schwarmverhaltens zu starten, Informationen über die \gls{app} abzurufen, oder sich vom aktuelles System abzumelden.
+
+\paragraph{Option Page} stellt die Benutzerschnittstelle dar, welche diesen durch die vorhandenen Szenarien anhand eines Carousels leitet, siehe Abbildung \eqref{fig:option}. Der Nutzer kann damit ein beliebiges Szenario auswählen und die Konfiguration des Schwarmes beginnen.\\
+
+\bigskip
 
 \begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=0.4\textwidth]{images/implementation/home.png}
-	\end{center}	
-	\caption{Home Page}
-	\label{fig:home}
+	\centering
+	\subfloat[Home Page]{\includegraphics[width=0.4\textwidth]{images/implementation/home.png}\label{fig:home}}
+	\qquad
+	\subfloat[Option Page]{\includegraphics[width=0.4\textwidth]{images/implementation/option.png}\label{fig:option}}
+	\caption{Hauptseiten}
 \end{figure}
 
 \newpage
-\paragraph{Option Page} stellt die Benutzerschnittstelle dar, welche diesen durch die vorhandenen Szenarien anhand eines Carousels leitet und ein entsprechends auswählt.
+\paragraph{List Page} stellt die Benutzerschnittstelle zur Auswahl der Robotern dar, welche im Szenario involviert sein sollen. Dabei kann der Benutzer unter den verschiedenen Typen wählen, wobei die Anzahl der Roboter vom gewählten Szenario abhängt. Sollte eine ungültige Anzahl an Robotern eingegeben werden, erhält der Benutzer eine Rückmeldung, über eine Fehlermeldung und kann dies korrigieren. Bei korrekter Eingabe wird der Benutzer auf eine Seite mit sämtlichen Informationen des Szenarios weitergeleitet und kann dieses starten.\\
 
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=0.4\textwidth]{images/implementation/option.png}
-	\end{center}	
-	\caption{Option Page}
-	\label{fig:option}
-\end{figure}
-
-\newpage
-\paragraph{List Page} stellt die Benutzerschnittstelle zur Auswahl der Robotern, welche im Szenario involviert werden sollen. Dabei kann der Benutzer unter den verschiedenen Typen wählen, welche vorhanden sind, wobei die Anzahl der Roboter vom gewählten Szenario abhängt.
+\bigskip
 
 \begin{figure}[h]
 	\begin{center}
@@ -223,7 +206,9 @@ Dabei wird für das Layout der einzelnen Seiten vor allem auf ein StackLayout ge
 \end{figure}
 
 \newpage
-\paragraph{Szenario Page} stellt die Benutzerschnittselle dar, die einerseits der Steuerung und Überwachung des Schwarmverhaltens dient. Dabei werden laufend die aktuellen Daten der Roboter angezeigt und können durch die Neigungssensoren der eräte gesteuert werden. Diese verhalten sich entsprechend dem ausgewählten SZenario.
+\paragraph{Szenario Page} stellt die Benutzerschnittselle dar, welche einerseits zur Steuerung und der Überwachung des Schwarmverhaltens dient. Dabei werden laufend die Daten der Roboter, die auf dem \gls{gui} zu sehen sind aktualisiert und entsprechend angezeigt. Die Neigungssensoren des Gerätes, auf dessen Gerät die \gls{app} ausgeführt wird, ermöglichen die Roboter zu steuern, wobei die Richtung und Beschleunigung durch einen Pfeil auf der Oberfläche dargestellt werden. Der Schwarm verhält sich dabei dem entsprechenden Kontext, welchen der Benutzer zuvor eingestellt hat.\\
+
+\bigskip
 
 \begin{figure}[h]
 	\begin{center}
@@ -236,13 +221,102 @@ Dabei wird für das Layout der einzelnen Seiten vor allem auf ein StackLayout ge
 \newpage
 \subsubsection{Buisnesslogic} %Logik
 
-\paragraph{Authorization}
+Die Logik der \gls{app} wird mittels des .NET \gls{framework} in C\# implementiert und ist durch die Strukturierung des \gls{mvvm} Design Pattern in separate Klassen, sowie des eingebundenen Projektes als Bibliothek unterteilt. Diese Logik kann in drei Benutzerszenarien gruppiert werden.
+\begin{enumerate}
+	\item Anmeldung am System
+	\item Erstellung eines Szenario
+	\item Ablauf eines Szenario
+\end{enumerate}
 
-\paragraph{Create Szenario}
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\begin{center}
+		\includegraphics[width=0.45\textwidth]{images/implementation/timeout_app.png}
+	\end{center}
+	\caption{Timeout der Verbindung}
+	\label{fig:timeout_app}
+\end{wrapfigure}
 
-\paragraph{Szenario}
+\paragraph{Die Anmeldung am System} beginnt mit der Validierung der vom Nutzer eingegebenen \gls{ip}-Adresse. Identifiziert wird diese durch die Unterteilung der Zeichenkette in vier Bereiche, welche als Zahl erkannt, und durch einen Punkt abgetrennt sind sowie einen Wertebereich von 0 bis 255 besitzen. Anschließend wird die Verbindung entsprechend konfiguriert, siehe Abbildung \eqref{fig:connect_app} und durch den Aufruf der Methode ConnectAsync() gestartet. Dabei wartet die \gls{app} eine im System fest definierte Zeit von drei Sekunden, siehe Abbildung \eqref{fig:timeout_app}, bis ein Timeout als Fehler geworfen wird, um einen neuen Verbindungsversuch starten zu können.
 
-\newpage
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{images/implementation/connect_app.png}
+	\end{center}	
+	\caption{Verbindungsaufbau}
+	\label{fig:connect_app}
+\end{figure}
+
+\noindent
+Durch die Speicherung der Verbindung in einer lokalen Datenbank mittels SQLite, siehe Abbildung \eqref{fig:saveip} und \eqref{fig:sqlite} besteht die Möglichkeit eine einmal eingegebene \gls{ip}-Adresse beim Start der \gls{app} wieder zu laden, um diese nicht laufend eingeben zu müssen. Dafür wird eine entsprechende Klasse implementiert, welche die benötigten Daten als Objekt darstellt. Diese Daten werden als Tabellen in der Datenbank ablegt sowie Methoden zu deren Verwaltung bereitgestellt.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{images/implementation/authorization.png}
+	\end{center}	
+	\caption{Speicherung der \gls{ip}-Adresse}
+	\label{fig:saveip}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{images/implementation/sqlite.png}
+	\end{center}	
+	\caption{Definition von SQLite}
+	\label{fig:sqlite}
+\end{figure}
+
+\noindent
+Sobald eine \gls{app} sich erfolgreich mit dem System verbunden hat, läuft neben dem eigentlichen Hauptprozess, welchen der Nutzer durch seine Eingaben steuert ein Nebenprozess. Dieser wartet auf eingehende Kommandos und interpretiert diese nach einem festgelegten Bedingungen in der Interpreter Klasse, um entsprechend zu reagieren oder den Nutzer zu informieren und neue Daten anzuzeigen.
+
+\paragraph{Die Erstellung eines Szenario} beginnt mit der Auswahl eines definierten Typ, wobei jeder einen anderen Kontext besitzt, siehe Abschnitt \eqref{szenarien}. Anschließend gelangt der Nutzer zur Auswahl der verschiedenen Roboter, welche im Szenario teilnehmen sollen. Hierbei wird die entsprechende Zahl an Robotern eines Typs einer Liste hinzugefügt, welche der Nutzer durch die \gls{gui} auswählt, siehe Abbildung \eqref{fig:addrobots}. Sollte der Nutzer dabei eine ungültige Anzahl auswählen, erhält er eine entsprechende Rückmeldung, um eine Korrektur vorzunehmen. Bei erfolgreicher Überprüfung wird das Szenario als Objekt erstellt und enthält somit alle Komponenten sowie zusätzliche Informationen zur Identifikation.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{images/implementation/robotlist_add.png}
+	\end{center}	
+	\caption{Hinzufügen der Roboter}
+	\label{fig:addrobots}
+\end{figure}
+
+\noindent
+Um das erzeugte Szenario zu verifizieren, wird das erzeugt Objekt an die Desktopanwendung versendet, siehe Abbildung \eqref{fig:tryszenario}, welche sämtliche beinhalteten Komponenten der Verfügbarkeit überprüft. Bei erfolgreicher Überprüfung wird der Nutzer zum Start des Szenarios mit einem Überblick auf sämtliche Informationen weitergeleitet. Andernfalls wird die Erstellung abgebrochen und der Nutzer kann Änderungen durchführen.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/implementation/trycreateszenario.png}
+	\end{center}	
+	\caption{Erstellung des Szenario}
+	\label{fig:tryszenario}
+\end{figure}
+
+\paragraph{Der Ablauf eines Szenario} teilt sich in verschiedene Prozesse, wobei der Nutzer durch seine Handlungen im \gls{gui} der Hauptprozess beeinflusst. Daneben existiert ein Prozess zum Datenempfang, welcher Aktualisierungen der Daten des Schwarmes empfängt und entsprechend in der \gls{gui} einpflegt. Zur Steuerung des Schwarmes, dient ein Prozess, der mittels eines Timer laufend neu gestartet wird und somit immer neue Steuerungskommandos versendet sowie die Oberfläche der \gls{app} aktualisiert.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/implementation/cancelszenario.png}
+	\end{center}	
+	\caption{Abbruch eines Szenario}
+	\label{fig:cancelszenario}
+\end{figure}
+
+\noindent
+Sobald ein Szenario abgebrochen wird, müssen sämtliche Prozesse und Daten freigegeben werden, damit der Nutzer anschließend ein neues Szenario starten kann, siehe Abbildung \eqref{fig:motionvector}. Dafür wird zunächst der Neigungssensor abgeschaltet, da dieser aktuell nicht mehr benötigt wird. Zur Freigabe der Daten wird sämtliche Aktivität der Roboter abgeschaltet sowie das Szenario entfernt. Dem Backend wird nun noch das Beenden des Szenarios mitgeteilt, damit auch dieses die anderen Komponenten informieren sowie seine Daten freigeben kann.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/implementation/motionvector.png}
+	\end{center}	
+	\caption{Neigungssensor}
+	\label{fig:motionvector}
+\end{figure}
+
+\noindent
+Zur Erzeugung eines neuen Steuerungskommandos, siehe Abbildung \eqref{fig:newcommand}, werden die Neigungssensoren des mobilen Gerätes verwendet. Da bei der Implementierung der Schnittstelle auf den verschiedenen Plattformen gewisse Unterschiede bestehen, müssen diese in der plattformübergreifenden Programmierung behoben werden. Dies wird durch eine Angleichung der Faktoren sowie ein vertauschen der Attribute realisiert, wie am Beispiel von Android und Windows. Das Steuerungskommando enthält dabei keine direkten Werte, wie Geschwindigkeit und Winkel, sondern wird durch Zeichenketten (Enums) umgesetzt. Diese verändern ihre Wertigkeit entsprechend der Werten zum Neigungssensor des mobilen Gerätes.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/implementation/newcommand.png}
+	\end{center}	
+	\caption{Neues Kommando}
+	\label{fig:newcommand}
+\end{figure}
 
 \subsection{Roboter}
 Die Implementierung des Roboters stellt das Kernstück bei der Realisierung dieses Projekts dar. 

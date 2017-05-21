@@ -7,16 +7,10 @@ In diesem Kapitel werden die technischen Grundlagen des Projektes, die zur Umset
 \\Platzhalter kommt noch Text
 \\Platzhalter kommt noch Text
 \subsection{Robotik} % Manuel ca. 8
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 Die Robotik beschäftigt sich mit dem Entwurf, der Konstruktion sowie der Programmierung, Steuerung und dem Betrieb 
 von Robotern.\footnote{\citep[vgl.][Definition Robotik]{Bendel.DefinitionRobotik}\label{note1}} Dabei umfasst die Robotik eine Vielzahl 
 von Fachgebieten wie der Elektrotechnik, dem Maschienenbau, der Informatik sowie der Biologie und der Medizin.
 \subsubsection{Roboter}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 Was im Kontext der Robotik unter einem Roboter zu verstehen ist, ist gar nicht so einfach darzulegen, da es in Tat keine allgemein anerkannte Definition dieses Begriffs gibt, die seiner üblichen Verwendung entspricht.\footnote{\citep[vgl.][Mobile Roboter, Seite 2]{Hertzberg.MobileRoboter}\label{note2}}
 \newline
 Auch ohne eine vollkommen allgemeingültige und präzise Beschreibung eines Roboters zu sein, soll hier die \gls{vdi}-Richtline 2860 einen Eindruck darüber vermitteln, was in der Robotik mit Roboter gemeint ist. \newline
@@ -30,9 +24,6 @@ variablen Bahnen zu bewegen zur Erfüllung der verschiedensten Aufgaben.}\grqq{}
 Auch wenn diese Definition einige grundlegenden Eigenschaften eines Roboters darlegt, beschreibt diese den Begriff des Roboters im industriellen Kontext und trifft hauptsächlich auf stationäre Industrieroboter zu, wie sie in der Automobilfertigung beispielsweise als Schweiß- oder Lackierroboter verwendet werden. Die genannten programmierten Bahnen sind dort möglich, da die Arbeitsprozess und Umgebung auf den Roboter zugeschnitten und vollständig bekannt sind.\footref{note2} \newline
 Im Gegensatz dazu, trifft dieser Aspekt auf mobile Roboter nicht zu, da sich diese meist in einer unbekannten, unstrukturierten und dynamischen Umgebung bewegen.
 \subsubsection{Mobile Roboter}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 Mobile Roboter bewegen sich selbständig durch eine sich meist ständig ändernde Umwelt. All ihre Aktionen sind somit von ihrer aktuellen Umgebung abhängen, die in ihrer konkrete Ausprägung erst zum Zeitpunkt der Aktionsausführung im Detail bekannt ist. 
 \newline
 Dieser grundsätzliche Unterschied zu stationären Robotern macht es unerlässlich das mobile Roboter ihre Umgebung ständig mittels Sensoren selbständig erfassen, die Sensordaten auswerten und auf Grundlage dessen ihre nächsten Aktionen planen.\footnote{\citep[vgl.][Mobile Roboter, Seite 2]{Hertzberg.MobileRoboter}\label{note3}}
@@ -52,14 +43,8 @@ Allein diese drei Beispiele zeigen wie sehr sich mobile Roboter im Aufbau, Einsa
 \newline
 Zu den Vertretern mobiler Roboter im kommerziellen Bereich zählen zum Beispiel Service-Roboter, Erkundungsroboter und Bergungsroboter, Humanoide Roboter sowie Haushaltsroboter.
 \subsubsection{Sensorik}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 Um mit der Umgebung interagieren zu können, müssen mobile Roboter diese wahrnehmen, dazu dienen Sensoren. Diese ermöglichen es dem Roboter Informationen über seine Umwelt und über seinen Zustand zu sammeln um darauf Aufbauen seine nächsten Interaktionsschritte zu planen.
 \paragraph{Klassifizierung}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 Sensoren lassen sich anhand zweier Aspekten klassifizieren, zum einen hinsichtlich des Objektes über welches sie Informationen liefern (die Umwelt oder den Roboter selbst) und anderseits hinsichtlich ihrer Arbeitsweise.\footnote{\citep[vgl.][Mobile Roboter, Seite 24]{Hertzberg.MobileRoboter}\label{note6}}
 \begin{itemize}
 	\item{\textbf{Propriozeptive Sensoren}} -- Diese Art der Sensoren bestimmen eine Messgröße des Roboters selbst und haben keine \glqq{}Kontakt\grqq{} zur Umwelt z.B Bestimmung der Lage Aufgrund eines Neigungssensors.
@@ -82,9 +67,6 @@ Die folgenden Tabelle zeigt beispielhaft die Einordnung einiger Sensoren:
 	\caption[Einordnung von Sensoren]{Einordnung von Sensoren}
 \end{table}
 \paragraph{Eigenschaften}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 Neben der Arbeitsweise gibt es noch weitere Eigenschaften die maßgeblich beeinflussen wann, wie und für welchen Zweck ein jeweiliger Sensor eingesetzt wird. Zu den wichtigsten Eigenschaften zählen:\footnote{\citep[vgl.][Mobile Roboter, Seite 26 f.]{Hertzberg.MobileRoboter}\label{note7}}
 \begin{itemize}
 	\item{\textbf{Messbereich}} -- Jeder Sensor hat einen bestimmten Bereich, in dem die gemessenen Daten valide sind d.h. der Bereich in dem die Messabweichungen innerhalb der festgelegten Grenzen bleibt.
@@ -102,9 +84,6 @@ Damit die Robotersteuerung darauf Rücksicht nehmen kann müssen die entsprechen
 	\item{\textbf{Genauigkeit}} -- Die Genauigkeit oder der relative Fehler ist der prozentuale	Wert einer Abweichung in Bezug zum tatsächlichen Wert.
 \end{itemize}
 \paragraph{Kenngrößen}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 In der Robotik finden zahlreiche Sensoren Anwendung, um es einem mobilen Systems zu ermöglichen verschiedene Kenngrößen zu ermitteln. Im Folgenden werden einiger dieser und die dazu geeigneten Sensoren vorgestellt.
 \begin{itemize}
 	\item{\textbf{Bewegungsmessung}} -- Eine Möglichkeit der Bewegungsmessung ist die Drehwinkelmessung. Diese ermöglicht die Erfassung der Drehungen von Rädern oder anderen rotierenden Elementen eines mobilen Roboters. Dies ermöglicht es mittels Odometire die Geschwindigkeit und Orientierung eines mobilen Roboters zu bestimmen, siehe Abschnitt \eqref{odometrie}. Zur Drehwinkelmessung dienen Impuls- sowie Inkrementalgeber welche mechanisch, photo-elektrisch und elektro-magnetisch arbeiten.\footnote{\citep[vgl.][Mobile Roboter, Seite 28 ff.]{Hertzberg.MobileRoboter}\label{note10}}
@@ -120,9 +99,6 @@ In der Robotik finden zahlreiche Sensoren Anwendung, um es einem mobilen Systems
 \end{itemize}
 Neben diesen elementaren Kenngrößen gibt es zahlreiche weitere die für ein entsprechendes mobile System von Bedeutung sind. Dies ist beispielsweise eine globale Positionsbestimmung mittels \gls{gps} oder die Dedektion von Objekten und geografischen Strukturen durch Kameras oder 2D-/3D-Laserscanner.
 \subsubsection{Sensordatenverarbeitung \& Steuerung}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{process}
-% Eigentlicher Text:
 Generell unterscheidet man zwischen zwei grundlegenden Arten der Steuerung, einer offenen und geschlossenen. Das typische Kontrollprogramm eines Roboters in der Automatisierung läuft in einer offenen Steuerung d.h. es werden keine Sensordaten aus der Umgebung erfasst bzw. berücksichtigt. Dies ist dort möglich, da sich dort Roboter auf vordefinierten Bahnen und in eine auf sie zugeschnittenen Umgebung bewegen.
 \newline
 Prozesssteuerungen dieser Art haben ihre Grenzen da, wo sich ein Roboter in einer unstrukturierten Umgebung bewegt und von Ereignissen oder Parametern abhängt, die nicht kontrollierbar bzw. vorab nicht bekannt sind.\footnote{\citep[vgl.][Mobile Roboter, Seite 3 f.]{Hertzberg.MobileRoboter}\label{note14}}
@@ -136,9 +112,6 @@ Mobile Roboter verfügen über eine geschlossene Steuerung bei der eine Rückkop
 \newline
 Die Sensordatenverarbeitung hat die Aufgabe, die durch die Sensoren erfassten Daten zu verarbeiten, aufzubereiten und sie für komplexere Anwendungen nutzbar zu machen. Dazu gehören die Filterung der Daten, Extraktion bestimmter Merkmale sowie weiterführende Berechnung von Kenngrößen und Informationen.\footnote{\citep[vgl.][Mobile Roboter, Seite 67]{Hertzberg.MobileRoboter}\label{note15}}
 \paragraph{Odometrie \& Koppelnavigation}\label{odometrie}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{process}
-% Eigentlicher Text:
 Die Odometrie bezeichnet eine Methode zur Berechnung von Position und Orientierung eines mobilen Systems anhand von Bewegungsdaten. Räder basierte Systeme benutzen dafür die Anzahl der Radumdrehungen, während laufende Systeme die Anzahl ihrer Schritte verwenden. Ist beispielsweise der Raddurchmesser bekannt, so kann über die Anzahl $n$ der Radumdrehungen (welche z.B. mittels Inkrementalgebern erfasst wird) zwischen zwei Messzeitpunkten und dem Radumfang $\pi \cdot d$, wobei $d$ den Raddurchmesser darstellt, die zurückgelegte Wegstrecke $\Delta{}s$ berechnet werden:
 \begin{equation}
 \Delta{}s = \pi \cdot d \cdot n
@@ -169,9 +142,6 @@ von Problemen wie beispielsweise variierender Raddurchmesser dem Durchdrehen ode
 \newline
 Wegen diesen Problemen finden sich kaum Roboternavigationssysteme, welche ausschließlich eine Koppelnavigation zur Bestimmung von Position und Orientierung verwenden. Es gibt zwar Navigationssysteme, welche die Koppelnavigation verwenden, jedoch beziehen diese noch weitere Sensorinformationen, wie beispielsweise Beschleunigungswerte zur Bestimmung der Position und Ausrichtung mit ein.\footnote{\citep[vgl.][Mobile Robotik, Seite 115]{Nehmzow.MobileRobotik}\label{note19}}
 \subsubsection{Antriebsarten}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{process}
-% Eigentlicher Text:
 Die entscheidende Eigenschaft des mobilen Roboters ist die Fähigkeit sich selbständig durch seine Umwelt zu bewegen. Um dies zu realisieren gibt es eine Vielzahl unterschiedlichster Fortbewegungsarten, beispielsweise in Form von schreitenden, kriechenden oder krabbelnden, sowie fliegenden, schwimmenden oder tauchenden Robotern.\footnote{\citep[vgl.][Mobile Roboter, Seite 103]{Hertzberg.MobileRoboter}\label{note20}}
 \newline
 Um den Umfang dieser Ausarbeitung überschaubar zu halten, beschränken wir uns auf die Darstellung von radgetriebenen Robotern.
@@ -187,9 +157,6 @@ Hinsichtlich Rad- und Achsenanzahl, Anordnung der Räder sowie dem Verhältnis z
 	\label{fig:einachsenlenkung}
 \end{wrapfigure}
 \paragraph{Differentialantrieb}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{process}
-% Eigentlicher Text:
 Dieser Antrieb besteht aus zwei voneinander unabhängig angetriebene, starren Rädern die sich auf einer Achse befinden. Zusätzlich gibt es meist ein oder auch mehrere passiv mitlaufenden Stützrädern, die sich frei drehen können. Je nachdem, wie und in welchem Verhältnis zueinander die beiden Antriebsräder sich drehen, fährt der Roboter gerade aus, eine mehr oder weniger weite Rechts- oder Linkskurve oder dreht sich auf der Stelle.\\
 Vorteile dieses Antriebs sind seine einfache Mechanik und gute Manövierbarkeit, welcher jedoch eine Radregelung des Antriebs in Echtzeit erfordert.
 \begin{wrapfigure}{r}{0.30\textwidth}
@@ -201,9 +168,6 @@ Vorteile dieses Antriebs sind seine einfache Mechanik und gute Manövierbarkeit,
 	\label{fig:einachsenlenkung}
 \end{wrapfigure}
 \paragraph{Einachsige Lenkung}
-% Farbe die Differentialantriebangibt welchen Status der folgende Abschnitt hat:
-\color{process}
-% Eigentlicher Text:
 Dieses Antriebsprinzip entspricht dem aus gängigen PKWs bekannten Konzept. Von den vier Rädern, von denen jeweils zwei an einer Achse angebracht sind, sind beide Räder einer Achse lenkbar. Für den Antrieb ist es möglich eine der beide Achsen, als auch beide anzutreiben. 
 \newline
 Der Vorteil dieses Antriebskonzeptes ist die gute Stabilität und die Möglichkeit der Trennung von Antrieb und Lenkung jedoch ist die Nanövierbarkeit eingeschränkter als bei den anderen Antriebsarten.
@@ -216,9 +180,6 @@ Der Vorteil dieses Antriebskonzeptes ist die gute Stabilität und die Möglichke
 	\label{fig:einachsenlenkung}
 \end{wrapfigure}
 \paragraph{Dreirad-Antrieb}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{process}
-% Eigentlicher Text:
 Bei diesem Antriebskonzept verfügt der mobile Roboter über zwei freilaufenden Räder auf einer Achse sowie einem einzelnen angetriebenen und gelenkten Rad, welches zentral vor den beiden anderen Rädern angebracht ist. Es ist auch möglich, dass ein Motor beide Hinterräder antreibt, und das Vorderrad allein der Lenkung dient.
 \newline
 Die einfache Mechanik dieser Antriebsform ist ein Vorteil, jedoch ist die Manövierbarkeit eingeschränkter als beim Synchro- oder Differentialantrieb und die Stabilität ist geringer, als bei der Einachsen Lenkung, die über ein zusätzliches Rad an der Vorderachse verfügt.
@@ -231,9 +192,6 @@ Die einfache Mechanik dieser Antriebsform ist ein Vorteil, jedoch ist die Manöv
 	\label{fig:einachsenlenkung}
 \end{wrapfigure}
 \paragraph{Synchro-Antrieb}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{process}
-% Eigentlicher Text:
 Der Synchro-Antrieb hat die selbe Radanordnung, wie der Dreirad-Antrieb, jedoch werden die drei Räder synchron angetriebene und sind auch nur synchron drehbar. Die Räder haben somit immer die selbe Ausrichtung und drehen sich auch mit der selben Geschwindigkeit. Eine Drehung des Roboters bzw. der auf dem Antrieb angebrachte Plattform ist nicht direkt möglich.
 \newline
 Durch die synchrone Lenkung und den synchronen Antrieb der Räder erfordert diese Antriebsform eine weitaus komplexere Mechanik, als die anderen Antriebsarten, garantiert jedoch einen stetigen Geradeauslauf und erfordert keine komplexe Regelung.\footnote{\citep[vgl.][Mobile Roboter, Seite 107 f.]{Hertzberg.MobileRoboter}\label{note22}}
@@ -246,18 +204,12 @@ Durch die synchrone Lenkung und den synchronen Antrieb der Räder erfordert dies
 	\label{fig:einachsenlenkung}
 \end{wrapfigure}
 \paragraph{Omni-Antrieb}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{process}
-% Eigentlicher Text:
 Beim Omni-Antrieb kommen omnidirektionale Räder wie Allseitenräder oder Mecanum-Räder zum Einsatz. Durch ihren speziellen Aufbau ist der Roboter in der Lage, sich sowohl auf der Stelle zu Drehen, als auch in alle Richtungen zu bewegen, ohne sich vorher drehen zu müssen. Dies verleiht dem Antrieb eine uneingeschränkte Beweglichkeit in jede Richtungen (x, y und $\omega{}$).
 \newline
 Der Große Vorteil dieser Antriebsform ist die uneingeschränkte Beweglichkeit. Jedoch birgt diese Art des Antriebs eine gewisse mechanische Komplexität und erfordert eine aufwändige Steuerung.
 
 \newpage
 \subsection{\LM}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 \LM{} ist eine seit 1988 existierende Produktserie des Spielwarenherstellers \LE{}.\footnote{\citep[vgl.][Das EV3 Roboter Universum, Seite 21]{Scholz.DasEV3}\label{note23}}
 \LM{} ermöglicht das Bauen, Programmieren und Steuern verschiedener \LE{} Roboter. Diese Roboter bestehen dabei aus
 gängigen \LE{} Teilen die auch in anderen \LE{}-Produkten Verwendung finden, sowie speziellen \LE{}-Komponenten 
@@ -266,9 +218,6 @@ wie einer zentralen Steuereinheit, Motoren und Sensoren.
 %### Subsektion über XXX ###################################################################################################################
 %-------------------------------------------------------------------------------------------------------------------------------------------
 \subsubsection{Das EV3-System}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 Der 2013 erschienene EV3 ist das dritte System der \LM{} Reihe. Die Bezeichnung setzt sich aus EV für Evolution 
 und 3 für die dritte Stufe der \LM{}-Serie zusammen.\footref{note23} \\
 Im Vergleich zu den Vorgängersystemen verfügt das EV3-System über eine modernere und leistungsfähigere Steuereinheit und auch die anderen elektronischen Komponenten des System wurden an den heutigen Stand der Technik 
@@ -288,9 +237,6 @@ Neben den elektronischen Komponenten gehören auch nicht elektronische Teile, wi
 \newline
 Im Folgenden wird auf die elektronischen Komponenten des EV3-Systems näher eingegangen, da diese im Projekt eine deutlich größere Relevanz aufweisen.
 \subsubsection{Der EV3-Stein (Steuereinheit)}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 Die zentrale Komponenten und das Gehirn des LEGO MINDSTORMS EV3-Systems ist die zentrale Steuereinheit, kurz (EV3-)Stein oder auch Brick genannt. Bei ihm handelt es sich um einen Computer, welcher selbständig Programme ausführen kann. Dazu verfügt der EV3-Stein über ein Linux Betriebssystem und eine spezielle Firmware, die wie die auszuführenden Programme auf einem Flash-Speicher liegen.\footnote{\citep[vgl.][Das EV3 Roboter Universum, Seite 21]{Scholz.DasEV3}\label{note25}} \\
 Zur Kommunikation mit dem PC verfügt der EV3-Stein über eine USB- sowie Bluetooth-Schnittstelle. Neben der Kommunikation zu einem Computer kann die USB-Schnittstelle auch für den Zusammenschluss mit einem weiteren EV3-Stein (genannt Daisy Chain) genutzt werden.\footref{note25}  \\
 Für den Anschluss von Motoren und Sensoren verfügt der EV3-Stein über 8 Ports, an welche die anderen System-Komponenten über Kabel mit RJ12-Steckern angeschlossen werden. 4 der Ports dienen für den Anschluss von
@@ -310,9 +256,6 @@ Die folgende Auflistung zeigt einige Leistungsmerkmale des EV3-Steins.\footnote{
 	\item{Kommunikation:} Bluetooth v2.1, USB 2.0 (Kommunikation zum PC), USB 1.1 (Daisy Chain)
 \end{itemize}
 \subsubsection{Motoren}\label{motoren}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 Das EV3-System verfügt über zwei unterschiedliche Motoren, einen großen Motor und einen mittleren Motor. Bei beiden handelt es sich um Servomotoren mit integriertem Rotationssensor, welche von außen angesteuert und abgefragt werden können.\footnote{\citep[vgl.][EV3-Programmieren mit Java, Seite 92]{Schobel.RobertaEV3Programmieren}\label{note27}} Die Motoren lassen sich sehr exakt steuern und ermöglichen so einen synchronen Betrieb mehrerer Motoren.\footnote{\citep[vgl.][Das EV3 Roboter Universum, Seite 29 f.]{Scholz.DasEV3}\label{note28}}
 \smallskip
 \newline
@@ -330,14 +273,8 @@ Die folgende Tabelle zeigt die wichtigsten Eigenschaften der beiden Motoren.
 	\caption[Eigenschaften der EV3-Motortypen]{Eigenschaften der EV3-Motoren}
 \end{table}
 \subsubsection{Sensoren}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 Zum EV3-System gehören eine Reihe von verschiedenen Sensoren, die es den Robotern ermöglichen Informationen über ihre Umwelt zu sammeln sowie ihre Eigenbewegungen zu erfassen. Im folgenden Abschnitt werden die wichtigsten Sensoren mit ihren Leistungsmerkmalen beschrieben.
 \paragraph{Farbsensor}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 Der Farbsensor ist ein digitaler Sensor, der dazu dient die Lichtintensität sowie verschiedener Farben zu erkennen. Der Sensor kann sowohl
 aktiv, als auch passiv betrieben werden und verfügt dafür über vier unterschiedliche Betriebsmodi:\footnote{\citep[vgl.][EV3-Programmieren mit Java, Seite 101]{Schobel.RobertaEV3Programmieren}\label{note29}}
 \begin{itemize}
@@ -355,9 +292,6 @@ Eigenschaften:
 \end{itemize}
 Durch diesen Sensor wird es beispielsweise möglich, den Roboter einer farbigen Linie auf dem Boden folgen zu lassen.
 \paragraph{Ultraschallsensor}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 Diese aktive Sensor verwendet einen für den Menschen unhörbaren Ultraschall, um die Entfernung von Objekten zu ermitteln. Der Sensor emittiert dazu Ultraschall und misst die Laufzeit der Schallwellen, wenn diese von einem Objekt reflektiert werden, aus der Laufzeit kann dann die Entfernung ermittelt werden. Der Sensor verfügt über zwei unterschiedliche Betriebsmodi:\footnote{\citep[vgl.][Das EV3 Roboter Universum, Seite 32 f.]{Scholz.DasEV3}\label{note30}}
 \begin{itemize}
 	\item{Messen} - In diesem Modus sendet der Sensor Ultraschall aus, um die Entfernung von Objekten zu ermitteln.
@@ -370,14 +304,8 @@ Eigenschaften:
 	\item{Messbereich: 3 cm bis 250 cm}
 \end{itemize}
 \paragraph{Berührungssensor}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 Der Berührungssensor ist ein einfacher mechanischer Sensor. Wird der Knopf am Ende des Sensors gedrückt wird dies registriert. Trotz der Einfachheit dieses Sensors ist dieser dennoch sehr nützlich, da er beispielsweise die Kollision des Roboters mit einem Hindernis erkennen kann.\footnote{\citep[vgl.][Das EV3 Roboter Universum, Seite 33]{Scholz.DasEV3}\label{note31}}
 \paragraph{Kreiselsensor (Gyroskop)}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 Der Kreiselsensor ermöglicht es Drehbewegungen um eine Achse über Rotationsgeschwindigkeit und Drehwinkel zu messen. Dadurch wird es möglich die Eigenbewegung des Roboters oder einer Roboterkomponente zu registrieren.\footnote{\citep[vgl.][Das EV3 Roboter Universum, Seite 33]{Scholz.DasEV3}\label{note32}}
 \medskip
 \newline
@@ -388,9 +316,6 @@ Eigenschaften:
 	\item{Abtastrate: 1.000 Hz}
 \end{itemize}
 \paragraph{Rotationssensor (Integriert)}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{finishing}
-% Eigentlicher Text:
 Wie bereits im Abschnitt \eqref{motoren} dargelegt verfügen die beiden Motortypen über integrierte Rotationssensoren, die es ermöglichen die Umdrehungen der Motoren auszulesen. Durch diese Sensoren können mittels Odometrie Rückschlüsse über die Bewegung bzw. Position des Roboters geschlossen werden.
 \medskip
 \newline
@@ -403,9 +328,6 @@ Eigenschaften:
 Neben den hier vorgestellten Sensoren existiert noch ein Infrarotsensor, welcher in Verbindung mit einer Infrarotfernsteuerung dazu dient einen EV3-Roboter fernzusteuern.
 %### Subsubsektion über XXX ################################################################################################################
 \subsubsection{Programmierung}
-% Farbe die angibt welchen Status der folgende Abschnitt hat:
-\color{process}
-% Eigentlicher Text:
 Für die Programmierung der \LM{} Produkte gibt es eine Reihe unterschiedlicher Programmiersprachen und -umgebungen. Die hauseigene \LE{}-Software zur Programmierung des EV3 richtet sich an Einsteiger. Sie ermöglicht es über eine grafische Oberfläche via vorgefertigter Programmabläufe, welche durch grafische Blöcke repräsentiert werden den EV3 zu programmieren.\footnote{\citep[vgl.][EV3-Programmieren mit Java, Seite 25 f.]{Schobel.RobertaEV3Programmieren}\label{note33}} \\
 %cite[vgl.][25\psq]{Roberta}.
 Die Abbildung \eqref{tab:ev3motoreneig} gibt einen Überblick über verschiedene für den EV3 verfügbare Programmiersprechen sowie ihre Vor- und Nachteile.
@@ -444,7 +366,6 @@ Im folgenden sind einige Features die leJOS bietet aufgelistet:
 \end{itemize}
 
 \newpage
-\color{finishing}
 \subsection{\gls{app} Entwicklung} %Simon ca. 8
 
 \begin{wrapfigure}{r}{0.45\textwidth}
@@ -617,8 +538,6 @@ Das .NET Framework bietet zusätzlich zur unabhängigen Entwicklung verschiedene
 	\label{fig:clr}
 \end{figure}
 
-\color{process}
-
 \subsection{TCP-Kommunikation}
 Das \gls{tcp} ist ein Transportprotokoll und ermöglicht eine Datenaustausch zwischen kommunizierenden Anwendungsinstanzen in einer Ende-zu-Ende-Beziehung. \gls{tcp} ist als Transportprotokoll in der vierten Schicht des \gls{osi}-Modells angesiedelt und basiert auf dem \gls{ip} mit dem es zusammen als Namensgeber der TCP/IP-Protokollfamilie (Internetprotokollfamilie) dient.
 \gls{tcp} ist ein offenes, frei verfügbares und weit verbreitetes Protokoll. Als Mitglied der Internetprotokollfamilie ist \gls{tcp} neben \gls{udp} das Transportprotokoll, auf dem die meisten Anwendungen im Internet basieren.\footnote{\citep[vgl.][Grundkurs Datenkommunikation, Seite 189]{Mandl.GrundkursDatenkommunikation}\label{note43}}
@@ -682,19 +601,17 @@ Als Transportzugriffsschnittstelle für die \gls{tcp}-basierte Kommunikation die
 Obwohl es sich bei \gls{tcp} ein paketvermitteltes Protokoll handelt der Anwendung eine Strom-orientierte Kommunikation, die Daten werden also von einem Anwendungsprozess Byte für Byte in einem Bytestrom geschrieben und \gls{tcp} sorgt anschließend um den Aufbau von Segmenten, die dann übertragen werden. Andere Transportdienste erwarten ihre Daten in festen Blöcken.\footnote{\citep[vgl.][Grundkurs Datenkommunikation, Seite 96 f. f.]{Mandl.GrundkursDatenkommunikation}\label{note67}}
 
 \newpage
-\color{finishing}
 \subsection{Schwarmverhalten}
 
 Dieser Abschnitt beschäftigt sich mit der Theorie des Schwarmverhalten und dessen Abstammung.
 
 \subsubsection{Allgemein}
 
-Das Schwarmverhalten beschreibt die Verhaltensweise eines Schwarmes, welcher aus einer einheitlich formierten Tierart besteht.  Diese interagieren untereinander, um eine evolutionstechnische Überlegenheit, durch das Bilden eines Schwarmes zu erhalten. Der Vorteil liegt dabei hauptsächlich im Schutz vor Fressfeinden des einzelnen Individuums, indem diese nicht als Beutetier identifiziert werden können. Andernfalls kann sich der Schwarm als solches effizienter gegenüber Fressfeinden behaupten und Jungtiere schützen. Zudem dient es einer Erleichterung der Fortpflanzung, da in einem Schwarm eine entsprechende Auswahl an Partnern besteht, um eine genetische Vielfalt zu erreichen.%Schwarm zur Beutejagd
-%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}\label{note7}}
-\color{process}
+Das Schwarmverhalten beschreibt die Verhaltensweise eines Schwarmes, welcher aus einer einheitlich formierten Tierart besteht.  Diese interagieren untereinander, um eine evolutionstechnische Überlegenheit, durch das Bilden eines Schwarmes zu erhalten. Der Vorteil liegt dabei hauptsächlich im Schutz vor Fressfeinden des einzelnen Individuums, indem diese nicht als Beutetier identifiziert werden können, was als Konklusionseffekt bekannt ist sowie die Zusammenarbeit der einzelnen zur Jagd auf andere Tiere.\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}\label{note46}} Zusätzlich bietet es die Möglichkeit sich gegenüber Fressfeinden zu behaupten und Jungtiere zu schützen. Zudem dient es einer Erleichterung der Fortpflanzung, da in einem Schwarm eine entsprechende Auswahl an paarungbereiten Partnern vorhanden ist, um eine genetische Vielfalt zu erreichen.\footref{note46}
+
 \subsubsection{Vorbilder aus dem Tierreich}
 
-Zur Nachstellung eines Schwarmverhaltens existieren verschiedene Ideale, die aus dem Tierreich übernommen werden können. Dabei verwendet jede Tierart ihre eigenen Überlebensstrategien, sowie Regeln die in dem anzutreffenden Schwarm vorherrschen.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
+Zur Nachstellung eines Schwarmverhaltens existieren verschiedene Vorbilder, die aus dem Tierreich übernommen werden können. Dabei verwendet jede Tierart ihre eigenen Überlebensstrategien, sowie Regeln die in dem anzutreffenden Schwarm vorherrschen.
 \begin{wrapfigure}{r}{0.45\textwidth}
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/fischschwarm.jpg}
@@ -705,13 +622,13 @@ Zur Nachstellung eines Schwarmverhaltens existieren verschiedene Ideale, die aus
 
 \noindent
 \paragraph{Ein Fischschwarm}
-ist hierfür eines der bekanntesten Beispiele, indem die einzelnen Individuen des Schwarmes sich so verhalten, als würden sie wie ein einzelnes Tier agieren. Dabei setzt jeder Fisch feste Regeln um, die zur Umsetzung eines Schwarmverhaltens führen.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
+ist hierfür eines der bekanntesten Beispiele, indem die einzelnen Individuen des Schwarmes sich so verhalten, als würden sie wie ein einzelnes Tier agieren. Dabei setzt jeder Fisch feste Regeln um, die zur Umsetzung eines Schwarmverhaltens führen.
 \begin{enumerate}
 	\item Folge deinem Vordermann
 	\item Behalte die Geschwindigkeit deines Nachbarn bei
 \end{enumerate}
 \noindent
-Die wichtigste Rolle spielt hierbei der Schwellenwert zur Steuerung des Schwarms durch einzelne Teilnehmer. Da jedes Individuum den Schwarm durch seine Bewegung beeinflusst, existiert ein Schwellenwert, der sich einer Mindestanzahl von etwa fünf Prozent richtet, durch die der Schwarm gesteuert werden kann. Somit reagieren die Fische ausschließlich auf die Mehrheit und der Schwarm lässt sich nicht durch eine Minderheit Fehlsteuern. Dieses Szenario lässt im Sinne von Veranstaltungen auf Menschen übertragen, um zu festzustellen an welchen Positionen Sicherheitspersonal positioniert werden muss, um einen geregelten Ablauf zu gewährleisten.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
+Die wichtigste Rolle spielt hierbei der Schwellenwert zur Steuerung des Schwarms durch einzelne Teilnehmer. Da jedes Individuum den Schwarm durch seine Bewegung beeinflusst, existiert ein Schwellenwert, der sich einer Mindestanzahl von etwa fünf Prozent der Fische richtet, durch die der Schwarm gesteuert werden kann.\footnote{\citep[vgl.][Logistik Schwarmintelligenz]{Stober.Logistik:Schwarmintelligenz}\label{note47}} Somit reagieren die Fische ausschließlich auf die Mehrheit und der Schwarm lässt sich nicht durch eine Minderheit Fehlsteuern. Dieses Szenario lässt im Sinne von Veranstaltungen auf Menschen übertragen, um zu festzustellen an welchen Positionen Sicherheitspersonal positioniert werden muss, um einen geregelten Ablauf zu gewährleisten.\footref{note47}
 \begin{wrapfigure}{r}{0.45\textwidth}
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/termitenschwarm.jpg}
@@ -721,8 +638,8 @@ Die wichtigste Rolle spielt hierbei der Schwellenwert zur Steuerung des Schwarms
 \end{wrapfigure}
 
 \noindent
-\paragraph{Ein Termitenschwarm} geht nach dem Prinzip der Stigmergie vor, wie andere Insekten, die vorwiegend in einem Staat leben. Dabei kommunizieren die einzelnen Individuen indirekt über die Beeinflussung ihrer direkten Umgebung, wie dem Hinterlassen von Spuren als Merkmale. Dieses Prinzip ermöglicht auch den kleinsten und primitivsten Organismen einen evolutionären Vorteil zu erlagen, indem sie sich nicht allein den Gefahren stellen, sondern in einer großen Masse zusammenarbeiten.\\
-Dies ermöglicht das Bauen riesiger Nester, indem die Insekten ihren inneren Plan, mit ihrer aktuellen Umgebung vergleichen und dadurch intuitiv erkennen, welche Arbeit sie zu erledigen haben.\\%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon} 
+\paragraph{Ein Termitenschwarm} geht nach dem Prinzip der Stigmergie vor, wie andere Insekten, die vorwiegend in einem Staat leben. Dabei kommunizieren die einzelnen Individuen indirekt über die Beeinflussung ihrer Umgebung, wie dem Hinterlassen von Spuren als Merkmale.\footnote{\citep[vgl.][Roboter bauen im Schwarm nach dem Vorbild von Termiten]{Schoenebeck.Roboterbauen}\label{note48}} Dieses Prinzip befähigt den kleinsten und primitivsten Organismen einen evolutionären Vorteil zu erlagen, indem sie sich nicht allein den Gefahren stellen, sondern in einer großen Masse zusammenarbeiten.\\
+Dies ermöglicht ihnen das Bauen riesiger Nester, indem die Insekten einen ihren vorgegebenen inneren Plan, mit ihrer aktuellen Umgebung vergleichen und dadurch intuitiv erkennen, welche Arbeit sie zu erledigen haben.\footref{note48}\\
 
 \noindent
 Der Ablauf ist dabei folgender:
@@ -731,25 +648,59 @@ Der Ablauf ist dabei folgender:
 	\item Analysieren
 	\item Reagieren
 \end{enumerate}
-Dieses Prinzip lässt sich durch festlegen von Regeln auf Roboterschwärme abbilden, um wie Insekten vollkommen autonom Gebäude und andere Objekte zu errichten. Zudem lässt sich dadurch eine indirekte Kommunikation und Zusammenarbeit zwischen verschiedenartigen Robotern realisieren.%\footnote{\citep[vgl.][Schwarmverhalten]{Spektrum.SchwarmverhaltenKompaktlexikon}
+Dieses Prinzip lässt sich durch festlegen von Regeln auf Roboterschwärme abbilden, um wie Insekten vollkommen autonom Gebäude und andere Objekte durch den Einsatz einer indirekten Kommunikation zu errichten.
 
 \subsubsection{Szenarien}
 
-Zur Umsetzung verschiedener Schwarmverhalten lassen sich nützliche Teile der Tierwelt auf Roboter abstrahieren, um eine Zusammenarbeit der einzelnen Individuen effizienter zu gestalten. Hierbei werden meist mehrere Basisszenarien eingesetzt, die einerseits die Kommunikation, oder den Abläufe verbessern.\\
-Für die Umsetzung der Kommunikation der einzelnen Teilnehmer existieren zwei verschiedene Möglichkeiten, einerseits eine direkt, oder indirekte Kommunikation. Dabei kann bei einer direkten Kommunikation auf die bekannten Kommunikationsmittel zurückgegriffen werden und über ein existierendes Netzwerk kommuniziert werden. Bei einer indirekte Kommunikation analysiert der Roboter dagegen seine Umgebung, um daraus Veränderungen zu registrieren und entsprechend darauf zu reagieren. Dabei wird bei einer Umsetzung zur Implementierung folgend vorgegangen:
+Zur Umsetzung verschiedener Schwarmverhalten lassen sich nützliche Teile der Tierwelt auf Roboter abstrahieren, um eine Zusammenarbeit der einzelnen Individuen effizienter zu gestalten. Hierbei werden meist mehrere Basisszenarien eingesetzt, die einerseits die Kommunikation, oder die Abläufe verbessern.\\
+Für die Umsetzung der Kommunikation der einzelnen Teilnehmer existieren zwei verschiedene Möglichkeiten, einerseits eine direkt, oder indirekte Kommunikation. Dabei kann bei einer direkten Kommunikation auf die bekannten Kommunikationsmittel zurückgegriffen und über ein existierendes Netzwerk kommuniziert werden. Dabei wird meist nach dem bekannten Request-Response-Prinzip vorgegangen.
+\begin{enumerate}
+	\item Anfrage
+	\item Verarbeitung
+	\item Antwort
+\end{enumerate}
+Bei einer indirekte Kommunikation analysiert der Roboter dagegen seine Umgebung, um daraus Veränderungen zu registrieren und entsprechend zu reagieren. Dabei wird bei einer Umsetzung zur Implementierung folgend vorgegangen:
 \begin{enumerate}
 	\item Datenerfassung durch Sensorik
 	\item Datenauswertung
 	\item Vergleich der Datensätze
 	\item Reaktion und Ausführung
 \end{enumerate}
+Für die Umsetzung eines Schwarmverhaltens, können viele Szenarien herangezogen werden, je nachdem, welche Problemstellung gelöst werden soll. Da sich dieses Projekt auf mobile Kleinroboter bezieht kommen folgende Basisszenarien in Frage:
+\begin{itemize}
+	\item Synchrone Verhaltensweise
+	\item Verfolgung eines Objektes
+	\item Selbstständige Verhaltensweise
+\end{itemize}
 
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\begin{center}
+		\includegraphics[width=0.35\textwidth]{images/technische_grundlagen/roboterform.jpg}
+	\end{center}
+	\caption{Roboter bilden Formen \cite{FrankfurterAllgemeineZeitungGmbH.Schwarmverhalten:Roboter}}
+	\label{fig:roboterFormen}
+\end{wrapfigure}
 
+\paragraph{Die Synchrone Verhaltensweise} stellt einen Schwarm dar, wobei alle Individuen als Einheit agieren und somit ein großes Tier nachahmen. Dazu werden meist den jeweilig beteiligten Robotern dieselben Informationen zur Verfügung gestellt, um eine gleichmäßige Reaktion zu erreichen. Dies dient dazu spezielle Formen mit Robotern darzustellen und den gesamten Schwarm zu steuern.
 
-1. Separation
+\begin{verbatim}
+\end{verbatim}
+\newpage
 
-2. Aligment
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\begin{center}
+		\includegraphics[width=0.35\textwidth]{images/technische_grundlagen/verkehr.png}
+	\end{center}
+	\caption{Roboter bilden Formen \cite{ETHZuerich.InduzierterVerkehr}}
+	\label{fig:verkehr}
+\end{wrapfigure}
+\paragraph{Die Verfolgung eines Objektes} stellt Roboter dar, welche einem klar definierten Objekt folgen. Dies kann durch verschiedene Prinzipien veranlasst werden. Einerseits kann ein Objekt durch vorhandene Sensorik erfasst und damit verfolgt werden. Andererseits kann eine Verfolgung mittels Positionsdaten, wie \gls{gps} realisiert werden. Dieses Prinzip eines Schwarmverhaltens erfasst damit ein weites Spektrum an Anwendungsgebieten, wie eine automatisierte Verkehrsführung oder der Verfolgung durch Drohnen, welche die Möglichkeit besitzen durch Gesichtserkennung Personen und Objekte zu erkennen.
 
-3. Cohesion
-
-4. Ausseneinflüsse
+\begin{wrapfigure}{r}{0.25\textwidth}
+	\begin{center}
+		\includegraphics[width=0.2\textwidth]{images/technische_grundlagen/industrie.jpg}
+	\end{center}
+	\caption{Industrieroboter \cite{KUKA.IndustrieroboterKUKA}}
+	\label{fig:industrie}
+\end{wrapfigure}
+\paragraph{Die Selbstständige Verhaltensweise} stellt eine indirekte Kommunikation zwischen Robotern dar, welche eine asynchrone Zusammenarbeit dieser ermöglicht. Dabei können unabhängig voneinander Roboter nach ihren Stärken für ein gemeinsames Ziel zusammenarbeiten. Dies findet oft Anwendung in Industrieanlagen, wobei jeder Roboter für eine spezielle Aufgabe ausgerüstet und programmiert ist. Diese erfassen zunächst das Produkt, um anschließend ihren definierten Arbeitsschritt durchzuführen.
