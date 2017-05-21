@@ -517,11 +517,18 @@ Dazu existieren die folgenden Controller-Klassen:
 	\item{ScenarioController} -- Der AppContoller verwaltet sämtliche aktiven Szenarien.
 	%   ###############################################################################################################################
 \end{itemize}
-Die beiden Klassen AppController und RoboterController bestehen im wesentlichen aus einer ArrayList, in welcher sämtliche Apps bzw. 
-Roboter die am Backend angemeldet sind gespeichert werden. Dazu werden die Devices durch Objekte entsprechender Klassen in der 
-ArrayList repräsentiert. 
-
-Alle drei Klassen arbeiten mit statischen Datenstrukturen und Methoden da sie ...
+Die beiden Klassen AppController und RoboterController bestehen im wesentlichen aus einer Listen-Datenstruktur (ArrayList), in 
+welcher sämtliche Apps bzw. Roboter die am Backend angemeldet sind gespeichert werden. In dieser Datenstruktur werden die Devices 
+durch Objekte entsprechender Klassen repräsentiert. \\
+Die Controller-Klassen verfügen über Datenstrukturoperationen zum Einfügen, Entfernen, Suchen oder zum Aktualisieren von Elementen
+so das durch entsprechende Methoden eine einfacher Zugriff auf die Devices sowie deren Manipulation möglich ist. \\
+Da alle drei Controller-Klassen mit statischen Datenstrukturen und Methoden arbeiten werden die angemeldeten Devices zentral 
+gespeichert und Verwaltet was einen einfachen und schnellen Zugriff auf diese ermöglicht und Redundanzen und Inkonsistenzen vermeidet.
+Durch die Verwendete Listen-Datenstruktur ist ein einfaches Suchen, Einfügen sowie Löschen möglich. Zudem kann leicht über die 
+einzelnen Devices iteriert werden was hilfreich ist wenn die selben Daten an mehrere Devices gesendet werden müssen.
+\\
+Die SzenarioController Klasse verfügt über die gleiche Listen-Datenstruktur zur Speicherung von Szenarien, jedoch bietet sie neben
+den Einfachen Operatoren noch weitere Komplexere Funktinalitäten zum ... 
 \subsubsection{Die GUI}
 Neben den rein Funktionalen Komponenten des Backends verfügt dieses auch über eine grafische Benutzeroberfläche die Informationen zu
 den angemeldeten Geräten und den existierenden Szenarien zur Verfügung stellt. Diese Benutzeroberfläche ist so realisiert das diese 

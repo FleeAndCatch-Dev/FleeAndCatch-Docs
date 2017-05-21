@@ -1,11 +1,11 @@
 \section{Theoretische und Technische Grundlagen}
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 % Eigentlicher Text:
-In diesem Kapitel werden die technischen Grundlagen des Projektes, die zur Umsetzung nötig sind beschrieben.
+In diesem Kapitel werden die technischen Grundlagen, die zur Umsetzung des Projektes nötig sind beschrieben.
+Dazu gehören Grundlagen der Robotik, Kommunikation sowie 
 \\Platzhalter kommt noch Text
 \\Platzhalter kommt noch Text
-\\Platzhalter kommt noch Text
-\\Platzhalter kommt noch Text
+Darüber hinaus werden theoretische Grundlagen der Kommunikation und des Verhaltens von Schwärmen gegeben.
 \subsection{Robotik} % Manuel ca. 8
 % Farbe die angibt welchen Status der folgende Abschnitt hat:
 \color{finishing}
@@ -655,28 +655,34 @@ Da es sich bei \gls{tcp} um ein verbindungsorientiertes Protokoll handelt gliede
 Der Verbindungsaufbau einer Kommunikation erfolgt bei \gls{tcp} nach dem Client-/Server-Paradigma, d.h. einer der Teilnehmern agiert als Server und wartet auf einen Verbindungsaufbau durch den Client, welchen der andere Teilnehmern darstellt. \newline
 Nach dem Verbfindungsaufbau haben die beiden Rollen jedoch keine Bedeutung mehr und die beide Teilnehmern sind sowohl bei der Datenübertragung, als auch beim Verbindungsabbau gleichberechtigt.
 \paragraph{Verbindungsaufbau}
-Der Verbindungsaufbau bei \gls{tcp} basiert auf dem Three-Way-Handshake. Dabei schickt der Client einen Verbindungswunsch (SYN) an den Server. Der Server bestätigt den Erhalt der Nachricht (ACK) und äußert seinerseits einen Verbindungswunsch (SYN), welchen der Client nach Erhalt der Nachricht bestätigt (ACK). Nach Ablauf dieses gegenseitigen Anfrage- und Bestätigungsvorgangs ist die Verbindung initiiert und der Datenaustausch zwischen den Teilnehmern kann beginnen [EK].\footnote{\citep[vgl.][TCP-Kommunikation]{Schnabel.TCPKommunikation}\label{note66}}
+Der Verbindungsaufbau bei \gls{tcp} basiert auf dem Three-Way-Handshake. Dabei schickt der Client einen Verbindungswunsch (SYN) an den Server. Der Server bestätigt den Erhalt der Nachricht (ACK) und äußert seinerseits einen Verbindungswunsch (SYN), welchen der Client nach Erhalt der Nachricht bestätigt (ACK). Nach Ablauf dieses gegenseitigen Anfrage- und Bestätigungsvorgangs ist die Verbindung initiiert und der Datenaustausch zwischen den Teilnehmern kann beginnen.\footnote{\citep[vgl.][TCP-Kommunikation]{Schnabel.TCPKommunikation}\label{note66}}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{images/Verbindungsaufbau.png}
+	\includegraphics[width=0.6\textwidth]{images/Verbindungsaufbau.png}
 	\caption[TCP Verbindungsaufbau]{TCP Verbindungsaufbau \cite{Schnabel.TCPKommunikation}}
 	\label{fig:<Sprungmakre>}
 \end{figure}
 \paragraph{Datenaustausch}
+Zum Datenaustausch werden die Daten in einzelnen Datenpakete verpackt und an den Empfänger gesendet welcher den 
+Erhalt jedes einzelnen Paketes bestätigen (ACK) muss. Für jedes gesendete Paket existiert beim Sender ein Timer. Ist dieser abgelaufen ohne das eine 
+Bestätigung des Empfangs für das entsprechende so muss der Sender davon Ausgehen, dass das Paket verloren gegangen ist und Sendet dieses erneut. 
+Durch dieses Verfahren ist gewährleistet das auch im Fall von Paketverlusten keine Daten verloren gehen.
+Da es sich bei TCP um eine bidirektionale Verbindung handelt kann nicht nur eine Seite Daten versenden sondern beide Teilnehmer könne Daten senden und 
+empfangen.\footnote{\citep[vgl.][TCP-Kommunikation]{Schnabel.TCPKommunikation}\label{note66}}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{images/Datenaustausch.png}
+	\includegraphics[width=0.6\textwidth]{images/Datenaustausch.png}
 	\caption[TCP Datenaustausch]{TCP Datenaustausch \cite{Schnabel.TCPKommunikation}}
 	\label{fig:<Sprungmakre>}
 \end{figure}
 \paragraph{Verbindungsabbau}
+Nach Abschluss der Datenübertragung wird von einer Seite (egal von welcher) ein Verbindungsabbau initiiert. Dazu dient ein etwas modifizierter Drei-Wege-Handshake-Mechanismus. Jede der beiden Verbindungsrichtungen der Vollduplex-Verbindung wird abgebaut, d.h. beide Seiten bauen ihre „Senderichtung“ ab. Die initiierende Seite schickt zuerst einen Verbindungsabbauwunsch (FIN). Die Gegenstelle bestätigt den Erhalt der Nachricht (ACK) und schickt ebenfalls einen Verbindungsabbauwunsch (FIN), woraufhin sie von der Gegenstelle noch mitgeteilt bekommt, dass die Verbindung abgebaut ist (ACK).
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{images/Verbindungsabbau.png}
+	\includegraphics[width=0.6\textwidth]{images/Verbindungsabbau.png}
 	\caption[TCP Verbindungsabbau]{TCP Verbindungsabbau \cite{Schnabel.TCPKommunikation}}
 	\label{fig:<Sprungmakre>}
 \end{figure}
-Nach Abschluss der Datenübertragung wird von einer Seite (egal von welcher) ein Verbindungsabbau initiiert. Dazu dient ein etwas modifizierter Drei-Wege-Handshake-Mechanismus. Jede der beiden Verbindungsrichtungen der Vollduplex-Verbindung wird abgebaut, d.h. beide Seiten bauen ihre „Senderichtung“ ab. Die initiierende Seite schickt zuerst einen Verbindungsabbauwunsch (FIN). Die Gegenstelle bestätigt den Erhalt der Nachricht (ACK) und schickt ebenfalls einen Verbindungsabbauwunsch (FIN), woraufhin sie von der Gegenstelle noch mitgeteilt bekommt, dass die Verbindung abgebaut ist (ACK).
 \subsubsection{Socket-Programmierung}
 Als Transportzugriffsschnittstelle für die \gls{tcp}-basierte Kommunikation dient die Socket-Schnittstelle.
 Obwohl es sich bei \gls{tcp} ein paketvermitteltes Protokoll handelt der Anwendung eine Strom-orientierte Kommunikation, die Daten werden also von einem Anwendungsprozess Byte für Byte in einem Bytestrom geschrieben und \gls{tcp} sorgt anschließend um den Aufbau von Segmenten, die dann übertragen werden. Andere Transportdienste erwarten ihre Daten in festen Blöcken.\footnote{\citep[vgl.][Grundkurs Datenkommunikation, Seite 96 f. f.]{Mandl.GrundkursDatenkommunikation}\label{note67}}
