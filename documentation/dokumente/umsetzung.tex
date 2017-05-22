@@ -326,8 +326,8 @@ Zur Erzeugung eines neuen Steuerungskommandos, siehe Abbildung \eqref{fig:newcom
 \subsection{Backend}
 Das Backend ist die Kommunikations- und Verwaltungszentrale des Projekts und bildet das Rückgrat der Kommunikation. Es verwaltet die 
 Devices im Kontext der einzelnen Szenarien und sorgt für den Datenaustausch zwischen den verschieden Geräten. \\
-Realisiert ist des Backend wie auch der Roboter in der Programmiersprache Java. Das bringt neben der plattformunabhängigen 
-Lauffähigkeit des Programms noch weitere Vorteile mit sich. So können vor allem Programmkomponenten welche die Kommunikation und
+Realisiert ist des Backend wie auch der Roboter in der Programmiersprache Java. Dies bringt neben der plattformunabhängigen 
+Lauffähigkeit des Programms noch weitere Vorteile mit sich. So können vor allem Programmkomponenten, welche die Kommunikation und
 den Datenaustausch betreffen für die Implementierung des Roboterprogramms wiederverwendet werden und müssen nicht komplett neu
 implementiert werden.
 \subsubsection{Aufbau \& Klassenstruktur}
@@ -343,49 +343,54 @@ strukturiert und befinden sich in den folgenden Paketkategorien:
 	\item{Verwaltung von Devices \& Szenarien (\code{flee\_and\_catch.backend.controller})}
 	%   ###############################################################################################################################
 \end{enumerate}
-Davon unabhängig existieren noch Komponenten die zur Realisierung einer grafische Benutzeroberfläche dienen und sich im Paket 
-\code{backend.view} befinden, diese ist jedoch 
-unabhängig von der eigentlichen Programmlogik des Backendes und dient vorrangig dem Monitorring und Debugging.
+Unabhängig davon existieren noch Komponenten die zur Realisierung einer grafische Benutzeroberfläche dienen und sich im Paket 
+\code{backend.view} befinden, diese sind jedoch 
+unabhängig von der eigentlichen Programmlogik des Backendes und dienen vorrangig dem Monitorring und Debugging.
 \subsubsection{Server}
-Zur Realisierung des Verbindungsaufbaus mit den Devices verfügt das Backendprogramm über eine Klasse namens Server. Innerhalb dieser Klasse ist ein
-Server-Socket implementiert welches den Endpunkt einer TCP-Verbindung darstellt Abschnitt siehe X.X. Dieses Server-Socket wird
-nach dem Programmstart durch aufrufe der Methode \code{open()} mit einer IP-Adresse und einem Port initialisiert und kann anschließend 
-darüber Nachrichten (Anfragen für den Aufbau eine TCP-Verbindung) von den Devices entgegennehmen. \\
-Die Abbildung X zeigt die Funktion \code{open()} welche eine Server-Socket initialisiert und den listenerThread startet.
+Zur Realisierung des Verbindungsaufbaus mit den Devices verfügt das Backendprogramm über eine Klasse Server. Innerhalb dieser Klasse ist ein
+Server-Socket implementiert welches den Endpunkt einer \gls{tcp}-Verbindung darstellt Abschnitt siehe \eqref{tcpsocket}. Dieses Server-Socket wird
+nach dem Programmstart durch den Aufruf der Methode \code{open()} mit einer \gls{ip}-Adresse und einem Port initialisiert und kann anschließend 
+darüber Nachrichten (Anfragen für den Aufbau einer \gls{tcp}-Verbindung) von den Devices entgegennehmen. \\
+Die Abbildung \eqref{fig:opensocket} zeigt die Funktion \code{open()}.
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1.0\textwidth]{images/implementation/SeverOpenMethod.png}
+	\includegraphics[width=0.9\textwidth]{images/implementation/SeverOpenMethod.png}
 	\caption[\code{open()}-Methode der Sever-Klasse im Backend]{\code{open()}-Methode der Sever-Klasse im Backend}
+	\label{fig:opensocket}
 \end{figure}
+\newpage
+\noindent
 Nach der Initialisierung des Server-Socket wird ein Thread gestartet (listenerThread), welcher zyklisch die Methode \code{listen()}
-aufruft. Die Aufgabe dieses Threads ist es kontinuierlich auf Verbindungsaufbauwünsche durch Roboter oder Apps zur warten und bei
-deren eintreffen diese zu verarbeiten. \\
-Die Abbildung X zeigt die Methode \code{listen()} in der ankommende Verbindungsaufbauwünsche verarbeitet werden.
+aufruft. Die Aufgabe dieses Threads ist es, kontinuierlich auf Verbindungsaufbauwünsche von Roboter oder \glspl{app} zu warten und bei
+deren Eintreffen diese zu verarbeiten. \\
+Die Abbildung \eqref{fig:listen} zeigt die Methode \code{listen()} in der ankommende Verbindungsaufbauwünsche verarbeitet werden.
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1.0\textwidth]{images/implementation/SeverListenMethod.png}
+	\includegraphics[width=0.9\textwidth]{images/implementation/SeverListenMethod.png}
 	\caption[\code{listen()}-Methode der Sever-Klasse im Backend]{\code{listen()}-Methode der Sever-Klasse im Backend}
+	\label{fig:listen}
 \end{figure}
-Trifft ein Verbindungsaufbauwunsch ein wird für diesen, vom Server-Socket ein neues Socket Objekt zurück geliefert welches 
-ab sofort eine unabhängige Verbindung zum anfangenden Device repräsentiert und ein Senden von Nachrichten in beide Richtungen 
+\newpage
+\noindent
+Trifft ein Verbindungsaufbauwunsch ein, wird für diesen vom Server-Socket ein neues Socket Objekt zurück geliefert, welches 
+ab sofort eine unabhängige Verbindung zum anfragenden Device repräsentiert und das Senden von Nachrichten in beide Richtungen 
 ermöglicht.\\
-Anschließend werden auf diesem Socket-Objekt noch ein paar Optimierungen durchgeführt um die Latenz der Kommunikation mit dem
-Device möglichst gering zu halten. Dazu wird zum einen der Nagle-Algorithmus deaktiviert, siehe Abschnitt X sowie entsprechende
+Anschließend werden auf diesem Socket-Objekt noch ein paar Optimierungen durchgeführt, um die Latenz der Kommunikation mit dem
+Device möglichst gering zu halten. Dazu wird zum einen der Nagle-Algorithmus deaktiviert, siehe Abschnitt \eqref{nagle} sowie entsprechende
 Puffergrößen festgelegt. \\
-Danach wird ein Thread erzeugt der ab sofort die Kommunikation dieser Verbindung verwaltet. Dazu wird durch diesen ein neues Client-Objekt 
+Danach wird ein Thread erzeugt, der ab sofort die Kommunikation dieser Verbindung verwaltet. Dazu wird durch diesen ein neues Client-Objekt 
 erzeugt, welches das zugehörige Socket-Objekt aufnimmt. Mit der Erzeugung dieses Client-Objekts, der Übergabe des Socket-Objekts und
-der Zuordnung des Threads zur Verbindungsverarbeitung ist die Verbindung zu einem Device vollständig initialisiert und die Kommunikation 
-zwischen Device und Backend kann beginnen. 
-Ab sofort wird das entsprechende Device (App oder Robot) durch das Client-Objekt repräsentiert und kann durch dieses angesprochen werden. 
+der Zuordnung des Threads zur Verbindungsverarbeitung ist die Verbindung zu einem Device vollständig initialisiert und die eigentliche Kommunikation 
+zwischen dem Device und dem Backend kann beginnen. 
+Ab diesem Zeitpunkt wird das entsprechende Device (\gls{app} oder Robot) durch das Client-Objekt repräsentiert und kann durch dieses angesprochen werden. 
 Innerhalb der Server Klasse werden sämtliche Clients (Instanzen der Klasse Client) in einer Listen-Datenstruktur (ArrayList) gespeichert 
 und sind durch eine eindeutige ID identifizierbar.
 \subsubsection{Client}
-Neben der Server Klasse ist die Client Klasse eine zentrale Komponente der Kommunikation und ermöglicht das Senden von Daten an ein Device 
-sowie Empfangen von Daten eines Devices.
-Während die Server-Klasse auf Verbindungsaufbauwünsche der Geräte die sich am Backend anmelden wollen warten, und diese entgegen nimmt, 
-repräsentieren die einzelnen Instanzen der Client Klasse eine Device und verwaltet die TCP-Verbindung zu diesem Device nach der Initialisierung
+Neben der Server Klasse ist die Client Klasse eine zentrale Komponente der Kommunikation und ermöglicht das Senden sowie Empfangen von Daten zu und an eine Komponente.
+Während die Server-Klasse auf Verbindungsaufbauwünsche der Geräte wartet und diese entgegen nimmt, 
+repräsentieren die einzelnen Instanzen der Client Klasse eine Device und verwaltet die \gls{tcp}-Verbindung zu diesem Device nach der Initialisierung
 der Verbindung. \\
-Dazu Verfügt das die Client Klasse über verschiedenen Attribute zur Kommunikation sowie zur Identifikation des durch die Instanz repräsentierten
+Dazu verfügt die Client Klasse über verschiedenen Attribute zur Kommunikation sowie zur Identifikation des durch die Instanz repräsentierten
 Devices. Zur Kommunikation dienen folgende Attribute:
 \begin{enumerate}
 	%   ###############################################################################################################################
@@ -398,7 +403,7 @@ Devices. Zur Kommunikation dienen folgende Attribute:
 	\item{\code{private Interpreter interpreter}} -- Instanz der Klasse Interpreter zum Parsen und Verarbeiten eintreffender Datenpakete
 	%   ###############################################################################################################################
 \end{enumerate}
-Zur Identifikation des durch die jeweilige Client Instanz repräsentierten Devices nutzt das Programm folgende Attribute der Klasse:
+Zur Identifikation des durch die jeweilige Client Instanz repräsentierten Devices nutzt das Programm folgende Attribute der Klasse Client:
 \begin{enumerate}
 	%   ###############################################################################################################################
 	\item{\code{private ClientIdentification identification}} -- Identifikations-Objekt welches den Client eindeutig identifiziert.
@@ -410,10 +415,10 @@ Zur Identifikation des durch die jeweilige Client Instanz repräsentierten Devic
 	%   ###############################################################################################################################
 \end{enumerate}
 Die eigentliche Verarbeitung von Datenpaketen erfolgt in einem eigenen Thread der beim Verbindungsaufbau durch die Server-Klasse erzeugt wird und nach
-Erzeugung des Client-Objekts sich um die Verarbeitung der vom Device gesendeten Datenpakete kümmert. Dazu prüft dieser zyklisch ob
-Datenpakete am Backend eingetroffen sind, indem es das entsprechende BufferedReader-Objekt des Client-Objekts abfragt. Ist dies der Fall
-wird das Datenpaket aus dem BufferedReader ausgelesen und als String-Objekt dem Interpreter-Objekt der Client-Instanz übergeben welches
-das Datenpaket in ein JSON-Objekt konvertiert und weiter verarbeitet.
+Erzeugung des Client-Objekts sich um die Verarbeitung der vom Device gesendeten Datenpakete kümmert. Dazu prüft dieser zyklisch, ob
+Datenpakete am Backend eingetroffen sind, indem es das entsprechende BufferedReader-Objekt abfragt. Ist dies der Fall
+wird das Datenpaket aus dem BufferedReader ausgelesen und als String-Objekt dem Interpreter-Objekt übergeben, welches
+das Datenpaket in ein \gls{json}-Objekt konvertiert und weiter verarbeitet.
 \subsubsection{Interpreter}
 Die Interpreter Klasse ist zuständig für die Interpretation der am Backend eintreffenden Datenpakete der verschiedenen Devices. Dazu enthält
 jedes Client-Objekt eine eigene Instanz der Klasse Interpreter, so dass eine parallele Verarbeitung ohne Beeinflussungen oder Wartezeiten 
@@ -426,31 +431,33 @@ Die Interpretation der Datenpakete besteht aus zwei grundlegenden Schritte:
 	\item{Weiterverarbeitung des JSON-Objekts anhand des vorliegenden Kommandotyps}
 	%   ###############################################################################################################################
 \end{enumerate}
-Den ersten Schritt realisiert die Methode \code{public void parse(String pCommand)}. Zur Umwandlung des vorliegenden Strings verwendet
-die Methode dazu eine Funktionalität der Bibliothek >>org.json<<. Anschließend wird das geparste JSON-Object abhängige von seinem
-Kommandotyp durch eine entsprechende Methode weiterverarbeitet. \\
-Die Abbildung X zeigt den Quellcode des Parse-Vorgangs in der Methode Vorgangs \code{public void parse(String pCommand)}.
+Der erste Schritt wird durch die Methode \code{public void parse(String pCommand)} realisiert. Zur Umwandlung des vorliegenden Strings verwendet
+die Methode dazu eine Funktionalität der Bibliothek org.json. Anschließend wird das geparste JSON-Object abhängige von seinem
+Kommandotyp durch eine entsprechende Methode weiterverarbeitet.
+\newpage
+\noindent
+Die Abbildung \eqref{fig:parse} zeigt den Quellcode des Parse-Vorgangs in der Methode Vorgangs \code{public void parse(String pCommand)}.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1.0\textwidth]{images/implementation/InterpreterParseMethod.png}
 	\caption[Ausschnitt der \code{parse()}-Methode der Interpreter-Klasse im Backend]{Ausschnitt der \code{parse()}-Methode der Interpreter-Klasse im Backend}
-	\label{fig:ev3system}
+	\label{fig:parse}
 \end{figure}
 \newline
 Die folgende Auflistung zeigt die Methoden der Interpreter Klasse:
 \begin{itemize}
 	%   ###############################################################################################################################
 	\item{\code{public void parse(String pCommand)}} -- Diese Methode führt den eigentlichen Parse-Vorgang durch um das als String
-	vorliegende Datenpaket (pCommand) in ein JSON-Objekt zu konvertieren.
+	vorliegende Datenpaket (pCommand) in ein \gls{json}-Objekt zu konvertieren.
 	%   ###############################################################################################################################
-	\item{\code{private void connection(JSONObject pCommand)}} -- Verarbeitet ein als JSON-Objekt vorliegendes Datenpaket vom Typ 
+	\item{\code{private void connection(JSONObject pCommand)}} -- Verarbeitet ein als \gls{json}-Objekt vorliegendes Datenpaket vom Typ 
 	Kommandotyp Connection.
 	%   ###############################################################################################################################
-	\item{\code{private void synchronization(JSONObject pCommand)}} -- Verarbeitet ein als JSON-Objekt vorliegendes Datenpaket vom 
+	\item{\code{private void synchronization(JSONObject pCommand)}} -- Verarbeitet ein als \gls{json}-Objekt vorliegendes Datenpaket vom 
 	Typ Kommandotyp Synchronization.
 	%   ###############################################################################################################################
-	\item{\code{private void szenario(JSONObject pCommand)}} -- Verarbeitet ein als JSON-Objekt vorliegendes Datenpaket vom Typ 
-	Kommandotyp Szenario. Dazu existieren folgenden folgende Methoden die die Daten abhängig vom vorliegenden Szenario verarbeiten:
+	\item{\code{private void szenario(JSONObject pCommand)}} -- Verarbeitet ein als \gls{json}-Objekt vorliegendes Datenpaket vom Typ 
+	Kommandotyp Szenario. Dazu existieren folgende Methoden, welche die Daten abhängig vom vorliegenden Szenario verarbeiten:
 	\begin{itemize}
 			%   ###############################################################################################################################
 			\item{\code{private void szenarioControl(SzenarioCommand pCommand)}}
@@ -461,7 +468,7 @@ Die folgende Auflistung zeigt die Methoden der Interpreter Klasse:
 			%   ###############################################################################################################################
 	\end{itemize}
 	%   ###############################################################################################################################
-	\item{\code{private void exception(JSONObject pCommand)}} -- Verarbeitet ein als JSON-Objekt vorliegendes Datenpaket vom Typ 
+	\item{\code{private void exception(JSONObject pCommand)}} -- Verarbeitet ein als \gls{json}-Objekt vorliegendes Datenpaket vom Typ 
 	Kommandotyp Exception.
 	%   ###############################################################################################################################
 \end{itemize}
@@ -487,38 +494,36 @@ Dazu existieren die folgenden Controller-Klassen:
 Die beiden Klassen AppController und RoboterController bestehen im wesentlichen aus einer Listen-Datenstruktur (ArrayList), in 
 welcher sämtliche Apps bzw. Roboter die am Backend angemeldet sind gespeichert werden. In dieser Datenstruktur werden die Devices 
 durch Objekte entsprechender Klassen (App-Klasse, Roboter-Klasse) repräsentiert. \\
-Die Controller-Klassen verfügen über Datenstrukturoperationen zum Einfügen, Entfernen, Suchen oder zum Aktualisieren von Elementen
-so das durch entsprechende Methoden eine einfacher Zugriff auf die Devices sowie deren Manipulation möglich ist. \\
-Da alle drei Controller-Klassen mit statischen Datenstrukturen und Methoden arbeiten werden die angemeldeten Devices zentral 
-gespeichert und Verwaltet was einen einfachen und schnellen Zugriff auf diese ermöglicht und Redundanzen und Inkonsistenzen vermeidet.
-Durch die Verwendete Listen-Datenstruktur ist ein einfaches Suchen, Einfügen sowie Löschen möglich. Zudem kann leicht über die 
-einzelnen Devices iteriert werden was hilfreich ist wenn die selben Daten an mehrere Devices gesendet werden müssen.
+Die Controller-Klassen verfügen über Datenstrukturoperationen zum Einfügen, Entfernen, Suchen oder zum Aktualisieren von Elementen,
+so dass durch entsprechende Methoden ein einfacher Zugriff auf die Devices sowie deren Manipulation möglich ist. \\
+Da alle drei Controller-Klassen mit statischen Datenstrukturen und Methoden arbeiten, werden die angemeldeten Devices zentral 
+gespeichert und verwaltet, was einen einfachen und schnellen Zugriff auf diese ermöglicht und Redundanzen und Inkonsistenzen vermeidet.
+Durch die verwendete Listen-Datenstruktur ist ein einfaches Suchen, Einfügen sowie Löschen möglich. Zudem kann leicht über die 
+einzelnen Devices iteriert werden, was hilfreich ist wenn die selben Daten an mehrere Devices gesendet werden müssen.
 \\
 Die SzenarioController Klasse verfügt über die gleiche Listen-Datenstruktur zur Speicherung von Szenarien, jedoch bietet sie neben
-den Einfachen Operatoren noch weitere Komplexere Funktionalitäten zum Abfragen ob bestimmte Devices am Szenario teilnehmen etc. 
+den Einfachen Operatoren weitere Komplexere Funktionalitäten zum Abfragen bestimmter Devices, welche am Szenario teilnehmen etc. 
 \subsubsection{Die GUI}
-Neben den rein Funktionalen Komponenten des Backends verfügt dieses auch über eine grafische Benutzeroberfläche die Informationen zu
-den angemeldeten Geräten und den existierenden Szenarien zur Verfügung stellt. Diese Benutzeroberfläche ist so realisiert das diese 
-komplett losgelöst von den der eigentlichen Funktionalität des Backend ist. Sie setzt lediglich auf dem eigentlichen Programm auf und
-ist zu dessen Ausführung nicht notwendig. Dadurch ist es möglich das Programm komplett ohne grafische Benutzeroberfläche zu starten so
-das es im Hintergrund laufen kann und lediglich als Verwaltungs- und Kommunikationsservice dient. Ob die grafische Benutzeroberfläche  
+Neben den rein funktionalen Komponenten des Backends verfügt dieses auch über eine \gls{gui}, die Informationen zu
+den angemeldeten Geräten und den existierenden Szenarien zur Verfügung stellt. Diese Benutzeroberfläche ist so realisiert, dass diese 
+komplett losgelöst von den der eigentlichen Funktionalitäten des Backends ist. Sie setzt lediglich auf dem eigentlichen Programm auf und
+ist zu dessen Ausführung nicht notwendig. Dadurch ist es möglich das Programm komplett ohne grafische Benutzeroberfläche zu starten, so
+dass es im Hintergrund laufen kann und lediglich als Verwaltungs- und Kommunikationsservice dient. Ob die \gls{gui}  
 aktiviert ist oder nicht wird beim Programmstart durch entsprechenden Parametern festgelegt. \\
-Der Nutzen der GUI bestand für uns hauptsächlich im Monitoring und bei der Identifikation sowie dem Aufspüren von Fehlern während der 
+Der Nutzen der \gls{gui} bestand dabei hauptsächlich im Monitoring und der Identifikation sowie dem Aufspüren von Fehlern während der 
 Entwicklung. \\
-Realisiert ist die grafische Benutzeroberfläche mit dem JavaFX-Framework welches Bestandteil der Java-Bibliothek ist uns somit wie 
-Java ebenfalls plattformunabhängig lauffähig ist. Zu ihrer Ansteuerung dient eine spezielle Klasse namens
->>ViewController<< welche lediglich Informationen des eigentliche Programms entgegen nimmt und an die eigentliche Benutzeroberfläche 
-(View) weiterreicht sofern diese aktiviert wurde. Umgekehrt werden jedoch keine Benutzereingaben von der GUI an das Programm 
-weitergereicht, sondern dienen lediglich zur Manipulation der Anzeige so das dieses komplett unabhängig ist. Lediglich das Beenden 
-das kompletten Programms ist über die grafische Benutzeroberfläche möglich.
-Abbildung X.X zeigt einen Screenshot der grafischen Benutzeroberfläche des Backends.
+Realisiert ist die grafische Benutzeroberfläche mit dem JavaFX-Framework welches Bestandteil der Java-Bibliothek ist und somit wie 
+Java ebenfalls plattformunabhängig lauffähig ist. Zu ihrer Ansteuerung dient eine spezielle Klasse ViewController, welche lediglich Informationen des eigentliche Programms entgegen nimmt und an die eigentliche Benutzeroberfläche 
+(View) weiterreicht, sofern diese aktiviert wurde. Umgekehrt werden jedoch keine Benutzereingaben von der \gls{gui} an das Programm weitergereicht, sondern dienen lediglich zur Manipulation der Anzeige, so dass dieses komplett unabhängig ist. Lediglich das Beenden des kompletten Programms ist über die grafische Benutzeroberfläche möglich.
+Abbildung \eqref{fig:guifx} zeigt einen Screenshot der \gls{gui} des Backends.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1.0\textwidth]{images/implementation/BackendGUI.png}
-	\caption[Grafische Benutzeroberfläche des Backends]{Grafische Benutzeroberfläche des Backends}
+	\caption[\gls{gui} des Backends]{Grafische Benutzeroberfläche des Backends}
+	\label{fig:guifx}
 \end{figure}
 \newline
-Da die grafische Benutzeroberfläche jedoch nicht zur eigentlichen Funktionalität des Backends beiträgt soll an dieser Stelle nicht 
+Da die \gls{gui} jedoch nicht zur eigentlichen Funktionalität des Backends beiträgt, soll an dieser Stelle nicht 
 weiter eingegangen werden.
 \newpage
 \subsection{Roboter}

@@ -580,7 +580,7 @@ TCP nutzt prinzipiell folgende Protokollmechanismen:
 	\item{Go-Back-N zur Übertragungswiederholung}
 	\item{Fluss- und Staukontrolle}
 \end{itemize}
-\subsubsection{Nagle-Algorithmus}
+\subsubsection{Nagle-Algorithmus}\label{nagle}
 Nagle-Algorithmus (RFC 896 und RFC 1122) ist ein Algorithmus, der der Optimierung dient und der bei allen \gls{tcp}-Implementierungen verwendet wird. Der Nagle-Algorithmus versucht aus Optimierungsgründen zu verhindern, dass viele kleine Nachrichten gesendet werden, da dies schlecht für die Netzauslastung ist.\footnote{\citep[vgl.][Grundkurs Datenkommunikation, Seite 198]{Mandl.GrundkursDatenkommunikation}\label{note45}} \newline
 Dazu werden mehrere Nachrichten zusammengefasst und gebündelt versendet, dies geschieht nach folgendem Prinzip:
 \begin{itemize}
@@ -625,7 +625,7 @@ Nach Abschluss der Datenübertragung wird von einer Seite (egal von welcher) ein
 	\cite{Schnabel.TCPKommunikation}
 	\label{fig:<Sprungmakre>}
 \end{figure}
-\subsubsection{Socket-Programmierung}
+\subsubsection{Socket-Programmierung}\label{tcpsocket}
 Als Transportzugriffsschnittstelle für die \gls{tcp}-basierte Kommunikation dient die Socket-Schnittstelle.
 Obwohl es sich bei \gls{tcp} ein paketvermitteltes Protokoll handelt der Anwendung eine Strom-orientierte Kommunikation, die Daten werden also von einem Anwendungsprozess Byte für Byte in einem Bytestrom geschrieben und \gls{tcp} sorgt anschließend um den Aufbau von Segmenten, die dann übertragen werden. Andere Transportdienste erwarten ihre Daten in festen Blöcken.\footnote{\citep[vgl.][Grundkurs Datenkommunikation, Seite 96 f. f.]{Mandl.GrundkursDatenkommunikation}\label{note67}}
 
