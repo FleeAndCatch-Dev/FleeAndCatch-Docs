@@ -331,7 +331,7 @@ Die Hauptaufgabe des Backends besteht zum einen in er Verwaltung der verschieden
 bzw. Verteilung der von den Geräten gesendeten Kommunikationsdaten.
 \\
 Aus diesem Grund wurden die Komponenten des Backendes hinsichtlich ihrer Unterstützung bei der Realisierung dieser beiden Hauptaufgaben
-strukturiert und befinden sich unter den folgenden Hauptpaketen:
+strukturiert und befinden sich in den folgenden Paketkategorien:
 \begin{enumerate}
 	%   ###############################################################################################################################
 	\item{Kommunikation (\code{flee\_and\_catch.backend.communication})}
@@ -361,7 +361,6 @@ Die Abbildung X zeigt die Methode \code{listen()} in der ankommende Verbindungsa
 	\centering
 	\includegraphics[width=1.0\textwidth]{images/implementation/SeverListenMethod.png}
 	\caption[\code{listen()}-Methode der Sever-Klasse im Backend]{\code{listen()}-Methode der Sever-Klasse im Backend}
-	\label{fig:ev3system}
 \end{figure}
 Trifft ein Verbindungsaufbauwunsch ein wird für diesen, vom Server-Socket ein neues Socket Objekt zurück geliefert welches 
 ab sofort eine unabhängige Verbindung zum anfangenden Device repräsentiert und ein Senden von Nachrichten in beide Richtungen 
@@ -519,49 +518,16 @@ Da die grafische Benutzeroberfläche jedoch nicht zur eigentlichen Funktionalit�
 weiter eingegangen werden.
 \newpage
 \subsection{Roboter}
-Die Implementierung des Roboters stellt das Kernstück bei der Realisierung dieses Projekts dar.\\
-
-\subsubsection{Threads}
-Für die Umsetzung der Szenarien ist es erforderlich das der Roboter verschiedene Dinge parallel erledigt. Zum einen muss die 
-ständige und zeitnahen Kommunikation mit dem Backend aufrecht erhalten werden, um zum einen Steuerdaten sowie die Positionsdaten
-der anderen Roboter für die Bewegungsberechnung zu empfangen. Andererseits müssen über diese Verbindung die eigenen Daten übermittelt
-an das Backend übermittelt werden. Darüber hinaus muss die eigentliche Steuerung des Roboters erfolgen. \\
-Zur Realisierung all dieser Aufgaben sind innerhalb des Roboters die folgenden X Threads implementiert:
-\begin{itemize}
-	%   ###############################################################################################################################
-	\item{Hauptthread (main thread)}
-	%   ###############################################################################################################################
-	\item{Kommunikationsthread (connectionThread)}
-	%   ###############################################################################################################################
-	\item{Steuerungsthread (steeringThread)}
-	%   ###############################################################################################################################
-	\item{Datenerfassungsthread (synchronizeThread)}
-	%   ###############################################################################################################################
-\end{itemize}
-In den folgenden Abschnitten werden die einzelnen Threads sowie ihre Aufgaben dargestellt:
-\paragraph{Hauptthread}
-Der Hauptthread ist der Thread welcher beim Programmstart (Aufruf der Funktion public static void main(String[] args)) automatisch 
-erzeugt wird und der immer vorhanden ist. Durch diesen Thread werden in der Initialisierungsphase alle anderen Threads die 
-zur Kommunikation, Steuerung und Datenerfassung benötigt werden erzeugt. 
-\paragraph{Kommunikationsthread}
-\paragraph{Steuerungsthread}
-Der Steuerungsthread hat wie der Name schon sagt die Aufgabe den Roboter zu steuern das heiß seine Geschwindigkeit und Bewegungsrichtung 
-umzusetzen. Implementiert ist der Steuerungsthread in der RobotController Klasse die als Schnittstelle zwischen der Kommunikation und den
-Roboterfunktionalitäten fungiert. \\
-Die konkrete Umsetzung der Steuerung die durch diesen Thread erfolgt wird im Abschnitt X.X beschrieben.
-\paragraph{Datenerfassungsthread}
-Neben dem Empfangen von Daten und der Umsetzung der Steuerung muss der Roboter auch seine eigen Daten wie Position, Orientierung und 
-Geschwindigkeit kontinuierlich erfassen und an das Backend übermitteln so das diese Informationen den anderen Robotern zur Verfügung
-gestellt werden können. Da dieser Thread dazu auf Funktionalitäten des Roboters zugreift ist auch dieser innerhalb der RoboterController
-Klasse implementiert.
-\\
-Die Realisierung der Datenerfassung ist weit weniger komplex als die der Steuerung des Roboters. 
-Die Abbildung X.X zeigt das Zusammenspiel der einzelnen Threads bzw. den Ablauf ihrer Erzeugung und Terminierung:
-\subsubsection{Klassen}
-Neben den verschiedenen Threads enthält das Roboterprogramm zahlreiche Klassen durch welche die vielfältigen Funktionen abgebildet 
-werden die, der Roboter zur Realisierung der verschiedenen Szenarien mitbringen muss. 
-\paragraph{Klassenstruktur}
-\color{finishing}             % Farbe die angibt welchen Status der folgende Abschnitt hat!
+Die Implementierung des Roboters stellt das Kernstück bei der Realisierung dieses Projekts dar. Durch die Programmierung der
+EV3-Roboter wird deren letztendliches Verhalten d.h. die Datenerfassung sowie ihre Bewegung bestimmt. Da die durch die Datenerfassung 
+die berechneten Positionsdaten die Grundlage zur Berechnung der Verfolgungssteuerung bilden muss diese möglichst exakt erfolgen.
+Im Gegenzug dazu bestimmt Programmierung der Steuerung die resultierenden Bewegung der Roboter und ist somit maßgeblich für die 
+Abbildung der veranschlagten Szenarien die ein Schwarmverhalten nachbilden sollen. \\
+Die nachfolgenden Abschnitte beschreiben den Aufbau des Roboterprogramms sowie die notwendigen Komponenten wie Klassen und 
+Threads, die zur Kommunikation, Datenerfassung als auch Steuerung notwendig sind und erläutert die dahinter stehenden Konzepte 
+und Prinzipien.
+\subsubsection{Aufbau \& Klassenstruktur}
+%\color{finishing}             % Farbe die angibt welchen Status der folgende Abschnitt hat!
 % Eigentlicher Text:
 Zur Strukturierung und einer sauberen Trennung der einzelnen Klassen und ihren Sichtbarkeiten, sind diese in verschiedenen 
 Paketen (Java-Packages) organisiert. Diese Klassenstruktur ist hierarchisch aufgebaut, orientiert sich an den grundlegenden 
@@ -589,15 +555,63 @@ Bei der Umsetzung wurden die Klassen in den folgenden vier großen Paketbereiche
 Innerhalb dieser Hauptpakete existieren zahlreiche weitere Unterpakete welche die Klassen weiter strukturieren. Die saubere Einordnung
 und Trennung der Programmklassen ermöglicht es in Verbindung mit der Festlegung entsprechender Sichtbarkeiten, die Klassen gegeneinander 
 abzuschotten. So wird erreicht, dass die Programmteile lediglich über die vorgesehenen Schnittstellen miteinander interagieren und die
-einzelnen Klassen nur diejenigen sehen und ansprechen können die sie tatsächlich benötigen. Zudem hilft es dem Programmierer bei der Orientierung und dem Programmverständnis.
+einzelnen Klassen nur diejenigen sehen und ansprechen können die sie tatsächlich benötigen. Zudem hilft es dem Programmierer bei der 
+Orientierung und dem Programmverständnis.
+%\medskip
+%\newline
+%In den nächsten Abschnitten werden die wichtigsten Klassen und Interfaces des Programms näher beschrieben und ihre Rolle bei der 
+%Realisierung des durch die Roboter abgebildeten Schwarmverhaltens erläutern.
+\subsubsection{Threads}
+Für die Umsetzung der Szenarien ist es erforderlich das der Roboter verschiedene Dinge parallel erledigt. Zum einen muss die 
+ständige und zeitnahen Kommunikation mit dem Backend aufrecht erhalten werden, um zum einen Steuerdaten sowie die Positionsdaten
+der anderen Roboter für die Bewegungsberechnung zu empfangen. Andererseits müssen über diese Verbindung die eigenen Daten übermittelt
+an das Backend übermittelt werden. Darüber hinaus muss die eigentliche Steuerung des Roboters erfolgen. \\
+Zur Realisierung all dieser Aufgaben sind innerhalb des Roboters die folgenden X Threads implementiert:
+\begin{itemize}
+	%   ###############################################################################################################################
+	\item{Hauptthread (main thread)}
+	%   ###############################################################################################################################
+	\item{Thread zur Überprüfung der Kommunikationsinitiierung (connectionThread)}
+	%   ###############################################################################################################################
+	\item{Daten-Empfangs-Thread (listenThread)}
+	%   ###############################################################################################################################
+	\item{Steuerungsthread (steeringThread)}
+	%   ###############################################################################################################################
+	\item{Daten-Sende-Thread (synchronizeThread)}
+	%   ###############################################################################################################################
+\end{itemize}
+In den folgenden Abschnitten werden die einzelnen Threads sowie ihre Aufgaben dargestellt:
+\paragraph{Hauptthread}
+Der Hauptthread ist der Thread welcher beim Programmstart (Aufruf der Funktion public static void main(String[] args)) automatisch 
+erzeugt wird und der immer vorhanden ist. Durch diesen Thread werden in der Initialisierungsphase die Verbindung zum Backend initiiert 
+sowie alle weiteren Threads für die Kommunikation, Steuerung und Datenerfassung erzeugt. 
+\paragraph{Thread zur Überprüfung der Kommunikationsinitiierung}
+Dieser Thread dient der Überprüfung einer korrekten Initiierung der Kommunikation mit dem Backend. Dazu wird dieser während der 
+Initiierungsphase erzeugt und prüft im 100 Millisekunde Takt zyklisch ob eine Verbindung zum Backend aufgebaut werden konnte. Wurde
+innerhalb von 3 Sekunden keine Verbindung aufgebaut wird durch den Thread ein Fehler gemeldet.
+\paragraph{Daten-Empfangs-Thread}
+Dieser Thread lauscht auf der TCP-Verbindung ob Pakete vom Backend eintreffen ließt diese als String aus und übergibt diesen der 
+Interpreter-Klasse um das Datenpaket in ein JSON-Objekt zu konvertieren und weiter zu verarbeiten.
+\paragraph{Steuerungsthread}
+Der Steuerungsthread hat wie der Name schon sagt die Aufgabe den Roboter zu steuern das heiß seine Geschwindigkeit und Bewegungsrichtung 
+umzusetzen. Implementiert ist der Steuerungsthread in der RobotController Klasse die als Schnittstelle zwischen der Kommunikation und den
+Roboterfunktionalitäten fungiert. \\
+Die konkrete Umsetzung der Steuerung die durch diesen Thread erfolgt wird im Abschnitt X.X beschrieben.
+\paragraph{Daten-Sende-Thread}
+Neben dem Empfangen von Daten und der Umsetzung der Steuerung muss der Roboter auch seine eigen Daten wie Position, Orientierung und 
+Geschwindigkeit kontinuierlich erfassen und an das Backend übermitteln so das diese Informationen den anderen Robotern zur Verfügung
+gestellt werden können. Da dieser Thread dazu auf Funktionalitäten des Roboters zugreift ist auch dieser innerhalb der RoboterController
+Klasse implementiert.
+\\
+Die Realisierung der Datenerfassung wird im Abschnitt X.X beschrieben.
 \medskip
 \newline
-In den nächsten Abschnitten werden die wichtigsten Klassen und Interfaces des Programms näher beschrieben und ihre Rolle bei der 
-Realisierung des durch die Roboter abgebildeten Schwarmverhaltens erläutern.
+Die Abbildung X.X zeigt das Zusammenspiel der einzelnen Threads bzw. den Ablauf ihrer Erzeugung und Terminierung:
+\subsubsection{Klassen}
+Neben den verschiedenen Threads enthält das Roboterprogramm zahlreiche Klassen durch welche die vielfältigen Funktionen abgebildet 
+werden die, der Roboter zur Realisierung der verschiedenen Szenarien mitbringen muss. 
 \paragraph{Das Roboter Interface}
-\color{process}             % Farbe die angibt welchen Status der folgende Abschnitt hat!
-% Eigentlicher Text:
-Das Roboter Interface dient als Implementierungsvorlage für Klassen die einen Roboter in seiner jeweiligen physischen Gestalt d.h. mit
+dient als Implementierungsvorlage für Klassen die einen Roboter in seiner jeweiligen physischen Gestalt d.h. mit
 der jeweiligen Antriebsform, seinen verbauten Sensoren etc darstellen. Innerhalb dieses Interfaces sind sämtliche Funktionalitäten 
 und Methoden definiert, die ein konkreter Roboter bzw. die entsprechende Klasse, die diesen repräsentiert implementieren muss um durch 
 das Programm gesteuert und in die entsprechenden Szenarien integriert werden zu können. \\
@@ -640,19 +654,61 @@ Interface implementiert notwendig ist um einen neue Art von Roboter zu Realisier
 integrieren. Dadurch ist das Programm leicht erweiterbar und es steigert seine Wiederverwendbarkeit. \\
 Wie diese konkrete Implementierung der durch diese Methoden definierten Funktionen zu realisieren ist hängt natürlich vom jeweilige
 Roboter und seinem Aufbau ab und muss durch den Programmiere entsprechend umgesetzt werden.
-\paragraph{Die ThreeWheelDrive Klasse (Eine konkrete Roboter Klasse)}
+\pagebreak
+\begin{wrapfigure}{r}{0.30\textwidth}
+	\vspace{+0.0cm}
+	\begin{center}
+		\includegraphics[width=0.25\textwidth]{images/implementation/threewheeldrive.png}
+	\end{center}
+	\caption{Dreirad-Antrieb}
+	\label{fig:einachsenlenkung}
+\end{wrapfigure}
+\paragraph{Die ThreeWheelDrive Klasse}
 \color{process}             % Farbe die angibt welchen Status der folgende Abschnitt hat!
 % Eigentlicher Text:
-Die Klasse >>ThreeWheelDrive<< repräsentiert den \glqq{}Standard\grqq{}-Roboter im Projekt. Sie bildet den in Abbildung X.X zu 
-sehenden Roboter mit seine relevanten Komponenten wie Sensoren, Motoren sowie relevanten geometrischen und physischen Parametern ab.
-Die Klasse implementiert das Roboter-Interface mit den dort definierten Methoden. 
-\paragraph{Die RoboterController Klasse}
-Die >>RobotController<<-Klasse übernimmt eine zentrale Rolle bei der Umsetzung der Roboter-Steuerung. Die Klasse stellt die Schnittstelle
-zum physischen Roboter dar. Sämtliche Steuerkommandos und Sensorabfragen werden über diese Klasse realisiert. Durch diese einheitliche 
+repräsentiert im Roboterprogramm den \glqq{}Standard\grqq{}-Roboter des Projekts. Sie beschreibt somit einen konkreten 
+Robotertyp in seinem Aufbau. Sie bildet den in Abbildung X.X zu sehenden Roboter (Auf der Abbildung fehlt der Ultraschall- und Gyrosensor) 
+mit seine relevanten Komponenten wie Sensoren, 
+Motoren sowie geometrischen und physischen Parametern ab. Die Klasse implementiert das Roboter-Interface mit den dort definierten 
+Methoden und setzt die jeweilige Funktionalität für diesen Robotertyp um.\\
+Neben diesen Schnittstellen Methoden verfügt diese Klasse über zahlreiche Attribute wie Motor- und Sensor-Objekte aus der 
+EV3-Bibliothek sowie spezielle Hilfsfunktionen die es ermöglichen den Roboter und seine Komponenten so anzusteuern das er die im 
+Roboter-Interface definierten Aktionen ausführen kann. Diese Attribute und Hilfsfunktionen sind jedoch nach Außen hin nicht
+sichtbar und verbergen so die Komplexität und Individualität des Roboters vor dem restlichen Programm insbesondere vor dem 
+RoboterController. \\
+Die folgende Abbildung gibt eine Einblick über die verschiedenen EV3-Bibliothekskompo\-nenten die bei der Realisierung des 
+ThreeWheelDrive-Roboters Anwendung finden:
+\begin{itemize}
+	%   ###############################################################################################################################
+	\item{\code{private EV3MediumRegulatedMotor motorRight, motorLeft;}} -- Das EV3\-Medium\-RegulatedMotor-Objekt der EV3-Java-Bibliothek
+	repräsentiert eine mittleren Motor des EV3-Sets mit integrierten Rotationssensor. Zur Realisierung des ThreeWheel\-Drive-Roboters
+	sind für den Differentialantrieb zwei dieser Motor-Objekte notwendig.
+	%   ###############################################################################################################################
+	\item{\code{private Ultrasonic ultrasonic}} -- Das Ultrasonic-Objekt repräsentiert den Ultraschallsensor des Roboters mit dem der 
+	Abstand zu einem Hindernis ermittelt werden kann und der zur Notabschaltung vor einer Kollision dient.
+	%   ###############################################################################################################################
+	\item{\code{private Gyro gyro}} -- Durch die Instanz der Klasse Gyro wird der Gyrosensor des Roboters abgebildet welcher in unserem
+	Projekt zur Verifizierung der durch Odometrie ermittelten Position und Orientierung des Roboters vorgesehen war.
+	%   ###############################################################################################################################
+\end{itemize}
+Neben den Sensor und Motor-Elementen sind auch physische Parameter des Roboters für die Datenerfassung und Steuerung notwendig wie
+beispielsweise die folgenden Parameter:
+\begin{itemize}
+	%   ###############################################################################################################################
+	\item{\code{public static final float DISTANCE\_DEGREE =   0.476389f;}} -- Dieser Parameter gibt an die Distanz in Millimetern 
+	an die sich ein Rad bei der Drehung um 1 Grad vorwärts bewegt.  
+	%   ###############################################################################################################################
+	\item{\code{public static final float DIAMETER\_WHEELS = 120.000000f;}} -- Dieser Parameter gibt den Abstand der Beiden Räder 
+	des Differentialantriebs in Millimetern an.
+	%   ###############################################################################################################################
+\end{itemize}
+Über welche Methoden bzw. die durch diese repräsentierten Funktionen die jeweilige Komponenten verfügen und wie diese angesteuert 
+werden, wird im Abschnitt X.X bei der Implementierung der Robotersteuerung erläutert.
+\paragraph{Die RoboterController Klasse} übernimmt eine zentrale Rolle bei der Umsetzung der Roboter-Steuerung. Die Klasse stellt die 
+Schnittstelle zum physischen Roboter dar. Sämtliche Steuerkommandos und Sensorabfragen werden über diese Klasse realisiert. Durch diese einheitliche 
 Schnittstelle wird es möglich die Steuerung und ... unabhängig von dem konkreten vorhandenen Roboter (Dreirädriger, Vierrädriger etc)
 zu realisieren. Dazu nutzt der RoboterController intern eine Instanz des "Roboter" Interfaces was eine Ansteuerung des Roboters 
 \\
-Die folgende Abbildung zeigt die der verschiedenen Komponenten:
 \subsubsection{Steuerung}
 Eine der Hauptaufgaben des Roboterprogramms ist die Steuerung des Roboters. Dabei muss das Programm die folgende zwei 
 grundlegenden Steuerungsarten unterscheiden und realisieren.
@@ -666,23 +722,65 @@ grundlegenden Steuerungsarten unterscheiden und realisieren.
 	%   ###############################################################################################################################
 \end{itemize}
 Dabei erfolgt das Empfangen und Verarbeiten der jeweiligen Daten jeweils zyklisch in einem konfigurierbaren Zeitintervall. Beide Steuerungsarten
-basieren auf dem grundlegenden Prinzip das die Daten (Steuerbefehle oder Positionsdaten) durch den X-Thread erfasst und gespeichert werden.
-Der Stuerungsthread widerun liest diese Daten aus und führt die entsprechenden Roboterbefehle aus.
-\paragraph{Allgemein}
-\paragraph{Realisierung beim ThreeWheelDrive}
-\subsubsection{Datenerfassung}
-\begin{comment}
-Aufbau
-Interpreter
-Mechanismen
-GUI
-\end{comment}
-
-
-\begin{comment}
-Aufbau
-Robot
-RobotController
-EV3 Library
-GUI
-\end{comment}
+basieren auf dem grundlegenden Prinzip, dass die vom Backend gesendeten Daten (Steuerbefehle oder Positionsdaten) durch den 
+Daten-Empfangs-Thread (listenThread) empfangen, verarbeitet und in entsprechenden Objekten der RoboterController-Klasse gespeichert werden. 
+Dieser Vorgang erfolgt zyklisch und vollständig unabhängig von der eigentlichen Umsetzung der Steuerung durch den Steuerungsthread (steeringThread). \\
+Der Steuerungsthread wiederum liest die gespeicherten Positions- bzw. Steuerdaten aus und führt auf deren Basis entsprechenden Roboterbefehle 
+aus um die gewünschte Steuerung zu realisieren.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\textwidth]{images/implementation/controlRobotMethod1.png}
+	\caption[\code{controlRobot()}-Methode der RobotController-Klasse im Robot]{\code{controlRobot()}-Methode der RobotController-Klasse im Robot}
+\end{figure}
+\newline
+Die Abbildung X zeigt einen Ausschnitt der Methode \code{controlRobot()} innerhalb der RobotController-Klasse. Der in der Abbildung zu 
+sehende Quellcode realisiert die direkte Steuerung des Roboters durch die beim Roboter eintreffenden Steuersignale der App. Die 
+\code{controlRobot()}-Methode wird durch den Steuerungsthread zyklisch aufgerufen um eine permanente Steuerung ohne Zeitverzögerung
+zu erreichen. \\
+Innerhalb der Methode wird zuerst geprüft ob der Roboter überhaupt aktiv ist d.h. an einem Szenario teil nimmt und überhaupt gesteuert werden
+muss. Anschließend wird geprüft ob ein Befehl zur direkten Steuerung vorliegt. Dafür müssen die folgenden Bedingungen erfüllt sein:
+\begin{itemize}
+	%   ###############################################################################################################################
+	\item{Es muss ein gültiges Steuerungskommando vorliegen}
+	%   ###############################################################################################################################
+	\item{Das Akzeptieren eins Steuerungskomando}
+	%   ###############################################################################################################################
+\end{itemize}
+Die indirekte Steuerung wird ebenfalls in der \code{controlRobot()}-Methode realisiert ist jedoch um einiges komplexer und erfordert eine
+Vielzahl von Überprüfungen, Fallunterscheidungen und Berechnungen, weshalb an dieser Stelle auf den Quellcode verwiesen wird.
+\subsubsection{Datenerfassung \& Synchronisation}
+Zur Erfassung der Daten des Roboters wie einer Position, Orientierung etc. und deren anschließenden Übermittlung an das Backend, 
+existiert wie bereit erwähnt ein separater Thread (synchronizeThread). Die eigentliche Erfassen und Senden der Daten erfolgt in der 
+\code{synchronize()}-Methode innerhalb der RoboterController-Klassen welche der synchronizeThread nach seiner Erzeugung betritt.
+Abbildung X zeigt den Quellcode der \code{synchronize()}-Methode.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\textwidth]{images/implementation/synchronizeMethod.png}
+	\caption[\code{synchronize()}-Methode der RobotController-Klasse im Robot]{\code{controlRobot()}-Methode der RobotController-Klasse im Robot}
+\end{figure}
+\newline
+Is der Roboter aktiv d.h. nimmt an eine Szenario teil werden durch die Methode )zyklisch ein entsprechendes Synchronisations-Kommando erzeugt, welches
+die aktuellen Roboterdaten enthält. Diese Daten werden vom Roboter durch den Aufruf der Methode {\code{getJSONRobot()} als spezielles serialisierbares 
+Datenobjekt zurückgeliefert. Anschließend wird dieses Datenobjekt konvertiert und durch Aufruf der Funktion {\code{controlRobot()}. Nach abwarten einer 
+konfigurierbare Zeit startet dieser Prozess von neuem. \\
+Die Abbildung X zeigt die Implementierung der Funktion {\code{getJSONRobot()} in der Klasse ThreeWheelDrive welche das Datenobjekt mit den 
+entsprechenden Roboterdaten erzeugt.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\textwidth]{images/implementation/getJSONRobotMethod.png}
+	\caption[\code{synchronize()}-Methode der RobotController-Klasse im Robot]{\code{controlRobot()}-Methode der RobotController-Klasse im Robot}
+\end{figure}
+Zur eigentlichen Erfassung der Daten von den Robotersensoren und deren Aufbereitung nutzt der Roboter mehrere Methoden wie X und X.
+Abbildung X zeugt exemplarich wie beim ThreeWheelDrive-Roboter die Position und Orientierung durch die Methode {\code{getPosition()} berechnet und
+in einem Objekt der Klasse Position zurückgeliefert wird.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\textwidth]{images/implementation/getPositionMethod.png}
+	\caption[\code{synchronize()}-Methode der RobotController-Klasse im Robot]{\code{controlRobot()}-Methode der RobotController-Klasse im Robot}
+\end{figure}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\textwidth]{images/implementation/positionMethods.png}
+	\caption[\code{synchronize()}-Methode der RobotController-Klasse im Robot]{\code{controlRobot()}-Methode der RobotController-Klasse im Robot}
+\end{figure}
+asdsada
