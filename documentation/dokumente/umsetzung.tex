@@ -324,21 +324,34 @@ Das Backend ist die Kommunikations- und Verwaltungszentrale des Projekts und bil
 Devices im Kontext der einzelnen Szenarien und sorgt für den Datenaustausch zwischen den verschieden Geräten. \\
 Realisiert ist des Backend wie auch der Roboter in der Programmiersprache Java. Das bringt neben der plattformunabhängigen 
 Lauffähigkeit des Programms noch weitere Vorteile mit sich. So können vor allem Programmkomponenten welche die Kommunikation und
-den Datenaustausch betreffen für die Roboter- bzw. Backend-Implementierung wiederverwendet werden und müssen nicht komplett neu
+den Datenaustausch betreffen für die Implementierung des Roboterprogramms wiederverwendet werden und müssen nicht komplett neu
 implementiert werden.
-Im Folgenden werden die zentralen Komponenten des Backends vorgestellt.
-\subsection{Aufbau}
+\subsubsection{Aufbau \& Klassenstruktur}
+Die Hauptaufgabe des Backends besteht zum einen in er Verwaltung der verschiedenen Devices und zum anderen aus der Vermittlung
+bzw. Verteilung der von den Geräten gesendeten Kommunikationsdaten.
+\\
+Aus diesem Grund wurden die Komponenten des Backendes hinsichtlich ihrer Unterstützung bei der Realisierung dieser beiden Hauptaufgaben
+strukturiert und befinden sich unter den folgenden Hauptpaketen:
+\begin{enumerate}
+	%   ###############################################################################################################################
+	\item{Kommunikation (\code{flee\_and\_catch.backend.communication})}
+	%   ###############################################################################################################################
+	\item{Verwaltung von Devices \& Szenarien (\code{flee\_and\_catch.backend.controller})}
+	%   ###############################################################################################################################
+\end{enumerate}
+Davon unabhängig existieren noch Komponenten die zur Realisierung einer grafische Benutzeroberfläche dienen und sich im Paket 
+\code{backend.view} befinden, diese ist jedoch 
+unabhängig von der eigentlichen Programmlogik des Backendes und dient vorrangig dem Monitorring und Debugging.
 \subsubsection{Server}
-Zur Realisierung der Kommunikation verfügt das Backendprogramm über eine Klasse namens Server. Innerhalb dieser Klasse ist ein
+Zur Realisierung des Verbindungsaufbaus mit den Devices verfügt das Backendprogramm über eine Klasse namens Server. Innerhalb dieser Klasse ist ein
 Server-Socket implementiert welches den Endpunkt einer TCP-Verbindung darstellt Abschnitt siehe X.X. Dieses Server-Socket wird
-nach dem Programmstart durch aufrufe der Methode \code{open()} mit IP-Adresse und Port initialisiert und kann anschließend 
-darüber Nachrichten (z.B. Aufbauanfragen für eine TCP-Verbindung) entgegennehmen. \\
+nach dem Programmstart durch aufrufe der Methode \code{open()} mit einer IP-Adresse und einem Port initialisiert und kann anschließend 
+darüber Nachrichten (Anfragen für den Aufbau eine TCP-Verbindung) von den Devices entgegennehmen. \\
 Die Abbildung X zeigt die Funktion \code{open()} welche eine Server-Socket initialisiert und den listenerThread startet.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1.0\textwidth]{images/implementation/SeverOpenMethod.png}
 	\caption[\code{open()}-Methode der Sever-Klasse im Backend]{\code{open()}-Methode der Sever-Klasse im Backend}
-	\label{fig:ev3system}
 \end{figure}
 Nach der Initialisierung des Server-Socket wird ein Thread gestartet (listenerThread), welcher zyklisch die Methode \code{listen()}
 aufruft. Die Aufgabe dieses Threads ist es kontinuierlich auf Verbindungsaufbauwünsche durch Roboter oder Apps zur warten und bei
@@ -356,15 +369,48 @@ ermöglicht.\\
 Anschließend werden auf diesem Socket-Objekt noch ein paar Optimierungen durchgeführt um die Latenz der Kommunikation mit dem
 Device möglichst gering zu halten. Dazu wird zum einen der Nagle-Algorithmus deaktiviert, siehe Abschnitt X sowie entsprechende
 Puffergrößen festgelegt. \\
-Danach wird ein Thread erzeugt der ab sofort die Kommunikation dieser Verbindung verwaltet. Dazu wird dieser an ein neues Client-Objekt 
-gekoppelt, welches das zugehörige Socket-Objekt aufnimmt. Mit der Erzeugung dieses Client-Objekts der Übergabe des Socket-Objekts an diese und
-die Zuordnung des entsprechenden Thread zur Verbindungsverarbeitung ist die Verbindung zu einem Device vollständig initialisiert. 
-Ab sofort wird das entsprechende Device (App oder Robot) durch das Client-Objekt repräsentiert und kann durch dieses angesprochen werden. Dazu
-werden sämtliche Clients in deiner Array-Liste gespeichert und sind durch eine eindeutige ID identifizierbar.
+Danach wird ein Thread erzeugt der ab sofort die Kommunikation dieser Verbindung verwaltet. Dazu wird durch diesen ein neues Client-Objekt 
+erzeugt, welches das zugehörige Socket-Objekt aufnimmt. Mit der Erzeugung dieses Client-Objekts, der Übergabe des Socket-Objekts und
+der Zuordnung des Threads zur Verbindungsverarbeitung ist die Verbindung zu einem Device vollständig initialisiert und die Kommunikation 
+zwischen Device und Backend kann beginnen. 
+Ab sofort wird das entsprechende Device (App oder Robot) durch das Client-Objekt repräsentiert und kann durch dieses angesprochen werden. 
+Innerhalb der Server Klasse werden sämtliche Clients (Instanzen der Klasse Client) in einer Listen-Datenstruktur (ArrayList) gespeichert 
+und sind durch eine eindeutige ID identifizierbar.
 \subsubsection{Client}
-Neben der Server Klasse ist die Client Klasse die zentrale Komponente zum Empfangen und Senden von Daten an die einzelnen Devices.
-Während die Server-Klasse auf Verbindungsaufbauwünsche der Geräte die sich am Backend anmelden wollen warten, repräsentieren die Clients
-eine Device inklusive einer vollwertige TCP-Verbindung.  
+Neben der Server Klasse ist die Client Klasse eine zentrale Komponente der Kommunikation und ermöglicht das Senden von Daten an ein Device 
+sowie Empfangen von Daten eines Devices.
+Während die Server-Klasse auf Verbindungsaufbauwünsche der Geräte die sich am Backend anmelden wollen warten, und diese entgegen nimmt, 
+repräsentieren die einzelnen Instanzen der Client Klasse eine Device und verwaltet die TCP-Verbindung zu diesem Device nach der Initialisierung
+der Verbindung. \\
+Dazu Verfügt das die Client Klasse über verschiedenen Attribute zur Kommunikation sowie zur Identifikation des durch die Instanz repräsentierten
+Devices. Zur Kommunikation dienen folgende Attribute:
+\begin{enumerate}
+	%   ###############################################################################################################################
+	\item{\code{private Socket socket}} -- Repräsentiert den TCP-Endpunkt zur Kommunikation mit dem Device.
+	%   ###############################################################################################################################
+	\item{\code{private BufferedReader bufferedReader}} -- Gepufferter Reader zu lesen von eintreffenden Datenpaketen.
+	%   ###############################################################################################################################
+	\item{\code{private OutputStream outputStream}} -- Stream zum versenden von Daten an das Device
+	%   ###############################################################################################################################
+	\item{\code{private Interpreter interpreter}} -- Instanz der Klasse Interpreter zum Parsen und Verarbeiten eintreffender Datenpakete
+	%   ###############################################################################################################################
+\end{enumerate}
+Zur Identifikation des durch die jeweilige Client Instanz repräsentierten Devices nutzt das Programm folgende Attribute der Klasse:
+\begin{enumerate}
+	%   ###############################################################################################################################
+	\item{\code{private ClientIdentification identification}} -- Identifikations-Objekt welches den Client eindeutig identifiziert.
+	%   ###############################################################################################################################
+	\item{\code{private Device device}} -- Referenz auf das ein konkretes Device-Objekt (Objekt der Klasse App oder Robot) welches die 
+	Daten des Devices enthält mit dem durch den Client kommuniziert werden kann.
+	%   ###############################################################################################################################
+	\item{\code{private Szenario szenario}} -- Repräsentiert das Szenario, welchem das durch den Client dargestellte Device zugeordnet ist. 
+	%   ###############################################################################################################################
+\end{enumerate}
+Die eigentliche Verarbeitung von Datenpaketen erfolgt in einem eigenen Thread der beim Verbindungsaufbau durch die Server-Klasse erzeugt wird und nach
+Erzeugung des Client-Objekts sich um die Verarbeitung der vom Device gesendeten Datenpakete kümmert. Dazu prüft dieser zyklisch ob
+Datenpakete am Backend eingetroffen sind, indem es das entsprechende BufferedReader-Objekt des Client-Objekts abfragt. Ist dies der Fall
+wird das Datenpaket aus dem BufferedReader ausgelesen und als String-Objekt dem Interpreter-Objekt der Client-Instanz übergeben welches
+das Datenpaket in ein JSON-Objekt konvertiert und weiter verarbeitet.
 \subsubsection{Interpreter}
 Die Interpreter Klasse ist zuständig für die Interpretation der am Backend eintreffenden Datenpakete der verschiedenen Devices. Dazu enthält
 jedes Client-Objekt eine eigene Instanz der Klasse Interpreter, so dass eine parallele Verarbeitung ohne Beeinflussungen oder Wartezeiten 
@@ -417,9 +463,10 @@ Die folgende Auflistung zeigt die Methoden der Interpreter Klasse:
 	%   ###############################################################################################################################
 \end{itemize}
 Aus der Auflistung ist gut ersichtlich das es für jeden Kommandotyp eine eigene Methode zu dessen Verarbeitung implementiert wurde.
-Da diese immer nach dem selben Prinzip die Datenverarbeitung vornehmen wird im folgenden exemplarisch auf eine dieser Methode 
-eingegangen um dieses Prinzip zu verdeutlichen. \\
-
+%\paragraph{Die \code{private void connection(JSONObject pCommand)} Mathode} verarbeitet Datenpakete welche die Kommunikation 
+%mit den Devices betreffen. 
+%Da diese in ähnlicher Art und Weise die Datenverarbeitung vornehmen wird im folgenden exemplarisch auf eine dieser Methode 
+%eingegangen um dieses Prinzip zu verdeutlichen. \\
 \subsubsection{Device \& Szenario Controller}
 Neben den für die Kommunikation wichtigen Komponenten spielen bei der Realisierung des Backends auch die Controller-Klassen eine 
 zentrale Rolle, da diese wichtige Verwaltungsfunktionen bereit stellen. Sie sind für die Verwaltung der verschiedenen Devices 
@@ -436,7 +483,7 @@ Dazu existieren die folgenden Controller-Klassen:
 \end{itemize}
 Die beiden Klassen AppController und RoboterController bestehen im wesentlichen aus einer Listen-Datenstruktur (ArrayList), in 
 welcher sämtliche Apps bzw. Roboter die am Backend angemeldet sind gespeichert werden. In dieser Datenstruktur werden die Devices 
-durch Objekte entsprechender Klassen repräsentiert. \\
+durch Objekte entsprechender Klassen (App-Klasse, Roboter-Klasse) repräsentiert. \\
 Die Controller-Klassen verfügen über Datenstrukturoperationen zum Einfügen, Entfernen, Suchen oder zum Aktualisieren von Elementen
 so das durch entsprechende Methoden eine einfacher Zugriff auf die Devices sowie deren Manipulation möglich ist. \\
 Da alle drei Controller-Klassen mit statischen Datenstrukturen und Methoden arbeiten werden die angemeldeten Devices zentral 
@@ -445,7 +492,7 @@ Durch die Verwendete Listen-Datenstruktur ist ein einfaches Suchen, Einfügen so
 einzelnen Devices iteriert werden was hilfreich ist wenn die selben Daten an mehrere Devices gesendet werden müssen.
 \\
 Die SzenarioController Klasse verfügt über die gleiche Listen-Datenstruktur zur Speicherung von Szenarien, jedoch bietet sie neben
-den Einfachen Operatoren noch weitere Komplexere Funktinalitäten zum ... 
+den Einfachen Operatoren noch weitere Komplexere Funktionalitäten zum Abfragen ob bestimmte Devices am Szenario teilnehmen etc. 
 \subsubsection{Die GUI}
 Neben den rein Funktionalen Komponenten des Backends verfügt dieses auch über eine grafische Benutzeroberfläche die Informationen zu
 den angemeldeten Geräten und den existierenden Szenarien zur Verfügung stellt. Diese Benutzeroberfläche ist so realisiert das diese 
@@ -461,11 +508,15 @@ Java ebenfalls plattformunabhängig lauffähig ist. Zu ihrer Ansteuerung dient e
 (View) weiterreicht sofern diese aktiviert wurde. Umgekehrt werden jedoch keine Benutzereingaben von der GUI an das Programm 
 weitergereicht, sondern dienen lediglich zur Manipulation der Anzeige so das dieses komplett unabhängig ist. Lediglich das Beenden 
 das kompletten Programms ist über die grafische Benutzeroberfläche möglich.
-Abbildung X.X zeigt einen Screenshot der grafischen Benutzeroberfläche des Backends. \\
-\\
+Abbildung X.X zeigt einen Screenshot der grafischen Benutzeroberfläche des Backends.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\textwidth]{images/implementation/BackendGUI.png}
+	\caption[Grafische Benutzeroberfläche des Backends]{Grafische Benutzeroberfläche des Backends}
+\end{figure}
+\newline
 Da die grafische Benutzeroberfläche jedoch nicht zur eigentlichen Funktionalität des Backends beiträgt soll an dieser Stelle nicht 
 weiter eingegangen werden.
-
 \newpage
 \subsection{Roboter}
 Die Implementierung des Roboters stellt das Kernstück bei der Realisierung dieses Projekts dar.\\
