@@ -707,20 +707,26 @@ beispielsweise die folgenden Parameter:
 	%   ###############################################################################################################################
 \end{itemize}
 
-\paragraph{Die RoboterController Klasse} übernimmt eine zentrale Rolle bei der Umsetzung der Roboter-Steuerung. Die Klasse stellt die 
-Schnittstelle zum physischen Roboter dar. Sämtliche Steuerkommandos und Sensorabfragen werden über diese Klasse realisiert. Durch diese einheitliche 
-Schnittstelle wird es möglich die Steuerung und ... unabhängig von dem konkreten vorhandenen Roboter (Dreirädriger, Vierrädriger etc)
-zu realisieren. Dazu nutzt der RoboterController intern eine Instanz des "Roboter" Interfaces was eine Ansteuerung des Roboters 
-\\
+\paragraph{Die RoboterController Klasse} übernimmt eine zentrale Rolle bei der Umsetzung der Roboter-Ansteuerung. Die Klasse stellt die 
+Schnittstelle zum physischen Roboter d.h zu einer konkreten Roboterklasse dar. Sämtliche 
+Steuerkommandos und Sensorabfragen werden über diese Klasse realisiert. Durch diese einheitliche Schnittstelle die lediglich auf einer
+Instanz des Roboter-Interfaces arbeite wird es möglich, die Steuerung sowie sämtliche Abfragen unabhängig von dem konkreten vorhandenen 
+Roboter (Dreirädriger, Vierrädriger etc) zu realisieren. Dazu nutzt der RoboterController intern eine Instanz des Roboter-Interfaces, 
+was eine generische Ansteuerung des Roboters ermöglicht, da lediglich über die im Interface definierten Schnittstellen auf den Roboter
+zugegriffen wird und die konkrete Implementierung der Funktionalitäten nicht bekannt sein muss.
+Neben dieser Instanz, welche den Roboter repräsentiert enthält die Klasse weitere Attribute, die spezifische Daten zur Robotersteuerung
+darstellen. Dazu gehören beispielsweise aktuelle Streukommandos oder Positionsdaten. Darüber hinaus sind in der RoboterController Klasse
+auch entsprechende Methode zur Umsetzung der Robotersteuerung sowie Datenabfrage implementiert, die durch die entsprechenden Threads aufgerufen
+werden.
 \subsubsection{Steuerung}\label{robotsteuerung}
 Eine der Hauptaufgaben des Roboterprogramms ist die Steuerung des Roboters. Dabei muss das Programm die folgende zwei 
 grundlegenden Steuerungsarten unterscheiden und realisieren.
 \begin{itemize}
 	%   ###############################################################################################################################
-	\item{Direkte Steuerung} -- Bei der direkten Steuerung erhält das Programm über das Backend von der App direkte Steuerbefehle wie
-	Rechts, Links, Schneller, Langsamer welche das Programm dann in die entsprechende Bewegung des Roboters umsetzen muss.
+	\item{Direkte Steuerung} -- Bei der direkten Steuerung erhält das Programm über das Backend von der App direkte Steuerbefehle wie,
+	Rechts, Links, Schneller, Langsamer, welche das Programm dann in die entsprechende Bewegung des Roboters umsetzt.
 	%   ###############################################################################################################################
-	\item{Indirekte Steuerung} -- Bei der indirekten Steuerung bekommt das Programm keinen konkreten Steuerbefehle sondern muss basierend
+	\item{Indirekte Steuerung} -- Bei der indirekten Steuerung bekommt das Programm keinen konkreten Steuerbefehle, sondern muss basierend
 	auf den Positionsdaten der anderen Roboter und dem vorherrschenden Szenario die notwendigen Steuerbefehle des Roboters berechnen.
 	%   ###############################################################################################################################
 \end{itemize}
@@ -729,61 +735,67 @@ basieren auf dem grundlegenden Prinzip, dass die vom Backend gesendeten Daten (S
 Daten-Empfangs-Thread (listenThread) empfangen, verarbeitet und in entsprechenden Objekten der RoboterController-Klasse gespeichert werden. 
 Dieser Vorgang erfolgt zyklisch und vollständig unabhängig von der eigentlichen Umsetzung der Steuerung durch den Steuerungsthread (steeringThread). \\
 Der Steuerungsthread wiederum liest die gespeicherten Positions- bzw. Steuerdaten aus und führt auf deren Basis entsprechenden Roboterbefehle 
-aus um die gewünschte Steuerung zu realisieren.
+aus, um die gewünschte Steuerung zu realisieren.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1.0\textwidth]{images/implementation/controlRobotMethod1.png}
 	\caption[\code{controlRobot()}-Methode der RobotController-Klasse im Robot]{\code{controlRobot()}-Methode der RobotController-Klasse im Robot}
+	\label{fig:controlRobotMethode}
 \end{figure}
 \newline
-Die Abbildung X zeigt einen Ausschnitt der Methode \code{controlRobot()} innerhalb der RobotController-Klasse. Der in der Abbildung zu 
-sehende Quellcode realisiert die direkte Steuerung des Roboters durch die beim Roboter eintreffenden Steuersignale der App. Die 
-\code{controlRobot()}-Methode wird durch den Steuerungsthread zyklisch aufgerufen um eine permanente Steuerung ohne Zeitverzögerung
+Die Abbildung \eqref{fig:controlRobotMethode} zeigt einen Ausschnitt der Methode \code{controlRobot()} innerhalb der RobotController-Klasse. Der Quellcode realisiert die direkte Steuerung des Roboters durch die beim Roboter eintreffenden Steuersignale der App. Die 
+\code{controlRobot()}-Methode wird durch den Steuerungsthread zyklisch aufgerufen, um eine permanente Steuerung ohne Zeitverzögerung
 zu erreichen. \\
-Innerhalb der Methode wird zuerst geprüft ob der Roboter überhaupt aktiv ist d.h. an einem Szenario teil nimmt und überhaupt gesteuert werden
-muss. Anschließend wird geprüft ob ein Befehl zur direkten Steuerung vorliegt. Dafür müssen die folgenden Bedingungen erfüllt sein:
-\begin{itemize}
-	%   ###############################################################################################################################
-	\item{Es muss ein gültiges Steuerungskommando vorliegen}
-	%   ###############################################################################################################################
-	\item{Das Akzeptieren eins Steuerungskomando}
-	%   ###############################################################################################################################
-\end{itemize}
-Die indirekte Steuerung wird ebenfalls in der \code{controlRobot()}-Methode realisiert ist jedoch um einiges komplexer und erfordert eine
+Innerhalb der Methode wird zuerst geprüft, ob der Roboter aktiv ist d.h. an einem Szenario teilnimmt und gesteuert werden
+muss. Anschließend wird geprüft, ob ein Befehl zur direkten Steuerung vorliegt. Dafür muss zum einen ein
+gültiges Steuerkommando vorliegen und dessen Verarbeitung aktiviert sein (accept == true). Ist dies der Fall, werden die im Steuerkommando enthaltenen Richtungs- und Geschwindigkeitsangaben in entsprechende Enums gewandelt. \\
+Anschließend wird zuerst die im Streukommando codierte Richtungsangabe verarbeitet, indem je nach Angabe, der Roboter entweder durch Aufruf der Funktion \code{rotate(direction)} veranlasst wird eine Drehung in die entsprechende Richtung durchzuführen oder sich geradeaus zu bewegen (\code{forward()}).
+\\
+Nach Verarbeitung der Richtungsangabe wird die Geschwindigkeitsangabe verarbeite. Soll der Roboter hierbei schneller Fahren, wird die Methode \code{increaseSpeed()} aufgerufen, zur Verlangsamung wird die Methode \code{decreaseSpeed()} aktiviert. Soll die Geschwindigkeit konstant bleiben, wird keine der beiden Methoden aufgerufen.
+Zum Abschluss wird das aktuelle Steuerkommando auf den Wert null gesetzt, um zu markieren, dass dieses Verarbeitet wurde.
+\medskip
+\newline
+Wie die jeweiligen Funktionen \code{rotate(direction)}, \code{forward()} etc. konkret realisiert sind, liegt in der Verantwortung der jeweiligen Roboter-Klasse und ist abhängig von seinem physischen Aufbau.
+\medskip
+\newline
+Die indirekte Steuerung wird ebenfalls in der \code{controlRobot()}-Methode realisiert, ist jedoch um einiges komplexer und erfordert eine
 Vielzahl von Überprüfungen, Fallunterscheidungen und Berechnungen, weshalb an dieser Stelle auf den Quellcode verwiesen wird.
 \subsubsection{Datenerfassung \& Synchronisation}\label{robotdatenerfassung}
-Zur Erfassung der Daten des Roboters wie einer Position, Orientierung etc. und deren anschließenden Übermittlung an das Backend, 
-existiert wie bereit erwähnt ein separater Thread (synchronizeThread). Die eigentliche Erfassen und Senden der Daten erfolgt in der 
-\code{synchronize()}-Methode innerhalb der RoboterController-Klassen welche der synchronizeThread nach seiner Erzeugung betritt.
-Abbildung X zeigt den Quellcode der \code{synchronize()}-Methode.
+Zur Erfassung der Daten des Roboters, wie seiner Position, Orientierung etc. und deren anschließenden Übermittlung an das Backend, 
+existiert ein separater Thread (synchronizeThread). Das eigentliche Erfassen und Senden der Daten erfolgt in der 
+\code{synchronize()}-Methode innerhalb der RoboterController-Klassen.
+Abbildung \eqref{fig:synchronizeRobot} zeigt den Quellcode der \code{synchronize()}-Methode.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1.0\textwidth]{images/implementation/synchronizeMethod.png}
-	\caption[\code{synchronize()}-Methode der RobotController-Klasse im Robot]{\code{controlRobot()}-Methode der RobotController-Klasse im Robot}
+	\caption{\code{synchronize()}-Methode der RobotController-Klasse im Robot}
+	\label{fig:synchronizeRobot}
 \end{figure}
 \newline
-Is der Roboter aktiv d.h. nimmt an eine Szenario teil werden durch die Methode )zyklisch ein entsprechendes Synchronisations-Kommando erzeugt, welches
+Ist der Roboter aktiv, d.h. nimmt an einem Szenario teil, wird durch die Methode zyklisch ein entsprechendes Synchronisations-Kommando erzeugt, welches
 die aktuellen Roboterdaten enthält. Diese Daten werden vom Roboter durch den Aufruf der Methode {\code{getJSONRobot()} als spezielles serialisierbares 
-Datenobjekt zurückgeliefert. Anschließend wird dieses Datenobjekt konvertiert und durch Aufruf der Funktion {\code{controlRobot()}. Nach abwarten einer 
-konfigurierbare Zeit startet dieser Prozess von neuem. \\
-Die Abbildung X zeigt die Implementierung der Funktion {\code{getJSONRobot()} in der Klasse ThreeWheelDrive welche das Datenobjekt mit den 
+Datenobjekt zurückgeliefert. Anschließend wird dieses Datenobjekt konvertiert und durch Aufruf der Funktion \code{sendCmd(gson.toJson(sync))} an das Backend gesendet. Nach abwarten einer 
+konfigurierbaren Zeit startet dieser Prozess von neuem.
+\newline
+\newpage
+\noindent
+Die Abbildung \eqref{fig:getJSONRobot} zeigt die Implementierung der Funktion {\code{getJSONRobot()} in der Klasse ThreeWheelDrive, welche das Datenobjekt mit den 
 entsprechenden Roboterdaten erzeugt.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1.0\textwidth]{images/implementation/getJSONRobotMethod.png}
-	\caption[\code{synchronize()}-Methode der RobotController-Klasse im Robot]{\code{controlRobot()}-Methode der RobotController-Klasse im Robot}
+	\caption{\code{getJSONRobot()}-Methode der ThreeWheelDrive-Klasse im Robot}
+	\label{fig:getJSONRobot}
 \end{figure}
-Zur eigentlichen Erfassung der Daten von den Robotersensoren und deren Aufbereitung nutzt der Roboter mehrere Methoden wie X und X.
-Abbildung X zeugt exemplarich wie beim ThreeWheelDrive-Roboter die Position und Orientierung durch die Methode {\code{getPosition()} berechnet und
+\newline
+Zur eigentlichen Erfassung der Daten von den Robotersensoren und deren Aufbereitung nutzt die Roboterklasse mehrere Methoden, wie \code{getPosition()} und \code{getRealSpeed()}.
+Abbildung \eqref{fig:getPosition} zeigt exemplarisch, wie beim ThreeWheelDrive-Roboter die Position und Orientierung durch die Methode \code{getPosition()} berechnet und
 in einem Objekt der Klasse Position zurückgeliefert wird.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1.0\textwidth]{images/implementation/getPositionMethod.png}
-	\caption[\code{synchronize()}-Methode der RobotController-Klasse im Robot]{\code{controlRobot()}-Methode der RobotController-Klasse im Robot}
+	\caption{\code{getPosition()}-Methode der ThreeWheelDrive-Klasse im Robot}
+	\label{fig:getPosition}
 \end{figure}
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=1.0\textwidth]{images/implementation/positionMethods.png}
-	\caption[\code{synchronize()}-Methode der RobotController-Klasse im Robot]{\code{controlRobot()}-Methode der RobotController-Klasse im Robot}
-\end{figure}
-asdsada
+\newline
+Zur letztendlichen Berechnung der aktuellen Position und Orientierung auf Grundlage der ausgelesenen und verarbeiteten Sensordaten nutzt die \code{getPosition()}-Methode standardisierte Methoden der Position-Klassen, welche eine Position inklusive Orientierung repräsentiert.
