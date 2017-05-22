@@ -1,54 +1,18 @@
-;; This logfile was generated automatically by `xindy'
-;; at 22.05.2017  17:00:17
-;; Indexstyle: "C:\\Users\\SL-Th\\OneDrive\\Dokumente\\DHBW\\Studienarbeit\\FleeAndCatch-Docs\\documentation\\Nvx_NnJB3o", Rawindex: "C:\\Users\\SL-Th\\OneDrive\\Dokumente\\DHBW\\Studienarbeit\\FleeAndCatch-Docs\\documentation\\8GAvgjkgXR", Output: "dokumentation.gls"
 
 
-Building indexentry-tree:
-Hierdepth of index is :TREE
+*** Unable to execute: '"xindy"  -L german -C din5007-utf8 -I xindy -M "dokumentation" -t "dokumentation.glg" -o "dokumentation.gls" "dokumentation.glo"' ***
 
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Failed with error code 127.
 
-Forming letter-groups:
-Letter-group: "€ÈÈ´¨†€Ú¨Ã¼ ÈËÃË€»»¨¼ ¨¼Ú—Ëœ€†—" -> "A"
-Letter-group: "œË€»—æÃË®" -> "F"
-Letter-group: "¬€å€Ð†Ë¨ÈÚ" -> "J"
-Letter-group: "ÚíÈ—Ð†Ë¨ÈÚ" -> "T"
-Letter-group: "¬€å€" -> "J"
-Letter-group: "Ã„¬—†Ú¨å—†" -> "O"
-Letter-group: "Ú—»È´€Ú—" -> "T"
-Letter-group: "†#" -> "C"
-Letter-group: "´—¬ÃÐ" -> "L"
-Letter-group: "—å3" -> "E"
-Letter-group: "—†´¨ÈÐ—" -> "E"
-Letter-group: "¬€å€œë" -> "J"
-Letter-group: "ÐÊ´¨Ú—" -> "S"
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "€ÈÈ´¨†€Ú¨Ã¼ ÈËÃË€»»¨¼ ¨¼Ú—Ëœ€†—" -> "A"
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "†#" -> "C"
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "—†´¨ÈÐ—" -> "E"
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "œË€»—æÃË®" -> "F"
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "¬€å€" -> "J"
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "´—¬ÃÐ" -> "L"
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "Ã„¬—†Ú¨å—†" -> "O"
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "ÐÊ´¨Ú—" -> "S"
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "Ú—»È´€Ú—" -> "T"
+Status report:
+
+sh: 1: xindy: not found
+
+xindy didn't create a transcript.
+Check that xindy has been installed and
+is on your system's PATH.
+Your PATH environment variable is set to: 
+/home/mbothner/bin:/home/mbothner/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/java/jre1.8.0_111/bin:/usr/local/java/jdk1.8.0_111/bin
+Try manually running:
+"xindy"  -L german -C din5007-utf8 -I xindy -M "dokumentation" -t "dokumentation.glg" -o "dokumentation.gls" "dokumentation.glo"
+

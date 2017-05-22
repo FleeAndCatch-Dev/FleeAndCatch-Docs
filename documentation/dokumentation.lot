@@ -1,0 +1,10 @@
+\select@language {ngerman}
+\contentsline {table}{\numberline {1}{\ignorespaces Einordnung von Sensoren}}{6}{table.caption.10}
+\contentsline {table}{\numberline {2}{\ignorespaces Eigenschaften der EV3-Motortypen}}{15}{table.caption.26}
+\contentsline {table}{\numberline {3}{\ignorespaces Vergleich der EV3 Programmierumgebungen}}{18}{table.caption.32}
+\contentsline {table}{\numberline {4}{\ignorespaces \gls {json} Kommando Connection}}{48}{table.caption.84}
+\contentsline {table}{\numberline {5}{\ignorespaces \gls {json} Kommando Synchronization}}{48}{table.caption.86}
+\contentsline {table}{\numberline {6}{\ignorespaces \gls {json} Kommando Scenario}}{49}{table.caption.88}
+\contentsline {table}{\numberline {7}{\ignorespaces \gls {json} Kommando Exception}}{49}{table.caption.90}
+\contentsline {table}{\numberline {8}{\ignorespaces \gls {json} Kommando Control}}{50}{table.caption.92}
+\contentsline {table}{\numberline {9}{\ignorespaces \gls {json} Kommando Position}}{50}{table.caption.94}

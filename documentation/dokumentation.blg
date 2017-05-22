@@ -1,0 +1,90 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: dokumentation.aux
+The style file: plainnat.bst
+A level-1 auxiliary file: dokumente/titel.aux
+A level-1 auxiliary file: dokumente/erklaerung.aux
+A level-1 auxiliary file: dokumente/abstract.aux
+A level-1 auxiliary file: dokumente/verzeichnisse.aux
+A level-1 auxiliary file: dokumente/einleitung.aux
+A level-1 auxiliary file: dokumente/theoretischeundtechnischegrundlagen.aux
+A level-1 auxiliary file: dokumente/konzeption.aux
+A level-1 auxiliary file: dokumente/umsetzung.aux
+A level-1 auxiliary file: dokumente/evaluation.aux
+A level-1 auxiliary file: dokumente/ausblick.aux
+A level-1 auxiliary file: dokumente/literatur.aux
+A level-1 auxiliary file: dokumente/anhang.aux
+Database file #1: literatur.bib
+Warning--to sort, need author or key in Nethority.Web&App
+Warning--empty year in Nethority.Web&App
+Warning--empty year in DanielWurstl.Unterschiedeund
+Warning--empty year in Dreamstime.Nestvon
+Warning--empty year in Brecht.MVVMEntity
+Warning--empty year in ETHZuerich.InduzierterVerkehr
+Warning--empty year in FrankfurterAllgemeineZeitungGmbH.Schwarmverhalten:Roboter
+Warning--empty year in Schoenebeck.Roboterbauen
+Warning--empty year in KUKA.IndustrieroboterKUKA
+Warning--empty year in Lego.LEGOMINDSTORMS
+Warning--empty publisher in MarkusStrand.Robotikscript
+Warning--empty year in MarkusStrand.Robotikscript
+Warning--empty year in MarkusStrand.Robotikscript
+Warning--empty year in Microsoft.Introductionto
+Warning--empty year in Microsoft.Overviewof
+Warning--empty year in Mono.MonoProject
+Warning--empty year in Schnabel.TCPKommunikation
+Warning--empty year in PetraRiepe.NativeApp
+Warning--empty year in Prezi.Gefahrdungder
+Warning--empty year in Bendel.DefinitionRobotik
+Warning--empty publisher in Scholz.DasEV3
+Warning--empty year in Spektrum.SchwarmverhaltenKompaktlexikon
+Warning--empty year in Xamarin
+Warning--empty year in Xamarin.Builda
+Warning--empty year in Xamarin.HierarchicalNavigation
+Warning--empty year in Xamarin.Introductionto
+Warning--empty year in Xamarin.PortableClass
+Warning--empty year in Xamarin.SharedProjects
+Warning--empty year in Xamarin.StackLayoutXamarin
+Warning--empty year in Xamarin.Xamarin.FormsLayouts
+Warning--empty year in Xamarin.Xamarin.FormsPages
+You've used 36 entries,
+            2773 wiz_defined-function locations,
+            807 strings with 12223 characters,
+and the built_in function-call counts, 11387 in all, are:
+= -- 981
+> -- 430
+< -- 31
++ -- 174
+- -- 129
+* -- 691
+:= -- 1729
+add.period$ -- 123
+call.type$ -- 36
+change.case$ -- 145
+chr.to.int$ -- 27
+cite$ -- 104
+duplicate$ -- 579
+empty$ -- 1160
+format.name$ -- 164
+if$ -- 2411
+int.to.chr$ -- 10
+int.to.str$ -- 1
+missing$ -- 14
+newline$ -- 199
+num.names$ -- 140
+pop$ -- 439
+preamble$ -- 1
+purify$ -- 115
+quote$ -- 0
+skip$ -- 483
+stack$ -- 0
+substring$ -- 73
+swap$ -- 47
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 361
+warning$ -- 31
+while$ -- 105
+width$ -- 0
+write$ -- 454
+(There were 31 warnings)

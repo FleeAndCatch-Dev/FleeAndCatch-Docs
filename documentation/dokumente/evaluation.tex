@@ -1,28 +1,57 @@
-\section{Evaluation}
-
-Durch die Durchführung dieses Projektes zum Thema \glqq{}Konzeption und Implementierung eines Schwarmverhaltens von mobilen Kleinrobotern anhand eines Verfolgungsszenarios\grqq{} entstand eine Software, welche die gesetzten Ziele erfüllt.
-
-Während des Projektes traten verschiedene Komplikationen auf, welche diese auf unterschiedliche Weise beeinflussten. Hier eine Auflistung der bedeutenden Problemfälle:
+\section{Evaluation und Reflektion}
+In diesem Kapitel werden zum eine die erreichten Ergebnisse anhand der vorab definierten Zielsetzung evaluiert, zum anderen wird der Projektablauf reflektiert und die bei der Umsetzung des Projekts aufgetretenen Probleme sowie die dafür entwickelten Lösungen vorgestellt.
+\medskip
+\newline
+Durch die Konzeption und Implementierung universeller Datenpakete in einem JSON-Format und einer entsprechend auf WLAN-Technologie basierenden Systemarchitektur in der das Backend die Kommunikationszentrale darstellt, ist es gelungen ein flexibles und abstraktes Kommunikationssystem 
+für den Datenaustausch zwischen einer flexiblen Anzahl von Devices zu entwickeln. \\
+Durch die Verwendung von TCP-Verbindungen für den Datentransfer ist ein zuverlässiger Datenaustausch garantiert, jedoch hat sich gezeigt, dass sich diese Art der Verbindung negativ auf die Latenz auswirkt und somit die Steuerung und Nachtstellung der verschiedenen Schwarmverhalten erschwert.
+\\
+Bei der Umsetzung der Robotersteuerung durch das Roboterprogramm wurde von Anfang an auf eine generische Programmierung geachtet, um das Programm flexibel und leicht erweiterbar zu halten. Durch die Verwendung eines Interfaces, welches entsprechende grundlegende Roboterfunktionen definiert, war es möglich die Steuerung des Roboters eines konkret implementierten Robotertyp zu abstrahieren. \\
+Sämtliche Interaktion mit dem Roboter beschränkt sich dabei auf die im Interface definierten grundlegenden Funktionen. Dadurch wird es ermöglicht das Programm auf einfache Art und Weise zu erweitern. Für die Integration neuer Robotertypen ist lediglich eine neuen Roboter-Klasse notwendig, welche von dem Interface
+erbt und die darin definierten Methoden für den neuen Roboter implementiert.
+\medskip
+\newline
+Hauptaufgabe des Projekts ist die Nachtstellung von verschiedenen Szenarien zu Schwarmverhalten, wobei der Fokus auf der Realisierung eines Verfolgungsszenarios liegt. Zur Nachstellung dieser Szenarien war es vorab notwendig, eine grundlegende Steuerung des Roboters durch den Nutzer zu implementieren, um somit die Kontrolle des Leittiers eines Schwarms durch den Benutzer zu ermöglichen. \\
+Anschließen erfolgte die Umsetzung der Datenfassung und deren Verteilung über das Backend 
+zu den anderen Komponenten, so dass diese Aufgrund von Positionsdaten der anderen Sachwarmtiere 
+ihre eigenen Bewegungen berechnen und durchführen konnten.
+\\
+Aufbauend auf diesen Grundprinzipien wurden anschließend die einzelnen Sachwarmszenarien 
+umgesetzt. Die Szenarien Synchron in der sich die am Schwarm beteiligten Roboter in einer festen Struktur (z.B. Dreiecksformation) synchron sowie bewegen als auch das Follow Szenario, bei der 
+sich die Roboter wie eine Art Schlange bewegen, wurden durch das zeitgleiche versenden identischer Steuerkommandos erreicht. Es hat sich gezeigt, dass die erfolgreiche Nachstellung dieser 
+Szenarien sehr stark von der Verzögerung der Datenübertragung abhängt. Treffen die Pakete zu unterschiedliche Zeiten bei den Robotern ein, erfolgt die Steuerung zeitlich versetzt, was 
+unweigerlich dazu führt, dass die Formation ihre Ordnung verliert.
+\\
+Im Gegensatz zu den Szenarien Synchron und Follow wurde das Flee Szenario, welches das Verfolgungsszenario darstellt über eine autonome Robotersteuerung basierend auf übertragenen
+Positionsdaten realisiert. Durch die fortlaufenden und Fehler kompensierende Steuerung ist die
+vorliegende Implementierung dieses Szenarios weit weniger durch eine schlechte Datenverbindung 
+und hoher Latenz beeinflussbar, wie am Beispiel von anderen.
+\medskip
+\newline
+Neben denen standardmäßigen Szenarien beinhaltete die Konzeption zusätzlich das Catch-Szenario, bei dem ein oder mehrere Roboter autonom nach einem Zufallsschema durch den Raum navigieren und der User diese durch Steuerung der App fangen muss. Ein solches Szenario erfordert jedoch eine vollständig autonome Steuerung des fliehenden Roboters durch einen auffälligen Algorithmus inklusive Hinderniserkennung und Berechnung der Position in Bezug auf die Spielfeldgrenzen. \\
+Da dieses Szenario einen komplexen Ablauf mit einem erheblichen Implementierungsaufwand darstellt, war es aufgrund der beschränkten Zeit leider nicht möglich dieses zur realisieren.
+\bigskip
+\newline
+Während des Projektes traten verschiedene Schwierigkeiten und Komplikationen auf, welche dieses auf unterschiedliche Weise beeinflussten. Hier eine Auflistung der bedeutenden Problemfälle:
 
 \begin{itemize}
-	\item Keine Funktionalität von Bluetooth
-	\item Verzögerung der Steuerung
+	\item Keine entsprechende Unterstützung von Bluetooth
+	\item Latenz der Datenübertragung
 	\item Unübersichtliche Struktur der Implementierung
-	\item Verhalten des EV3
+	\item Verhalten des EV3 bzw. des leJOS-Systems
 	% vergleich ziele, ergebnis
 \end{itemize}
 
 \noindent
-Da zu Beginn des Projektes zwischen den Robotern und dem Backend eine Bluetooth-Verbindung angedacht war, konnte diese leider nicht umgesetzt werden. Das Problem dabei lag an der komplexen Implementierung von Bluetooth auf den Komponenten sowie einer mangelhaften Dokumentation der Bibliotheken. Daher wurde ein Wechsel auf eine Netzwerkkommunikation mit TCP entschieden, wie sie bereits zwischen App und Backend besteht. Dabei konnte die Implementierung teilweise übernommen werden und musste an wenigen stellen angepasst werden.\\
+ Zu Beginn des Projektes war für die Verbindung und den Datenaustausch zwischen Robotern und dem Backend eine Bluetooth-Verbindung konzipiert. Diese konnte wegen verschiedenen Problemen nicht umgesetzt werden. Ein Hauptproblem stellte dabei die komplexen Implementierung von Bluetooth auf den Komponenten sowie einer mangelhaften Dokumentation der Bibliotheken dar. \\
+ Um dem Problem zu begegnen wurde daher ein Wechsel auf eine Netzwerkkommunikation (WLAN) mit TCP veranlasst, wie sie bereits zwischen App und Backend besteht. Dabei konnte die Implementierung teilweise übernommen werden, so dass diese nur an wenigen Stellen angepasst werden musste.\\
 
 \noindent
-Durch einer Verzögerung der Steuerung, die mit dem Versenden der Kommandos im Roboter auftrat, erzeugte eine Verzögerung der Steuerung, welche dieses erschwert. Dies wurde durch das Einfügen eines Initialisierungskommandos bei der Anmeldung des Systems gelöst. Dabei werden laufend Kommandos zwischen den beiden Parteien hin- und hergesendet, damit die \gls{cpu}-Laufzeit im System des ROboter entsprechend erhöht wird und die damit verbundene Verzögerung so gut wie möglich verschwindet.\\
+Durch eine Verzögerung des Datenaustauschs, die mit dem Versenden der Kommandos in der Implementierung des Roboters auftrat, führte zu einer Verzögerung der Steuerung, welche die Nachstellung der geforderten Szenarien erschwerte. Dies wurde durch das Einfügen eines Initialisierungskommandos zum Teil kompensiert. Dabei werden laufend Kommandos zwischen den beiden Parteien hin- und hergesendet, wodurch dem Thread für die Datenübertragung mehr CPU-Zeit eingeräumt wird und die damit verbundene Verzögerung so gut wie möglich reduziert wird.\\
 
 \noindent
-Da eine Implementierung zwangsläufig zu Beginn eines Projektes etwas chaotisch abläuft, kommt es dabei zu einer Unübersichtlichkeit des Quellcode. Um dies zu Verbessern wurde das \gls{mvvm} Design Pattern in der \gls{app} integriert, um in den einzelnen Teilen unkomplizierte Abänderungen des Quellcodes vorzunehmen.\\
+Da eine Implementierung zwangsläufig zu Beginn eines Projektes etwas unstrukturiert ablief, kam es dabei zu einer Unübersichtlichkeit des Quellcodes. Um dies zu Verbessern wurde das \gls{mvvm} Design Pattern in der \gls{app} integriert, um in den einzelnen Teilen unkomplizierte Abänderungen des Quellcodes vorzunehmen und diesen so zu strukturieren.\\
 
 \noindent
-Da die EV3 Roboter sehr einfach gestrickte Kleinroboter darstellen und eigentlich als Kinderspielzeug gedacht sind, bringen diese einige technische Probleme mit sich, wenn man diese effizient einsetzen will. Beispielsweise bereitet die Installation des Betriebsystems eineige Schwireigkeiten, da dieses mittels einer SD-Karte auf den Roboter kopiert wird, um Anwendungen mittels Hochsprachen auszuführen. Dies schlägt oft fehl und benötigt somit viel Zeit und Geduld. Anderseits zeigt sich dieses Problem in der Steuerung der Roboter, wobei ein Überlauf der Daten bei bestimmten Methoden entsteht und der ROboter sich mit voller Geschwindigkeit in bestimmte Richtungen bewegt, was er aber nicht machen sollte.\\
-
-\noindent
-Das Ergebnis dieses Projektes stellt ein sehr respektables Ergebnis dar, wobei auf eine sehr abstrakte Implementierung mittels Kommandos geachtet wurde. Dadurch ist dieses System in vielen Punkten erweiterbar und bietet die möglichkeiten für diverse neue Implementierungen von Logik. Dabei ist das Ziel vollstens erfüllt, wobei ein Verfolgungsszenario mittels eines Schwarmes von Kleinrobotern durchgeführt werden kann. Und wurde durch das Hinzufügen einer \gls{gui} der Desktopanwendung übertroffen, welche die Darstellung der erfassten Daten sämtlicher Komponenten ermöglicht.
+Da die EV3 Roboter auf sehr einfacher Hardware basieren und eigentlich als Kinderspielzeug gedacht sind, bringen diese einige technische Probleme mit sich, wenn man diese effizient einsetzen will. Beispielsweise bereitet die Installation eines Betriebssystems einige Schwierigkeiten, da dieses mittels einer SD-Karte auf den Roboter kopiert wird, um Anwendungen mittels Hochsprachen auszuführen zu können. Dies schlägt oft fehl und benötigt dadurch viel Zeit und Geduld. \\
+Anderseits zeigen sich Probleme bei der Ausführung von Programmen zur Steuerung der Roboter, wobei vermutlich ein Überlauf der Daten bei bestimmten Methoden auftritt der dazu führt, dass sich der Roboter unkontrolliert verhält.\\
