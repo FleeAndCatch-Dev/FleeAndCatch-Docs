@@ -154,6 +154,7 @@ Hinsichtlich Rad- und Achsenanzahl, Anordnung der Räder sowie dem Verhältnis z
 		\includegraphics[width=0.25\textwidth]{images/technische_grundlagen/Differentialantrieb.png}
 	\end{center}
 	\caption{Einachsige Lenkung}
+	\cite{MarkusStrand.Robotikscript}
 	\label{fig:einachsenlenkung}
 \end{wrapfigure}
 \paragraph{Differentialantrieb}
@@ -165,6 +166,7 @@ Vorteile dieses Antriebs sind seine einfache Mechanik und gute Manövierbarkeit,
 		\includegraphics[width=0.20\textwidth]{images/technische_grundlagen/Einachsenlenkung.png}
 	\end{center}
 	\caption{Einachsige Lenkung}
+	\cite{MarkusStrand.Robotikscript}
 	\label{fig:einachsenlenkung}
 \end{wrapfigure}
 \paragraph{Einachsige Lenkung}
@@ -177,6 +179,7 @@ Der Vorteil dieses Antriebskonzeptes ist die gute Stabilität und die Möglichke
 		\includegraphics[width=0.20\textwidth]{images/technische_grundlagen/Dreiradantrieb.png}
 	\end{center}
 	\caption{Dreirad-Antrieb}
+	\cite{MarkusStrand.Robotikscript}
 	\label{fig:einachsenlenkung}
 \end{wrapfigure}
 \paragraph{Dreirad-Antrieb}
@@ -189,6 +192,7 @@ Die einfache Mechanik dieser Antriebsform ist ein Vorteil, jedoch ist die Manöv
 		\includegraphics[width=0.25\textwidth]{images/technische_grundlagen/Synchroantrieb.png}
 	\end{center}
 	\caption{Einachsige Lenkung}
+	\cite{MarkusStrand.Robotikscript}
 	\label{fig:einachsenlenkung}
 \end{wrapfigure}
 \paragraph{Synchro-Antrieb}
@@ -201,6 +205,7 @@ Durch die synchrone Lenkung und den synchronen Antrieb der Räder erfordert dies
 		\includegraphics[width=0.25\textwidth]{images/technische_grundlagen/Omniantrieb.png}
 	\end{center}
 	\caption{Einachsige Lenkung}
+	\cite{MarkusStrand.Robotikscript}
 	\label{fig:einachsenlenkung}
 \end{wrapfigure}
 \paragraph{Omni-Antrieb}
@@ -229,6 +234,7 @@ Die folgende Abbildung \eqref{fig:ev3system} zeigt einige der zentralen Komponen
 	\centering
 	\includegraphics[width=0.90\textwidth]{images/technische_grundlagen/EV3-Overview.png}
 	\caption[Zentrale Komponenten des EV3-Systems]{Zentrale Komponenten des EV3-Systems}
+	\cite{NatinalInstruments.NILabVIEW}
 	\label{fig:ev3system}
 \end{figure}
 \newline
@@ -271,6 +277,7 @@ Die folgende Tabelle zeigt die wichtigsten Eigenschaften der beiden Motoren.
 	\end{tabular}
 	\centering
 	\caption[Eigenschaften der EV3-Motortypen]{Eigenschaften der EV3-Motoren}
+	\cite{Scholz.DasEV3}
 \end{table}
 \subsubsection{Sensoren}
 Zum EV3-System gehören eine Reihe von verschiedenen Sensoren, die es den Robotern ermöglichen Informationen über ihre Umwelt zu sammeln sowie ihre Eigenbewegungen zu erfassen. Im folgenden Abschnitt werden die wichtigsten Sensoren mit ihren Leistungsmerkmalen beschrieben.
@@ -343,7 +350,8 @@ Die Abbildung \eqref{tab:ev3motoreneig} gibt einen Überblick über verschiedene
 	\centering
 	\newline
 	0 = neutral; + = gut; ++ = sehr gut; +++ = hervorragend
-	\caption[Eigenschaften der EV3-Motortypen]{Eigenschaften der EV3-Motoren}
+	\caption[Vergleich der EV3 Programmierumgebungen]{Vergleich der EV3 Programmierumgebungen}
+	\cite{Scholz.DasEV3}
 	\label{tab:ev3motoreneig}
 \end{table}
 \newpage
@@ -416,9 +424,9 @@ Für eine effiziente Entwicklung bringt Xamarin eine große Bandbreite von Funkt
 Wie viele andere \glspl{framework}, bietet auch Xamarin für verschiedene Zwecke nützliche \glspl{template}, die jeweils andere Nutzen besitzen. Die Entwicklung der \gls{app} baut dabei vor allem auf zwei Hauptkomponenten von Bibliotheken, den Shared Projects und Protable Class Libraries.
 
 \newpage
-\begin{wrapfigure}{r}{0.55\textwidth}
+\begin{wrapfigure}{r}{0.5\textwidth}
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{images/technische_grundlagen/SharedAssetProject.png}
+		\includegraphics[width=0.45\textwidth]{images/technische_grundlagen/SharedAssetProject.png}
 	\end{center}
 	\caption{Shared Project}
 	\cite{Xamarin.SharedProjects}
@@ -429,9 +437,9 @@ Wie viele andere \glspl{framework}, bietet auch Xamarin für verschiedene Zwecke
 
 ermöglichen dem Entwickler Quellcode für verschiedene Plattformen zu entwickeln, wobei die plattformspezifischen Projekte das entsprechende Shared Project referenzieren. Somit besitzt diese Projektart keinen direkten Output, sondern kopiert den Quellcode entsprechend in das zu bauende Projekt, siehe Abbildung \eqref{fig:shared}.\footnote{\citep[vgl.][Shared Projects - Xamarin]{Xamarin.SharedProjects}\label{note39}} Der Hauptunterschied zu Standardprojekten liegt vor allem darin, dass ein Shared Project keine Abhängigkeiten haben darf und daher lediglich als Referenz für andere Projekte dienen kann.
 
-\begin{wrapfigure}{r}{0.55\textwidth}
+\begin{wrapfigure}{r}{0.5\textwidth}
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{images/technische_grundlagen/PortableClassLibrary.png}
+		\includegraphics[width=0.45\textwidth]{images/technische_grundlagen/PortableClassLibrary.png}
 	\end{center}
 	\caption{Portable Class Library}
 	\cite{Xamarin.PortableClass}
@@ -638,6 +646,7 @@ Zur Nachstellung eines Schwarmverhaltens existieren verschiedene Vorbilder, die 
 		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/fischschwarm.jpg}
 	\end{center}
 	\caption{Fischschwarm}
+	\cite{Prezi.Gefahrdungder}
 	\label{fig:fischschwarm}
 \end{wrapfigure}
 
@@ -655,6 +664,7 @@ Die wichtigste Rolle spielt hierbei der Schwellenwert zur Steuerung des Schwarms
 		\includegraphics[width=0.4\textwidth]{images/technische_grundlagen/termitenschwarm.jpg}
 	\end{center}
 	\caption{Termitenschwarm}
+	\cite{Dreamstime.Nestvon}
 	\label{fig:termitenschwarm}
 \end{wrapfigure}
 
@@ -696,6 +706,7 @@ Für die Umsetzung eines Schwarmverhaltens, können viele Szenarien herangezogen
 
 \begin{wrapfigure}{r}{0.4\textwidth}
 	\begin{center}
+		\vspace{-1cm}
 		\includegraphics[width=0.35\textwidth]{images/technische_grundlagen/roboterform.jpg}
 	\end{center}
 	\caption{Roboter bilden Formen}
